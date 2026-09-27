@@ -1,0 +1,32 @@
+{
+ "script": "scripts/e006_segformer_test.py",
+ "frozen_manifest": "results/E005_segformer_b2/FROZEN.json",
+ "checkpoint": "results/E005_segformer_b2/best.pt",
+ "checkpoint_sha256": "1240a10a184d90a156ddcacd4f72469cca94d33710b4989d1eed1818679b300b",
+ "threshold": 0.6,
+ "reference_threshold": 0.5,
+ "eval_batch": 4,
+ "amp": "bf16 autocast",
+ "tiles": "full 1024x1024 vv20/lab20, no cropping, no TTA",
+ "norm_mu": 0.4433064878306307,
+ "norm_sd": 0.12064228658860848,
+ "post_processing": "none",
+ "exclusion": "role == test and valid_frac_40 <= 0.05 (E004 rule)",
+ "views": {
+  "full": "official test minus nodata",
+  "acq_clean": "full & ~test_shares_acq_with_trainval",
+  "place_clean": "full & ~test_shares_place_with_trainval"
+ },
+ "components": "scipy.ndimage.label default 4-connectivity; GT component missed if no predicted valid pixel inside",
+ "size_bins": [
+  "1",
+  "2-4",
+  "5-16",
+  "17-64",
+  "65-256",
+  "257-1024",
+  ">1024"
+ ],
+ "prob_file": "test_prob_u8.npy (uint8 = round(prob*255))",
+ "figure_rules": "seeded 26143: good = Dice>=0.75 random 3; small = GT px <= q25 random 3; large = GT px >= q75 random 3; complete misses = TP==0, largest GT first, 3; LookAlike / NoOil = top-3 FP fraction"
+}

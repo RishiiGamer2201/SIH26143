@@ -37,6 +37,9 @@ ROOT = Path(__file__).resolve().parents[1]
 C = ROOT / "data/sar/cache/v1"
 DB_RANGE = 45.0  # cache scale: (dB + 40) / 45
 KINDS = ("oil_pos", "lookalike", "no_oil", "oil_bg")
+PIXEL_AREA_NOTE = ("pixel counts are image-space diagnostics only, not areas. The cache grid is EPSG:4326 (degrees): "
+                   "N-S and E-W ground sizes differ and E-W size varies with cos(latitude). Real slick area: georeference "
+                   "the prediction, vectorize, then compute geodesically or in a suitable projected CRS; never pixel_count * 400 m2.")
 
 CFG = dict(encoder="mit_b2", encoder_weights="imagenet", in_channels=2, seed=26143, epochs=40, patience=10,
            crop=512, samples_per_epoch=2000, eval_batch=4, lr=6e-5, weight_decay=1e-2, warmup_epochs=1, poly_power=1.0,
@@ -503,7 +506,7 @@ def validate(out):
                                       largest_false_component_px=int(n[f"{tag}_largest_false_comp_px"].max()))
         return res
 
-    met = dict(checkpoint_epoch=ck["epoch"], threshold_selected=t_sel, pixel_area_note="20 m cache pixels (~0.0004 km2 each)",
+    met = dict(checkpoint_epoch=ck["epoch"], threshold_selected=t_sel, pixel_area_note=PIXEL_AREA_NOTE,
                at_0_5=group("t05"), at_selected=group("tsel"))
     json.dump(met, open(out / "val_metrics.json", "w"), indent=1)
     figures(T, keep, vv, lab, t_sel, out)

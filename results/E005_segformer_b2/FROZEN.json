@@ -1,0 +1,202 @@
+{
+ "frozen_at": "2026-09-27T19:03:11+00:00",
+ "status": "E005 approved and FROZEN. Never retrain, never change the threshold, never overwrite these files (E006+ write elsewhere).",
+ "best_epoch": 9,
+ "threshold": 0.6,
+ "threshold_rule": "max global val Dice over sweep 0.10..0.90 step 0.05; frozen; test never used",
+ "secondary_reference_threshold": 0.5,
+ "model": {
+  "library": "segmentation_models_pytorch 0.5.0",
+  "arch": "Segformer",
+  "encoder": "mit_b2",
+  "encoder_init": "imagenet",
+  "in_channels": 2,
+  "classes": 1,
+  "params_m": 24.719746,
+  "input": "ch0 = (vv20 - norm_mu) / norm_sd on valid px, 0 on invalid; ch1 = validity (lab20 != 255); full 1024x1024 tiles",
+  "norm_mu": 0.4433064878306307,
+  "norm_sd": 0.12064228658860848,
+  "output": "1 logit/px, sigmoid, oil if prob >= threshold; no post-processing",
+  "inference_dtype": "bf16 autocast",
+  "checkpoint_val_iou_at_0_5": 0.7529564145428309
+ },
+ "dataset": {
+  "source": "Trujillo Sentinel-1 (data/sar/extracted), E002 cache v1 20 m (EPSG:4326 degree grid)",
+  "split": "results/sar_audit/splits_v1_acq.parquet",
+  "n_train": 1941,
+  "n_val": 477,
+  "train_tiles": {
+   "oil": 844,
+   "no_oil": 550,
+   "lookalike": 547
+  },
+  "val_tiles": {
+   "oil": 211,
+   "lookalike": 135,
+   "no_oil": 131
+  },
+  "test_used": false
+ },
+ "validation": {
+  "at_frozen_0_60": {
+   "iou": 0.7539305890035947,
+   "dice": 0.8597040199086801,
+   "precision": 0.8635062660881413,
+   "recall": 0.8559351115226447
+  },
+  "at_0_5": {
+   "iou": 0.7529564145428309,
+   "dice": 0.8590703206265412,
+   "precision": 0.8495969303438239,
+   "recall": 0.8687573583531621
+  },
+  "oil_tiles_at_0_60": {
+   "iou": 0.7679818966851507,
+   "dice": 0.8687666973571008,
+   "precision": 0.8819888629721186,
+   "recall": 0.8559351115226447
+  }
+ },
+ "pixel_area_note": "pixel counts are image-space diagnostics only, not areas. The cache grid is EPSG:4326 (degrees): N-S and E-W ground sizes differ and E-W size varies with cos(latitude). Real slick area: georeference the prediction, vectorize, then compute geodesically or in a suitable projected CRS; never pixel_count * 400 m2.",
+ "sha256": {
+  "results/E005_segformer_b2/best.pt": {
+   "sha256": "1240a10a184d90a156ddcacd4f72469cca94d33710b4989d1eed1818679b300b",
+   "bytes": 98987361
+  },
+  "results/E005_segformer_b2/config.json": {
+   "sha256": "28ea1aaec3ff7769789fd77f455a7819a1e7c83d1eb952dc13080ff858c418f6",
+   "bytes": 1344
+  },
+  "results/E005_segformer_b2/frozen_threshold.json": {
+   "sha256": "04a4686d5743ab4f86ff62e4dcc42b24321d0ff5f8b5985bdf772ecd21b5a111",
+   "bytes": 134
+  },
+  "results/E005_segformer_b2/training_complete.json": {
+   "sha256": "e913a50b9be3fb8d08bbae830890c9043bb7bcf3c8af57a54b8a39e9384288ec",
+   "bytes": 1065
+  },
+  "results/E005_segformer_b2/val_metrics.json": {
+   "sha256": "a71c45e042bfa1e5664ee7ed7ab804a60660ca9c31d1047a462092392c91336a",
+   "bytes": 3087
+  },
+  "results/E005_segformer_b2/pretraining_tests.json": {
+   "sha256": "45a0bf2eddd3cb6505c35cf9b7555f17dc34eb41bf6d24d83f876c8695fbf30c",
+   "bytes": 3277
+  },
+  "results/E005_segformer_b2/history.csv": {
+   "sha256": "d68c2b76106bf40657f27b647fe65a2efc5ad72f966dfe0de4a4474750124e2e",
+   "bytes": 4174
+  },
+  "results/E005_segformer_b2/val_threshold_sweep.csv": {
+   "sha256": "6ba4dde22e347c2ea73a35685e2f05cfff8959c4988e93fef5aedf05c376929f",
+   "bytes": 1396
+  },
+  "results/E005_segformer_b2/val_tiles.parquet": {
+   "sha256": "053fc040cc0eb6013e4bc36d479677157358482e64664385fb77f244c5a946c1",
+   "bytes": 50751
+  },
+  "results/E005_segformer_b2/val_gt_component_recall_by_size.csv": {
+   "sha256": "5274a5a58669efdce0d1d9d27940186f775bfb061823cdba50b387a825d32fde",
+   "bytes": 271
+  },
+  "results/sar_audit/splits_v1_acq.parquet": {
+   "sha256": "1608b362024fb0547caaca8e22c1332f78f07a458b419d8637e3ed5db71110e2",
+   "bytes": 89633
+  },
+  "data/sar/cache/v1/meta.parquet": {
+   "sha256": "f7075e73cf52f095eaf924c92b52ce7b0772e9634f6aa43b4029b04fe2cef473",
+   "bytes": 347498
+  },
+  "data/sar/cache/v1/cache_config.json": {
+   "sha256": "3e1f6dee32019eda1fccd67c2cb96e5a639af3f015abd40607134edd26a58e54",
+   "bytes": 287
+  },
+  "data/sar/cache/v1/vv20.npy": {
+   "sha256": "44657389e6f9a1f3aa1bbc6f0c1f47d3131b8c4fdd0c4a086816025458eb55f3",
+   "bytes": 6333399168
+  },
+  "data/sar/cache/v1/lab20.npy": {
+   "sha256": "6c6d12ac6b404318d59ad6a2338d9d25c3e88ad0fec14142a1024dcc76542829",
+   "bytes": 3166699648
+  },
+  "scripts/e005_segformer.py": {
+   "sha256": "f330ef8bbbdc0357f38fdc560b306ffa6d381a158f88e088fc0788514636e8ab",
+   "bytes": 32520
+  }
+ },
+ "git": {
+  "head": "5c16912effbb458a0aa0f321ada42fd29618c360",
+  "branch": "main",
+  "remote": "https://github.com/RishiiGamer2201/SIH26143.git",
+  "files": {
+   "results/E005_segformer_b2/best.pt": {
+    "tracked": true,
+    "matches_head": true
+   },
+   "results/E005_segformer_b2/config.json": {
+    "tracked": true,
+    "matches_head": true
+   },
+   "results/E005_segformer_b2/frozen_threshold.json": {
+    "tracked": true,
+    "matches_head": true
+   },
+   "results/E005_segformer_b2/training_complete.json": {
+    "tracked": true,
+    "matches_head": true
+   },
+   "results/E005_segformer_b2/val_metrics.json": {
+    "tracked": true,
+    "matches_head": false
+   },
+   "results/E005_segformer_b2/pretraining_tests.json": {
+    "tracked": true,
+    "matches_head": true
+   },
+   "results/E005_segformer_b2/history.csv": {
+    "tracked": true,
+    "matches_head": true
+   },
+   "results/E005_segformer_b2/val_threshold_sweep.csv": {
+    "tracked": true,
+    "matches_head": true
+   },
+   "results/E005_segformer_b2/val_tiles.parquet": {
+    "tracked": true,
+    "matches_head": true
+   },
+   "results/E005_segformer_b2/val_gt_component_recall_by_size.csv": {
+    "tracked": true,
+    "matches_head": true
+   },
+   "results/sar_audit/splits_v1_acq.parquet": {
+    "tracked": true,
+    "matches_head": true
+   },
+   "data/sar/cache/v1/meta.parquet": {
+    "tracked": true,
+    "matches_head": true
+   },
+   "data/sar/cache/v1/cache_config.json": {
+    "tracked": true,
+    "matches_head": true
+   },
+   "data/sar/cache/v1/vv20.npy": {
+    "tracked": false,
+    "matches_head": false
+   },
+   "data/sar/cache/v1/lab20.npy": {
+    "tracked": false,
+    "matches_head": false
+   },
+   "scripts/e005_segformer.py": {
+    "tracked": true,
+    "matches_head": false
+   }
+  }
+ },
+ "notes": [
+  "val_metrics.json pixel_area_note corrected on 2026-09-28 before freezing (metrics unchanged); original kept as superseded/val_metrics.2026-09-27_pixel_area_note.json.",
+  "scripts/e005_segformer.py hash is after the same pixel-area-note correction (PIXEL_AREA_NOTE constant); logic unchanged."
+ ]
+}

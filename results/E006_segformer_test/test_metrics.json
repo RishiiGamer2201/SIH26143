@@ -1,0 +1,370 @@
+{
+ "checkpoint": "results/E005_segformer_b2/best.pt",
+ "checkpoint_sha256": "1240a10a184d90a156ddcacd4f72469cca94d33710b4989d1eed1818679b300b",
+ "checkpoint_epoch": 9,
+ "threshold": 0.6,
+ "reference_threshold": 0.5,
+ "post_processing": "none (raw mask)",
+ "excluded_nodata": [
+  "no_oil/00005",
+  "no_oil/00087",
+  "no_oil/00099"
+ ],
+ "pixel_area_note": "pixel counts are image-space diagnostics only, not areas. The cache grid is EPSG:4326 (degrees): N-S and E-W ground sizes differ and E-W size varies with cos(latitude). Real slick area: georeference the prediction, vectorize, then compute geodesically or in a suitable projected CRS; never pixel_count * 400 m2.",
+ "val_recheck": {
+  "max_abs_diff_vs_E005": 0.0,
+  "component_table_identical": true
+ },
+ "views": {
+  "full": {
+   "at_frozen_0_60": {
+    "n_tiles": 447,
+    "tiles_by_class": {
+     "oil": 150,
+     "lookalike": 150,
+     "no_oil": 147
+    },
+    "global_pixel": {
+     "iou": 0.33518873303141505,
+     "dice": 0.5020844240804847,
+     "precision": 0.8883388264228911,
+     "recall": 0.3499321022479721
+    },
+    "oil_tiles": {
+     "n": 150,
+     "pixel": {
+      "iou": 0.3357313247233952,
+      "dice": 0.5026928971556743,
+      "precision": 0.8921601457114321,
+      "recall": 0.3499321022479721
+     },
+     "tile_dice_mean": 0.6967797408211189,
+     "tile_dice_median": 0.8543550222142654,
+     "tile_recall_mean": 0.7268118382404322,
+     "tiles_detected_any_tp": 142,
+     "tiles_missed_entirely": 8,
+     "false_components_total": 127,
+     "largest_false_component_px": 5428,
+     "gt_components": 5756,
+     "missed_gt_components": 4369
+    },
+    "lookalike_tiles": {
+     "n": 150,
+     "frac_tiles_any_pred": 0.08,
+     "mean_fp_frac": 5.72015164305208e-05,
+     "p95_fp_frac": 0.00017599866867257913,
+     "max_fp_frac": 0.0027379989624023438,
+     "false_components_total": 78,
+     "false_components_per_tile": 0.52,
+     "largest_false_component_px": 1174
+    },
+    "no_oil_tiles": {
+     "n": 147,
+     "frac_tiles_any_pred": 0.047619047619047616,
+     "mean_fp_frac": 0.0001218984780466751,
+     "p95_fp_frac": 0.0,
+     "max_fp_frac": 0.009176463746765267,
+     "false_components_total": 23,
+     "false_components_per_tile": 0.1564625850340136,
+     "largest_false_component_px": 3092
+    }
+   },
+   "at_0_5_reference": {
+    "n_tiles": 447,
+    "tiles_by_class": {
+     "oil": 150,
+     "lookalike": 150,
+     "no_oil": 147
+    },
+    "global_pixel": {
+     "iou": 0.34568964096019367,
+     "dice": 0.5137732065969279,
+     "precision": 0.8801680020222465,
+     "recall": 0.3627629010499187
+    },
+    "oil_tiles": {
+     "n": 150,
+     "pixel": {
+      "iou": 0.3463340000009716,
+      "dice": 0.5144845187014837,
+      "precision": 0.8843572856649775,
+      "recall": 0.3627629010499187
+     },
+     "tile_dice_mean": 0.701658869637502,
+     "tile_dice_median": 0.8595804493484285,
+     "tile_recall_mean": 0.7395911732484296,
+     "tiles_detected_any_tp": 142,
+     "tiles_missed_entirely": 8,
+     "false_components_total": 138,
+     "largest_false_component_px": 5475,
+     "gt_components": 5756,
+     "missed_gt_components": 4294
+    },
+    "lookalike_tiles": {
+     "n": 150,
+     "frac_tiles_any_pred": 0.1,
+     "mean_fp_frac": 7.921784178539415e-05,
+     "p95_fp_frac": 0.00034912750262891057,
+     "max_fp_frac": 0.0034074783325195312,
+     "false_components_total": 87,
+     "false_components_per_tile": 0.58,
+     "largest_false_component_px": 2102
+    },
+    "no_oil_tiles": {
+     "n": 147,
+     "frac_tiles_any_pred": 0.05442176870748299,
+     "mean_fp_frac": 0.00013081996711367466,
+     "p95_fp_frac": 2.1205309809575974e-06,
+     "max_fp_frac": 0.009550578132723378,
+     "false_components_total": 27,
+     "false_components_per_tile": 0.1836734693877551,
+     "largest_false_component_px": 3500
+    }
+   }
+  },
+  "acq_clean": {
+   "at_frozen_0_60": {
+    "n_tiles": 385,
+    "tiles_by_class": {
+     "lookalike": 150,
+     "no_oil": 147,
+     "oil": 88
+    },
+    "global_pixel": {
+     "iou": 0.25688246316329627,
+     "dice": 0.40876131331609117,
+     "precision": 0.8757158443181079,
+     "recall": 0.26660211262189615
+    },
+    "oil_tiles": {
+     "n": 88,
+     "pixel": {
+      "iou": 0.2574779179184987,
+      "dice": 0.4095148141363811,
+      "precision": 0.8826747061146016,
+      "recall": 0.26660211262189615
+     },
+     "tile_dice_mean": 0.6402949199913199,
+     "tile_dice_median": 0.8319309718036252,
+     "tile_recall_mean": 0.66854598490074,
+     "tiles_detected_any_tp": 80,
+     "tiles_missed_entirely": 8,
+     "false_components_total": 60,
+     "largest_false_component_px": 5428,
+     "gt_components": 3308,
+     "missed_gt_components": 2539
+    },
+    "lookalike_tiles": {
+     "n": 150,
+     "frac_tiles_any_pred": 0.08,
+     "mean_fp_frac": 5.72015164305208e-05,
+     "p95_fp_frac": 0.00017599866867257913,
+     "max_fp_frac": 0.0027379989624023438,
+     "false_components_total": 78,
+     "false_components_per_tile": 0.52,
+     "largest_false_component_px": 1174
+    },
+    "no_oil_tiles": {
+     "n": 147,
+     "frac_tiles_any_pred": 0.047619047619047616,
+     "mean_fp_frac": 0.0001218984780466751,
+     "p95_fp_frac": 0.0,
+     "max_fp_frac": 0.009176463746765267,
+     "false_components_total": 23,
+     "false_components_per_tile": 0.1564625850340136,
+     "largest_false_component_px": 3092
+    }
+   },
+   "at_0_5_reference": {
+    "n_tiles": 385,
+    "tiles_by_class": {
+     "lookalike": 150,
+     "no_oil": 147,
+     "oil": 88
+    },
+    "global_pixel": {
+     "iou": 0.2689378596386211,
+     "dice": 0.42387869129416866,
+     "precision": 0.8695399021966863,
+     "recall": 0.280245684177268
+    },
+    "oil_tiles": {
+     "n": 88,
+     "pixel": {
+      "iou": 0.269656572769156,
+      "dice": 0.42477088458814904,
+      "precision": 0.8770983116659885,
+      "recall": 0.280245684177268
+     },
+     "tile_dice_mean": 0.6469916901897588,
+     "tile_dice_median": 0.841486676555349,
+     "tile_recall_mean": 0.6824101693417962,
+     "tiles_detected_any_tp": 80,
+     "tiles_missed_entirely": 8,
+     "false_components_total": 68,
+     "largest_false_component_px": 5475,
+     "gt_components": 3308,
+     "missed_gt_components": 2501
+    },
+    "lookalike_tiles": {
+     "n": 150,
+     "frac_tiles_any_pred": 0.1,
+     "mean_fp_frac": 7.921784178539415e-05,
+     "p95_fp_frac": 0.00034912750262891057,
+     "max_fp_frac": 0.0034074783325195312,
+     "false_components_total": 87,
+     "false_components_per_tile": 0.58,
+     "largest_false_component_px": 2102
+    },
+    "no_oil_tiles": {
+     "n": 147,
+     "frac_tiles_any_pred": 0.05442176870748299,
+     "mean_fp_frac": 0.00013081996711367466,
+     "p95_fp_frac": 2.1205309809575974e-06,
+     "max_fp_frac": 0.009550578132723378,
+     "false_components_total": 27,
+     "false_components_per_tile": 0.1836734693877551,
+     "largest_false_component_px": 3500
+    }
+   }
+  },
+  "place_clean": {
+   "at_frozen_0_60": {
+    "n_tiles": 212,
+    "tiles_by_class": {
+     "lookalike": 110,
+     "no_oil": 65,
+     "oil": 37
+    },
+    "global_pixel": {
+     "iou": 0.4932021785712776,
+     "dice": 0.6605966501377358,
+     "precision": 0.8637259110680177,
+     "recall": 0.5348190255477394
+    },
+    "oil_tiles": {
+     "n": 37,
+     "pixel": {
+      "iou": 0.4951891846208086,
+      "dice": 0.6623766272712739,
+      "precision": 0.8698383927855985,
+      "recall": 0.5348190255477394
+     },
+     "tile_dice_mean": 0.7297483422487694,
+     "tile_dice_median": 0.8301422151080465,
+     "tile_recall_mean": 0.767471780222772,
+     "tiles_detected_any_tp": 37,
+     "tiles_missed_entirely": 0,
+     "false_components_total": 18,
+     "largest_false_component_px": 5428,
+     "gt_components": 895,
+     "missed_gt_components": 541
+    },
+    "lookalike_tiles": {
+     "n": 110,
+     "frac_tiles_any_pred": 0.08181818181818182,
+     "mean_fp_frac": 5.432493551338774e-05,
+     "p95_fp_frac": 0.00017556951523019763,
+     "max_fp_frac": 0.0027379989624023438,
+     "false_components_total": 56,
+     "false_components_per_tile": 0.509090909090909,
+     "largest_false_component_px": 1174
+    },
+    "no_oil_tiles": {
+     "n": 65,
+     "frac_tiles_any_pred": 0.03076923076923077,
+     "mean_fp_frac": 8.726776189651231e-05,
+     "p95_fp_frac": 0.0,
+     "max_fp_frac": 0.0055999755859375,
+     "false_components_total": 4,
+     "false_components_per_tile": 0.06153846153846154,
+     "largest_false_component_px": 3092
+    }
+   },
+   "at_0_5_reference": {
+    "n_tiles": 212,
+    "tiles_by_class": {
+     "lookalike": 110,
+     "no_oil": 65,
+     "oil": 37
+    },
+    "global_pixel": {
+     "iou": 0.5245522829278901,
+     "dice": 0.6881394476291647,
+     "precision": 0.861216462663837,
+     "recall": 0.5729872939210259
+    },
+    "oil_tiles": {
+     "n": 37,
+     "pixel": {
+      "iou": 0.5271414331255734,
+      "dice": 0.6903636057423737,
+      "precision": 0.8682178213810972,
+      "recall": 0.5729872939210259
+     },
+     "tile_dice_mean": 0.7423236876155241,
+     "tile_dice_median": 0.8414846877531591,
+     "tile_recall_mean": 0.7885320218710774,
+     "tiles_detected_any_tp": 37,
+     "tiles_missed_entirely": 0,
+     "false_components_total": 20,
+     "largest_false_component_px": 5475,
+     "gt_components": 895,
+     "missed_gt_components": 529
+    },
+    "lookalike_tiles": {
+     "n": 110,
+     "frac_tiles_any_pred": 0.1,
+     "mean_fp_frac": 7.742005391722783e-05,
+     "p95_fp_frac": 0.0002693049623457074,
+     "max_fp_frac": 0.0034074783325195312,
+     "false_components_total": 59,
+     "false_components_per_tile": 0.5363636363636364,
+     "largest_false_component_px": 2102
+    },
+    "no_oil_tiles": {
+     "n": 65,
+     "frac_tiles_any_pred": 0.046153846153846156,
+     "mean_fp_frac": 9.639625207831326e-05,
+     "p95_fp_frac": 0.0,
+     "max_fp_frac": 0.0061626434326171875,
+     "false_components_total": 5,
+     "false_components_per_tile": 0.07692307692307693,
+     "largest_false_component_px": 3500
+    }
+   }
+  }
+ },
+ "contamination_effect": {
+  "note": "view minus full, at the frozen 0.60; views also differ in class mix",
+  "acq_clean": {
+   "global_iou_delta": -0.07830626986811878,
+   "global_dice_delta": -0.09332311076439354,
+   "global_precision_delta": -0.012622982104783187,
+   "global_recall_delta": -0.08332998962607596,
+   "oil_tiles_iou_delta": -0.07825340680489645,
+   "oil_tiles_dice_delta": -0.09317808301929326,
+   "oil_tiles_precision_delta": -0.009485439596830458,
+   "oil_tiles_recall_delta": -0.08332998962607596
+  },
+  "place_clean": {
+   "global_iou_delta": 0.15801344553986257,
+   "global_dice_delta": 0.15851222605725113,
+   "global_precision_delta": -0.02461291535487342,
+   "global_recall_delta": 0.1848869232997673,
+   "oil_tiles_iou_delta": 0.1594578598974134,
+   "oil_tiles_dice_delta": 0.15968373011559955,
+   "oil_tiles_precision_delta": -0.022321752925833604,
+   "oil_tiles_recall_delta": 0.1848869232997673
+  }
+ },
+ "runtime_s": {
+  "val_recheck": 39.33128261566162,
+  "test_inference_and_tile_stats": 34.891183853149414,
+  "total": 83.06787014007568
+ },
+ "peak_vram_gb": {
+  "allocated": 3.0232672691345215,
+  "reserved": 4.53125
+ }
+}

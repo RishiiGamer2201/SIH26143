@@ -1,7 +1,7 @@
 {
  "checkpoint_epoch": 9,
  "threshold_selected": 0.6,
- "pixel_area_note": "pixel counts are image-space diagnostics only, not areas. The cache grid is EPSG:4326 (degrees): N-S and E-W ground sizes differ and E-W size varies with cos(latitude). Real slick area: georeference the prediction, vectorize, then compute geodesically or in a suitable projected CRS; never pixel_count * 400 m2.",
+ "pixel_area_note": "20 m cache pixels (~0.0004 km2 each)",
  "at_0_5": {
   "global_pixel": {
    "iou": 0.7529564145428309,

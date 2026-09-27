@@ -8,3 +8,4 @@ data/incident_001/sentinel1/**/measurement/
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+results/E006_segformer_test/test_prob_u8.npy

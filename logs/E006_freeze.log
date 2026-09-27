@@ -1,0 +1,136 @@
+{
+ "frozen_at": "2026-09-27T19:03:11+00:00",
+ "status": "E005 approved and FROZEN. Never retrain, never change the threshold, never overwrite these files (E006+ write elsewhere).",
+ "best_epoch": 9,
+ "threshold": 0.6,
+ "threshold_rule": "max global val Dice over sweep 0.10..0.90 step 0.05; frozen; test never used",
+ "secondary_reference_threshold": 0.5,
+ "model": {
+  "library": "segmentation_models_pytorch 0.5.0",
+  "arch": "Segformer",
+  "encoder": "mit_b2",
+  "encoder_init": "imagenet",
+  "in_channels": 2,
+  "classes": 1,
+  "params_m": 24.719746,
+  "input": "ch0 = (vv20 - norm_mu) / norm_sd on valid px, 0 on invalid; ch1 = validity (lab20 != 255); full 1024x1024 tiles",
+  "norm_mu": 0.4433064878306307,
+  "norm_sd": 0.12064228658860848,
+  "output": "1 logit/px, sigmoid, oil if prob >= threshold; no post-processing",
+  "inference_dtype": "bf16 autocast",
+  "checkpoint_val_iou_at_0_5": 0.7529564145428309
+ },
+ "dataset": {
+  "source": "Trujillo Sentinel-1 (data/sar/extracted), E002 cache v1 20 m (EPSG:4326 degree grid)",
+  "split": "results/sar_audit/splits_v1_acq.parquet",
+  "n_train": 1941,
+  "n_val": 477,
+  "train_tiles": {
+   "oil": 844,
+   "no_oil": 550,
+   "lookalike": 547
+  },
+  "val_tiles": {
+   "oil": 211,
+   "lookalike": 135,
+   "no_oil": 131
+  },
+  "test_used": false
+ },
+ "validation": {
+  "at_frozen_0_60": {
+   "iou": 0.7539305890035947,
+   "dice": 0.8597040199086801,
+   "precision": 0.8635062660881413,
+   "recall": 0.8559351115226447
+  },
+  "at_0_5": {
+   "iou": 0.7529564145428309,
+   "dice": 0.8590703206265412,
+   "precision": 0.8495969303438239,
+   "recall": 0.8687573583531621
+  },
+  "oil_tiles_at_0_60": {
+   "iou": 0.7679818966851507,
+   "dice": 0.8687666973571008,
+   "precision": 0.8819888629721186,
+   "recall": 0.8559351115226447
+  }
+ },
+ "pixel_area_note": "pixel counts are image-space diagnostics only, not areas. The cache grid is EPSG:4326 (degrees): N-S and E-W ground sizes differ and E-W size varies with cos(latitude). Real slick area: georeference the prediction, vectorize, then compute geodesically or in a suitable projected CRS; never pixel_count * 400 m2.",
+ "notes": [
+  "val_metrics.json pixel_area_note corrected on 2026-09-28 before freezing (metrics unchanged); original kept as superseded/val_metrics.2026-09-27_pixel_area_note.json.",
+  "scripts/e005_segformer.py hash is after the same pixel-area-note correction (PIXEL_AREA_NOTE constant); logic unchanged."
+ ]
+}
+{
+ "head": "5c16912effbb458a0aa0f321ada42fd29618c360",
+ "branch": "main",
+ "remote": "https://github.com/RishiiGamer2201/SIH26143.git",
+ "files": {
+  "results/E005_segformer_b2/best.pt": {
+   "tracked": true,
+   "matches_head": true
+  },
+  "results/E005_segformer_b2/config.json": {
+   "tracked": true,
+   "matches_head": true
+  },
+  "results/E005_segformer_b2/frozen_threshold.json": {
+   "tracked": true,
+   "matches_head": true
+  },
+  "results/E005_segformer_b2/training_complete.json": {
+   "tracked": true,
+   "matches_head": true
+  },
+  "results/E005_segformer_b2/val_metrics.json": {
+   "tracked": true,
+   "matches_head": false
+  },
+  "results/E005_segformer_b2/pretraining_tests.json": {
+   "tracked": true,
+   "matches_head": true
+  },
+  "results/E005_segformer_b2/history.csv": {
+   "tracked": true,
+   "matches_head": true
+  },
+  "results/E005_segformer_b2/val_threshold_sweep.csv": {
+   "tracked": true,
+   "matches_head": true
+  },
+  "results/E005_segformer_b2/val_tiles.parquet": {
+   "tracked": true,
+   "matches_head": true
+  },
+  "results/E005_segformer_b2/val_gt_component_recall_by_size.csv": {
+   "tracked": true,
+   "matches_head": true
+  },
+  "results/sar_audit/splits_v1_acq.parquet": {
+   "tracked": true,
+   "matches_head": true
+  },
+  "data/sar/cache/v1/meta.parquet": {
+   "tracked": true,
+   "matches_head": true
+  },
+  "data/sar/cache/v1/cache_config.json": {
+   "tracked": true,
+   "matches_head": true
+  },
+  "data/sar/cache/v1/vv20.npy": {
+   "tracked": false,
+   "matches_head": false
+  },
+  "data/sar/cache/v1/lab20.npy": {
+   "tracked": false,
+   "matches_head": false
+  },
+  "scripts/e005_segformer.py": {
+   "tracked": true,
+   "matches_head": false
+  }
+ }
+}

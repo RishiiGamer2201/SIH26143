@@ -4,6 +4,88 @@ Newest first. Every entry: date, what ran, exact command, outputs, result, decis
 
 ---
 
+## 2026-09-28 · E006 — One-shot official test of the FROZEN E005 SegFormer (evaluation only)
+
+**Freeze.** `python scripts/e006_segformer_test.py freeze` wrote `results/E005_segformer_b2/FROZEN.json`. It holds SHA-256 of 10 E005 artefacts, the split, the cache meta, `vv20`/`lab20` and `e005_segformer.py`, plus epoch 9, threshold 0.60, the architecture, split identity, val metrics and git state (HEAD `5c16912`).
+- `best.pt` sha256 `1240a10a184d90a156ddcacd4f72469cca94d33710b4989d1eed1818679b300b`.
+- Before freezing, the val_metrics.json `pixel_area_note` "20 m cache pixels (~0.0004 km2 each)" was corrected. It was wrong: the grid is EPSG:4326 degrees. The original is in `superseded/`; the metrics are unchanged.
+
+**Run.** `conda activate sih-ml; python scripts/e006_segformer_test.py test` (log `logs/E006_test.log`, outputs `results/E006_segformer_test/`). The script:
+1. Verifies all hashes.
+2. Re-runs val and requires E005's metrics (diff 0.0) and the component table (identical) to reproduce.
+3. Only then loads test and scores the raw mask at the frozen 0.60 (0.5 as reference).
+4. Re-verifies the hashes.
+
+No training, sweep, selection or post-processing. Runtime 83 s (val re-check 39 s, test 35 s). Peak VRAM 3.02 GB allocated / 4.53 GB reserved.
+
+**Test views** (3 all-nodata no_oil tiles excluded: 00005, 00087, 00099):
+
+| view | tiles (oil / LA / NoOil) | IoU | Dice | P | R | IoU / Dice @0.5 (ref) |
+|---|---|---|---|---|---|---|
+| full | 447 (150/150/147) | **0.335** | **0.502** | 0.888 | 0.350 | 0.346 / 0.514 |
+| acquisition-clean | 385 (88/150/147) | 0.257 | 0.409 | 0.876 | 0.267 | 0.269 / 0.424 |
+| place-clean | 212 (37/110/65) | 0.493 | 0.661 | 0.864 | 0.535 | 0.525 / 0.688 |
+
+Val was IoU 0.754 / Dice 0.860.
+
+**Oil tiles @0.60:**
+
+| view | n | IoU / Dice / P / R (pixel) | tile Dice mean / median | tile recall mean | any TP | missed entirely |
+|---|---|---|---|---|---|---|
+| full | 150 | 0.336 / 0.503 / 0.892 / 0.350 | 0.697 / 0.854 | 0.727 | 142 | 8 |
+| acq-clean | 88 | 0.257 / 0.410 / 0.883 / 0.267 | 0.640 / 0.832 | 0.669 | 80 | 8 |
+| place-clean | 37 | 0.495 / 0.662 / 0.870 / 0.535 | 0.730 / 0.830 | 0.767 | 37 | 0 |
+
+**Negative tiles @0.60** (acq-clean = full, because every negative test tile is acquisition-clean):
+
+| | any predicted oil | mean FP frac | p95 | max | false comps (per tile) | largest false comp |
+|---|---|---|---|---|---|---|
+| LookAlike full (150) | 8.0% | 5.7e-5 | 1.8e-4 | 0.0027 | 78 (0.52) | 1,174 px |
+| LookAlike place-clean (110) | 8.2% | 5.4e-5 | 1.8e-4 | 0.0027 | 56 (0.51) | 1,174 px |
+| NoOil full (147) | 4.8% | 1.2e-4 | 0 | 0.0092 | 23 (0.16) | 3,092 px |
+| NoOil place-clean (65) | 3.1% | 8.7e-5 | 0 | 0.0056 | 4 (0.06) | 3,092 px |
+
+Look-alike FP is lower than on val (22% of tiles, mean 1.2e-3).
+
+**GT component recall @0.60, full test** (4-connected, same as E005; all views in `test_component_recall_by_size.csv`):
+
+| size (px) | 1 | 2–4 | 5–16 | 17–64 | 65–256 | 257–1024 | >1024 |
+|---|---|---|---|---|---|---|---|
+| n | 1,311 | 917 | 1,275 | 1,001 | 584 | 279 | 389 |
+| missed | 1,136 | 813 | 1,121 | 812 | 361 | 77 | 49 |
+| miss rate | 0.87 | 0.89 | 0.88 | 0.81 | 0.62 | 0.28 | 0.13 |
+| share of GT px | 0.01% | 0.02% | 0.07% | 0.21% | 0.48% | 0.92% | 98.3% |
+
+**Main failure mode: large, broad slicks.**
+- 10 of 150 oil tiles hold 50% of all test FN, and 21 tiles hold 80%. Each has 25–80% of the tile labelled oil, predicted almost empty.
+- All 8 complete misses are such tiles (GT 220k–574k px; 00015, 00004, 00059, 00068, 00040, 00061, 00127, 00012).
+- By tile GT-size quartile, median tile Dice is Q1 0.83, Q2 0.89, Q3 0.91, **Q4 0.08**. Q4 pixel recall is 0.16.
+- Without the 10 largest-FN tiles, oil-pixel IoU is 0.495 (diagnostic only, not a result).
+- The dominant test failure is strongly associated with a label-coverage distribution shift: broad oil masks are largely absent from train/validation. Region, annotation style and scene-intensity shift may also contribute and have not been disentangled. Oil-tile coverage (`pos_frac_20`):
+
+  | split | median | tiles > 20% | tiles > 40% |
+  |---|---|---|---|
+  | train | 1.6% | 3 of 844 | 0 |
+  | val | 2.3% | 0 | 0 |
+  | test | 4.8% | 25 of 150 | 8 |
+
+  Val could not expose this failure. The missed tiles are broad, low-contrast dark areas with scene-wide VV medians of −23 to −30 dB (`test_examples.png`).
+- Thin and linear slicks are segmented well (tile Dice 0.82–0.92 in the figure).
+
+**Other failure modes.**
+- Tiny GT fragments (≤ 64 px) are missed 81–89% of the time. They hold 0.3% of GT px.
+- LookAlike FPs are thin streaks and small bright-edged blobs; the largest is 1,174 px.
+- NoOil FPs are coastal / land-edge dark features (00140, 00093, 00059).
+
+**Contamination effect.** At 0.60: acq-clean vs full is IoU −0.078 / Dice −0.093. Place-clean vs full is IoU +0.158 / Dice +0.159.
+- The direction does **not** measure leakage. The large missed slicks are almost all acquisition-clean but not place-clean, so the view deltas mainly reflect which view contains those tiles, plus a different class mix.
+- The full score is **not** an unbiased generalisation estimate, and neither clean view is either (n oil 88 / 37).
+
+Decision: E006 reviewed and **accepted as the frozen baseline test result** (2026-09-28). E005 stays frozen and unchanged (no threshold change, no post-processing, no retraining based on test failures).
+The large-slick failure matters for E007: an incident slick may fill a whole tile. Any remedy would be a new, independently specified experiment tuned on dev/val only, never on these test results.
+
+---
+
 ## 2026-09-27 · E005 — SegFormer MiT-B2 binary oil segmentation, Trujillo only (train/val; test NOT run)
 
 **Run.** `conda activate sih-ml; cd scripts; python e005_segformer.py {tests|train|validate}`.
@@ -91,7 +173,7 @@ Newest first. Every entry: date, what ran, exact command, outputs, result, decis
 5. Tiny GT fragments (≤ 64 px) are mostly missed (73% miss rate; all ≤ 64 px fragments together hold 0.5% of GT pixels).
 6. The epoch-to-epoch val metric is unstable, and val was used for both checkpoint and threshold selection, so val numbers are optimistic for test.
 
-**Official test: NOT evaluated.** E006 awaits review.
+**Official test:** not evaluated here; one-shot test in E006 (2026-09-28) with this frozen checkpoint and threshold.
 
 ---
 
@@ -376,7 +458,7 @@ E001–E003, E101, E102 done (entries above). E000 item 2 is superseded by E102 
 |---|---|---|
 | E004 | DONE 2026-09-27 (entry above): val macro-F1 0.907, test 0.777 / 0.758 / 0.812 | — |
 | E005 | DONE 2026-09-27 (entry above): SegFormer MiT-B2, Trujillo only. Val IoU@0.5 0.753; frozen threshold 0.60 gives IoU 0.754 / Dice 0.860. Test not run | — |
-| E006 | Official test evaluation (3 variants), once, after model selection on val | minutes |
+| E006 | Official test evaluation (3 variants), once, after model selection on val | DONE 2026-09-28 (segmentation; test IoU 0.335 full / 0.257 acq-clean / 0.493 place-clean) |
 | E007 | Incident 001 GRD → σ0 VV → geocode → tile → classify → segment → polygon → geometry | ~10 min |
 | E008 | Hindcast + attribution from **our** polygon (new output dir, frozen parameters) | ~15 min |
 | E009 | Physics sensitivity, windage/Stokes double counting (new script + new output dir; frozen baseline untouched): (1) explicit Stokes + lower/no windage, (2) windage without explicit Stokes, (3) frozen baseline. Compare release region + per-bin ranks (older bins); never choose by Cerulean agreement | ~3 × 15 min CPU |
