@@ -4,6 +4,87 @@ Newest first. Every entry: date, what ran, exact command, outputs, result, decis
 
 ---
 
+## 2026-09-28 · E008b — Forcing-domain expansion (forcing v2) and 42 deterministic re-runs (no ensemble, no AIS)
+
+**Scripts and outputs.** Neither script edits E008a or v1 files.
+- `scripts/e008b_prepare_forcing_v2.py` has stages `provenance`, `config`, `download`, `build`, `validate` and `freeze`.
+  `download` runs in the base env (cdsapi); the other stages run in `opendrift`.
+- `scripts/e008b_candidate_hindcast_v2.py` has stages `preflight`, `run`, `summary` and `compare`. It imports the committed
+  E008a module unchanged and swaps only its `OCEAN`, `WIND` and `OUT` constants.
+- Outputs: `results/E008b_forcing_expansion/`, `results/E008b_candidate_hindcast_v2/`, `data/incident_001/forcing_v2/`.
+- Logs: `logs/E008b_*.log`.
+- E008a outputs, v1 forcing, `results/incident_001/` and the root scripts are unchanged. Their hashes were checked before
+  and after the runs.
+
+**Provenance** (`provenance_audit.json`). No preparation script existed, so the recipe was rebuilt from the v1 raw files.
+- **Ocean.** SMOC `cmems_mod_glo_phy_anfc_merged-uv_PT1H-i`, version 202211, product GLOBAL_ANALYSISFORECAST_PHY_001_024,
+  downloaded with copernicusmarine 2.4.1.
+  - Recipe: x/y current = uo+utide and vo+vtide, Stokes = vsdx/vsdy, attrs replaced, time-first coordinate order,
+    netCDF4 engine.
+  - The rebuilt `ocean_opendrift.nc` is **byte-identical** to v1.
+- **Wind.** ERA5 `download_era5_wind.py` (168 h); keep the first 151 `valid_time` values; write with the h5netcdf engine.
+  - Values, header and encoding are identical to v1. The only byte difference is the `_NCProperties` string: v1 was
+    written with HDF5 2.0.0, the current env has HDF5 1.14.6.
+- **v1 request box.** The box W −92.477933, S 25.106677, E −88.379742, N 29.139636 (used for both products) is exactly
+  the reference slick bounds ±2.0°. It is recorded for provenance only; v2 bounds do not use it.
+
+**Domain** (`forcing_expansion_config.json`, written before any download).
+- Envelope of every finite position of all 42 E008a trajectories, plus the in-memory deactivation positions:
+  lon −90.581 to −88.498, lat 26.694 to 28.227.
+- Buffer +2.0°, then snapped outward to 0.25° nodes. These nodes lie on both the ERA5 grid and the SMOC −180+k/12 grid,
+  so both products get the same requested bounds.
+- **Result: W −92.75, E −86.25, S 24.5, N 30.25.** SMOC is 79 × 70 cells, ERA5 27 × 24; both as predicted.
+- Same time range (151 h ocean; 168 h wind cut to 151), same variables (all 8 SMOC raw variables), dataset version pinned.
+- Predeclared before download:
+  - Equivalence criterion: exact equality plus identical NaN masks, no tolerance.
+  - Freeze criterion.
+
+**Equivalence** (`forcing_overlap_validation.json`). Coordinates were intersected on exact values; no resampling.
+- v1 is fully contained in v2 on every axis.
+- All 4 ocean variables: 355,152 cells compared (354,850 finite in both for currents; 302 NaN in both), 100 % exact,
+  max diff 0, 0 NaN-mask disagreements.
+- u10 and v10: 38,656 cells each, 100 % exact, max diff 0.
+- Variables, dims, units, standard_names, dtype, encoding, depth and time are identical.
+- Wind differences are GRIB grid-extent attrs (`Nx`, `Ny`, first/last grid point, `numberOfPoints`) and the global
+  `history` timestamp.
+- OpenDrift readers: variables and variable_mapping are identical (current: 4 variables; wind: x_wind, y_wind), as are
+  proj, time and z.
+- **Anomaly.** The current reader's `delta_x` (= x[1]−x[0]) is 0.0833283 in v1 and 0.0833359 in v2. The float32 1/12°
+  grid alternates between two step sizes, and v2 starts on a different node.
+- **Result: PASS.**
+
+**Runs** (identical recipe; the runtime config of 102 keys equals v1 with 0 differences).
+- 42 of 42 completed; **42 of 42 `physics_valid_for_attribution = true`**.
+- 0 deactivations, 0 current or wind exits, 0 fallback zeros. All 42 in-memory re-runs are bit-exact to the saved files.
+- **C12 and C14 are valid under the same rule**, with no special-casing: 2,000 of 2,000 reach −48 h, maximum longitude
+  −88.471 and −88.482.
+- Forcing margins: C1–C10 224–230 km; C12 232 km; C14 236 km.
+- Realized trajectory margins: C1–C10 at least 224.2 km; C12 218.3 km; C14 219.5 km. The minimum over all 42 is
+  214.6 km (C25).
+- Runtime 131 s for the runs (255 s wall, including the in-memory diagnostic re-runs).
+- Disk: 74 MB of results and 40 MB of forcing v2.
+
+**v1 vs v2 for the 40 runs valid under v1** (`v1_v2_trajectory_comparison.csv`).
+- Status, finite mask and per-hour active counts match 40 of 40.
+- 30 of 40 are exactly equal wherever finite (all variables bit-equal).
+- **The other 10 (C5, C10, C18, C19, C23, C26, C29, C38, C44, C47) differ by exactly 1 float32 ulp.** Max |dlon| is
+  7.63e-6° and max |dlat| 1.91e-6°. The median endpoint distance is 0, the max 0.76 m.
+- Their origin-cloud CSVs therefore differ at that ulp.
+- This is consistent with the reader-block origin/`delta_x` effect above; the forcing values themselves are identical.
+
+**Freeze.** `data/incident_001/forcing_v2/FROZEN.json` was written after the predeclared criteria held: equivalence
+PASS, 42/42 completed, 0 edge exits.
+- It hashes the description, the download metadata, the raw and processed files, both scripts, and the config,
+  provenance and validation files.
+- It is described as the "same frozen physics recipe with expanded environmental spatial coverage", not better physics.
+
+**Also written:** `candidate_origin_pairwise.parquet`, a by-product of the reused E008a summary stage. It is descriptive
+only: no threshold and no fusion.
+
+**Not run:** ensemble, AIS, V2/V2.1 attribution, release-age ranking and candidate fusion.
+
+---
+
 ## 2026-09-28 · E008a — Candidate-driven deterministic hindcasts (42 candidates; no ensemble, no AIS)
 
 **Script and outputs.** `scripts/e008a_candidate_hindcast.py`, run in the `opendrift` env (OpenDrift 1.14.11).

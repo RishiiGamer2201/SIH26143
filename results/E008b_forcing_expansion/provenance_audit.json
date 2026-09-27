@@ -1,0 +1,149 @@
+{
+ "forbidden_token_hits": [],
+ "ocean": {
+  "product_id": "GLOBAL_ANALYSISFORECAST_PHY_001_024",
+  "dataset_id": "cmems_mod_glo_phy_anfc_merged-uv_PT1H-i",
+  "dataset_version": "202211",
+  "dataset_name": "hourly mean merged surface currents from oceanic circulation, tides and waves",
+  "description_file": "data/incident_001/currents/dataset_description.json",
+  "description_sha256": "0f30b399813e5f35ed416a441827eae242a6cc054f47aa549bef635d77034c8f",
+  "raw_global_attrs": {
+   "Conventions": "CF-1.6",
+   "area": "GLOBAL",
+   "contact": "servicedesk.cmems@mercator-ocean.eu",
+   "credit": "E.U. Copernicus Marine Service Information (CMEMS)",
+   "institution": "MERCATOR OCEAN",
+   "licence": "http://marine.copernicus.eu/services-portfolio/service-commitments-and-licence/",
+   "producer": "CMEMS - Global Monitoring and Forecasting Centre",
+   "product_user_manual": "http://marine.copernicus.eu/documents/PUM/CMEMS-GLO-PUM-001-024.pdf",
+   "quality_information_document": "http://marine.copernicus.eu/documents/QUID/CMEMS-GLO-QUID-001-024.pdf",
+   "references": "http://marine.copernicus.eu",
+   "source": "MERCATOR GLO12, mfwamglo, FES2014",
+   "title": "hourly mean merged surface currents from oceanic circulation, tides and waves",
+   "copernicusmarine_version": "2.4.1"
+  },
+  "raw_variables": [
+   "uo",
+   "vo",
+   "utide",
+   "vtide",
+   "vsdx",
+   "vsdy",
+   "utotal",
+   "vtotal"
+  ],
+  "raw_time": [
+   "2023-01-01T00:00:00.000000000",
+   "2023-01-07T06:00:00.000000000",
+   151
+  ],
+  "raw_depth": [
+   0.49402499198913574
+  ],
+  "raw_lon": [
+   -92.41666412353516,
+   -88.41666412353516,
+   49
+  ],
+  "raw_lat": [
+   25.16666603088379,
+   29.08333396911621,
+   48
+  ],
+  "download_tool": "copernicusmarine 2.4.1 subset (command not preserved; request reconstructed from the file)",
+  "reconstructed_request": {
+   "dataset_id": "cmems_mod_glo_phy_anfc_merged-uv_PT1H-i",
+   "variables": "all 8 (= uo,vo,utide,vtide,vsdx,vsdy,utotal,vtotal)",
+   "start_datetime": "2023-01-01T00:00:00",
+   "end_datetime": "2023-01-07T06:00:00",
+   "bbox_same_as_era5_area": true,
+   "depth": "not requested (dataset has one level, 0.494025 m)"
+  },
+  "processing": "SMOC -> OpenDrift ocean file. Water current = uo+utide, vo+vtide (NOT utotal); Stokes = vsdx/vsdy kept separately.\n    Coordinate order time, depth, latitude, longitude; netCDF4 engine; attrs replaced wholesale.",
+  "rebuild": {
+   "raw": "data/incident_001/currents/ocean_surface_velocity.nc",
+   "raw_sha256": "810ce1384bc8bd608a7d7008b9819a2adbc828e010169f3df91df3f9e4caca2f",
+   "v1": "data/incident_001/currents/ocean_opendrift.nc",
+   "v1_sha256": "3c8f047ac526dee253895f72ff73a3ce214530f07322ed04c28257824edc8ca8",
+   "rebuilt_sha256": "3c8f047ac526dee253895f72ff73a3ce214530f07322ed04c28257824edc8ca8",
+   "byte_identical": true,
+   "header_lines_equal_len": true,
+   "header_differences": [],
+   "values_bit_exact": {
+    "x_sea_water_velocity": true,
+    "y_sea_water_velocity": true,
+    "sea_surface_wave_stokes_drift_x_velocity": true,
+    "sea_surface_wave_stokes_drift_y_velocity": true,
+    "time": true,
+    "depth": true,
+    "latitude": true,
+    "longitude": true
+   },
+   "reproduced": true
+  }
+ },
+ "wind": {
+  "dataset": "reanalysis-era5-single-levels (product_type reanalysis)",
+  "download_script": "data/incident_001/wind/download_era5_wind.py",
+  "download_script_sha256": "69a8f85e9dadc4f183772166ee86d53a5a7ef9e336d511591d8cc92a016f5d1e",
+  "download_script_text": "import cdsapi\n\ndataset = \"reanalysis-era5-single-levels\"\n\nrequest = {\n    \"product_type\": [\"reanalysis\"],\n\n    \"variable\": [\n        \"10m_u_component_of_wind\",\n        \"10m_v_component_of_wind\",\n    ],\n\n    \"year\": [\"2023\"],\n    \"month\": [\"01\"],\n\n    \"day\": [\n        \"01\", \"02\", \"03\", \"04\",\n        \"05\", \"06\", \"07\"\n    ],\n\n    \"time\": [\n        \"00:00\", \"01:00\", \"02:00\", \"03:00\",\n        \"04:00\", \"05:00\", \"06:00\", \"07:00\",\n        \"08:00\", \"09:00\", \"10:00\", \"11:00\",\n        \"12:00\", \"13:00\", \"14:00\", \"15:00\",\n        \"16:00\", \"17:00\", \"18:00\", \"19:00\",\n        \"20:00\", \"21:00\", \"22:00\", \"23:00\"\n    ],\n\n    # ERA5 area order:\n    # [North, West, South, East]\n    \"area\": [\n        29.139636,\n        -92.477933,\n        25.106677,\n        -88.379742\n    ],\n\n    \"data_format\": \"netcdf\",\n    \"download_format\": \"unarchived\",\n}\n\nclient = cdsapi.Client()\n\nprint(\"Submitting ERA5 request...\")\n\nclient.retrieve(\n    dataset,\n    request,\n    \"era5_wind_10m.nc\"\n)\n\nprint(\"DOWNLOAD COMPLETE\")\n",
+  "raw_valid_time": [
+   "2023-01-01T00:00:00.000000000",
+   "2023-01-07T23:00:00.000000000",
+   168
+  ],
+  "raw_lon": [
+   -92.25,
+   -88.5,
+   16
+  ],
+  "raw_lat": [
+   29.0,
+   25.25,
+   16
+  ],
+  "raw_global_attrs": {
+   "GRIB_centre": "ecmf",
+   "GRIB_centreDescription": "European Centre for Medium-Range Weather Forecasts",
+   "GRIB_subCentre": 0,
+   "Conventions": "CF-1.7",
+   "institution": "European Centre for Medium-Range Weather Forecasts",
+   "history": "2026-09-25T17:31 GRIB to CDM+CF via cfgrib-0.9.15.1/ecCodes-2.48.2 with {\"source\": \"tmpip0goiee/data.grib\", \"filter_by_keys\": {\"stream\": [\"oper\"], \"stepType\": [\"instant\"]}, \"encode_cf\": [\"parameter\", \"time\", \"geography\", \"vertical\"]}"
+  },
+  "processing": "ERA5 168 h file -> first 151 valid_times (2023-01-01T00 .. 2023-01-07T06, = ocean time axis); h5netcdf engine.",
+  "rebuild": {
+   "raw": "data/incident_001/wind/era5_wind_10m.nc",
+   "raw_sha256": "ba293fba708469d194696deec59d9154d200d8231dd55ee4b7e4b38fc26cfe47",
+   "v1": "data/incident_001/wind/era5_wind_10m_151h.nc",
+   "v1_sha256": "4fe4edcfbee1820608c364f51c1540c7fba9d6ab08888a7d62659d0de57df7a1",
+   "rebuilt_sha256": "6d913c5fe800283200fd8e1bca34f59bcbe6efd939b0b84d9ec3cab0827965a3",
+   "byte_identical": false,
+   "header_lines_equal_len": true,
+   "header_differences": [
+    [
+     "\t\t:_NCProperties = \"version=2,h5netcdf=1.8.1,hdf5=2.0.0,h5py=3.16.0\" ;",
+     "\t\t:_NCProperties = \"version=2,h5netcdf=1.8.1,hdf5=1.14.6,h5py=3.16.0\" ;"
+    ]
+   ],
+   "values_bit_exact": {
+    "u10": true,
+    "v10": true,
+    "number": true,
+    "valid_time": true,
+    "latitude": true,
+    "longitude": true,
+    "expver": true
+   },
+   "reproduced": true
+  }
+ },
+ "v1_request_bbox": {
+  "west": -92.477933,
+  "south": 25.106677,
+  "east": -88.379742,
+  "north": 29.139636,
+  "origin": "download_era5_wind.py area; SMOC raw grid extent is exactly the SMOC nodes inside this box. The box equals the reference slick polygon bounds +- 2.0 deg (reference-derived; recorded for provenance only; forcing v2 bounds are NOT derived from it)"
+ },
+ "library_note": "Wind v1 was written by h5netcdf 1.8.1 with HDF5 2.0.0; the current env has HDF5 1.14.6, so the _NCProperties provenance string is the only byte-level difference of the rebuilt wind file.",
+ "provenance_reproduced": true
+}

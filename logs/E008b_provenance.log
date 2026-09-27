@@ -1,0 +1,50 @@
+{
+ "ocean": {
+  "raw": "data/incident_001/currents/ocean_surface_velocity.nc",
+  "raw_sha256": "810ce1384bc8bd608a7d7008b9819a2adbc828e010169f3df91df3f9e4caca2f",
+  "v1": "data/incident_001/currents/ocean_opendrift.nc",
+  "v1_sha256": "3c8f047ac526dee253895f72ff73a3ce214530f07322ed04c28257824edc8ca8",
+  "rebuilt_sha256": "3c8f047ac526dee253895f72ff73a3ce214530f07322ed04c28257824edc8ca8",
+  "byte_identical": true,
+  "header_lines_equal_len": true,
+  "header_differences": [],
+  "values_bit_exact": {
+   "x_sea_water_velocity": true,
+   "y_sea_water_velocity": true,
+   "sea_surface_wave_stokes_drift_x_velocity": true,
+   "sea_surface_wave_stokes_drift_y_velocity": true,
+   "time": true,
+   "depth": true,
+   "latitude": true,
+   "longitude": true
+  },
+  "reproduced": true
+ },
+ "wind": {
+  "raw": "data/incident_001/wind/era5_wind_10m.nc",
+  "raw_sha256": "ba293fba708469d194696deec59d9154d200d8231dd55ee4b7e4b38fc26cfe47",
+  "v1": "data/incident_001/wind/era5_wind_10m_151h.nc",
+  "v1_sha256": "4fe4edcfbee1820608c364f51c1540c7fba9d6ab08888a7d62659d0de57df7a1",
+  "rebuilt_sha256": "6d913c5fe800283200fd8e1bca34f59bcbe6efd939b0b84d9ec3cab0827965a3",
+  "byte_identical": false,
+  "header_lines_equal_len": true,
+  "header_differences": [
+   [
+    "\t\t:_NCProperties = \"version=2,h5netcdf=1.8.1,hdf5=2.0.0,h5py=3.16.0\" ;",
+    "\t\t:_NCProperties = \"version=2,h5netcdf=1.8.1,hdf5=1.14.6,h5py=3.16.0\" ;"
+   ]
+  ],
+  "values_bit_exact": {
+   "u10": true,
+   "v10": true,
+   "number": true,
+   "valid_time": true,
+   "latitude": true,
+   "longitude": true,
+   "expver": true
+  },
+  "reproduced": true
+ },
+ "reproduced": true,
+ "hits": []
+}

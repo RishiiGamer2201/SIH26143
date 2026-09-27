@@ -1,0 +1,240 @@
+{
+ "experiment": "E008b forcing-domain expansion (forcing v2)",
+ "bounds_source": "envelope of all finite positions of all 42 E008a deterministic candidate trajectories (every output time, incl. C12/C14) plus in-memory deactivation positions; nothing else",
+ "not_used": [
+  "reference slick geometry",
+  "candidate rank",
+  "vessel data",
+  "reference agreement"
+ ],
+ "e008a_hindcast_sha256": {
+  "E007-C1": "867b8e837f9521d85660b3a10fca8385bdc186523ee1eb3c13bff1cb1be2a5e0",
+  "E007-C2": "dc9660bbe8748e24dbf4f970ada1ddab8e796d2a065bd638be86eafd77eaa32e",
+  "E007-C3": "b6ae09dbb8a8387fb0ad7bf2a73634d5da358c10b01b3dd3ef7e8bc452663a40",
+  "E007-C4": "c909acb919cc13614bf79069d565488101f6957e07581dbfada93341e66883ab",
+  "E007-C5": "f15088be363ad5d13ec50ba403440ba37282f5fa2637cf5001f8b7a4bb5fa48f",
+  "E007-C6": "0fd223f7da15e4286b872f514b812f4cf17682fb2f584260adc344e9f32deffe",
+  "E007-C7": "927c0577c1a867403a253bf833d8aae16f3eeacb9f9a129710ee4929584479e6",
+  "E007-C8": "c9ad0cfbf4b442b4c58b162c1e83c907324ab84de59c6aa9bbf38f216b4a3d41",
+  "E007-C9": "fad6a448434ff74c37f0bee4ab91e25409d4160c49553bcc7c4cbc1bec427d77",
+  "E007-C10": "93881a0f492cc55cb986cb3f80afcf6d68702a8ad7a124208719336d3f778436",
+  "E007-C12": "8d02018fbe0e36221d9982a6a852d92ffe424d7a00c0f7dfef4331e2d436f06c",
+  "E007-C14": "f1724e6f3c35bcddfda13d153c16bfb2cf073e283fdf8dafe1fa48bc1b330ab5",
+  "E007-C16": "d13d1e35d2fae062e0f8d17e5083f70c890c027181f6236b24aba03993ad932b",
+  "E007-C17": "cc4ed5bb0c2371140ec12382930ec7cb434e02c48f8490823051018ad0a5e4e1",
+  "E007-C18": "de1e3b447e85b1748edda3e1960d33376245bc7f83cc6fd7bb3c60a512a0a14d",
+  "E007-C19": "c1b48cbbda6b1f9be74c3875de4aafb9389c28e17dd846c40dfb30dba9f2582f",
+  "E007-C21": "2135f44cd8a03cbd8ce109030e6469e542c949df04f9911bea85b37369f4e4e2",
+  "E007-C23": "504ab2f86f70763ffd60a5fb3695aecb9f56ce9cc6f0523c0087870198b27410",
+  "E007-C24": "73218a01450626cd10442b525346e32fe1e20a911191979f9125126c571e7058",
+  "E007-C25": "958dbcd30c65379aa7a54f02aac36648334523679b0b1230c0e05d8fcc066e56",
+  "E007-C26": "a221851d92d0756ebc6e88b4a5b6e2f40e707927ec2d9721e4523856d2ec0f81",
+  "E007-C27": "411a7699a1c4db55b0a9169611a88c98748b2bdabbd66b006f98c8bbb318cdc5",
+  "E007-C28": "b39a2d6774675594c1f3fb9aa0400879bd42feadb8ec8b563a1e3d8f7b8c09c7",
+  "E007-C29": "748253a1e72e067f5cb39d64ea6bd251bab1a427c49fa49026efe2a7d6a3e588",
+  "E007-C30": "57f49193b08d234892c7609d01cf01e65af28fbc7d98dff95ff1339cdfb6efe0",
+  "E007-C31": "7c716e1d3e0e020341c7933015bd4f66f1a689d79cc7bea67538421ab4905fca",
+  "E007-C33": "1b4e26bbb4acfc0f6af823cc0cd78749b21f183d41c4aa289e24ba9c3f8a735c",
+  "E007-C34": "1833d7b73b9a31540c175c0fe27836804ed10bc48e7bdb06095034f15875d1cc",
+  "E007-C35": "2c373bb9bf1bafcb02be01e1bdaea82ec59dd3bdc27dc41b61959b6e8c5ea98c",
+  "E007-C36": "1349b5f844b9efc846c20ce7ed7b3ac5cad484450a4e1c4db42fd894fbe2a193",
+  "E007-C37": "d341f081b368279f719f60f302b00a5f91fbbe5e5b7857a818e3135d42a13bbd",
+  "E007-C38": "b3a8164ece15c1928c8b1a4ce7ac2f54f52b10ba27bdb6eedc32b1a1dde8d1ea",
+  "E007-C39": "0ef03fda83e0a78275f07c993719dc1560b4b03497190a10bbc889eea7f9337d",
+  "E007-C40": "48dce8bf3bec9fca5d671e50c243c4cf13a04fe2cc11d9eba09a24d85c886052",
+  "E007-C41": "bd045b05e9061786568b7dc4be686f9cba47ea95aace20b6cc1f11d78e741586",
+  "E007-C43": "2c106ae1f094b8d4db6befa50cc8409d00091f4807d617a2972148ab2d2b6d23",
+  "E007-C44": "af755ff1266e6ef4f12b897ebb46dd9b5def0093ef1f4a03c0948b9a2d94675a",
+  "E007-C45": "93c18c4ee9c5f599fb2bf19464d30c8f2ad84c5c4bc5cb6e7b26b102ecbec570",
+  "E007-C46": "d981e4aa1d9a88754bc45d3602e2e91f58e16cab5167b09dcf47b10445f15bb5",
+  "E007-C47": "2112066874cc27b51eb91dd4ea1758d355301703edd88ed7ea83f396df734f10",
+  "E007-C48": "190fe67bb77f8eee341bf9dc7a2de2ddda3289f1cb1e0cee4df14ea5fb297daf",
+  "E007-C49": "aeec6c21409a897eab17bdaef07ada7fd03d198943803ec509a0c2189385d2fb"
+ },
+ "deactivation_ranges_included": {
+  "E007-C12": {
+   "lon": [
+    -88.49999956422364,
+    -88.4975490681493
+   ],
+   "lat": [
+    28.023389427286734,
+    28.043303059421824
+   ]
+  },
+  "E007-C14": {
+   "lon": [
+    -88.4999974515684,
+    -88.4977978714745
+   ],
+   "lat": [
+    28.005243501133737,
+    28.009933980332878
+   ]
+  }
+ },
+ "trajectory_envelope": {
+  "west": -90.58070373535156,
+  "south": 26.69392967224121,
+  "east": -88.49755096435547,
+  "north": 28.22686195373535
+ },
+ "buffer_deg": 2.0,
+ "buffered_box": {
+  "west": -92.58070373535156,
+  "south": 24.69392967224121,
+  "east": -86.49755096435547,
+  "north": 30.22686195373535
+ },
+ "snapping": "outward to multiples of 0.25 deg (ERA5 native grid; also nodes of the SMOC -180+k/12 grid), so the requested bounds are identical for both products and lie on both native grids",
+ "requested_bounds": {
+  "west": -92.75,
+  "south": 24.5,
+  "east": -86.25,
+  "north": 30.25
+ },
+ "expected_native": {
+  "smoc": {
+   "lon": [
+    -92.75,
+    -86.25
+   ],
+   "lat": [
+    24.5,
+    30.25
+   ],
+   "n_lon": 79,
+   "n_lat": 70,
+   "step": "1/12 deg"
+  },
+  "era5": {
+   "lon": [
+    -92.75,
+    -86.25
+   ],
+   "lat": [
+    30.25,
+    24.5
+   ],
+   "n_lon": 27,
+   "n_lat": 24,
+   "step": "0.25 deg"
+  }
+ },
+ "v1_bounds": {
+  "smoc": {
+   "lon": [
+    -92.416664,
+    -88.416664
+   ],
+   "lat": [
+    25.166666,
+    29.083334
+   ]
+  },
+  "era5": {
+   "lon": [
+    -92.25,
+    -88.5
+   ],
+   "lat": [
+    29.0,
+    25.25
+   ]
+  }
+ },
+ "smoc_request": {
+  "dataset_id": "cmems_mod_glo_phy_anfc_merged-uv_PT1H-i",
+  "dataset_version": "202211",
+  "variables": [
+   "uo",
+   "vo",
+   "utide",
+   "vtide",
+   "vsdx",
+   "vsdy",
+   "utotal",
+   "vtotal"
+  ],
+  "start_datetime": "2023-01-01T00:00:00",
+  "end_datetime": "2023-01-07T06:00:00",
+  "minimum_longitude": -92.75,
+  "maximum_longitude": -86.25,
+  "minimum_latitude": 24.5,
+  "maximum_latitude": 30.25,
+  "depth": "not requested (as v1)",
+  "coordinates_selection_method": "default (as v1)"
+ },
+ "era5_request": {
+  "dataset": "reanalysis-era5-single-levels",
+  "product_type": [
+   "reanalysis"
+  ],
+  "variable": [
+   "10m_u_component_of_wind",
+   "10m_v_component_of_wind"
+  ],
+  "year": [
+   "2023"
+  ],
+  "month": [
+   "01"
+  ],
+  "day": [
+   "01",
+   "02",
+   "03",
+   "04",
+   "05",
+   "06",
+   "07"
+  ],
+  "time": [
+   "00:00",
+   "01:00",
+   "02:00",
+   "03:00",
+   "04:00",
+   "05:00",
+   "06:00",
+   "07:00",
+   "08:00",
+   "09:00",
+   "10:00",
+   "11:00",
+   "12:00",
+   "13:00",
+   "14:00",
+   "15:00",
+   "16:00",
+   "17:00",
+   "18:00",
+   "19:00",
+   "20:00",
+   "21:00",
+   "22:00",
+   "23:00"
+  ],
+  "area": [
+   30.25,
+   -92.75,
+   24.5,
+   -86.25
+  ],
+  "data_format": "netcdf",
+  "download_format": "unarchived"
+ },
+ "temporal_domain": "identical to v1: ocean 2023-01-01T00..2023-01-07T06 hourly (151); wind 168 h downloaded, first 151 kept",
+ "recipe": {
+  "ocean": "SMOC -> OpenDrift ocean file. Water current = uo+utide, vo+vtide (NOT utotal); Stokes = vsdx/vsdy kept separately.\n    Coordinate order time, depth, latitude, longitude; netCDF4 engine; attrs replaced wholesale.",
+  "wind": "ERA5 168 h file -> first 151 valid_times (2023-01-01T00 .. 2023-01-07T06, = ocean time axis); h5netcdf engine."
+ },
+ "outputs": {
+  "ocean_raw": "data/incident_001/forcing_v2/raw/ocean_surface_velocity.nc",
+  "wind_raw": "data/incident_001/forcing_v2/raw/era5_wind_10m.nc",
+  "ocean": "data/incident_001/forcing_v2/ocean_opendrift.nc",
+  "wind": "data/incident_001/forcing_v2/era5_wind_10m_151h.nc"
+ },
+ "predeclared_equivalence_criterion": "PASS only if, on the common domain (coordinate values present in both files, no resampling), every one of the 4 ocean and 2 wind variables is exactly equal wherever finite in both AND the NaN masks agree everywhere AND the common coordinates are identical. Any other outcome = STOP (no tolerance).",
+ "predeclared_freeze_criterion": "equivalence PASS AND 42/42 runs completed AND zero active particle-hours outside either reader and zero deactivations outside either reader in all 42 runs"
+}

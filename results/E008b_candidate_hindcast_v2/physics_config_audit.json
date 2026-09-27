@@ -1,0 +1,233 @@
+{
+ "recipe": "E008a code imported unchanged; only OCEAN/WIND (forcing v2) and OUT differ",
+ "e008a_script_sha256": "ca92e83fefabb8226392eb393468db0b77b0bde4a1f9c900544b7f7e8df9484f",
+ "e008b_script_sha256": "91b1062773d25576dd2481df6aa1e53accc29acaf4a6e711b7775d7715cddb8f",
+ "provenance": {
+  "policy_sha256": "3fb833df7268647641f8b9f1696527c10b067607e3fc9ce11363a4cce0f5bb27",
+  "e007_frozen_sha256": "7f85aad2f579675f50dfa9dc31c76726b9a482aff6ef43e4343bdf41c7b7d4f2",
+  "e007_frozen_files_verified": 19,
+  "candidate_files_sha256": {
+   "candidate_components.csv": "19541d9bd80b7acf16767600c59c4337c892bc9d721b6d4ce6b189db85329847",
+   "candidate_components.geojson": "22414cc32182f6b2edccbcde61c49b3bc9837021792a6fe06a54783655e537ab",
+   "excluded_components.csv": "41e9268f007c595a8d7ed6a45266f810c412f7161fdc7afd5f9b3984189ab520"
+  }
+ },
+ "runtime_full_config_n_keys": 102,
+ "runtime_full_config_differences_v1_vs_v2": {},
+ "set_config_calls": [
+  [
+   "processes:evaporation",
+   false
+  ],
+  [
+   "processes:emulsification",
+   false
+  ],
+  [
+   "processes:dispersion",
+   false
+  ],
+  [
+   "processes:biodegradation",
+   false
+  ],
+  [
+   "drift:vertical_mixing",
+   false
+  ],
+  [
+   "drift:vertical_advection",
+   false
+  ],
+  [
+   "drift:current_uncertainty",
+   0
+  ],
+  [
+   "drift:wind_uncertainty",
+   0
+  ],
+  [
+   "environment:fallback:land_binary_mask",
+   0
+  ]
+ ],
+ "readers_v1": {
+  "current": {
+   "name": "/home/admin_wsl/SIH26143/data/incident_001/currents/ocean_opendrift.nc",
+   "variables": [
+    "sea_surface_wave_stokes_drift_speed",
+    "sea_surface_wave_stokes_drift_x_velocity",
+    "sea_surface_wave_stokes_drift_y_velocity",
+    "sea_water_speed",
+    "x_sea_water_velocity",
+    "y_sea_water_velocity"
+   ],
+   "xmin": -92.41666412353516,
+   "xmax": -88.41666412353516,
+   "ymin": 25.16666603088379,
+   "ymax": 29.08333396911621,
+   "delta_x": 0.0833282470703125,
+   "delta_y": 0.08333396911621094,
+   "zmin": -Infinity,
+   "zmax": Infinity,
+   "z_for_coverage": 0.0,
+   "start_time": "2023-01-01 00:00:00",
+   "end_time": "2023-01-07 06:00:00",
+   "time_step": "1:00:00",
+   "proj": "+proj=latlong"
+  },
+  "wind": {
+   "name": "/home/admin_wsl/SIH26143/data/incident_001/wind/era5_wind_10m_151h.nc",
+   "variables": [
+    "eastward_wind",
+    "northward_wind",
+    "wind_speed",
+    "x_wind",
+    "y_wind"
+   ],
+   "xmin": -92.25,
+   "xmax": -88.5,
+   "ymin": 25.25,
+   "ymax": 29.0,
+   "delta_x": 0.25,
+   "delta_y": 0.25,
+   "zmin": -Infinity,
+   "zmax": Infinity,
+   "z_for_coverage": 0.0,
+   "start_time": "2023-01-01 00:00:00",
+   "end_time": "2023-01-07 06:00:00",
+   "time_step": "1:00:00",
+   "proj": "+proj=latlong"
+  }
+ },
+ "readers_v2": {
+  "current": {
+   "name": "/home/admin_wsl/SIH26143/data/incident_001/forcing_v2/ocean_opendrift.nc",
+   "variables": [
+    "sea_surface_wave_stokes_drift_speed",
+    "sea_surface_wave_stokes_drift_x_velocity",
+    "sea_surface_wave_stokes_drift_y_velocity",
+    "sea_water_speed",
+    "x_sea_water_velocity",
+    "y_sea_water_velocity"
+   ],
+   "xmin": -92.75,
+   "xmax": -86.25,
+   "ymin": 24.5,
+   "ymax": 30.25,
+   "delta_x": 0.08333587646484375,
+   "delta_y": 0.08333396911621094,
+   "zmin": -Infinity,
+   "zmax": Infinity,
+   "z_for_coverage": 0.0,
+   "start_time": "2023-01-01 00:00:00",
+   "end_time": "2023-01-07 06:00:00",
+   "time_step": "1:00:00",
+   "proj": "+proj=latlong"
+  },
+  "wind": {
+   "name": "/home/admin_wsl/SIH26143/data/incident_001/forcing_v2/era5_wind_10m_151h.nc",
+   "variables": [
+    "eastward_wind",
+    "northward_wind",
+    "wind_speed",
+    "x_wind",
+    "y_wind"
+   ],
+   "xmin": -92.75,
+   "xmax": -86.25,
+   "ymin": 24.5,
+   "ymax": 30.25,
+   "delta_x": 0.25,
+   "delta_y": 0.25,
+   "zmin": -Infinity,
+   "zmax": Infinity,
+   "z_for_coverage": 0.0,
+   "start_time": "2023-01-01 00:00:00",
+   "end_time": "2023-01-07 06:00:00",
+   "time_step": "1:00:00",
+   "proj": "+proj=latlong"
+  }
+ },
+ "reader_differences": {
+  "current": {
+   "name": [
+    "/home/admin_wsl/SIH26143/data/incident_001/currents/ocean_opendrift.nc",
+    "/home/admin_wsl/SIH26143/data/incident_001/forcing_v2/ocean_opendrift.nc"
+   ],
+   "xmin": [
+    -92.41666412353516,
+    -92.75
+   ],
+   "xmax": [
+    -88.41666412353516,
+    -86.25
+   ],
+   "ymin": [
+    25.16666603088379,
+    24.5
+   ],
+   "ymax": [
+    29.08333396911621,
+    30.25
+   ],
+   "delta_x": [
+    0.0833282470703125,
+    0.08333587646484375
+   ]
+  },
+  "wind": {
+   "name": [
+    "/home/admin_wsl/SIH26143/data/incident_001/wind/era5_wind_10m_151h.nc",
+    "/home/admin_wsl/SIH26143/data/incident_001/forcing_v2/era5_wind_10m_151h.nc"
+   ],
+   "xmin": [
+    -92.25,
+    -92.75
+   ],
+   "xmax": [
+    -88.5,
+    -86.25
+   ],
+   "ymin": [
+    25.25,
+    24.5
+   ],
+   "ymax": [
+    29.0,
+    30.25
+   ]
+  }
+ },
+ "forcing_files": {
+  "data/incident_001/forcing_v2/ocean_opendrift.nc": "9873536080833ef6c55c79df5570d333a9fcbbe0ba6333b5705ce30a5128f707",
+  "data/incident_001/forcing_v2/era5_wind_10m_151h.nc": "c3c64ddd4ed99897e899aa436a8962698c3c7084258a89a3994bf79b7d58fabb"
+ },
+ "validity_rule": "physics_valid_for_attribution = run completed AND 2000 seeded AND 2000 active at -48 h AND every output time inside both readers' time coverage AND zero active particle-hours outside current or wind reader horizontal coverage AND zero active particle-hours with exported current, Stokes or wind exactly (0, 0) (fallback marker)",
+ "risk_flag_km": {
+  "high": 50.0,
+  "moderate": 100.0
+ },
+ "frozen_state_before": {
+  "incident_001": {
+   "ais_density_scores_v2.csv": "e6e3ccae34245555d28735bd5f05600b747e9414e292958a0239f0ee543ceb4c",
+   "ais_density_time_scores_v2.parquet": "69514183d3929106a296820d2164d38cc109bcba952b01e8ca3675aaf127b706",
+   "ais_ensemble_robust_scores.csv": "9b53b3ac349951474cad8546e3359a7c0460e6b74e8f8af8eb1ab53a9d8bae6e",
+   "ais_ensemble_scenario_scores.parquet": "152e1a3fdf93082bab6f52d9741879e8032b40c0fd552634b29104b1b5d3d294",
+   "ais_hindcast_scores.csv": "fe2b10d312682784f57cb7521bad3961b889e39abd2229766c51657a7397733c",
+   "ais_hindcast_time_scores.parquet": "705c5791a4ae3c9de06a52795967dcdcbcc82b01433f18cf4e7451cbbf3ba838",
+   "hindcast_48h.nc": "5b3b5e26d52f4a6b206c94d1fbedf71663240645521cbdd11396a43d0f4012d0",
+   "hindcast_ensemble_particles.parquet": "ce62916634bee39d554a5002b65e280747d64e06a16e849e2c920867ca320793",
+   "hindcast_ensemble_scenarios.csv": "4093e52ef62fbc5b00b31392fc018d1e8b89c0a4ab4b86bf9f36ab8094b0d024",
+   "origin_cloud_48h.csv": "8c8e6a4df789c9094f379e87a913b6db81db23f8b00a24ad5cdef5f493900afe",
+   "release_age_scores.csv": "797cae82651cdc4d5cbae0f75be6bc20f3a8208d2ad38a067024ee3ea1647a0e"
+  },
+  "root_scripts": {
+   "run_hindcast_48h.py": "ae919a8536fbefa41e76dc776176e7371380e5ea2ef93f10d70a4fb3409ee70d",
+   "run_hindcast_ensemble.py": "4d77fa65ab930bfc123b9c187ea3a22c5c1444b1995e9e71f8065f97ae7e687f"
+  },
+  "root_scripts_git_clean": true
+ },
+ "config_equal": true
+}

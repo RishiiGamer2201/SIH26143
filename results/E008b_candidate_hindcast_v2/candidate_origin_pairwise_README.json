@@ -1,0 +1,10 @@
+{
+ "note": "EXPLORATORY ONLY. Pairwise distances between deterministic -48 h origin clouds. No threshold, no fusion, no clustering; close origins do not show a common release.",
+ "laea_center": [
+  -89.94069148722355,
+  27.511148363045322
+ ],
+ "energy_distance": "2E|X-Y| - E|X-X'| - E|Y-Y'| (km, LAEA)",
+ "histogram_overlap": "sum over 2 km cells of min(p_a, p_b); 1 = identical binned distributions",
+ "n_pairs": 861
+}

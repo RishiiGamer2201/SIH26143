@@ -1,0 +1,145 @@
+INFO - 2026-09-27T21:02:05Z - Selected dataset version: "202211"
+INFO - 2026-09-27T21:02:05Z - Selected dataset part: "default"
+INFO - 2026-09-27T21:02:25Z - Total size of the download: 25.51 MB.
+2026-09-27 21:02:26,908 INFO Request ID is 347e7b43-4bea-44cf-b54d-3682446e9c39
+2026-09-27 21:02:28,362 INFO status has been updated to accepted
+2026-09-27 21:02:43,059 INFO status has been updated to running
+2026-09-27 21:03:03,936 INFO status has been updated to successful
+1ac1eb58a3dff16d11bbaecdc64f0f41.nc:   0%|          | 0.00/510k [00:00<?, ?B/s]1ac1eb58a3dff16d11bbaecdc64f0f41.nc: 100%|██████████| 510k/510k [00:01<00:00, 312kB/s]                                                                                      {
+ "config_sha256": "e2b569bdf296e7dce00a84e5c92b813c45ca8bdae73331624fbe72c7c14f3381",
+ "smoc_request": {
+  "dataset_id": "cmems_mod_glo_phy_anfc_merged-uv_PT1H-i",
+  "dataset_version": "202211",
+  "variables": [
+   "uo",
+   "vo",
+   "utide",
+   "vtide",
+   "vsdx",
+   "vsdy",
+   "utotal",
+   "vtotal"
+  ],
+  "start_datetime": "2023-01-01T00:00:00",
+  "end_datetime": "2023-01-07T06:00:00",
+  "minimum_longitude": -92.75,
+  "maximum_longitude": -86.25,
+  "minimum_latitude": 24.5,
+  "maximum_latitude": 30.25,
+  "depth": "not requested (as v1)",
+  "coordinates_selection_method": "default (as v1)"
+ },
+ "smoc_response": {
+  "file_path": "/home/admin_wsl/SIH26143/data/incident_001/forcing_v2/raw/ocean_surface_velocity.nc",
+  "output_directory": "/home/admin_wsl/SIH26143/data/incident_001/forcing_v2/raw",
+  "filename": "ocean_surface_velocity.nc",
+  "file_size": "25.51 MB",
+  "data_transfer_size": "1836.63 MB",
+  "variables": [
+   "uo",
+   "vo",
+   "utide",
+   "vtide",
+   "vsdx",
+   "vsdy",
+   "utotal",
+   "vtotal"
+  ],
+  "coordinates_extent": [
+   {
+    "minimum": -92.75,
+    "maximum": -86.25,
+    "unit": "degrees_east",
+    "coordinate_id": "longitude"
+   },
+   {
+    "minimum": 24.5,
+    "maximum": 30.25,
+    "unit": "degrees_north",
+    "coordinate_id": "latitude"
+   },
+   {
+    "minimum": "2023-01-01T00:00:00+00:00",
+    "maximum": "2023-01-07T06:00:00+00:00",
+    "unit": "iso8601",
+    "coordinate_id": "time"
+   },
+   {
+    "minimum": 0.49402499198913574,
+    "maximum": 0.49402499198913574,
+    "unit": "m",
+    "coordinate_id": "depth"
+   }
+  ],
+  "status": "000",
+  "message": "The request was successful.",
+  "file_status": "DOWNLOADED",
+  "file_names": null
+ },
+ "copernicusmarine_version": "2.4.1",
+ "era5_request": {
+  "dataset": "reanalysis-era5-single-levels",
+  "product_type": [
+   "reanalysis"
+  ],
+  "variable": [
+   "10m_u_component_of_wind",
+   "10m_v_component_of_wind"
+  ],
+  "year": [
+   "2023"
+  ],
+  "month": [
+   "01"
+  ],
+  "day": [
+   "01",
+   "02",
+   "03",
+   "04",
+   "05",
+   "06",
+   "07"
+  ],
+  "time": [
+   "00:00",
+   "01:00",
+   "02:00",
+   "03:00",
+   "04:00",
+   "05:00",
+   "06:00",
+   "07:00",
+   "08:00",
+   "09:00",
+   "10:00",
+   "11:00",
+   "12:00",
+   "13:00",
+   "14:00",
+   "15:00",
+   "16:00",
+   "17:00",
+   "18:00",
+   "19:00",
+   "20:00",
+   "21:00",
+   "22:00",
+   "23:00"
+  ],
+  "area": [
+   30.25,
+   -92.75,
+   24.5,
+   -86.25
+  ],
+  "data_format": "netcdf",
+  "download_format": "unarchived"
+ },
+ "cdsapi_version": null,
+ "raw_sha256": {
+  "data/incident_001/forcing_v2/raw/ocean_surface_velocity.nc": "524cb86e0f5c883aa39f59a6bfccb8d22ea18ad9ab1a809e5d7ba0a30b35771f",
+  "data/incident_001/forcing_v2/raw/era5_wind_10m.nc": "90df47885fa0a537efef7b8f894d12d1476a4286071b3f2fc40587a6c61076fa"
+ },
+ "python": "3.14.6 | packaged by conda-forge | (main, Aug 11 2026, 10:26:15) [GCC 14.4.0]"
+}

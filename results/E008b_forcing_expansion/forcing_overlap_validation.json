@@ -1,0 +1,589 @@
+{
+ "criterion": "PASS only if, on the common domain (coordinate values present in both files, no resampling), every one of the 4 ocean and 2 wind variables is exactly equal wherever finite in both AND the NaN masks agree everywhere AND the common coordinates are identical. Any other outcome = STOP (no tolerance).",
+ "method": "coordinates intersected on exact values (np.intersect1d), selection by those values; no interpolation",
+ "ocean": {
+  "common_domain": {
+   "time": {
+    "n_v1": 151,
+    "n_v2": 151,
+    "n_common": 151,
+    "v1_fully_contained": true,
+    "v1_first_last": [
+     "2023-01-01T00:00:00.000000000",
+     "2023-01-07T06:00:00.000000000"
+    ],
+    "v2_first_last": [
+     "2023-01-01T00:00:00.000000000",
+     "2023-01-07T06:00:00.000000000"
+    ]
+   },
+   "depth": {
+    "n_v1": 1,
+    "n_v2": 1,
+    "n_common": 1,
+    "v1_fully_contained": true,
+    "v1_first_last": [
+     "0.494025",
+     "0.494025"
+    ],
+    "v2_first_last": [
+     "0.494025",
+     "0.494025"
+    ]
+   },
+   "latitude": {
+    "n_v1": 48,
+    "n_v2": 70,
+    "n_common": 48,
+    "v1_fully_contained": true,
+    "v1_first_last": [
+     "25.166666",
+     "29.083334"
+    ],
+    "v2_first_last": [
+     "24.5",
+     "30.25"
+    ]
+   },
+   "longitude": {
+    "n_v1": 49,
+    "n_v2": 79,
+    "n_common": 49,
+    "v1_fully_contained": true,
+    "v1_first_last": [
+     "-92.416664",
+     "-88.416664"
+    ],
+    "v2_first_last": [
+     "-92.75",
+     "-86.25"
+    ]
+   }
+  },
+  "stats": {
+   "x_sea_water_velocity": {
+    "n_compared": 355152,
+    "n_finite_both": 354850,
+    "exact_equality_fraction": 1.0,
+    "max_abs_diff": 0.0,
+    "mean_abs_diff": 0.0,
+    "rmse": 0.0,
+    "nan_mask_disagreement": 0,
+    "n_nan_v1": 302,
+    "n_nan_v2": 302,
+    "bitwise_equal_float32": true
+   },
+   "y_sea_water_velocity": {
+    "n_compared": 355152,
+    "n_finite_both": 354850,
+    "exact_equality_fraction": 1.0,
+    "max_abs_diff": 0.0,
+    "mean_abs_diff": 0.0,
+    "rmse": 0.0,
+    "nan_mask_disagreement": 0,
+    "n_nan_v1": 302,
+    "n_nan_v2": 302,
+    "bitwise_equal_float32": true
+   },
+   "sea_surface_wave_stokes_drift_x_velocity": {
+    "n_compared": 355152,
+    "n_finite_both": 355152,
+    "exact_equality_fraction": 1.0,
+    "max_abs_diff": 0.0,
+    "mean_abs_diff": 0.0,
+    "rmse": 0.0,
+    "nan_mask_disagreement": 0,
+    "n_nan_v1": 0,
+    "n_nan_v2": 0,
+    "bitwise_equal_float32": true
+   },
+   "sea_surface_wave_stokes_drift_y_velocity": {
+    "n_compared": 355152,
+    "n_finite_both": 355152,
+    "exact_equality_fraction": 1.0,
+    "max_abs_diff": 0.0,
+    "mean_abs_diff": 0.0,
+    "rmse": 0.0,
+    "nan_mask_disagreement": 0,
+    "n_nan_v1": 0,
+    "n_nan_v2": 0,
+    "bitwise_equal_float32": true
+   }
+  }
+ },
+ "wind": {
+  "common_domain": {
+   "valid_time": {
+    "n_v1": 151,
+    "n_v2": 151,
+    "n_common": 151,
+    "v1_fully_contained": true,
+    "v1_first_last": [
+     "2023-01-01T00:00:00.000000000",
+     "2023-01-07T06:00:00.000000000"
+    ],
+    "v2_first_last": [
+     "2023-01-01T00:00:00.000000000",
+     "2023-01-07T06:00:00.000000000"
+    ]
+   },
+   "latitude": {
+    "n_v1": 16,
+    "n_v2": 24,
+    "n_common": 16,
+    "v1_fully_contained": true,
+    "v1_first_last": [
+     "29.0",
+     "25.25"
+    ],
+    "v2_first_last": [
+     "30.25",
+     "24.5"
+    ]
+   },
+   "longitude": {
+    "n_v1": 16,
+    "n_v2": 27,
+    "n_common": 16,
+    "v1_fully_contained": true,
+    "v1_first_last": [
+     "-92.25",
+     "-88.5"
+    ],
+    "v2_first_last": [
+     "-92.75",
+     "-86.25"
+    ]
+   }
+  },
+  "stats": {
+   "u10": {
+    "n_compared": 38656,
+    "n_finite_both": 38656,
+    "exact_equality_fraction": 1.0,
+    "max_abs_diff": 0.0,
+    "mean_abs_diff": 0.0,
+    "rmse": 0.0,
+    "nan_mask_disagreement": 0,
+    "n_nan_v1": 0,
+    "n_nan_v2": 0,
+    "bitwise_equal_float32": true
+   },
+   "v10": {
+    "n_compared": 38656,
+    "n_finite_both": 38656,
+    "exact_equality_fraction": 1.0,
+    "max_abs_diff": 0.0,
+    "mean_abs_diff": 0.0,
+    "rmse": 0.0,
+    "nan_mask_disagreement": 0,
+    "n_nan_v1": 0,
+    "n_nan_v2": 0,
+    "bitwise_equal_float32": true
+   }
+  }
+ },
+ "schema_check": {
+  "ocean": {
+   "variables_equal": true,
+   "per_variable_differences": {},
+   "time_equal": true,
+   "depth_equal": true,
+   "global_attr_differences": {}
+  },
+  "wind": {
+   "variables_equal": true,
+   "per_variable_differences": {
+    "u10": {
+     "v1": {
+      "dims": [
+       "valid_time",
+       "latitude",
+       "longitude"
+      ],
+      "dtype": "float32",
+      "attrs": {
+       "GRIB_paramId": "165",
+       "GRIB_dataType": "an",
+       "GRIB_numberOfPoints": "256",
+       "GRIB_typeOfLevel": "surface",
+       "GRIB_stepUnits": "1",
+       "GRIB_stepType": "instant",
+       "GRIB_gridType": "regular_ll",
+       "GRIB_uvRelativeToGrid": "0",
+       "GRIB_NV": "0",
+       "GRIB_Nx": "16",
+       "GRIB_Ny": "16",
+       "GRIB_cfName": "unknown",
+       "GRIB_cfVarName": "u10",
+       "GRIB_gridDefinitionDescription": "Latitude/Longitude Grid",
+       "GRIB_iDirectionIncrementInDegrees": "0.25",
+       "GRIB_iScansNegatively": "0",
+       "GRIB_jDirectionIncrementInDegrees": "0.25",
+       "GRIB_jPointsAreConsecutive": "0",
+       "GRIB_jScansPositively": "0",
+       "GRIB_latitudeOfFirstGridPointInDegrees": "29.0",
+       "GRIB_latitudeOfLastGridPointInDegrees": "25.25",
+       "GRIB_longitudeOfFirstGridPointInDegrees": "-92.25",
+       "GRIB_longitudeOfLastGridPointInDegrees": "-88.5",
+       "GRIB_missingValue": "3.4028234663852886e+38",
+       "GRIB_name": "10 metre U wind component",
+       "GRIB_shortName": "10u",
+       "GRIB_totalNumber": "0",
+       "GRIB_units": "m s**-1",
+       "long_name": "10 metre U wind component",
+       "units": "m s**-1",
+       "standard_name": "unknown",
+       "GRIB_surface": "0.0"
+      },
+      "encoding": {
+       "dtype": "float32",
+       "_FillValue": "nan",
+       "least_significant_digit": "None",
+       "units": "None",
+       "calendar": "None"
+      }
+     },
+     "v2": {
+      "dims": [
+       "valid_time",
+       "latitude",
+       "longitude"
+      ],
+      "dtype": "float32",
+      "attrs": {
+       "GRIB_paramId": "165",
+       "GRIB_dataType": "an",
+       "GRIB_numberOfPoints": "648",
+       "GRIB_typeOfLevel": "surface",
+       "GRIB_stepUnits": "1",
+       "GRIB_stepType": "instant",
+       "GRIB_gridType": "regular_ll",
+       "GRIB_uvRelativeToGrid": "0",
+       "GRIB_NV": "0",
+       "GRIB_Nx": "27",
+       "GRIB_Ny": "24",
+       "GRIB_cfName": "unknown",
+       "GRIB_cfVarName": "u10",
+       "GRIB_gridDefinitionDescription": "Latitude/Longitude Grid",
+       "GRIB_iDirectionIncrementInDegrees": "0.25",
+       "GRIB_iScansNegatively": "0",
+       "GRIB_jDirectionIncrementInDegrees": "0.25",
+       "GRIB_jPointsAreConsecutive": "0",
+       "GRIB_jScansPositively": "0",
+       "GRIB_latitudeOfFirstGridPointInDegrees": "30.25",
+       "GRIB_latitudeOfLastGridPointInDegrees": "24.5",
+       "GRIB_longitudeOfFirstGridPointInDegrees": "-92.75",
+       "GRIB_longitudeOfLastGridPointInDegrees": "-86.25",
+       "GRIB_missingValue": "3.4028234663852886e+38",
+       "GRIB_name": "10 metre U wind component",
+       "GRIB_shortName": "10u",
+       "GRIB_totalNumber": "0",
+       "GRIB_units": "m s**-1",
+       "long_name": "10 metre U wind component",
+       "units": "m s**-1",
+       "standard_name": "unknown",
+       "GRIB_surface": "0.0"
+      },
+      "encoding": {
+       "dtype": "float32",
+       "_FillValue": "nan",
+       "least_significant_digit": "None",
+       "units": "None",
+       "calendar": "None"
+      }
+     }
+    },
+    "v10": {
+     "v1": {
+      "dims": [
+       "valid_time",
+       "latitude",
+       "longitude"
+      ],
+      "dtype": "float32",
+      "attrs": {
+       "GRIB_paramId": "166",
+       "GRIB_dataType": "an",
+       "GRIB_numberOfPoints": "256",
+       "GRIB_typeOfLevel": "surface",
+       "GRIB_stepUnits": "1",
+       "GRIB_stepType": "instant",
+       "GRIB_gridType": "regular_ll",
+       "GRIB_uvRelativeToGrid": "0",
+       "GRIB_NV": "0",
+       "GRIB_Nx": "16",
+       "GRIB_Ny": "16",
+       "GRIB_cfName": "unknown",
+       "GRIB_cfVarName": "v10",
+       "GRIB_gridDefinitionDescription": "Latitude/Longitude Grid",
+       "GRIB_iDirectionIncrementInDegrees": "0.25",
+       "GRIB_iScansNegatively": "0",
+       "GRIB_jDirectionIncrementInDegrees": "0.25",
+       "GRIB_jPointsAreConsecutive": "0",
+       "GRIB_jScansPositively": "0",
+       "GRIB_latitudeOfFirstGridPointInDegrees": "29.0",
+       "GRIB_latitudeOfLastGridPointInDegrees": "25.25",
+       "GRIB_longitudeOfFirstGridPointInDegrees": "-92.25",
+       "GRIB_longitudeOfLastGridPointInDegrees": "-88.5",
+       "GRIB_missingValue": "3.4028234663852886e+38",
+       "GRIB_name": "10 metre V wind component",
+       "GRIB_shortName": "10v",
+       "GRIB_totalNumber": "0",
+       "GRIB_units": "m s**-1",
+       "long_name": "10 metre V wind component",
+       "units": "m s**-1",
+       "standard_name": "unknown",
+       "GRIB_surface": "0.0"
+      },
+      "encoding": {
+       "dtype": "float32",
+       "_FillValue": "nan",
+       "least_significant_digit": "None",
+       "units": "None",
+       "calendar": "None"
+      }
+     },
+     "v2": {
+      "dims": [
+       "valid_time",
+       "latitude",
+       "longitude"
+      ],
+      "dtype": "float32",
+      "attrs": {
+       "GRIB_paramId": "166",
+       "GRIB_dataType": "an",
+       "GRIB_numberOfPoints": "648",
+       "GRIB_typeOfLevel": "surface",
+       "GRIB_stepUnits": "1",
+       "GRIB_stepType": "instant",
+       "GRIB_gridType": "regular_ll",
+       "GRIB_uvRelativeToGrid": "0",
+       "GRIB_NV": "0",
+       "GRIB_Nx": "27",
+       "GRIB_Ny": "24",
+       "GRIB_cfName": "unknown",
+       "GRIB_cfVarName": "v10",
+       "GRIB_gridDefinitionDescription": "Latitude/Longitude Grid",
+       "GRIB_iDirectionIncrementInDegrees": "0.25",
+       "GRIB_iScansNegatively": "0",
+       "GRIB_jDirectionIncrementInDegrees": "0.25",
+       "GRIB_jPointsAreConsecutive": "0",
+       "GRIB_jScansPositively": "0",
+       "GRIB_latitudeOfFirstGridPointInDegrees": "30.25",
+       "GRIB_latitudeOfLastGridPointInDegrees": "24.5",
+       "GRIB_longitudeOfFirstGridPointInDegrees": "-92.75",
+       "GRIB_longitudeOfLastGridPointInDegrees": "-86.25",
+       "GRIB_missingValue": "3.4028234663852886e+38",
+       "GRIB_name": "10 metre V wind component",
+       "GRIB_shortName": "10v",
+       "GRIB_totalNumber": "0",
+       "GRIB_units": "m s**-1",
+       "long_name": "10 metre V wind component",
+       "units": "m s**-1",
+       "standard_name": "unknown",
+       "GRIB_surface": "0.0"
+      },
+      "encoding": {
+       "dtype": "float32",
+       "_FillValue": "nan",
+       "least_significant_digit": "None",
+       "units": "None",
+       "calendar": "None"
+      }
+     }
+    }
+   },
+   "time_equal": true,
+   "depth_equal": true,
+   "global_attr_differences": {
+    "history": [
+     "2026-09-25T17:31 GRIB to CDM+CF via cfgrib-0.9.15.1/ecCodes-2.48.2 with {\"source\": \"tmpip0goiee/data.grib\", \"filter_by_keys\": {\"stream\": [\"oper\"], \"stepType\": [\"instant\"]}, \"encode_cf\": [\"parameter\", \"time\", \"geography\", \"vertical\"]}",
+     "2026-09-27T21:03 GRIB to CDM+CF via cfgrib-0.9.15.1/ecCodes-2.48.2 with {\"source\": \"tmpsu98ekpn/data.grib\", \"filter_by_keys\": {\"stream\": [\"oper\"], \"stepType\": [\"instant\"]}, \"encode_cf\": [\"parameter\", \"time\", \"geography\", \"vertical\"]}"
+    ]
+   }
+  }
+ },
+ "opendrift_reader_check": {
+  "ocean": {
+   "v1": {
+    "variables": [
+     "sea_surface_wave_stokes_drift_speed",
+     "sea_surface_wave_stokes_drift_x_velocity",
+     "sea_surface_wave_stokes_drift_y_velocity",
+     "sea_water_speed",
+     "x_sea_water_velocity",
+     "y_sea_water_velocity"
+    ],
+    "variable_mapping": {
+     "sea_surface_wave_stokes_drift_x_velocity": "sea_surface_wave_stokes_drift_x_velocity",
+     "sea_surface_wave_stokes_drift_y_velocity": "sea_surface_wave_stokes_drift_y_velocity",
+     "x_sea_water_velocity": "x_sea_water_velocity",
+     "y_sea_water_velocity": "y_sea_water_velocity"
+    },
+    "proj": "+proj=latlong",
+    "delta_x": 0.0833282470703125,
+    "delta_y": 0.08333396911621094,
+    "time_step": "1:00:00",
+    "start_time": "2023-01-01 00:00:00",
+    "end_time": "2023-01-07 06:00:00",
+    "zmin": -Infinity,
+    "zmax": Infinity,
+    "xmin": -92.41666412353516,
+    "xmax": -88.41666412353516,
+    "ymin": 25.16666603088379,
+    "ymax": 29.08333396911621
+   },
+   "v2": {
+    "variables": [
+     "sea_surface_wave_stokes_drift_speed",
+     "sea_surface_wave_stokes_drift_x_velocity",
+     "sea_surface_wave_stokes_drift_y_velocity",
+     "sea_water_speed",
+     "x_sea_water_velocity",
+     "y_sea_water_velocity"
+    ],
+    "variable_mapping": {
+     "sea_surface_wave_stokes_drift_x_velocity": "sea_surface_wave_stokes_drift_x_velocity",
+     "sea_surface_wave_stokes_drift_y_velocity": "sea_surface_wave_stokes_drift_y_velocity",
+     "x_sea_water_velocity": "x_sea_water_velocity",
+     "y_sea_water_velocity": "y_sea_water_velocity"
+    },
+    "proj": "+proj=latlong",
+    "delta_x": 0.08333587646484375,
+    "delta_y": 0.08333396911621094,
+    "time_step": "1:00:00",
+    "start_time": "2023-01-01 00:00:00",
+    "end_time": "2023-01-07 06:00:00",
+    "zmin": -Infinity,
+    "zmax": Infinity,
+    "xmin": -92.75,
+    "xmax": -86.25,
+    "ymin": 24.5,
+    "ymax": 30.25
+   },
+   "equal": {
+    "variables": true,
+    "variable_mapping": true,
+    "proj": true,
+    "delta_x": false,
+    "delta_y": true,
+    "time_step": true,
+    "start_time": true,
+    "end_time": true,
+    "zmin": true,
+    "zmax": true,
+    "xmin": false,
+    "xmax": false,
+    "ymin": false,
+    "ymax": false
+   },
+   "identical_except_bounds": false,
+   "required_variables_provided": {
+    "v1": [
+     "sea_surface_wave_stokes_drift_x_velocity",
+     "sea_surface_wave_stokes_drift_y_velocity",
+     "x_sea_water_velocity",
+     "y_sea_water_velocity"
+    ],
+    "v2": [
+     "sea_surface_wave_stokes_drift_x_velocity",
+     "sea_surface_wave_stokes_drift_y_velocity",
+     "x_sea_water_velocity",
+     "y_sea_water_velocity"
+    ]
+   }
+  },
+  "wind": {
+   "v1": {
+    "variables": [
+     "eastward_wind",
+     "northward_wind",
+     "wind_speed",
+     "x_wind",
+     "y_wind"
+    ],
+    "variable_mapping": {
+     "eastward_wind": "u10",
+     "northward_wind": "v10"
+    },
+    "proj": "+proj=latlong",
+    "delta_x": 0.25,
+    "delta_y": 0.25,
+    "time_step": "1:00:00",
+    "start_time": "2023-01-01 00:00:00",
+    "end_time": "2023-01-07 06:00:00",
+    "zmin": -Infinity,
+    "zmax": Infinity,
+    "xmin": -92.25,
+    "xmax": -88.5,
+    "ymin": 25.25,
+    "ymax": 29.0
+   },
+   "v2": {
+    "variables": [
+     "eastward_wind",
+     "northward_wind",
+     "wind_speed",
+     "x_wind",
+     "y_wind"
+    ],
+    "variable_mapping": {
+     "eastward_wind": "u10",
+     "northward_wind": "v10"
+    },
+    "proj": "+proj=latlong",
+    "delta_x": 0.25,
+    "delta_y": 0.25,
+    "time_step": "1:00:00",
+    "start_time": "2023-01-01 00:00:00",
+    "end_time": "2023-01-07 06:00:00",
+    "zmin": -Infinity,
+    "zmax": Infinity,
+    "xmin": -92.75,
+    "xmax": -86.25,
+    "ymin": 24.5,
+    "ymax": 30.25
+   },
+   "equal": {
+    "variables": true,
+    "variable_mapping": true,
+    "proj": true,
+    "delta_x": true,
+    "delta_y": true,
+    "time_step": true,
+    "start_time": true,
+    "end_time": true,
+    "zmin": true,
+    "zmax": true,
+    "xmin": false,
+    "xmax": false,
+    "ymin": false,
+    "ymax": false
+   },
+   "identical_except_bounds": true,
+   "required_variables_provided": {
+    "v1": [
+     "x_wind",
+     "y_wind"
+    ],
+    "v2": [
+     "x_wind",
+     "y_wind"
+    ]
+   }
+  }
+ },
+ "coordinates_v1_fully_contained": true,
+ "values_exact": true,
+ "schema_same": false,
+ "readers_same_except_bounds": false,
+ "file_sha256": {
+  "data/incident_001/currents/ocean_opendrift.nc": "3c8f047ac526dee253895f72ff73a3ce214530f07322ed04c28257824edc8ca8",
+  "data/incident_001/wind/era5_wind_10m_151h.nc": "4fe4edcfbee1820608c364f51c1540c7fba9d6ab08888a7d62659d0de57df7a1",
+  "data/incident_001/forcing_v2/ocean_opendrift.nc": "9873536080833ef6c55c79df5570d333a9fcbbe0ba6333b5705ce30a5128f707",
+  "data/incident_001/forcing_v2/era5_wind_10m_151h.nc": "c3c64ddd4ed99897e899aa436a8962698c3c7084258a89a3994bf79b7d58fabb"
+ },
+ "equivalence_pass": true
+}

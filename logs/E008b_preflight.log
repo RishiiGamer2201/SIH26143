@@ -1,0 +1,113 @@
+21:04:23 INFO    opendrift:569: OpenDriftSimulation initialised (version 1.14.11)
+21:04:23 INFO    opendrift.readers:67: Opening file with xr.open_dataset
+21:04:23 INFO    opendrift.readers.reader_netCDF_CF_generic:307: Grid coordinates are detected, but proj4 string not given: assuming latlong
+21:04:23 INFO    opendrift.readers.reader_netCDF_CF_generic:340: Detected dimensions: {'time': 'time', 'z': 'depth', 'y': 'latitude', 'x': 'longitude'}
+21:04:23 INFO    opendrift.readers:67: Opening file with xr.open_dataset
+21:04:23 INFO    opendrift.readers.reader_netCDF_CF_generic:340: Detected dimensions: {'time': 'valid_time', 'x': 'longitude', 'y': 'latitude'}
+21:04:23 INFO    opendrift.readers.basereader:175: Variable x_wind will be rotated from eastward_wind
+21:04:23 INFO    opendrift.readers.basereader:175: Variable y_wind will be rotated from northward_wind
+21:04:23 INFO    opendrift:569: OpenDriftSimulation initialised (version 1.14.11)
+21:04:23 INFO    opendrift.readers:67: Opening file with xr.open_dataset
+21:04:23 INFO    opendrift.readers.reader_netCDF_CF_generic:307: Grid coordinates are detected, but proj4 string not given: assuming latlong
+21:04:23 INFO    opendrift.readers.reader_netCDF_CF_generic:340: Detected dimensions: {'time': 'time', 'z': 'depth', 'y': 'latitude', 'x': 'longitude'}
+21:04:23 INFO    opendrift.readers:67: Opening file with xr.open_dataset
+21:04:23 INFO    opendrift.readers.reader_netCDF_CF_generic:340: Detected dimensions: {'time': 'valid_time', 'x': 'longitude', 'y': 'latitude'}
+21:04:23 INFO    opendrift.readers.basereader:175: Variable x_wind will be rotated from eastward_wind
+21:04:23 INFO    opendrift.readers.basereader:175: Variable y_wind will be rotated from northward_wind
+21:04:23 INFO    opendrift:569: OpenDriftSimulation initialised (version 1.14.11)
+{
+ "config_equal": true,
+ "reader_differences": {
+  "current": {
+   "name": [
+    "/home/admin_wsl/SIH26143/data/incident_001/currents/ocean_opendrift.nc",
+    "/home/admin_wsl/SIH26143/data/incident_001/forcing_v2/ocean_opendrift.nc"
+   ],
+   "xmin": [
+    -92.41666412353516,
+    -92.75
+   ],
+   "xmax": [
+    -88.41666412353516,
+    -86.25
+   ],
+   "ymin": [
+    25.16666603088379,
+    24.5
+   ],
+   "ymax": [
+    29.08333396911621,
+    30.25
+   ],
+   "delta_x": [
+    "0.08332825",
+    "0.08333588"
+   ]
+  },
+  "wind": {
+   "name": [
+    "/home/admin_wsl/SIH26143/data/incident_001/wind/era5_wind_10m_151h.nc",
+    "/home/admin_wsl/SIH26143/data/incident_001/forcing_v2/era5_wind_10m_151h.nc"
+   ],
+   "xmin": [
+    -92.25,
+    -92.75
+   ],
+   "xmax": [
+    -88.5,
+    -86.25
+   ],
+   "ymin": [
+    25.25,
+    24.5
+   ],
+   "ymax": [
+    29.0,
+    30.25
+   ]
+  }
+ }
+}
+candidate_id  min_margin_km forcing_risk_flag
+     E007-C1     224.244049               low
+     E007-C2     224.741821               low
+     E007-C3     224.881195               low
+     E007-C4     225.040482               low
+     E007-C5     226.294861               low
+     E007-C6     226.673172               low
+     E007-C7     227.270493               low
+     E007-C8     228.704066               low
+     E007-C9     228.982816               low
+    E007-C10     229.560226               low
+    E007-C12     232.049057               low
+    E007-C14     235.792236               low
+    E007-C16     247.226410               low
+    E007-C17     246.924088               low
+    E007-C18     262.013943               low
+    E007-C19     250.822613               low
+    E007-C21     249.767924               low
+    E007-C23     216.968933               low
+    E007-C24     254.386368               low
+    E007-C25     214.618744               low
+    E007-C26     215.394180               low
+    E007-C27     214.942336               low
+    E007-C28     299.191254               low
+    E007-C29     298.514397               low
+    E007-C30     229.238007               low
+    E007-C31     229.083764               low
+    E007-C33     227.489391               low
+    E007-C34     230.338026               low
+    E007-C35     225.246658               low
+    E007-C36     225.660821               low
+    E007-C37     229.317276               low
+    E007-C38     232.544918               low
+    E007-C39     232.251947               low
+    E007-C40     225.432182               low
+    E007-C41     229.649977               low
+    E007-C43     250.924850               low
+    E007-C44     250.366272               low
+    E007-C45     250.467965               low
+    E007-C46     246.137405               low
+    E007-C47     249.862984               low
+    E007-C48     248.939514               low
+    E007-C49     248.013258               low

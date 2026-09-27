@@ -51,6 +51,8 @@ SIH26143/
 │   ├── e005_segformer.py          E005 SegFormer MiT-B2 segmentation (20 m), tests/train/validate -> results/E005_segformer_b2
 │   ├── e006_segformer_test.py     E006 freeze E005 (FROZEN.json) + one-shot official test -> results/E006_segformer_test
 │   ├── e008a_candidate_hindcast.py  E008a deterministic hindcast per policy-v1 candidate (frozen recipe; coverage audit) -> results/E008a_candidate_hindcast
+│   ├── e008b_prepare_forcing_v2.py  E008b forcing v2: v1 provenance rebuild, domain config, download, build, v1/v2 equivalence, freeze -> data/incident_001/forcing_v2, results/E008b_forcing_expansion
+│   ├── e008b_candidate_hindcast_v2.py  E008b 42 deterministic re-runs with forcing v2 (imports E008a unchanged) + v1/v2 comparison -> results/E008b_candidate_hindcast_v2
 │   ├── e008_candidate_policy_v1.py  E008 candidate policy v1: freeze config, apply once to E007 (no grouping, A_min 5000), post-hoc Cerulean map -> results/E008_candidate_policy_v1
 │   ├── e007c_validate_clustering.py  E007c grouping policy from E005 val only (G / A_min / orientation sweeps; its G-based freeze/apply stages are unused) -> results/E007c_validation_clustering
 │   ├── e007b_component_structure.py  E007b model-only component/cluster structure (no Cerulean) -> results/E007b_component_structure
@@ -67,6 +69,7 @@ SIH26143/
 │       ├── ais/                   ais_roi.parquet (59,077 rows, 162 MMSI), candidate tracks, closest approach, summary json
 │       ├── currents/              ocean_surface_velocity.nc (raw CMEMS SMOC), ocean_opendrift.nc (uo+utide, vsdx/vsdy)
 │       ├── wind/                  era5_wind_10m(_151h).nc + download script
+│       ├── forcing_v2/            FROZEN forcing v2 (expanded extent, same recipe): raw/, ocean_opendrift.nc, era5_wind_10m_151h.nc, FROZEN.json
 │       ├── metadata/              incident.json, slick_3775938.geojson, cerulean_candidates.geojson (*contains the two SLICKS 3775938 & 3750297, not candidates*)
 │       ├── sentinel1/             SAFE (IPF 003.52, ascending, VV+VH), asf_scene_metadata.json
 │       └── waves/                 empty
@@ -121,6 +124,11 @@ Done and verified (2026-09-26):
 - E008a (2026-09-28): deterministic 48 h hindcast per candidate (`scripts/e008a_candidate_hindcast.py`, `results/E008a_candidate_hindcast/`).
   Frozen recipe reproduced exactly (0 config diffs). 40/42 physics-valid; C12 (1,595/2,000) and C14 (2,000/2,000) deactivated at the
   ERA5 wind east edge (-88.5°). Outside current/wind = deactivation (`missing_data`), not silent zero. Ensemble / AIS NOT run.
+  Reproducibility checkpoint (E008a): git commit `b4c7e871a3b9d313289224e9a3524c1ab50d0bc5`.
+- E008b (2026-09-28): forcing v2 = same products/recipe, domain W -92.75 E -86.25 S 24.5 N 30.25 (E008a trajectory envelope + 2°,
+  0.25° snap). v1 provenance reproduced (ocean byte-identical). v1/v2 common domain 100% bit-exact. FROZEN
+  (`data/incident_001/forcing_v2/FROZEN.json`). 42/42 re-runs valid incl. C12/C14; 30/40 v1-valid runs bit-exact, 10 differ by 1 float32
+  ulp (max 0.76 m). Ensemble / AIS NOT run.
 
 ## How to state the attribution result
 

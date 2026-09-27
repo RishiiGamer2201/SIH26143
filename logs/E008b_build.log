@@ -1,0 +1,2 @@
+{"smoc": {"lon": [-92.75, -86.25], "lat": [24.5, 30.25], "n_lon": 79, "n_lat": 70}, "era5": {"lon": [-92.75, -86.25], "lat": [30.25, 24.5], "n_lon": 27, "n_lat": 24}}
+data/incident_001/forcing_v2/ocean_opendrift.nc 9873536080833ef6c55c79df5570d333a9fcbbe0ba6333b5705ce30a5128f707 data/incident_001/forcing_v2/era5_wind_10m_151h.nc c3c64ddd4ed99897e899aa436a8962698c3c7084258a89a3994bf79b7d58fabb

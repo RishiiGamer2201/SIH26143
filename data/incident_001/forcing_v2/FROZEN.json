@@ -1,0 +1,24 @@
+{
+ "name": "forcing v2",
+ "description": "same frozen physics recipe with expanded environmental spatial coverage",
+ "not_a_claim": "not a physics change and not 'better physics': products, variables, times, resolution and processing are those of forcing v1; only the horizontal extent differs",
+ "criteria": {
+  "equivalence_pass": true,
+  "completed_42": true,
+  "zero_forcing_edge_exits": true
+ },
+ "predeclared_freeze_criterion": "equivalence PASS AND 42/42 runs completed AND zero active particle-hours outside either reader and zero deactivations outside either reader in all 42 runs",
+ "sha256": {
+  "data/incident_001/currents/dataset_description.json": "0f30b399813e5f35ed416a441827eae242a6cc054f47aa549bef635d77034c8f",
+  "data/incident_001/forcing_v2/download_metadata.json": "72da7b289d4f921caebe3454a25324e591c290c4cecfca39e32b2372bd59ea40",
+  "data/incident_001/forcing_v2/raw/ocean_surface_velocity.nc": "524cb86e0f5c883aa39f59a6bfccb8d22ea18ad9ab1a809e5d7ba0a30b35771f",
+  "data/incident_001/forcing_v2/raw/era5_wind_10m.nc": "90df47885fa0a537efef7b8f894d12d1476a4286071b3f2fc40587a6c61076fa",
+  "data/incident_001/forcing_v2/ocean_opendrift.nc": "9873536080833ef6c55c79df5570d333a9fcbbe0ba6333b5705ce30a5128f707",
+  "data/incident_001/forcing_v2/era5_wind_10m_151h.nc": "c3c64ddd4ed99897e899aa436a8962698c3c7084258a89a3994bf79b7d58fabb",
+  "scripts/e008b_prepare_forcing_v2.py": "d59c19d06f831ecb491ca63692a6d75b085e4562e296bfdb2204031dea6c5ffb",
+  "scripts/e008b_candidate_hindcast_v2.py": "91b1062773d25576dd2481df6aa1e53accc29acaf4a6e711b7775d7715cddb8f",
+  "results/E008b_forcing_expansion/provenance_audit.json": "5b1e203e3a952863e1170ab13b69685fc9c645df34839cfa1cccae3c9b6c621f",
+  "results/E008b_forcing_expansion/forcing_expansion_config.json": "e2b569bdf296e7dce00a84e5c92b813c45ca8bdae73331624fbe72c7c14f3381",
+  "results/E008b_forcing_expansion/forcing_overlap_validation.json": "5338acc758d9eb89e2a7ce8020645c0f1cdb2c2aae8c7fd6f8114712bb443e22"
+ }
+}
