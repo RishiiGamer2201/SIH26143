@@ -89,6 +89,8 @@ Done and verified (2026-09-26):
   (a) official test minus the 3 nodata tiles, (b) acquisition-clean test, (c) place-clean test — never only the aggregate.
 - E001 env, E002 cache, E003 feature baseline done; E101 (AIS V2.1) and E102 (source types) done. E004 (CNN) done.
 - E005-A approved and frozen. E005 SegFormer (Trujillo only) FROZEN (`results/E005_segformer_b2/FROZEN.json`, epoch 9, thr 0.60). E006 one-shot test accepted as the frozen baseline test result: dominant failure on broad oil masks, strongly associated with a label-coverage distribution shift (region, annotation style, intensity shift not disentangled).
+- Reproducibility checkpoint (E005 freeze + E006 test): git commit `971c9490c5a36ecbaafa570f3a766a82c8410903`
+  on `main` of the private repo github.com/RishiiGamer2201/SIH26143.
 
 ## How to state the attribution result
 
