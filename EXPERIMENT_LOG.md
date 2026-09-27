@@ -4,6 +4,50 @@ Newest first. Every entry: date, what ran, exact command, outputs, result, decis
 
 ---
 
+## 2026-09-28 · E008 candidate policy v1 — frozen and applied once to E007 (no physics)
+
+**Decision.** The reviewer approved Option 1: autonomous multi-candidate, **no grouping**, A_min = 5,000 m², no
+orientation guard.
+- The E007c state was committed first: `cf51f5bd21f22b3e41d9af676e0c9598f9aea360`.
+- No G was selected, because none met the predeclared rule (r_area ≥ 0.95 and wrong merge ≤ 0.05; see E007c).
+
+**Run.**
+- `python scripts/e008_candidate_policy_v1.py freeze` wrote `configs/e008_candidate_policy_v1.json` and `.sha256`
+  (`3fb833df7268647641f8b9f1696527c10b067607e3fc9ce11363a4cce0f5bb27`).
+  - The config records the E005 checkpoint sha, the E007 `FROZEN.json` sha (`7f85aad2…`), the E007c commits, the
+    exact validation values and the forbidden inputs.
+- `... apply` (E007 `FROZEN.json` verified: 19 files) wrote `results/E008_candidate_policy_v1/`.
+- `... posthoc` wrote `posthoc_cerulean_candidate_mapping.json`. It ran after the candidate files were written, and it
+  re-checks their sha256.
+
+**Implementation.** "No grouping" is an explicit mode: each E007 4-connected component with `area_m2 ≥ 5000` is one
+candidate `E007-C{component_id}`, ordered by ID.
+- It is not G = 0 single linkage, because diagonally touching components have distance 0.
+- The post-hoc `in_roi` flag is dropped on load.
+
+**Result.**
+- 49 components → **42 candidates**, **7 excluded**: 11, 13, 15, 20, 22, 32, 42. All are < 5,000 m²; together
+  19,068 m².
+- Retained area: 25,858,333 m² (99.926% of 25,877,401 m²).
+- The large model strands **C37** (1.128 km²) and **C40** (0.840 km²) remain **separate** candidates.
+
+**Post hoc (no winner).**
+- 8 candidates intersect the Cerulean reference: C30, C33, C34, C35, C36, C37, C38, C40.
+- Together they cover 80.5% of the reference.
+- No excluded component intersects the reference (checked read-only; C32 is 214 m and C42 is 187 m away).
+
+**Recorded caveat.** 14 descriptive validation floats in the v1 JSON differ by ≤ 1.1e-16 (≤ 1 ulp) from the E007c
+CSV text, because pandas' default float parser was used.
+- The operative values and all counts are exact.
+- The CSVs are authoritative; their sha256 are in the JSON.
+- Not corrected, because v1 is hashed.
+
+**Not run.** Deterministic OpenDrift per candidate, the 27-member ensemble, release-age scoring and AIS attribution.
+The existing physics scripts seed from the Cerulean polygon, so E008 needs new, versioned per-candidate scripts.
+Frozen root scripts are not edited.
+
+---
+
 ## 2026-09-28 · E007c — Component-grouping policy from the E005 VALIDATION split (no G found; nothing frozen or applied)
 
 **Run.** `python scripts/e007c_validate_clustering.py extract`, then `... analyse`. Logs `logs/E007c_{extract,analyse}.log`. Outputs in `results/E007c_validation_clustering/`.

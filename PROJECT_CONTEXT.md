@@ -50,12 +50,13 @@ SIH26143/
 │   ├── kaggle/e005a_audit/        private Kaggle kernel used by E005-A (hashes the dataset next to its mount)
 │   ├── e005_segformer.py          E005 SegFormer MiT-B2 segmentation (20 m), tests/train/validate -> results/E005_segformer_b2
 │   ├── e006_segformer_test.py     E006 freeze E005 (FROZEN.json) + one-shot official test -> results/E006_segformer_test
-│   ├── e007c_validate_clustering.py  E007c grouping policy from E005 val only (G / A_min / orientation sweeps; freeze + apply stages) -> results/E007c_validation_clustering
+│   ├── e008_candidate_policy_v1.py  E008 candidate policy v1: freeze config, apply once to E007 (no grouping, A_min 5000), post-hoc Cerulean map -> results/E008_candidate_policy_v1
+│   ├── e007c_validate_clustering.py  E007c grouping policy from E005 val only (G / A_min / orientation sweeps; its G-based freeze/apply stages are unused) -> results/E007c_validation_clustering
 │   ├── e007b_component_structure.py  E007b model-only component/cluster structure (no Cerulean) -> results/E007b_component_structure
 │   ├── e007_incident001_ml.py     E007 Incident 001 SAFE -> σ0 VV geocoded -> frozen E004/E005 -> mask -> polygons -> results/E007_incident001_ml
 │   ├── score_ais_density_v2_1.py  E101 V2.1 = V2 with interpolated AIS positions -> results/incident_001_v2_1
 │   └── source_type_v1.py          E102 post-score source-type layer -> results/incident_001_source_type_v1
-├── configs/                       ais_v2_1.json, source_type_v1.json (all thresholds for E101/E102)
+├── configs/                       ais_v2_1.json, source_type_v1.json (E101/E102 thresholds); e008_candidate_policy_v1.json + .sha256 (FROZEN, never edit)
 ├── logs/                          E001_*.log, E002_*.log, E003_*.log, E101_*.log, E102_*.log
 ├── data/
 │   ├── sar/extracted/             Zenodo dataset, see SAR_DATA_AUDIT.md §1 (never modified)
@@ -78,6 +79,7 @@ SIH26143/
     ├── E004_resnet18_cls/         E004 checkpoint, curves, val + one-shot test metrics
     ├── E005_segformer_b2/         FROZEN E005 checkpoint (FROZEN.json hashes), tests, curves, val sweep/metrics/figures
     ├── E006_segformer_test/       E006 one-shot test: metrics (3 views), per-tile, component recall, figures, u8 probs (git-ignored)
+    ├── E008_candidate_policy_v1/  E008 policy v1 applied once: 42 candidate components (CSV/GeoJSON), 7 excluded, report; post-hoc Cerulean mapping (separate file)
     ├── E007c_validation_clustering/ E007c val component tables, intra/inter gaps, G + A_min sweeps, report, curves
     ├── E007b_component_structure/ E007b model-only component table, clusters at predeclared gaps, figure; post-hoc ROI map (separate file)
     └── E007_incident001_ml/       E007 Incident 001 ML: reports, windows, predicted components (GeoJSON/CSV), post-hoc Cerulean comparison; rasters/ git-ignored
@@ -109,7 +111,11 @@ Done and verified (2026-09-26):
   model-only cluster; the northern linear features (unverified) are bigger.
 - E007c (validation only): NO defensible single global link gap G (r_area >= 0.95 needs G >= 250 m, where wrong-GT merges are 17.8%; <= 5% only at 100 m).
   A_min rule gives 5,000 m². No candidate policy frozen, nothing applied to E007. G = 5 km via AIS σ was rejected (different concept).
-- E008 blocked on the reviewer's choice of candidate policy (`E008_SELECTION_POLICY.md`, DRAFT). Cerulean geometry / ROI never selects the physics seed.
+  Analysis commit `cf51f5bd21f22b3e41d9af676e0c9598f9aea360` (rules predeclared in `c56fdde636858ce2770d15f55ce710f06ff124dc`).
+- E008 candidate policy v1 FROZEN (2026-09-28, reviewer Option 1): `configs/e008_candidate_policy_v1.json`, sha256 `3fb833df…f5bb27`.
+  No grouping (explicit mode, not G = 0); drop components < 5,000 m²; each remaining E007 component = one candidate `E007-C{id}`.
+  Applied once: 42 candidates, 7 excluded (19,068 m²). Post hoc only: 8 candidates intersect Cerulean (C30, C33–C38, C40); no winner.
+  Cerulean geometry / ROI never selects, merges or ranks candidates. Physics (hindcast / ensemble / scoring) per candidate NOT started.
 
 ## How to state the attribution result
 

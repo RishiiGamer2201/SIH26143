@@ -1,0 +1,122 @@
+{
+ "note": "POST HOC only. Written after the candidate list was frozen. Does not alter the policy, the candidate list, its order or downstream eligibility. No candidate is selected or declared the Incident 001 slick; rows are ordered by component id.",
+ "policy_sha256": "3fb833df7268647641f8b9f1696527c10b067607e3fc9ce11363a4cce0f5bb27",
+ "candidate_files_sha256": {
+  "candidate_components.csv": "19541d9bd80b7acf16767600c59c4337c892bc9d721b6d4ce6b189db85329847",
+  "candidate_components.geojson": "22414cc32182f6b2edccbcde61c49b3bc9837021792a6fe06a54783655e537ab",
+  "excluded_components.csv": "41e9268f007c595a8d7ed6a45266f810c412f7161fdc7afd5f9b3984189ab520"
+ },
+ "reference": "data/incident_001/metadata/slick_3775938.geojson",
+ "areas": "intersection / fractions / IoU in the E007 scene-centred LAEA (equal-area); candidate_area_m2 geodesic from E007",
+ "n_candidates": 42,
+ "n_candidates_intersecting_reference": 8,
+ "intersecting_candidate_ids": [
+  "E007-C30",
+  "E007-C33",
+  "E007-C34",
+  "E007-C35",
+  "E007-C36",
+  "E007-C37",
+  "E007-C38",
+  "E007-C40"
+ ],
+ "reference_covered_by_all_intersecting_candidates": 0.8048864786385085,
+ "per_candidate": [
+  {
+   "candidate_id": "E007-C30",
+   "component_id": 30,
+   "intersection_area_m2": 10361.101739622383,
+   "candidate_area_m2": 81550.02786509693,
+   "candidate_area_m2_laea": 81550.02792394574,
+   "reference_area_m2_laea": 1243162.7263137111,
+   "frac_candidate_inside_reference": 0.127052093094134,
+   "frac_reference_covered": 0.008334469430519081,
+   "iou": 0.007883051480119682,
+   "centroid_distance_m": 1786.2475322570506
+  },
+  {
+   "candidate_id": "E007-C33",
+   "component_id": 33,
+   "intersection_area_m2": 56521.58929901204,
+   "candidate_area_m2": 129779.3156150505,
+   "candidate_area_m2_laea": 129779.31551937335,
+   "reference_area_m2_laea": 1243162.7263137111,
+   "frac_candidate_inside_reference": 0.4355207844394475,
+   "frac_reference_covered": 0.04546596201980147,
+   "iou": 0.04293581825640096,
+   "centroid_distance_m": 2245.359882995319
+  },
+  {
+   "candidate_id": "E007-C34",
+   "component_id": 34,
+   "intersection_area_m2": 3220.5520702046265,
+   "candidate_area_m2": 14892.629484340549,
+   "candidate_area_m2_laea": 14892.629479670863,
+   "reference_area_m2_laea": 1243162.7263137111,
+   "frac_candidate_inside_reference": 0.21625140641555818,
+   "frac_reference_covered": 0.0025906118338621443,
+   "iou": 0.002566514779992582,
+   "centroid_distance_m": 1090.445065193626
+  },
+  {
+   "candidate_id": "E007-C35",
+   "component_id": 35,
+   "intersection_area_m2": 2265.102002072861,
+   "candidate_area_m2": 23757.545677751303,
+   "candidate_area_m2_laea": 23757.5458017791,
+   "reference_area_m2_laea": 1243162.7263137111,
+   "frac_candidate_inside_reference": 0.09534242387541719,
+   "frac_reference_covered": 0.0018220478736435863,
+   "iou": 0.001791082704283509,
+   "centroid_distance_m": 4648.912563169845
+  },
+  {
+   "candidate_id": "E007-C36",
+   "component_id": 36,
+   "intersection_area_m2": 129298.68514177937,
+   "candidate_area_m2": 280131.57536319643,
+   "candidate_area_m2_laea": 280131.5753176584,
+   "reference_area_m2_laea": 1243162.7263137111,
+   "frac_candidate_inside_reference": 0.46156412391269935,
+   "frac_reference_covered": 0.10400785223442337,
+   "iou": 0.09275401128404116,
+   "centroid_distance_m": 3710.939495668504
+  },
+  {
+   "candidate_id": "E007-C37",
+   "component_id": 37,
+   "intersection_area_m2": 496998.03095593525,
+   "candidate_area_m2": 1127644.7426313236,
+   "candidate_area_m2_laea": 1127644.7406947976,
+   "reference_area_m2_laea": 1243162.7263137111,
+   "frac_candidate_inside_reference": 0.4407399006266018,
+   "frac_reference_covered": 0.3997851773031025,
+   "iou": 0.2652340314834399,
+   "centroid_distance_m": 827.4398922447978
+  },
+  {
+   "candidate_id": "E007-C38",
+   "component_id": 38,
+   "intersection_area_m2": 52582.33884797093,
+   "candidate_area_m2": 88298.01103640348,
+   "candidate_area_m2_laea": 88298.01106577765,
+   "reference_area_m2_laea": 1243162.7263137111,
+   "frac_candidate_inside_reference": 0.5955098898977429,
+   "frac_reference_covered": 0.04229722926449921,
+   "iou": 0.041115980149753886,
+   "centroid_distance_m": 2832.612578746941
+  },
+  {
+   "candidate_id": "E007-C40",
+   "component_id": 40,
+   "intersection_area_m2": 249357.46910069344,
+   "candidate_area_m2": 839833.4700908884,
+   "candidate_area_m2_laea": 839833.4781463741,
+   "reference_area_m2_laea": 1243162.7263137111,
+   "frac_candidate_inside_reference": 0.2969129900025646,
+   "frac_reference_covered": 0.2005831286786572,
+   "iou": 0.13599051126710604,
+   "centroid_distance_m": 3008.4001644035234
+  }
+ ]
+}
