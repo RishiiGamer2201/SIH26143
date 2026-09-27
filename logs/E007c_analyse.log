@@ -1,0 +1,62 @@
+{
+ "counts": {
+  "val_tiles": 477,
+  "val_tiles_with_predictions": 247,
+  "pred_components": 2297,
+  "by_status": {
+   "tp": 1279,
+   "fp": 735,
+   "ambiguous": 283
+  },
+  "by_class": {
+   "oil": 1925,
+   "lookalike": 346,
+   "no_oil": 26
+  },
+  "gt_components": 4790,
+  "fragmented_gt": 200
+ },
+ "intra": {
+  "n": 200,
+  "min": 17.479569244720096,
+  "p25": 106.6671235974186,
+  "median": 204.09287050060556,
+  "p75": 416.46546350258205,
+  "p90": 666.918562253156,
+  "p95": 1244.2640154222252,
+  "p99": 3073.487476600323,
+  "max": 4373.059533545177
+ },
+ "inter": {
+  "n": 5262,
+  "min": 17.497375483037104,
+  "p25": 1736.5234206223556,
+  "median": 4688.397545642038,
+  "p75": 8410.39410862814,
+  "p90": 12125.039882567047,
+  "p95": 14448.809524611339,
+  "p99": 18077.62891824732,
+  "max": 23505.58873583958
+ },
+ "G_rule": {
+  "rule": "smallest G in [100, 250, 500, 750, 1000, 1500, 2000, 3000, 5000] with r_area >= 0.95 and wrong_rate <= 0.05 (variant none, A_min 0)",
+  "selected_G_m": null,
+  "outcome": "NO defensible single global G: no grid value meets both constraints",
+  "max_G_with_wrong_ok": 100,
+  "min_G_with_r_area_ok": 250
+ },
+ "A_min_rule": {
+  "rule": "smallest A_min in [500, 1000, 2000, 5000, 10000, 20000, 50000, 100000] with fp_reduction >= 0.2 and tp_area_retained >= 0.99; else 0",
+  "selected_A_min_m2": 5000,
+  "outcome": "selected"
+ },
+ "guard": {
+  "rule": {
+   "min_rel_wrong_reduction": 0.25,
+   "min_abs_wrong_reduction": 0.01,
+   "max_r_area_drop": 0.01
+  },
+  "adopted_theta_deg": null
+ },
+ "combined": null
+}

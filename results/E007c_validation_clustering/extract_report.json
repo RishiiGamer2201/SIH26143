@@ -1,0 +1,23 @@
+{
+ "e005_checkpoint_sha256": "1240a10a184d90a156ddcacd4f72469cca94d33710b4989d1eed1818679b300b",
+ "threshold": 0.6,
+ "val_tiles": 477,
+ "val_iou_reproduced": 0.7539305890035947,
+ "val_iou_reference": 0.7539305890035947,
+ "n_pred_components": 2297,
+ "n_gt_components": 4790,
+ "n_overlaps": 2622,
+ "n_pred_pairs": 20005,
+ "pred_components_by_status": {
+  "tp": 1279,
+  "fp": 735,
+  "ambiguous": 283
+ },
+ "pred_components_by_class": {
+  "oil": 1925,
+  "lookalike": 346,
+  "no_oil": 26
+ },
+ "runtime_s": 61.77044987678528,
+ "peak_vram_gb": 3.0271735191345215
+}

@@ -4,6 +4,53 @@ Newest first. Every entry: date, what ran, exact command, outputs, result, decis
 
 ---
 
+## 2026-09-28 · E007c — Component-grouping policy from the E005 VALIDATION split (no G found; nothing frozen or applied)
+
+**Run.** `python scripts/e007c_validate_clustering.py extract`, then `... analyse`. Logs `logs/E007c_{extract,analyse}.log`. Outputs in `results/E007c_validation_clustering/`.
+- Rules predeclared in the script and committed (`c56fdde`) after `extract` and before `analyse`.
+- Used: frozen E005 (hash-verified) at 0.60 on the 477 val tiles. Not used: test, Incident 001, Cerulean, E007 gaps or ROI, AIS.
+- Val IoU was reproduced exactly (0.75393), and per-tile component counts match E005 `val_tiles.parquet`. Runtime 62 s, 3.0 GB VRAM.
+- After the first `analyse` run, only a report label (`val_tiles` → 477 total plus 247 with predictions), pandas keywords and the plot x-limits changed. All CSV outputs are sha256-identical across re-runs.
+
+**Definitions** (full text in the script docstring):
+- 4-connected components in a local metric frame per tile (dx = 2·px_x_m, dy = 2·px_y_m).
+- Edge-to-edge polygon distance; association by pixel overlap only (tp / ambiguous / fp).
+- r_area = fragment TP area in the dominant cluster ÷ total, over GT components with ≥ 2 predicted fragments.
+- Wrong merge = a cluster whose TP-associated members have > 1 distinct dominant GT.
+- Bootstrap is over tiles (1000 draws).
+
+**Data.** 2,297 predicted components (1,279 tp, 283 ambiguous, 735 fp); 4,790 GT components; 200 fragmented GT components.
+
+**Gaps.**
+- Intra-slick merge height: median 204 m, p90 667 m, p95 1,244 m, max 4,373 m.
+- Nearest other-GT TP component from a TP component: median 425 m, p25 199 m.
+- Nearest GT-object pair gap: median 4.7 km.
+- The intra- and inter-slick distributions overlap heavily.
+
+**G sweep** (see `gap_sweep.csv` and `validation_clustering_curves.png`):
+
+| G (m) | r_area | wrong-merge rate | mixed rate | purity |
+|---|---|---|---|---|
+| 100 | 0.908 | 0.045 (CI 0.035–0.056) | — | — |
+| 250 | 0.950 | 0.178 | — | — |
+| 1000 | 0.989 | 0.492 | — | — |
+| 5000 | 1.000 | 0.717 | 0.371 | 0.850 |
+
+- **Rule outcome: NO defensible single global G.** No grid value meets r_area ≥ 0.95 together with wrong-merge ≤ 5%.
+- The GT 8-connectivity sensitivity check changes this by < 1 pp.
+- **Limitation:** wrong merges are counted against GT *connected components*. Trujillo masks are highly fragmented (~23 per oil tile), so the rate is an upper bound for physical-slick mis-merges. GT was not redefined after seeing the results.
+
+**A_min.** The rule selects **5,000 m²**: fp components −24.8%, TP area kept 99.99%, 119 small TP-associated components removed. Not frozen, because the policy bundle requires G.
+
+**Orientation guard.** Not adopted (no G selected). θ = 20° cuts wrong merges by ~12–19% relative, at ≤ 1 pp r_area cost.
+
+**Decision.**
+- `configs/e008_candidate_policy_v1.json` was NOT written (`freeze` asserts a selected G), and `apply` was NOT run.
+- Nothing was applied to the E007 components.
+- Options are listed in `E008_SELECTION_POLICY.md` (recommended: no grouping + A_min 5,000 m²). Awaiting review. No OpenDrift / ensemble / AIS run.
+
+---
+
 ## 2026-09-28 · E007b — Model-only structure of the E007 components (descriptive; prepares E008 selection)
 
 **Run.** `python scripts/e007b_component_structure.py model_only`, then `... posthoc`. Logs `logs/E007b_{model_only,posthoc}.log`. Outputs in `results/E007b_component_structure/`.

@@ -343,7 +343,7 @@ def analyse():
     Ig = I.drop_duplicates(["row", "gt"])
     strat = lambda df, col, bins, v: {f"[{lo:g}, {hi:g})": dist_stats(df[(df[col] >= lo) & (df[col] < hi)][v])
                                       for lo, hi in zip(bins[:-1], bins[1:])}
-    I["min_frag_area_m2"] = I[["area_a_m2", "area_b_m2"]].min(1)
+    I["min_frag_area_m2"] = I[["area_a_m2", "area_b_m2"]].min(axis=1)
     intra = dict(n_fragmented_gt=int(len(Ig)), pairwise_gap_m=dist_stats(I.gap_m), gt_merge_height_m=dist_stats(Ig.gt_merge_height_m),
                  merge_height_by_gt_area_m2=strat(Ig, "gt_area_m2", GT_AREA_BINS, "gt_merge_height_m"),
                  merge_height_by_gt_elongation=strat(Ig, "gt_elongation", ELONG_BINS, "gt_merge_height_m"),
@@ -357,7 +357,7 @@ def analyse():
     X = X[X.pair_type != "tp_tp_same_gt"]
     X[["row", "cls", "comp_a", "comp_b", "pair_type", "dom_a", "dom_b", "gap_m"]].to_csv(OUT / "inter_slick_gaps.csv", index=False)
     dd = X[X.pair_type == "tp_tp_diff_gt"]
-    gtpair = dd.assign(g1=dd[["dom_a", "dom_b"]].min(1), g2=dd[["dom_a", "dom_b"]].max(1)).groupby(["row", "g1", "g2"]).gap_m.min()
+    gtpair = dd.assign(g1=dd[["dom_a", "dom_b"]].min(axis=1), g2=dd[["dom_a", "dom_b"]].max(axis=1)).groupby(["row", "g1", "g2"]).gap_m.min()
 
     def nearest(mask_self, mask_other, types):
         s = X[X.pair_type.isin(types)]
@@ -452,7 +452,7 @@ def analyse():
                predeclared=dict(G_GRID=G_GRID, R_AREA_MIN=R_AREA_MIN, WRONG_MAX=WRONG_MAX, A_GRID=A_GRID, TP_RETAIN_MIN=TP_RETAIN_MIN,
                                 FP_REDUCTION_MATERIAL=FP_REDUCTION_MATERIAL, MIN_ELONG=MIN_ELONG, THETA_GRID=THETA_GRID,
                                 GUARD_ADOPT=GUARD_ADOPT, N_BOOT=N_BOOT, SEED=SEED),
-               counts=dict(val_tiles=int(len(tiles)), pred_components=int(len(P)), by_status=P.status.value_counts().to_dict(),
+               counts=dict(val_tiles=int(json.load(open(OUT / "extract_report.json"))["val_tiles"]), val_tiles_with_predictions=int(len(tiles)), pred_components=int(len(P)), by_status=P.status.value_counts().to_dict(),
                            by_class=P.cls.value_counts().to_dict(), gt_components=int(len(G)), fragmented_gt=int(len(Ig))),
                intra_slick=intra, inter_slick=inter, G_rule=g_rule, A_min_rule=a_rule, orientation_guard=guard,
                combined_policy_on_validation=combined, runtime_s=time.time() - t0)
@@ -522,6 +522,8 @@ def curves(I, Ig, gtpair, X, S, AS):
     a.set_xlabel("A_min (m2)")
     a.set_title("minimum component area")
     a.legend()
+    for a in (ax[0, 0], ax[0, 1], ax[0, 2], ax[1, 0], ax[1, 2]):
+        a.set_xlim(left=0)
     plt.tight_layout()
     plt.savefig(OUT / "validation_clustering_curves.png", dpi=80)
 
