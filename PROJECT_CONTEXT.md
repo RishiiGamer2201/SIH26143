@@ -50,6 +50,7 @@ SIH26143/
 │   ├── kaggle/e005a_audit/        private Kaggle kernel used by E005-A (hashes the dataset next to its mount)
 │   ├── e005_segformer.py          E005 SegFormer MiT-B2 segmentation (20 m), tests/train/validate -> results/E005_segformer_b2
 │   ├── e006_segformer_test.py     E006 freeze E005 (FROZEN.json) + one-shot official test -> results/E006_segformer_test
+│   ├── e008a_candidate_hindcast.py  E008a deterministic hindcast per policy-v1 candidate (frozen recipe; coverage audit) -> results/E008a_candidate_hindcast
 │   ├── e008_candidate_policy_v1.py  E008 candidate policy v1: freeze config, apply once to E007 (no grouping, A_min 5000), post-hoc Cerulean map -> results/E008_candidate_policy_v1
 │   ├── e007c_validate_clustering.py  E007c grouping policy from E005 val only (G / A_min / orientation sweeps; its G-based freeze/apply stages are unused) -> results/E007c_validation_clustering
 │   ├── e007b_component_structure.py  E007b model-only component/cluster structure (no Cerulean) -> results/E007b_component_structure
@@ -117,6 +118,9 @@ Done and verified (2026-09-26):
   Applied once: 42 candidates, 7 excluded (19,068 m²). Post hoc only: 8 candidates intersect Cerulean (C30, C33–C38, C40); no winner.
   Cerulean geometry / ROI never selects, merges or ranks candidates. Physics (hindcast / ensemble / scoring) per candidate NOT started.
 - Reproducibility checkpoint (E008 policy v1 freeze + application): git commit `e3aa9a63d2cebd043262a4fa1ea54db133a0aba1` on `main`.
+- E008a (2026-09-28): deterministic 48 h hindcast per candidate (`scripts/e008a_candidate_hindcast.py`, `results/E008a_candidate_hindcast/`).
+  Frozen recipe reproduced exactly (0 config diffs). 40/42 physics-valid; C12 (1,595/2,000) and C14 (2,000/2,000) deactivated at the
+  ERA5 wind east edge (-88.5°). Outside current/wind = deactivation (`missing_data`), not silent zero. Ensemble / AIS NOT run.
 
 ## How to state the attribution result
 

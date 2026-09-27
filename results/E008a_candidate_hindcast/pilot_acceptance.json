@@ -1,0 +1,22 @@
+{
+ "candidate_id": "E007-C1",
+ "selection_rule": "smallest retained component_id (software smoke test, not an attribution choice)",
+ "passed": true,
+ "checks": {
+  "completed": true,
+  "physics_config_equal_to_baseline": true,
+  "seed_is_candidate_polygon": true,
+  "seeded_2000": true,
+  "times_49": true,
+  "backward_T0_to_minus48h": true,
+  "active_coordinates_finite": true,
+  "output_schema_matches_baseline": true,
+  "frozen_incident_001_unchanged": true,
+  "frozen_root_scripts_unchanged": true,
+  "reader_behaviour_audited": true,
+  "no_reference_geometry_dependency": true
+ },
+ "runtime_s": 6.157599366000795,
+ "physics_valid_for_attribution": true,
+ "schema_diff": null
+}

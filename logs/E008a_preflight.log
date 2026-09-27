@@ -1,0 +1,149 @@
+20:29:40 INFO    opendrift:569: OpenDriftSimulation initialised (version 1.14.11)
+20:29:40 INFO    opendrift.readers:67: Opening file with xr.open_dataset
+20:29:40 INFO    opendrift.readers.reader_netCDF_CF_generic:307: Grid coordinates are detected, but proj4 string not given: assuming latlong
+20:29:40 INFO    opendrift.readers.reader_netCDF_CF_generic:340: Detected dimensions: {'time': 'time', 'z': 'depth', 'y': 'latitude', 'x': 'longitude'}
+20:29:40 INFO    opendrift.readers:67: Opening file with xr.open_dataset
+20:29:40 INFO    opendrift.readers.reader_netCDF_CF_generic:340: Detected dimensions: {'time': 'valid_time', 'x': 'longitude', 'y': 'latitude'}
+20:29:40 INFO    opendrift.readers.basereader:175: Variable x_wind will be rotated from eastward_wind
+20:29:40 INFO    opendrift.readers.basereader:175: Variable y_wind will be rotated from northward_wind
+20:29:40 INFO    opendrift:569: OpenDriftSimulation initialised (version 1.14.11)
+20:29:40 INFO    opendrift.models.openoil.openoil:1720: Oil type not specified, using default: GENERIC BUNKER C
+20:29:40 INFO    opendrift.models.openoil.adios.dirjs:86: Querying ADIOS database for oil: GENERIC BUNKER C
+20:29:40 INFO    opendrift.models.openoil.openoil:1731: Using density 988.1 and viscosity 0.02169233387797549 of oiltype GENERIC BUNKER C
+20:29:40 INFO    opendrift.models.basemodel.environment:203: Adding a global landmask from GSHHG
+20:29:43 INFO    opendrift.models.basemodel.environment:227: Fallback values will be used for the following variables which have no readers: 
+20:29:43 INFO    opendrift.models.basemodel.environment:230: 	sea_surface_height: 0.000000
+20:29:43 INFO    opendrift.models.basemodel.environment:230: 	upward_sea_water_velocity: 0.000000
+20:29:43 INFO    opendrift.models.basemodel.environment:230: 	sea_surface_wave_significant_height: 0.000000
+20:29:43 INFO    opendrift.models.basemodel.environment:230: 	sea_surface_wave_period_at_variance_spectral_density_maximum: 0.000000
+20:29:43 INFO    opendrift.models.basemodel.environment:230: 	sea_surface_wave_mean_period_from_variance_spectral_density_second_frequency_moment: 0.000000
+20:29:43 INFO    opendrift.models.basemodel.environment:230: 	sea_ice_area_fraction: 0.000000
+20:29:43 INFO    opendrift.models.basemodel.environment:230: 	sea_ice_x_velocity: 0.000000
+20:29:43 INFO    opendrift.models.basemodel.environment:230: 	sea_ice_y_velocity: 0.000000
+20:29:43 INFO    opendrift.models.basemodel.environment:230: 	sea_water_temperature: 10.000000
+20:29:43 INFO    opendrift.models.basemodel.environment:230: 	sea_water_salinity: 34.000000
+20:29:43 INFO    opendrift.models.basemodel.environment:230: 	sea_floor_depth_below_sea_level: 10000.000000
+20:29:43 INFO    opendrift.models.basemodel.environment:230: 	horizontal_diffusivity: 0.000000
+20:29:43 INFO    opendrift.models.basemodel.environment:230: 	ocean_vertical_diffusivity: 0.020000
+20:29:43 INFO    opendrift.models.basemodel.environment:230: 	ocean_mixed_layer_thickness: 50.000000
+20:29:43 INFO    opendrift:1903: Skipping environment variable upward_sea_water_velocity because of condition ['drift:vertical_advection', 'is', False]
+20:29:43 INFO    opendrift:1903: Skipping environment variable ocean_vertical_diffusivity because of condition ['drift:vertical_mixing', 'is', False]
+20:29:43 INFO    opendrift:1903: Skipping environment variable ocean_mixed_layer_thickness because of condition ['drift:vertical_mixing', 'is', False]
+20:29:43 INFO    opendrift:1914: Storing previous values of element property lon because of condition (('general:coastline_action', 'in', ['stranding', 'previous']), 'or', ('general:seafloor_action', 'in', ['previous']))
+20:29:43 INFO    opendrift:1914: Storing previous values of element property lat because of condition (('general:coastline_action', 'in', ['stranding', 'previous']), 'or', ('general:seafloor_action', 'in', ['previous']))
+20:29:43 INFO    opendrift:1967: Backwards simulation, starting from last seeded element
+20:29:43 INFO    opendrift:2058: Backwards simulation, starting at time of last seeded element
+20:29:43 INFO    opendrift:955: Using existing reader for land_binary_mask to move elements to ocean
+20:29:43 INFO    opendrift:986: All points are in ocean
+20:29:43 INFO    opendrift.models.openoil.openoil:697: Oil-water surface tension is 0.035935 Nm
+20:29:43 INFO    opendrift.models.openoil.openoil:710: Max water fraction not available for GENERIC BUNKER C, using default
+20:29:43 INFO    opendrift:2213: 2023-01-03 00:01:42 - step 1 of 4 - 3 active elements (0 deactivated)
+20:29:43 WARNING opendrift:2511: Missing variables: ['x_sea_water_velocity', 'y_sea_water_velocity', 'x_wind', 'y_wind', 'sea_surface_wave_significant_height']
+20:29:43 INFO    opendrift:2213: 2023-01-02 23:46:42 - step 2 of 4 - 1 active elements (2 deactivated)
+20:29:43 INFO    opendrift:2213: 2023-01-02 23:31:42 - step 3 of 4 - 1 active elements (2 deactivated)
+20:29:43 INFO    opendrift:2213: 2023-01-02 23:16:42 - step 4 of 4 - 1 active elements (2 deactivated)
+{
+ "config_equal": true,
+ "runtime_diff": {},
+ "token_hits": [],
+ "zero_fallbacks": [
+  "land_binary_mask",
+  "sea_surface_wave_stokes_drift_x_velocity",
+  "sea_surface_wave_stokes_drift_y_velocity"
+ ],
+ "readers": {
+  "current": {
+   "name": "/home/admin_wsl/SIH26143/data/incident_001/currents/ocean_opendrift.nc",
+   "variables": [
+    "sea_surface_wave_stokes_drift_speed",
+    "sea_surface_wave_stokes_drift_x_velocity",
+    "sea_surface_wave_stokes_drift_y_velocity",
+    "sea_water_speed",
+    "x_sea_water_velocity",
+    "y_sea_water_velocity"
+   ],
+   "xmin": -92.41666412353516,
+   "xmax": -88.41666412353516,
+   "ymin": 25.16666603088379,
+   "ymax": 29.08333396911621,
+   "delta_x": "0.08332825",
+   "delta_y": "0.08333397",
+   "zmin": -Infinity,
+   "zmax": Infinity,
+   "z_for_coverage": 0.0,
+   "start_time": "2023-01-01 00:00:00",
+   "end_time": "2023-01-07 06:00:00",
+   "time_step": "1:00:00",
+   "proj": "+proj=latlong"
+  },
+  "wind": {
+   "name": "/home/admin_wsl/SIH26143/data/incident_001/wind/era5_wind_10m_151h.nc",
+   "variables": [
+    "eastward_wind",
+    "northward_wind",
+    "wind_speed",
+    "x_wind",
+    "y_wind"
+   ],
+   "xmin": -92.25,
+   "xmax": -88.5,
+   "ymin": 25.25,
+   "ymax": 29.0,
+   "delta_x": 0.25,
+   "delta_y": 0.25,
+   "zmin": -Infinity,
+   "zmax": Infinity,
+   "z_for_coverage": 0.0,
+   "start_time": "2023-01-01 00:00:00",
+   "end_time": "2023-01-07 06:00:00",
+   "time_step": "1:00:00",
+   "proj": "+proj=latlong"
+  }
+ }
+}
+candidate_id  min_margin_km forcing_risk_flag  initial_polygon_current_covered  initial_polygon_wind_covered
+     E007-C1      58.869814          moderate                             True                          True
+     E007-C2      57.448601          moderate                             True                          True
+     E007-C3      63.123201          moderate                             True                          True
+     E007-C4      58.715564          moderate                             True                          True
+     E007-C5      62.715748          moderate                             True                          True
+     E007-C6      56.466970          moderate                             True                          True
+     E007-C7      59.326172          moderate                             True                          True
+     E007-C8      56.828301          moderate                             True                          True
+     E007-C9      56.617453          moderate                             True                          True
+    E007-C10      55.791873          moderate                             True                          True
+    E007-C12      35.212271              high                             True                          True
+    E007-C14      35.750237              high                             True                          True
+    E007-C16     117.363798               low                             True                          True
+    E007-C17     118.140287               low                             True                          True
+    E007-C18     123.456231               low                             True                          True
+    E007-C19     169.310141               low                             True                          True
+    E007-C21     169.466291               low                             True                          True
+    E007-C23     167.505165               low                             True                          True
+    E007-C24     165.874737               low                             True                          True
+    E007-C25     165.151785               low                             True                          True
+    E007-C26     165.924675               low                             True                          True
+    E007-C27     165.474538               low                             True                          True
+    E007-C28     101.982935               low                             True                          True
+    E007-C29     100.953593               low                             True                          True
+    E007-C30     179.673328               low                             True                          True
+    E007-C31     179.517774               low                             True                          True
+    E007-C33     177.921512               low                             True                          True
+    E007-C34     180.770432               low                             True                          True
+    E007-C35     175.678427               low                             True                          True
+    E007-C36     176.091605               low                             True                          True
+    E007-C37     179.747013               low                             True                          True
+    E007-C38     182.973913               low                             True                          True
+    E007-C39     182.678838               low                             True                          True
+    E007-C40     175.854487               low                             True                          True
+    E007-C41     180.073261               low                             True                          True
+    E007-C43     170.406578               low                             True                          True
+    E007-C44     170.415300               low                             True                          True
+    E007-C45     171.232643               low                             True                          True
+    E007-C46     174.135287               low                             True                          True
+    E007-C47     171.709336               low                             True                          True
+    E007-C48     172.264722               low                             True                          True
+    E007-C49     173.174844               low                             True                          True
+inside_all True True status [0.0, 0.0, 0.0, 0.0, 0.0] u [0.20742657780647278, 0.2130315601825714] stokes [-0.05008137971162796, -0.0498046875] wind [-4.112786769866943, -3.9235525131225586] land [0.0]
+outside_wind_only True False status [1.0, None, None, None, None] u [0.33779376745224, None] stokes [-0.059570278972387314, None] wind [None, None] land [0.0]
+outside_all_east False False status [1.0, None, None, None, None] u [None, None] stokes [0.0, None] wind [None, None] land [0.0]

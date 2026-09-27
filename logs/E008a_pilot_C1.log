@@ -1,0 +1,248 @@
+20:29:55 INFO    opendrift:569: OpenDriftSimulation initialised (version 1.14.11)
+20:29:55 INFO    opendrift.models.openoil.openoil:1720: Oil type not specified, using default: GENERIC BUNKER C
+20:29:55 INFO    opendrift.models.openoil.adios.dirjs:86: Querying ADIOS database for oil: GENERIC BUNKER C
+20:29:55 INFO    opendrift.models.openoil.openoil:1731: Using density 988.1 and viscosity 0.02169233387797549 of oiltype GENERIC BUNKER C
+20:29:55 INFO    opendrift.models.basemodel.environment:203: Adding a global landmask from GSHHG
+20:29:58 INFO    opendrift.models.basemodel.environment:227: Fallback values will be used for the following variables which have no readers: 
+20:29:58 INFO    opendrift.models.basemodel.environment:230: 	sea_surface_height: 0.000000
+20:29:58 INFO    opendrift.models.basemodel.environment:230: 	upward_sea_water_velocity: 0.000000
+20:29:58 INFO    opendrift.models.basemodel.environment:230: 	sea_surface_wave_significant_height: 0.000000
+20:29:58 INFO    opendrift.models.basemodel.environment:230: 	sea_surface_wave_period_at_variance_spectral_density_maximum: 0.000000
+20:29:58 INFO    opendrift.models.basemodel.environment:230: 	sea_surface_wave_mean_period_from_variance_spectral_density_second_frequency_moment: 0.000000
+20:29:58 INFO    opendrift.models.basemodel.environment:230: 	sea_ice_area_fraction: 0.000000
+20:29:58 INFO    opendrift.models.basemodel.environment:230: 	sea_ice_x_velocity: 0.000000
+20:29:58 INFO    opendrift.models.basemodel.environment:230: 	sea_ice_y_velocity: 0.000000
+20:29:58 INFO    opendrift.models.basemodel.environment:230: 	sea_water_temperature: 10.000000
+20:29:58 INFO    opendrift.models.basemodel.environment:230: 	sea_water_salinity: 34.000000
+20:29:58 INFO    opendrift.models.basemodel.environment:230: 	sea_floor_depth_below_sea_level: 10000.000000
+20:29:58 INFO    opendrift.models.basemodel.environment:230: 	horizontal_diffusivity: 0.000000
+20:29:58 INFO    opendrift.models.basemodel.environment:230: 	ocean_vertical_diffusivity: 0.020000
+20:29:58 INFO    opendrift.models.basemodel.environment:230: 	ocean_mixed_layer_thickness: 50.000000
+20:29:58 INFO    opendrift:1903: Skipping environment variable upward_sea_water_velocity because of condition ['drift:vertical_advection', 'is', False]
+20:29:58 INFO    opendrift:1903: Skipping environment variable ocean_vertical_diffusivity because of condition ['drift:vertical_mixing', 'is', False]
+20:29:58 INFO    opendrift:1903: Skipping environment variable ocean_mixed_layer_thickness because of condition ['drift:vertical_mixing', 'is', False]
+20:29:58 INFO    opendrift:1914: Storing previous values of element property lon because of condition (('general:coastline_action', 'in', ['stranding', 'previous']), 'or', ('general:seafloor_action', 'in', ['previous']))
+20:29:58 INFO    opendrift:1914: Storing previous values of element property lat because of condition (('general:coastline_action', 'in', ['stranding', 'previous']), 'or', ('general:seafloor_action', 'in', ['previous']))
+20:29:58 INFO    opendrift:1967: Backwards simulation, starting from last seeded element
+20:29:58 INFO    opendrift:2058: Backwards simulation, starting at time of last seeded element
+20:29:58 INFO    opendrift:955: Using existing reader for land_binary_mask to move elements to ocean
+20:29:58 INFO    opendrift:986: All points are in ocean
+20:29:58 INFO    opendrift.models.openoil.openoil:697: Oil-water surface tension is 0.035935 Nm
+20:29:58 INFO    opendrift.models.openoil.openoil:710: Max water fraction not available for GENERIC BUNKER C, using default
+20:29:58 INFO    opendrift:2213: 2023-01-03 00:01:42 - step 1 of 192 - 2000 active elements (0 deactivated)
+20:29:58 INFO    opendrift:2213: 2023-01-02 23:46:42 - step 2 of 192 - 2000 active elements (0 deactivated)
+20:29:58 INFO    opendrift:2213: 2023-01-02 23:31:42 - step 3 of 192 - 2000 active elements (0 deactivated)
+20:29:58 INFO    opendrift:2213: 2023-01-02 23:16:42 - step 4 of 192 - 2000 active elements (0 deactivated)
+20:29:58 INFO    opendrift:2213: 2023-01-02 23:01:42 - step 5 of 192 - 2000 active elements (0 deactivated)
+20:29:58 INFO    opendrift:2213: 2023-01-02 22:46:42 - step 6 of 192 - 2000 active elements (0 deactivated)
+20:29:58 INFO    opendrift:2213: 2023-01-02 22:31:42 - step 7 of 192 - 2000 active elements (0 deactivated)
+20:29:58 INFO    opendrift:2213: 2023-01-02 22:16:42 - step 8 of 192 - 2000 active elements (0 deactivated)
+20:29:58 INFO    opendrift:2213: 2023-01-02 22:01:42 - step 9 of 192 - 2000 active elements (0 deactivated)
+20:29:58 INFO    opendrift:2213: 2023-01-02 21:46:42 - step 10 of 192 - 2000 active elements (0 deactivated)
+20:29:58 INFO    opendrift:2213: 2023-01-02 21:31:42 - step 11 of 192 - 2000 active elements (0 deactivated)
+20:29:58 INFO    opendrift:2213: 2023-01-02 21:16:42 - step 12 of 192 - 2000 active elements (0 deactivated)
+20:29:58 INFO    opendrift:2213: 2023-01-02 21:01:42 - step 13 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 20:46:42 - step 14 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 20:31:42 - step 15 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 20:16:42 - step 16 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 20:01:42 - step 17 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 19:46:42 - step 18 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 19:31:42 - step 19 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 19:16:42 - step 20 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 19:01:42 - step 21 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 18:46:42 - step 22 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 18:31:42 - step 23 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 18:16:42 - step 24 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 18:01:42 - step 25 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 17:46:42 - step 26 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 17:31:42 - step 27 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 17:16:42 - step 28 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 17:01:42 - step 29 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 16:46:42 - step 30 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 16:31:42 - step 31 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 16:16:42 - step 32 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 16:01:42 - step 33 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 15:46:42 - step 34 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 15:31:42 - step 35 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 15:16:42 - step 36 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 15:01:42 - step 37 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 14:46:42 - step 38 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 14:31:42 - step 39 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 14:16:42 - step 40 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 14:01:42 - step 41 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 13:46:42 - step 42 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 13:31:42 - step 43 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 13:16:42 - step 44 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 13:01:42 - step 45 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 12:46:42 - step 46 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 12:31:42 - step 47 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 12:16:42 - step 48 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 12:01:42 - step 49 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 11:46:42 - step 50 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 11:31:42 - step 51 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 11:16:42 - step 52 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 11:01:42 - step 53 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 10:46:42 - step 54 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 10:31:42 - step 55 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 10:16:42 - step 56 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 10:01:42 - step 57 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 09:46:42 - step 58 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 09:31:42 - step 59 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 09:16:42 - step 60 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 09:01:42 - step 61 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 08:46:42 - step 62 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 08:31:42 - step 63 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 08:16:42 - step 64 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 08:01:42 - step 65 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 07:46:42 - step 66 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 07:31:42 - step 67 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 07:16:42 - step 68 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 07:01:42 - step 69 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 06:46:42 - step 70 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 06:31:42 - step 71 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 06:16:42 - step 72 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 06:01:42 - step 73 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 05:46:42 - step 74 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 05:31:42 - step 75 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 05:16:42 - step 76 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 05:01:42 - step 77 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 04:46:42 - step 78 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 04:31:42 - step 79 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 04:16:42 - step 80 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 04:01:42 - step 81 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 03:46:42 - step 82 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 03:31:42 - step 83 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 03:16:42 - step 84 of 192 - 2000 active elements (0 deactivated)
+20:29:59 INFO    opendrift:2213: 2023-01-02 03:01:42 - step 85 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-02 02:46:42 - step 86 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-02 02:31:42 - step 87 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-02 02:16:42 - step 88 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-02 02:01:42 - step 89 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-02 01:46:42 - step 90 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-02 01:31:42 - step 91 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-02 01:16:42 - step 92 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-02 01:01:42 - step 93 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-02 00:46:42 - step 94 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-02 00:31:42 - step 95 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-02 00:16:42 - step 96 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-02 00:01:42 - step 97 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 23:46:42 - step 98 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 23:31:42 - step 99 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 23:16:42 - step 100 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 23:01:42 - step 101 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 22:46:42 - step 102 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 22:31:42 - step 103 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 22:16:42 - step 104 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 22:01:42 - step 105 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 21:46:42 - step 106 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 21:31:42 - step 107 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 21:16:42 - step 108 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 21:01:42 - step 109 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 20:46:42 - step 110 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 20:31:42 - step 111 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 20:16:42 - step 112 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 20:01:42 - step 113 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 19:46:42 - step 114 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 19:31:42 - step 115 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 19:16:42 - step 116 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 19:01:42 - step 117 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 18:46:42 - step 118 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 18:31:42 - step 119 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 18:16:42 - step 120 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 18:01:42 - step 121 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 17:46:42 - step 122 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 17:31:42 - step 123 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 17:16:42 - step 124 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 17:01:42 - step 125 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 16:46:42 - step 126 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 16:31:42 - step 127 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 16:16:42 - step 128 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 16:01:42 - step 129 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 15:46:42 - step 130 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 15:31:42 - step 131 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 15:16:42 - step 132 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 15:01:42 - step 133 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 14:46:42 - step 134 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 14:31:42 - step 135 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 14:16:42 - step 136 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 14:01:42 - step 137 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 13:46:42 - step 138 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 13:31:42 - step 139 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 13:16:42 - step 140 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 13:01:42 - step 141 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 12:46:42 - step 142 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 12:31:42 - step 143 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 12:16:42 - step 144 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 12:01:42 - step 145 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 11:46:42 - step 146 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 11:31:42 - step 147 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 11:16:42 - step 148 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 11:01:42 - step 149 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 10:46:42 - step 150 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 10:31:42 - step 151 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 10:16:42 - step 152 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 10:01:42 - step 153 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 09:46:42 - step 154 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 09:31:42 - step 155 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 09:16:42 - step 156 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 09:01:42 - step 157 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 08:46:42 - step 158 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 08:31:42 - step 159 of 192 - 2000 active elements (0 deactivated)
+20:30:00 INFO    opendrift:2213: 2023-01-01 08:16:42 - step 160 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 08:01:42 - step 161 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 07:46:42 - step 162 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 07:31:42 - step 163 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 07:16:42 - step 164 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 07:01:42 - step 165 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 06:46:42 - step 166 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 06:31:42 - step 167 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 06:16:42 - step 168 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 06:01:42 - step 169 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 05:46:42 - step 170 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 05:31:42 - step 171 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 05:16:42 - step 172 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 05:01:42 - step 173 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 04:46:42 - step 174 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 04:31:42 - step 175 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 04:16:42 - step 176 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 04:01:42 - step 177 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 03:46:42 - step 178 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 03:31:42 - step 179 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 03:16:42 - step 180 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 03:01:42 - step 181 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 02:46:42 - step 182 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 02:31:42 - step 183 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 02:16:42 - step 184 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 02:01:42 - step 185 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 01:46:42 - step 186 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 01:31:42 - step 187 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 01:16:42 - step 188 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 01:01:42 - step 189 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 00:46:42 - step 190 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 00:31:42 - step 191 of 192 - 2000 active elements (0 deactivated)
+20:30:01 INFO    opendrift:2213: 2023-01-01 00:16:42 - step 192 of 192 - 2000 active elements (0 deactivated)
+20:30:01 WARNING py.warnings:112: /home/admin_wsl/SIH26143/scripts/e008a_candidate_hindcast.py:469: DeprecationWarning: The 'generic' unit for NumPy timedelta is deprecated, and will raise an error in the future. This includes implicit conversion of bare integers (e.g. `+ 1`). Please use a specific unit instead.
+  n_times=len(t), time_first=str(t[0]), time_last=str(t[-1]), backward=bool(np.all(np.diff(t) < np.timedelta64(0))),
+
+{
+ "candidate_id": "E007-C1",
+ "selection_rule": "smallest retained component_id (software smoke test, not an attribution choice)",
+ "passed": true,
+ "checks": {
+  "completed": true,
+  "physics_config_equal_to_baseline": true,
+  "seed_is_candidate_polygon": true,
+  "seeded_2000": true,
+  "times_49": true,
+  "backward_T0_to_minus48h": true,
+  "active_coordinates_finite": true,
+  "output_schema_matches_baseline": true,
+  "frozen_incident_001_unchanged": true,
+  "frozen_root_scripts_unchanged": true,
+  "reader_behaviour_audited": true,
+  "no_reference_geometry_dependency": true
+ },
+ "runtime_s": 6.157599366000795,
+ "physics_valid_for_attribution": true,
+ "schema_diff": null
+}

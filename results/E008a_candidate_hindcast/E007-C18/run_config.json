@@ -1,0 +1,67 @@
+{
+ "candidate_id": "E007-C18",
+ "component_id": 18,
+ "status": "completed",
+ "runtime_s": 2.9171422559957136,
+ "seed_source": "results/E008_candidate_policy_v1/candidate_components.geojson",
+ "seed_area_m2": 27472.995772652328,
+ "seed_centroid_lon": -89.81688126607587,
+ "seed_centroid_lat": 27.88529344273853,
+ "seed_geometry_valid": true,
+ "n_particles": 2000,
+ "rng_seed": 26143,
+ "T0": "2023-01-03 00:01:42",
+ "duration_h": 48,
+ "time_step_s": -900,
+ "time_step_output_s": 3600,
+ "wind_drift_factor": 0.03,
+ "set_config": [
+  [
+   "processes:evaporation",
+   false
+  ],
+  [
+   "processes:emulsification",
+   false
+  ],
+  [
+   "processes:dispersion",
+   false
+  ],
+  [
+   "processes:biodegradation",
+   false
+  ],
+  [
+   "drift:vertical_mixing",
+   false
+  ],
+  [
+   "drift:vertical_advection",
+   false
+  ],
+  [
+   "drift:current_uncertainty",
+   0
+  ],
+  [
+   "drift:wind_uncertainty",
+   0
+  ],
+  [
+   "environment:fallback:land_binary_mask",
+   0
+  ]
+ ],
+ "forcing": {
+  "data/incident_001/currents/ocean_opendrift.nc": "3c8f047ac526dee253895f72ff73a3ce214530f07322ed04c28257824edc8ca8",
+  "data/incident_001/wind/era5_wind_10m_151h.nc": "4fe4edcfbee1820608c364f51c1540c7fba9d6ab08888a7d62659d0de57df7a1"
+ },
+ "opendrift_version": "1.14.11",
+ "script_sha256": "f11e9bc34a3ddb753ceacd33eb88a52bd29402d9b224a17d1739acfc66ecebaf",
+ "git_head": "c618e6eafecf8e35b6ba0c6bcc88f0297bb93c22",
+ "seed_lon_min": -89.818232224124,
+ "seed_lon_max": -89.81482048323838,
+ "seed_lat_min": 27.88461192862648,
+ "seed_lat_max": 27.88604068880573
+}

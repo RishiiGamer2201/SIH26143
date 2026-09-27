@@ -4,6 +4,84 @@ Newest first. Every entry: date, what ran, exact command, outputs, result, decis
 
 ---
 
+## 2026-09-28 · E008a — Candidate-driven deterministic hindcasts (42 candidates; no ensemble, no AIS)
+
+**Script and outputs.** `scripts/e008a_candidate_hindcast.py`, run in the `opendrift` env (OpenDrift 1.14.11).
+- Stages: `preflight`, `run --candidate E007-C1`, `run --all`, `rediagnose`, `summary`.
+- Logs: `logs/E008a_*.log`.
+- Outputs: `results/E008a_candidate_hindcast/`.
+- `run_hindcast_48h.py` and `run_hindcast_ensemble.py` were not edited or executed (hash and git-clean checked before and
+  after). `results/incident_001/` is unchanged (sha256 of every file checked).
+
+**Inputs.** Policy v1 sha, E007 `FROZEN.json` (19 files) and the candidate output sha256 were verified.
+- 42 candidates, in component-ID order.
+- No reference-slick geometry, ROI, `incident.json` or post-hoc mapping is read. A static token check on the script
+  finds none of them.
+
+**Physics recipe equality** (`physics_config_audit.json`):
+- The baseline source is parsed, never run. Static fields are equal: constants, reader construction, `add_reader`, all
+  9 `set_config` calls in order, the `seed_elements` and `run` keywords, the RNG construction and the rejection-sampler
+  loop (compared by syntax tree).
+- The runtime effective config (102 keys) of the E008a model equals a model built from the baseline's parsed calls:
+  0 differences.
+- Allowed differences only: seed geometry, output paths, candidate ID and instrumentation.
+- Every candidate uses `RNG_SEED` 26143 and N = 2000.
+
+**Forcing.**
+- Currents and Stokes come from `ocean_opendrift.nc`: −92.417 to −88.417°E, 25.167 to 29.083°N, 2023-01-01 00:00 to
+  01-07 06:00.
+- Wind comes from ERA5 `era5_wind_10m_151h.nc`: −92.25 to −88.5°E, 25.25 to 29.0°N, same times.
+- The run window, 2023-01-01 00:01:42 to 01-03 00:01:42, is inside both.
+- Preflight: all 42 seed polygons are inside both readers.
+  - Minimum margin 35 km (C12, C14): risk flag "high".
+  - C1–C10: 56–63 km, flag "moderate".
+  - All others: ≥ 101 km, flag "low".
+
+**Out-of-domain behaviour.** Established from the OpenDrift source (`environment.get_environment`,
+`report_missing_variables`) and an empirical 4-element probe:
+- **Currents or wind missing** (outside the reader, or a NaN cell): no fallback is configured, so the element is
+  **deactivated** (`missing_data`). This is not a silent zero.
+- **Stokes:** fallback 0. It never applies to an active element: Stokes comes from the same file as the currents and
+  that file has no NaN Stokes, so outside the file the element is already deactivated for missing currents.
+- **Land mask:** `general:use_auto_landmask` is True, so the GSHHG land mask is used; the configured fallback of 0 is
+  unused. Coastline action is `stranding`. No stranding occurred.
+- `sea_surface_wave_significant_height` is always its fallback of 0 (no wave reader). This is identical to the baseline.
+- No extrapolation, and no domain deactivation config.
+
+**C1 pilot** (smallest component ID; a software smoke test). Passed all 12 checks: 2,000 seeded, 49 times,
+T0 → −48 h, finite coordinates, schema identical to the baseline, frozen files unchanged. Runtime 6.2 s.
+
+**Diagnostics bug, found and fixed.** Diagnostics v0 inferred deactivations from the output file.
+- When every element is deactivated, OpenDrift stops early and never writes the deactivating step. C14's file ends
+  at −45 h with all 2,000 elements still recorded as active, so v0 reported C14 as valid.
+- Diagnostics v1 (`rediagnose`) re-runs each candidate in memory with identical physics. All 42 re-runs are bit-exact
+  against the saved files.
+- v1 takes deactivations from `elements_deactivated`, and it requires the run to reach −48 h.
+- v0 files are kept in `<cand>/superseded/`. The hindcast files are untouched (hash-checked).
+
+**Result (reviewed and approved 2026-09-28 after the corrected `rediagnose` stage).**
+- 42 of 42 deterministic runs completed. **40 are `physics_valid_for_attribution = true` under forcing v1.**
+- C12 and C14 are invalid because of ERA5 eastern-domain loss.
+- No ensemble, no AIS and no release-age scoring was run.
+- **C12:** 1,595 of 2,000 deactivated (`missing_data`) at the ERA5 east edge (−88.5°), from −44.25 h. 405 reach −48 h.
+- **C14:** all 2,000 deactivated at the ERA5 east edge at −45.5 h; the simulation stopped early.
+- No particle left the current domain. No fallback-zero current, wind or Stokes occurred on any active particle.
+- The northern valid group (C1–C10) comes within about 21 km of the wind east edge (maximum longitude −88.716°).
+- Total runtime: 128 s.
+- Disk: 76 MB (about 1.7 MB per candidate).
+
+**Pairwise origins** (`candidate_origin_pairwise.parquet`; exploratory, no threshold, fusion or clustering):
+- 780 valid pairs.
+- The origin-median distance tracks the seed-centroid distance (r = 0.98). Median 80 km; minimum 0.38 km (C25–C27).
+- Close origins do not show a common release.
+- **Reviewer decision:** deterministic origin proximity is no independent basis for fusing candidates.
+  `grouping.mode = none` stays. There is no origin-distance threshold, no C37/C40 merge, no fragment merge and no
+  endpoint clustering.
+
+**Not run:** the ensemble, AIS scoring and release-age scoring.
+
+---
+
 ## 2026-09-28 · E008 candidate policy v1 — frozen and applied once to E007 (no physics)
 
 **Decision.** The reviewer approved Option 1: autonomous multi-candidate, **no grouping**, A_min = 5,000 m², no

@@ -1,0 +1,803 @@
+{
+ "opendrift_version": "1.14.11",
+ "provenance": {
+  "policy_sha256": "3fb833df7268647641f8b9f1696527c10b067607e3fc9ce11363a4cce0f5bb27",
+  "e007_frozen_sha256": "7f85aad2f579675f50dfa9dc31c76726b9a482aff6ef43e4343bdf41c7b7d4f2",
+  "e007_frozen_files_verified": 19,
+  "candidate_files_sha256": {
+   "candidate_components.csv": "19541d9bd80b7acf16767600c59c4337c892bc9d721b6d4ce6b189db85329847",
+   "candidate_components.geojson": "22414cc32182f6b2edccbcde61c49b3bc9837021792a6fe06a54783655e537ab",
+   "excluded_components.csv": "41e9268f007c595a8d7ed6a45266f810c412f7161fdc7afd5f9b3984189ab520"
+  }
+ },
+ "frozen_state_before": {
+  "incident_001": {
+   "ais_density_scores_v2.csv": "e6e3ccae34245555d28735bd5f05600b747e9414e292958a0239f0ee543ceb4c",
+   "ais_density_time_scores_v2.parquet": "69514183d3929106a296820d2164d38cc109bcba952b01e8ca3675aaf127b706",
+   "ais_ensemble_robust_scores.csv": "9b53b3ac349951474cad8546e3359a7c0460e6b74e8f8af8eb1ab53a9d8bae6e",
+   "ais_ensemble_scenario_scores.parquet": "152e1a3fdf93082bab6f52d9741879e8032b40c0fd552634b29104b1b5d3d294",
+   "ais_hindcast_scores.csv": "fe2b10d312682784f57cb7521bad3961b889e39abd2229766c51657a7397733c",
+   "ais_hindcast_time_scores.parquet": "705c5791a4ae3c9de06a52795967dcdcbcc82b01433f18cf4e7451cbbf3ba838",
+   "hindcast_48h.nc": "5b3b5e26d52f4a6b206c94d1fbedf71663240645521cbdd11396a43d0f4012d0",
+   "hindcast_ensemble_particles.parquet": "ce62916634bee39d554a5002b65e280747d64e06a16e849e2c920867ca320793",
+   "hindcast_ensemble_scenarios.csv": "4093e52ef62fbc5b00b31392fc018d1e8b89c0a4ab4b86bf9f36ab8094b0d024",
+   "origin_cloud_48h.csv": "8c8e6a4df789c9094f379e87a913b6db81db23f8b00a24ad5cdef5f493900afe",
+   "release_age_scores.csv": "797cae82651cdc4d5cbae0f75be6bc20f3a8208d2ad38a067024ee3ea1647a0e"
+  },
+  "root_scripts": {
+   "run_hindcast_48h.py": "ae919a8536fbefa41e76dc776176e7371380e5ea2ef93f10d70a4fb3409ee70d",
+   "run_hindcast_ensemble.py": "4d77fa65ab930bfc123b9c187ea3a22c5c1444b1995e9e71f8065f97ae7e687f"
+  },
+  "root_scripts_git_clean": true
+ },
+ "forcing_files": {
+  "data/incident_001/currents/ocean_opendrift.nc": "3c8f047ac526dee253895f72ff73a3ce214530f07322ed04c28257824edc8ca8",
+  "data/incident_001/wind/era5_wind_10m_151h.nc": "4fe4edcfbee1820608c364f51c1540c7fba9d6ab08888a7d62659d0de57df7a1"
+ },
+ "readers": {
+  "current": {
+   "name": "/home/admin_wsl/SIH26143/data/incident_001/currents/ocean_opendrift.nc",
+   "variables": [
+    "sea_surface_wave_stokes_drift_speed",
+    "sea_surface_wave_stokes_drift_x_velocity",
+    "sea_surface_wave_stokes_drift_y_velocity",
+    "sea_water_speed",
+    "x_sea_water_velocity",
+    "y_sea_water_velocity"
+   ],
+   "xmin": -92.41666412353516,
+   "xmax": -88.41666412353516,
+   "ymin": 25.16666603088379,
+   "ymax": 29.08333396911621,
+   "delta_x": 0.0833282470703125,
+   "delta_y": 0.08333396911621094,
+   "zmin": -Infinity,
+   "zmax": Infinity,
+   "z_for_coverage": 0.0,
+   "start_time": "2023-01-01 00:00:00",
+   "end_time": "2023-01-07 06:00:00",
+   "time_step": "1:00:00",
+   "proj": "+proj=latlong"
+  },
+  "wind": {
+   "name": "/home/admin_wsl/SIH26143/data/incident_001/wind/era5_wind_10m_151h.nc",
+   "variables": [
+    "eastward_wind",
+    "northward_wind",
+    "wind_speed",
+    "x_wind",
+    "y_wind"
+   ],
+   "xmin": -92.25,
+   "xmax": -88.5,
+   "ymin": 25.25,
+   "ymax": 29.0,
+   "delta_x": 0.25,
+   "delta_y": 0.25,
+   "zmin": -Infinity,
+   "zmax": Infinity,
+   "z_for_coverage": 0.0,
+   "start_time": "2023-01-01 00:00:00",
+   "end_time": "2023-01-07 06:00:00",
+   "time_step": "1:00:00",
+   "proj": "+proj=latlong"
+  }
+ },
+ "run_time_window": {
+  "start": "2023-01-03 00:01:42",
+  "end": "2023-01-01 00:01:42",
+  "inside_current_time": true,
+  "inside_wind_time": true
+ },
+ "config_comparison": {
+  "all_equal_except_allowed": true,
+  "allowed_differences": [
+   "seed geometry",
+   "output directory / filenames",
+   "candidate identifier",
+   "instrumentation / coverage checks"
+  ],
+  "static_fields": [
+   {
+    "field": "const:OCEAN",
+    "baseline": "/home/admin_wsl/SIH26143/data/incident_001/currents/ocean_opendrift.nc",
+    "e008a": "/home/admin_wsl/SIH26143/data/incident_001/currents/ocean_opendrift.nc",
+    "equal": true,
+    "allowed_difference": false
+   },
+   {
+    "field": "const:WIND",
+    "baseline": "/home/admin_wsl/SIH26143/data/incident_001/wind/era5_wind_10m_151h.nc",
+    "e008a": "/home/admin_wsl/SIH26143/data/incident_001/wind/era5_wind_10m_151h.nc",
+    "equal": true,
+    "allowed_difference": false
+   },
+   {
+    "field": "const:T0",
+    "baseline": "2023-01-03 00:01:42",
+    "e008a": "2023-01-03 00:01:42",
+    "equal": true,
+    "allowed_difference": false
+   },
+   {
+    "field": "const:N_PARTICLES",
+    "baseline": "2000",
+    "e008a": "2000",
+    "equal": true,
+    "allowed_difference": false
+   },
+   {
+    "field": "const:RNG_SEED",
+    "baseline": "26143",
+    "e008a": "26143",
+    "equal": true,
+    "allowed_difference": false
+   },
+   {
+    "field": "model_constructor",
+    "baseline": "OpenOil(loglevel=20)",
+    "e008a": "OpenOil(loglevel=20)",
+    "equal": true,
+    "allowed_difference": false
+   },
+   {
+    "field": "readers",
+    "baseline": [
+     "reader_netCDF_CF_generic.Reader(str(OCEAN))",
+     "reader_netCDF_CF_generic.Reader(str(WIND))"
+    ],
+    "e008a": [
+     "reader_netCDF_CF_generic.Reader(str(OCEAN))",
+     "reader_netCDF_CF_generic.Reader(str(WIND))"
+    ],
+    "equal": true,
+    "allowed_difference": false
+   },
+   {
+    "field": "add_reader",
+    "baseline": "[ocean_reader, wind_reader]",
+    "e008a": "[ocean_reader, wind_reader]",
+    "equal": true,
+    "allowed_difference": false
+   },
+   {
+    "field": "set_config_calls_ordered",
+    "baseline": [
+     [
+      "processes:evaporation",
+      false
+     ],
+     [
+      "processes:emulsification",
+      false
+     ],
+     [
+      "processes:dispersion",
+      false
+     ],
+     [
+      "processes:biodegradation",
+      false
+     ],
+     [
+      "drift:vertical_mixing",
+      false
+     ],
+     [
+      "drift:vertical_advection",
+      false
+     ],
+     [
+      "drift:current_uncertainty",
+      0
+     ],
+     [
+      "drift:wind_uncertainty",
+      0
+     ],
+     [
+      "environment:fallback:land_binary_mask",
+      0
+     ]
+    ],
+    "e008a": [
+     [
+      "processes:evaporation",
+      false
+     ],
+     [
+      "processes:emulsification",
+      false
+     ],
+     [
+      "processes:dispersion",
+      false
+     ],
+     [
+      "processes:biodegradation",
+      false
+     ],
+     [
+      "drift:vertical_mixing",
+      false
+     ],
+     [
+      "drift:vertical_advection",
+      false
+     ],
+     [
+      "drift:current_uncertainty",
+      0
+     ],
+     [
+      "drift:wind_uncertainty",
+      0
+     ],
+     [
+      "environment:fallback:land_binary_mask",
+      0
+     ]
+    ],
+    "equal": true,
+    "allowed_difference": false
+   },
+   {
+    "field": "seed_elements:lat",
+    "baseline": "lats",
+    "e008a": "lats",
+    "equal": true,
+    "allowed_difference": false
+   },
+   {
+    "field": "seed_elements:lon",
+    "baseline": "lons",
+    "e008a": "lons",
+    "equal": true,
+    "allowed_difference": false
+   },
+   {
+    "field": "seed_elements:number",
+    "baseline": "N_PARTICLES",
+    "e008a": "N_PARTICLES",
+    "equal": true,
+    "allowed_difference": false
+   },
+   {
+    "field": "seed_elements:time",
+    "baseline": "T0",
+    "e008a": "T0",
+    "equal": true,
+    "allowed_difference": false
+   },
+   {
+    "field": "seed_elements:wind_drift_factor",
+    "baseline": "0.03",
+    "e008a": "0.03",
+    "equal": true,
+    "allowed_difference": false
+   },
+   {
+    "field": "run:duration",
+    "baseline": "timedelta(hours=48)",
+    "e008a": "timedelta(hours=48)",
+    "equal": true,
+    "allowed_difference": false
+   },
+   {
+    "field": "run:outfile",
+    "baseline": "str(OUTFILE)",
+    "e008a": "str(outfile)",
+    "equal": false,
+    "allowed_difference": true
+   },
+   {
+    "field": "run:time_step",
+    "baseline": "-900",
+    "e008a": "-900",
+    "equal": true,
+    "allowed_difference": false
+   },
+   {
+    "field": "run:time_step_output",
+    "baseline": "3600",
+    "e008a": "3600",
+    "equal": true,
+    "allowed_difference": false
+   },
+   {
+    "field": "sampler_rng",
+    "baseline": "np.random.default_rng(RNG_SEED)",
+    "e008a": "np.random.default_rng(RNG_SEED)",
+    "equal": true,
+    "allowed_difference": false
+   },
+   {
+    "field": "sampler_validity_fix",
+    "baseline": "if not geom.is_valid:\n    geom = geom.buffer(0)",
+    "e008a": "if not geom.is_valid:\n    geom = geom.buffer(0)",
+    "equal": true,
+    "allowed_difference": false
+   },
+   {
+    "field": "sampler_while_loop_ast",
+    "baseline": [
+     "While(test=Compare(left=Call(func=Name(id='len', ctx=Load()), args=[Name(id='lons', ctx=Load())], keywords=[]), ops=[Lt()], comparators=[Name(id='N_PARTICLES', ctx=Load())]), body=[Assign(targets=[Name(id='n_need', ctx=Store())], value=BinOp(left=Name(id='N_PARTICLES', ctx=Load()), op=Sub(), right=Call(func=Name(id='len', ctx=Load()), args=[Name(id='lons', ctx=Load())], keywords=[]))), Assign(targets=[Name(id='n_try', ctx=Store())], value=Call(func=Name(id='max', ctx=Load()), args=[Constant(value=1000), BinOp(left=Name(id='n_need', ctx=Load()), op=Mult(), right=Constant(value=3))], keywords=[])), Assign(targets=[Name(id='xs', ctx=Store())], value=Call(func=Attribute(value=Name(id='rng', ctx=Load()), attr='uniform', ctx=Load()), args=[Name(id='minx', ctx=Load()), Name(id='maxx', ctx=Load()), Name(id='n_try', ctx=Load())], keywords=[])), Assign(targets=[Name(id='ys', ctx=Store())], value=Call(func=Attribute(value=Name(id='rng', ctx=Load()), attr='uniform', ctx=Load()), args=[Name(id='miny', ctx=Load()), Name(id='maxy', ctx=Load()), Name(id='n_try', ctx=Load())], keywords=[])), For(target=Tuple(elts=[Name(id='x', ctx=Store()), Name(id='y', ctx=Store())], ctx=Store()), iter=Call(func=Name(id='zip', ctx=Load()), args=[Name(id='xs', ctx=Load()), Name(id='ys', ctx=Load())], keywords=[]), body=[If(test=Call(func=Attribute(value=Name(id='geom', ctx=Load()), attr='contains', ctx=Load()), args=[Call(func=Name(id='Point', ctx=Load()), args=[Name(id='x', ctx=Load()), Name(id='y', ctx=Load())], keywords=[])], keywords=[]), body=[Expr(value=Call(func=Attribute(value=Name(id='lons', ctx=Load()), attr='append', ctx=Load()), args=[Name(id='x', ctx=Load())], keywords=[])), Expr(value=Call(func=Attribute(value=Name(id='lats', ctx=Load()), attr='append', ctx=Load()), args=[Name(id='y', ctx=Load())], keywords=[])), If(test=Compare(left=Call(func=Name(id='len', ctx=Load()), args=[Name(id='lons', ctx=Load())], keywords=[]), ops=[Eq()], comparators=[Name(id='N_PARTICLES', ctx=Load())]), body=[Break()], orelse=[])], orelse=[])], orelse=[])], orelse=[])"
+    ],
+    "e008a": [
+     "While(test=Compare(left=Call(func=Name(id='len', ctx=Load()), args=[Name(id='lons', ctx=Load())], keywords=[]), ops=[Lt()], comparators=[Name(id='N_PARTICLES', ctx=Load())]), body=[Assign(targets=[Name(id='n_need', ctx=Store())], value=BinOp(left=Name(id='N_PARTICLES', ctx=Load()), op=Sub(), right=Call(func=Name(id='len', ctx=Load()), args=[Name(id='lons', ctx=Load())], keywords=[]))), Assign(targets=[Name(id='n_try', ctx=Store())], value=Call(func=Name(id='max', ctx=Load()), args=[Constant(value=1000), BinOp(left=Name(id='n_need', ctx=Load()), op=Mult(), right=Constant(value=3))], keywords=[])), Assign(targets=[Name(id='xs', ctx=Store())], value=Call(func=Attribute(value=Name(id='rng', ctx=Load()), attr='uniform', ctx=Load()), args=[Name(id='minx', ctx=Load()), Name(id='maxx', ctx=Load()), Name(id='n_try', ctx=Load())], keywords=[])), Assign(targets=[Name(id='ys', ctx=Store())], value=Call(func=Attribute(value=Name(id='rng', ctx=Load()), attr='uniform', ctx=Load()), args=[Name(id='miny', ctx=Load()), Name(id='maxy', ctx=Load()), Name(id='n_try', ctx=Load())], keywords=[])), For(target=Tuple(elts=[Name(id='x', ctx=Store()), Name(id='y', ctx=Store())], ctx=Store()), iter=Call(func=Name(id='zip', ctx=Load()), args=[Name(id='xs', ctx=Load()), Name(id='ys', ctx=Load())], keywords=[]), body=[If(test=Call(func=Attribute(value=Name(id='geom', ctx=Load()), attr='contains', ctx=Load()), args=[Call(func=Name(id='Point', ctx=Load()), args=[Name(id='x', ctx=Load()), Name(id='y', ctx=Load())], keywords=[])], keywords=[]), body=[Expr(value=Call(func=Attribute(value=Name(id='lons', ctx=Load()), attr='append', ctx=Load()), args=[Name(id='x', ctx=Load())], keywords=[])), Expr(value=Call(func=Attribute(value=Name(id='lats', ctx=Load()), attr='append', ctx=Load()), args=[Name(id='y', ctx=Load())], keywords=[])), If(test=Compare(left=Call(func=Name(id='len', ctx=Load()), args=[Name(id='lons', ctx=Load())], keywords=[]), ops=[Eq()], comparators=[Name(id='N_PARTICLES', ctx=Load())]), body=[Break()], orelse=[])], orelse=[])], orelse=[])], orelse=[])"
+    ],
+    "equal": true,
+    "allowed_difference": false
+   },
+   {
+    "field": "seed_geometry",
+    "baseline": "reference polygon file (SLICK constant)",
+    "e008a": "candidate polygon from candidate_components.geojson",
+    "equal": false,
+    "allowed_difference": true
+   }
+  ],
+  "runtime_full_config_n_keys": 102,
+  "runtime_full_config_differences": {}
+ },
+ "required_variables_provider": {
+  "x_sea_water_velocity": [
+   "/home/admin_wsl/SIH26143/data/incident_001/currents/ocean_opendrift.nc"
+  ],
+  "y_sea_water_velocity": [
+   "/home/admin_wsl/SIH26143/data/incident_001/currents/ocean_opendrift.nc"
+  ],
+  "x_wind": [
+   "/home/admin_wsl/SIH26143/data/incident_001/wind/era5_wind_10m_151h.nc"
+  ],
+  "y_wind": [
+   "/home/admin_wsl/SIH26143/data/incident_001/wind/era5_wind_10m_151h.nc"
+  ],
+  "sea_surface_height": [],
+  "upward_sea_water_velocity": [],
+  "sea_surface_wave_significant_height": [],
+  "sea_surface_wave_stokes_drift_x_velocity": [
+   "/home/admin_wsl/SIH26143/data/incident_001/currents/ocean_opendrift.nc"
+  ],
+  "sea_surface_wave_stokes_drift_y_velocity": [
+   "/home/admin_wsl/SIH26143/data/incident_001/currents/ocean_opendrift.nc"
+  ],
+  "sea_surface_wave_period_at_variance_spectral_density_maximum": [],
+  "sea_surface_wave_mean_period_from_variance_spectral_density_second_frequency_moment": [],
+  "sea_ice_area_fraction": [],
+  "sea_ice_x_velocity": [],
+  "sea_ice_y_velocity": [],
+  "sea_water_temperature": [],
+  "sea_water_salinity": [],
+  "sea_floor_depth_below_sea_level": [],
+  "horizontal_diffusivity": [],
+  "ocean_vertical_diffusivity": [],
+  "land_binary_mask": [],
+  "ocean_mixed_layer_thickness": []
+ },
+ "required_variables_default_fallback": {
+  "x_sea_water_velocity": null,
+  "y_sea_water_velocity": null,
+  "x_wind": null,
+  "y_wind": null,
+  "sea_surface_height": 0,
+  "upward_sea_water_velocity": 0,
+  "sea_surface_wave_significant_height": 0,
+  "sea_surface_wave_stokes_drift_x_velocity": 0,
+  "sea_surface_wave_stokes_drift_y_velocity": 0,
+  "sea_surface_wave_period_at_variance_spectral_density_maximum": 0,
+  "sea_surface_wave_mean_period_from_variance_spectral_density_second_frequency_moment": 0,
+  "sea_ice_area_fraction": 0,
+  "sea_ice_x_velocity": 0,
+  "sea_ice_y_velocity": 0,
+  "sea_water_temperature": 10,
+  "sea_water_salinity": 34,
+  "sea_floor_depth_below_sea_level": 10000,
+  "horizontal_diffusivity": 0,
+  "ocean_vertical_diffusivity": 0.02,
+  "land_binary_mask": null,
+  "ocean_mixed_layer_thickness": 50
+ },
+ "effective_fallbacks": {
+  "horizontal_diffusivity": 0,
+  "land_binary_mask": 0.0,
+  "ocean_mixed_layer_thickness": 50,
+  "ocean_vertical_diffusivity": 0.02,
+  "sea_floor_depth_below_sea_level": 10000,
+  "sea_ice_area_fraction": 0,
+  "sea_ice_x_velocity": 0,
+  "sea_ice_y_velocity": 0,
+  "sea_surface_height": 0,
+  "sea_surface_wave_mean_period_from_variance_spectral_density_second_frequency_moment": 0,
+  "sea_surface_wave_period_at_variance_spectral_density_maximum": 0,
+  "sea_surface_wave_significant_height": 0,
+  "sea_surface_wave_stokes_drift_x_velocity": 0,
+  "sea_surface_wave_stokes_drift_y_velocity": 0,
+  "sea_water_salinity": 34,
+  "sea_water_temperature": 10,
+  "upward_sea_water_velocity": 0,
+  "x_sea_water_velocity": null,
+  "x_wind": null,
+  "y_sea_water_velocity": null,
+  "y_wind": null
+ },
+ "physically_important_zero_fallbacks": [
+  "land_binary_mask",
+  "sea_surface_wave_stokes_drift_x_velocity",
+  "sea_surface_wave_stokes_drift_y_velocity"
+ ],
+ "relevant_config": {
+  "drift:advection_scheme": "euler",
+  "drift:current_uncertainty": 0.0,
+  "drift:current_uncertainty_uniform": 0,
+  "drift:deactivate_east_of": null,
+  "drift:deactivate_north_of": null,
+  "drift:deactivate_south_of": null,
+  "drift:deactivate_west_of": null,
+  "drift:max_age_seconds": null,
+  "drift:max_speed": 1.3,
+  "drift:profiles_depth": 50,
+  "drift:relative_wind": false,
+  "drift:stokes_drift": true,
+  "drift:stokes_drift_profile": "Phillips",
+  "drift:tabularised_stokes_drift_fetch": "25000",
+  "drift:truncate_ocean_model_below_m": null,
+  "drift:use_tabularised_stokes_drift": false,
+  "drift:vertical_advection": false,
+  "drift:vertical_advection_at_surface": false,
+  "drift:vertical_advection_correction": false,
+  "drift:vertical_mixing": false,
+  "drift:vertical_mixing_at_surface": false,
+  "drift:water_column_stretching": false,
+  "drift:wind_drift_depth": 0.1,
+  "drift:wind_uncertainty": 0.0,
+  "environment:fallback:land_binary_mask": 0.0,
+  "general:coastline_action": "stranding",
+  "general:coastline_approximation_precision": 0.001,
+  "general:seafloor_action": "lift_to_seafloor",
+  "general:simulation_name": "",
+  "general:time_step_minutes": 60,
+  "general:time_step_output_minutes": null,
+  "general:use_auto_landmask": true,
+  "processes:biodegradation": false,
+  "processes:dispersion": false,
+  "processes:emulsification": false,
+  "processes:evaporation": false,
+  "processes:update_oilfilm_thickness": false,
+  "seed:wind_drift_factor": 0.03
+ },
+ "opendrift_code_behaviour": {
+  "source": "opendrift/models/basemodel/environment.py get_environment() and basemodel report_missing_variables()",
+  "variable_with_fallback": "reader NotCoveredError or masked/NaN value -> element gets the configured fallback value (silent in output; logged at DEBUG only)",
+  "variable_without_fallback": "masked value -> element deactivated with reason 'missing_data'",
+  "domain_deactivation": "only if drift:deactivate_{north,south,east,west}_of are set",
+  "stokes": "if drift:use_tabularised_stokes_drift is True and Stokes max over all elements == 0, Stokes is parameterised from wind"
+ },
+ "fallback_probe": {
+  "note": "1 h backward from T0 with the frozen configuration; exported environment values are post-fallback",
+  "status_flag_meanings": "active missing_data",
+  "messages": [
+   "Missing variables: ['x_sea_water_velocity', 'y_sea_water_velocity', 'x_wind', 'y_wind', 'sea_surface_wave_significant_height']"
+  ],
+  "probes": {
+   "inside_all": {
+    "seed_lon": -90.0,
+    "seed_lat": 27.0,
+    "output_trajectory_index": 2,
+    "first_recorded_lon": -90.0,
+    "first_recorded_lat": 27.0,
+    "in_current_reader": true,
+    "in_wind_reader": true,
+    "per_output_time": {
+     "status": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "lon": [
+      -90.0,
+      -90.00030517578125,
+      -90.00071716308594,
+      -90.0012435913086,
+      -90.00188446044922
+     ],
+     "lat": [
+      27.0,
+      26.997575759887695,
+      26.99513053894043,
+      26.992660522460938,
+      26.99016761779785
+     ],
+     "x_sea_water_velocity": [
+      0.20742657780647278,
+      0.2130315601825714,
+      0.21864420175552368,
+      0.22433511912822723,
+      0.22433511912822723
+     ],
+     "y_sea_water_velocity": [
+      -0.006164079997688532,
+      -0.002422161167487502,
+      0.0014979068655520678,
+      0.005403457209467888,
+      0.005403457209467888
+     ],
+     "sea_surface_wave_stokes_drift_x_velocity": [
+      -0.05008137971162796,
+      -0.0498046875,
+      -0.0498046875,
+      -0.0498046875,
+      -0.0498046875
+     ],
+     "sea_surface_wave_stokes_drift_y_velocity": [
+      0.09012044221162796,
+      0.08984375,
+      0.08984375,
+      0.08984375,
+      0.08984375
+     ],
+     "x_wind": [
+      -4.112786769866943,
+      -3.9235525131225586,
+      -3.69710636138916,
+      -3.470529794692993,
+      -3.470529794692993
+     ],
+     "y_wind": [
+      7.153933048248291,
+      7.118265151977539,
+      7.087114334106445,
+      7.056778907775879,
+      7.056778907775879
+     ],
+     "land_binary_mask": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "outside_wind_only": {
+    "seed_lon": -88.45833206176758,
+    "seed_lat": 27.5,
+    "output_trajectory_index": 1,
+    "first_recorded_lon": -88.45832824707031,
+    "first_recorded_lat": 27.5,
+    "in_current_reader": true,
+    "in_wind_reader": false,
+    "per_output_time": {
+     "status": [
+      1.0,
+      null,
+      null,
+      null,
+      null
+     ],
+     "lon": [
+      -88.45832824707031,
+      null,
+      null,
+      null,
+      null
+     ],
+     "lat": [
+      27.5,
+      null,
+      null,
+      null,
+      null
+     ],
+     "x_sea_water_velocity": [
+      0.33779376745224,
+      null,
+      null,
+      null,
+      null
+     ],
+     "y_sea_water_velocity": [
+      -0.04285026714205742,
+      null,
+      null,
+      null,
+      null
+     ],
+     "sea_surface_wave_stokes_drift_x_velocity": [
+      -0.059570278972387314,
+      null,
+      null,
+      null,
+      null
+     ],
+     "sea_surface_wave_stokes_drift_y_velocity": [
+      0.09991373866796494,
+      null,
+      null,
+      null,
+      null
+     ],
+     "x_wind": [
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "y_wind": [
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "land_binary_mask": [
+      0.0,
+      null,
+      null,
+      null,
+      null
+     ]
+    }
+   },
+   "outside_all_east": {
+    "seed_lon": -87.91666412353516,
+    "seed_lat": 27.5,
+    "output_trajectory_index": 0,
+    "first_recorded_lon": -87.91666412353516,
+    "first_recorded_lat": 27.5,
+    "in_current_reader": false,
+    "in_wind_reader": false,
+    "per_output_time": {
+     "status": [
+      1.0,
+      null,
+      null,
+      null,
+      null
+     ],
+     "lon": [
+      -87.91666412353516,
+      null,
+      null,
+      null,
+      null
+     ],
+     "lat": [
+      27.5,
+      null,
+      null,
+      null,
+      null
+     ],
+     "x_sea_water_velocity": [
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "y_sea_water_velocity": [
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "sea_surface_wave_stokes_drift_x_velocity": [
+      0.0,
+      null,
+      null,
+      null,
+      null
+     ],
+     "sea_surface_wave_stokes_drift_y_velocity": [
+      0.0,
+      null,
+      null,
+      null,
+      null
+     ],
+     "x_wind": [
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "y_wind": [
+      null,
+      null,
+      null,
+      null,
+      null
+     ],
+     "land_binary_mask": [
+      0.0,
+      null,
+      null,
+      null,
+      null
+     ]
+    }
+   }
+  },
+  "current_file_value_facts": {
+   "x_sea_water_velocity": {
+    "n_nan": 302,
+    "n_exact_zero": 637,
+    "n": 355152
+   },
+   "y_sea_water_velocity": {
+    "n_nan": 302,
+    "n_exact_zero": 1000,
+    "n": 355152
+   },
+   "sea_surface_wave_stokes_drift_x_velocity": {
+    "n_nan": 0,
+    "n_exact_zero": 30159,
+    "n": 355152
+   },
+   "sea_surface_wave_stokes_drift_y_velocity": {
+    "n_nan": 0,
+    "n_exact_zero": 23499,
+    "n": 355152
+   }
+  },
+  "land_cell_probe": "skipped: no current cell with an all-NaN 3x3 neighbourhood (the file has only a few NaN cells)",
+  "observed_behaviour": {
+   "inside_all": {
+    "in_current_reader": true,
+    "in_wind_reader": true,
+    "deactivated": false,
+    "reason": [],
+    "exported_at_first_record": {
+     "x_sea_water_velocity": 0.20742657780647278,
+     "sea_surface_wave_stokes_drift_x_velocity": -0.05008137971162796,
+     "x_wind": -4.112786769866943,
+     "land_binary_mask": 0.0
+    }
+   },
+   "outside_wind_only": {
+    "in_current_reader": true,
+    "in_wind_reader": false,
+    "deactivated": true,
+    "reason": [
+     "missing_data"
+    ],
+    "exported_at_first_record": {
+     "x_sea_water_velocity": 0.33779376745224,
+     "sea_surface_wave_stokes_drift_x_velocity": -0.059570278972387314,
+     "x_wind": null,
+     "land_binary_mask": 0.0
+    }
+   },
+   "outside_all_east": {
+    "in_current_reader": false,
+    "in_wind_reader": false,
+    "deactivated": true,
+    "reason": [
+     "missing_data"
+    ],
+    "exported_at_first_record": {
+     "x_sea_water_velocity": null,
+     "sea_surface_wave_stokes_drift_x_velocity": 0.0,
+     "x_wind": null,
+     "land_binary_mask": 0.0
+    }
+   }
+  }
+ },
+ "static_forbidden_token_hits": [],
+ "predeclared": {
+  "validity_rule": "physics_valid_for_attribution = run completed AND 2000 seeded AND 2000 active at -48 h AND every output time inside both readers' time coverage AND zero active particle-hours outside current or wind reader horizontal coverage AND zero active particle-hours with exported current, Stokes or wind exactly (0, 0) (fallback marker)",
+  "risk_flag_km": {
+   "high": 50.0,
+   "moderate": 100.0
+  },
+  "pilot_rule": "smallest retained component_id",
+  "run_order": "component_id"
+ }
+}
