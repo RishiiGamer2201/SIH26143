@@ -50,6 +50,7 @@ SIH26143/
 │   ├── kaggle/e005a_audit/        private Kaggle kernel used by E005-A (hashes the dataset next to its mount)
 │   ├── e005_segformer.py          E005 SegFormer MiT-B2 segmentation (20 m), tests/train/validate -> results/E005_segformer_b2
 │   ├── e006_segformer_test.py     E006 freeze E005 (FROZEN.json) + one-shot official test -> results/E006_segformer_test
+│   ├── e007b_component_structure.py  E007b model-only component/cluster structure (no Cerulean) -> results/E007b_component_structure
 │   ├── e007_incident001_ml.py     E007 Incident 001 SAFE -> σ0 VV geocoded -> frozen E004/E005 -> mask -> polygons -> results/E007_incident001_ml
 │   ├── score_ais_density_v2_1.py  E101 V2.1 = V2 with interpolated AIS positions -> results/incident_001_v2_1
 │   └── source_type_v1.py          E102 post-score source-type layer -> results/incident_001_source_type_v1
@@ -76,6 +77,7 @@ SIH26143/
     ├── E004_resnet18_cls/         E004 checkpoint, curves, val + one-shot test metrics
     ├── E005_segformer_b2/         FROZEN E005 checkpoint (FROZEN.json hashes), tests, curves, val sweep/metrics/figures
     ├── E006_segformer_test/       E006 one-shot test: metrics (3 views), per-tile, component recall, figures, u8 probs (git-ignored)
+    ├── E007b_component_structure/ E007b model-only component table, clusters at predeclared gaps, figure; post-hoc ROI map (separate file)
     └── E007_incident001_ml/       E007 Incident 001 ML: reports, windows, predicted components (GeoJSON/CSV), post-hoc Cerulean comparison; rasters/ git-ignored
 ```
 `data/segformer_combined/` holds the E005-A audit outputs: the manifest, the Drone-RGB "M4D" subset and the kernel outputs. The Trujillo copy there was not stored; it is identical to `data/sar/extracted/`.
@@ -101,7 +103,9 @@ Done and verified (2026-09-26):
   Absolute geolocation error of the GCP/TPS product has not been measured (the Cerulean area match validates the AREA method only).
   **E004 must not gate E005** (the reference-slick windows are argmax lookalike, p(oil) 0.12–0.34).
 - Reproducibility checkpoint (E007 freeze): git commit `4b9e1783aa5612c91c9db5d625030af512a63969` on `main` (rasters git-ignored; their sha256 are in FROZEN.json).
-- E008 blocked on a reference-independent source-geometry rule (`E008_SELECTION_POLICY.md`). Cerulean geometry / ROI never selects the physics seed.
+- E007b: the Incident-area components form one isolated (18.6 km), orientation-coherent cluster at link gap ≥ 2 km, but it is not the largest
+  model-only cluster; the northern linear features (unverified) are bigger.
+- E008 blocked on a reference-independent source-geometry rule (`E008_SELECTION_POLICY.md`: Mode A analyst-assisted / Mode B multi-candidate). Cerulean geometry / ROI never selects the physics seed.
 
 ## How to state the attribution result
 

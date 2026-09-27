@@ -1,0 +1,229 @@
+{
+ "note": "POST-HOC evaluation only. Uses E007's reporting-ROI flag (Cerulean bbox + 0.1 deg). Must not select E008 geometry.",
+ "n_roi_components": 13,
+ "by_link_gap_m": {
+  "250": {
+   "n_clusters_total": 38,
+   "clusters_holding_roi_components": [
+    {
+     "cluster": 5,
+     "area_rank": 6,
+     "n_members": 3,
+     "n_roi_members": 3,
+     "n_non_roi_members": 0,
+     "area_m2": 1142891.9542626888,
+     "extent_major_m": 2953.347542051967,
+     "orientation_coherence": NaN,
+     "isolation_gap_m": 261.77549887650804
+    },
+    {
+     "cluster": 6,
+     "area_rank": 7,
+     "n_members": 3,
+     "n_roi_members": 3,
+     "n_non_roi_members": 0,
+     "area_m2": 919629.9494133666,
+     "extent_major_m": 5018.936049455791,
+     "orientation_coherence": 0.983895001160168,
+     "isolation_gap_m": 1134.778203259582
+    },
+    {
+     "cluster": 11,
+     "area_rank": 12,
+     "n_members": 1,
+     "n_roi_members": 1,
+     "n_non_roi_members": 0,
+     "area_m2": 280131.57536319643,
+     "extent_major_m": 1317.6764271610805,
+     "orientation_coherence": NaN,
+     "isolation_gap_m": 261.764141197622
+    },
+    {
+     "cluster": 14,
+     "area_rank": 15,
+     "n_members": 1,
+     "n_roi_members": 1,
+     "n_non_roi_members": 0,
+     "area_m2": 129779.3156150505,
+     "extent_major_m": 641.1966589841081,
+     "orientation_coherence": NaN,
+     "isolation_gap_m": 569.0925595005391
+    },
+    {
+     "cluster": 20,
+     "area_rank": 21,
+     "n_members": 2,
+     "n_roi_members": 2,
+     "n_non_roi_members": 0,
+     "area_m2": 105661.12807702272,
+     "extent_major_m": 704.7392701427643,
+     "orientation_coherence": NaN,
+     "isolation_gap_m": 680.6954588954509
+    },
+    {
+     "cluster": 21,
+     "area_rank": 22,
+     "n_members": 1,
+     "n_roi_members": 1,
+     "n_non_roi_members": 0,
+     "area_m2": 88298.01103640348,
+     "extent_major_m": 409.6812815818916,
+     "orientation_coherence": NaN,
+     "isolation_gap_m": 261.77549887650804
+    },
+    {
+     "cluster": 29,
+     "area_rank": 30,
+     "n_members": 1,
+     "n_roi_members": 1,
+     "n_non_roi_members": 0,
+     "area_m2": 23757.545677751303,
+     "extent_major_m": 178.11115052040444,
+     "orientation_coherence": NaN,
+     "isolation_gap_m": 261.764141197622
+    },
+    {
+     "cluster": 34,
+     "area_rank": 35,
+     "n_members": 1,
+     "n_roi_members": 1,
+     "n_non_roi_members": 0,
+     "area_m2": 6737.880403369665,
+     "extent_major_m": 119.4505491373192,
+     "orientation_coherence": NaN,
+     "isolation_gap_m": 299.1566078379138
+    }
+   ]
+  },
+  "500": {
+   "n_clusters_total": 30,
+   "clusters_holding_roi_components": [
+    {
+     "cluster": 5,
+     "area_rank": 6,
+     "n_members": 5,
+     "n_roi_members": 5,
+     "n_non_roi_members": 0,
+     "area_m2": 1237927.845702462,
+     "extent_major_m": 3654.643406786215,
+     "orientation_coherence": NaN,
+     "isolation_gap_m": 680.6954588954509
+    },
+    {
+     "cluster": 6,
+     "area_rank": 7,
+     "n_members": 3,
+     "n_roi_members": 3,
+     "n_non_roi_members": 0,
+     "area_m2": 919629.9494133666,
+     "extent_major_m": 5018.936049455791,
+     "orientation_coherence": 0.983895001160168,
+     "isolation_gap_m": 1134.778203259582
+    },
+    {
+     "cluster": 11,
+     "area_rank": 12,
+     "n_members": 2,
+     "n_roi_members": 2,
+     "n_non_roi_members": 0,
+     "area_m2": 303889.12104094774,
+     "extent_major_m": 1746.725844004708,
+     "orientation_coherence": NaN,
+     "isolation_gap_m": 569.0925595005391
+    },
+    {
+     "cluster": 14,
+     "area_rank": 15,
+     "n_members": 1,
+     "n_roi_members": 1,
+     "n_non_roi_members": 0,
+     "area_m2": 129779.3156150505,
+     "extent_major_m": 641.1966589841081,
+     "orientation_coherence": NaN,
+     "isolation_gap_m": 569.0925595005391
+    },
+    {
+     "cluster": 17,
+     "area_rank": 18,
+     "n_members": 2,
+     "n_roi_members": 2,
+     "n_non_roi_members": 0,
+     "area_m2": 105661.12807702272,
+     "extent_major_m": 704.7392701427643,
+     "orientation_coherence": NaN,
+     "isolation_gap_m": 680.6954588954509
+    }
+   ]
+  },
+  "1000": {
+   "n_clusters_total": 22,
+   "clusters_holding_roi_components": [
+    {
+     "cluster": 5,
+     "area_rank": 6,
+     "n_members": 7,
+     "n_roi_members": 7,
+     "n_non_roi_members": 0,
+     "area_m2": 1343588.9737794846,
+     "extent_major_m": 4075.726640867144,
+     "orientation_coherence": NaN,
+     "isolation_gap_m": 1056.8033377461838
+    },
+    {
+     "cluster": 6,
+     "area_rank": 7,
+     "n_members": 3,
+     "n_roi_members": 3,
+     "n_non_roi_members": 0,
+     "area_m2": 919629.9494133666,
+     "extent_major_m": 5018.936049455791,
+     "orientation_coherence": 0.983895001160168,
+     "isolation_gap_m": 1134.778203259582
+    },
+    {
+     "cluster": 9,
+     "area_rank": 10,
+     "n_members": 3,
+     "n_roi_members": 3,
+     "n_non_roi_members": 0,
+     "area_m2": 433668.43665599823,
+     "extent_major_m": 2883.583375014685,
+     "orientation_coherence": 0.999187494358454,
+     "isolation_gap_m": 1056.8033377461838
+    }
+   ]
+  },
+  "2000": {
+   "n_clusters_total": 13,
+   "clusters_holding_roi_components": [
+    {
+     "cluster": 2,
+     "area_rank": 3,
+     "n_members": 13,
+     "n_roi_members": 13,
+     "n_non_roi_members": 0,
+     "area_m2": 2696887.359848849,
+     "extent_major_m": 7756.033204723474,
+     "orientation_coherence": 0.9874261323338216,
+     "isolation_gap_m": 18606.06214002833
+    }
+   ]
+  },
+  "5000": {
+   "n_clusters_total": 10,
+   "clusters_holding_roi_components": [
+    {
+     "cluster": 1,
+     "area_rank": 2,
+     "n_members": 13,
+     "n_roi_members": 13,
+     "n_non_roi_members": 0,
+     "area_m2": 2696887.359848849,
+     "extent_major_m": 7756.033204723474,
+     "orientation_coherence": 0.9874261323338216,
+     "isolation_gap_m": 18606.06214002833
+    }
+   ]
+  }
+ }
+}

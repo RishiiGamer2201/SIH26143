@@ -4,6 +4,37 @@ Newest first. Every entry: date, what ran, exact command, outputs, result, decis
 
 ---
 
+## 2026-09-28 · E007b — Model-only structure of the E007 components (descriptive; prepares E008 selection)
+
+**Run.** `python scripts/e007b_component_structure.py model_only`, then `... posthoc`. Logs `logs/E007b_{model_only,posthoc}.log`. Outputs in `results/E007b_component_structure/`.
+- `model_only` reads only the frozen E007 components GeoJSON (its `in_roi` flag is dropped on load), the x4 VV raster and the mask geotransform. It never opens Cerulean.
+- Distances are edge-to-edge in the E007 scene-centred LAEA.
+- Single-linkage gaps were **predeclared** at 250 / 500 / 1000 / 2000 / 5000 m and are descriptive only. Orientation is used only where elongation ≥ 2 (predeclared).
+- `posthoc` runs afterwards, maps E007's reporting-ROI flag onto the clusters, and writes a separate file. Nothing feeds back.
+
+**Model-only results.**
+- 49 components; 23 are elongated (≥ 2). The median nearest-component gap is 286 m; 31 of 49 components have a neighbour within 500 m.
+
+| gap G | 250 m | 500 m | 1 km | 2 km | 5 km |
+|---|---|---|---|---|---|
+| clusters (singletons) | 38 (29) | 30 (18) | 22 (10) | 13 (5) | 10 (2) |
+
+- At G = 2 km, the largest clusters by area:
+  - c0: northern group at −89.12°, 28.18°N; 10 components, 12.4 km², orientation coherence 0.88.
+  - c1: 4.9 km² single linear feature, 13.3 km long.
+  - c2: group at −90.44°, 27.12°N; 13 components, 2.70 km², extent 7.8 km, **coherence 0.99, isolated by 18.6 km**.
+  - c3: 1.7 km² near −88.87°.
+  - c4: 1.5 km², blocky, near −90.57°, 27.36°N.
+- The northern features (c0, c1) are long, very dark and linear, with bright point targets at their heads (`model_only_clusters.png`). They are **unverified** (no reference); visually they are not obvious noise.
+
+**Post hoc (ROI flag only).**
+- At G ≥ 2 km the 13 reporting-ROI components form exactly one cluster, with no outside members. By area it ranks 3rd at 2 km and 2nd at 5 km.
+- At G ≤ 1 km they split into 3–8 clusters; the internal fragment gaps are about 1.06–1.13 km.
+
+**Answer.** A coherent, isolated, orientation-consistent model-only cluster exists for the Incident 001 region at G ≥ 2 km. However, model-only features do not single it out: larger coherent clusters exist, and `incident.json` offers no location cue independent of Cerulean. Decision: see `E008_SELECTION_POLICY.md` (Mode A analyst-assisted vs Mode B autonomous multi-candidate); awaiting review. No OpenDrift / AIS run.
+
+---
+
 ## 2026-09-28 · E007 — Incident 001 real Sentinel-1: calibrated/geocoded VV → frozen E004 + E005 → mask → polygons (no physics)
 
 **Run.** `conda activate sih-ml; python scripts/e007_incident001_ml.py {preprocess|infer|vector}`. Logs `logs/E007_{preprocess,infer,vector}.log`, outputs `results/E007_incident001_ml/`. Rasters are in `rasters/` (git-ignored).
