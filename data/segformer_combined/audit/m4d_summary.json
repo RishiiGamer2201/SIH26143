@@ -1,0 +1,78 @@
+{
+ "pairs": 1268,
+ "trujillo": {
+  "max_ncc16": 0.9518600702285767,
+  "n_m4d_with_ncc16_ge_0_9": 56,
+  "sha_overlap": 0
+ },
+ "near_dup_threshold_ncc128": 0.97,
+ "near_dup_pairs": 649,
+ "near_dup_pairs_cross_split": 312,
+ "images_in_near_dup_groups": 359,
+ "nd_groups": 969,
+ "nd_groups_multi": 60,
+ "largest_nd_group": 34,
+ "nd_groups_spanning_splits": 44,
+ "images_in_split_spanning_groups": 319,
+ "exact_image_dup_files": 2,
+ "pixel_image_dup_files": 2,
+ "exact_mask_dup_files": 17,
+ "identical_mask_pairs_image_not_near_dup": 10,
+ "id_collisions": {
+  "different images sharing an ID": 11
+ },
+ "id_collisions_cross_split": 5,
+ "class_masks_containing": {
+  "LookAlikes": {
+   "background": 229,
+   "oil": 0,
+   "others": 229,
+   "water": 208
+  },
+  "NoOilSpill": {
+   "background": 41,
+   "oil": 0,
+   "others": 0,
+   "water": 41
+  },
+  "OilSpill": {
+   "background": 998,
+   "oil": 998,
+   "others": 888,
+   "water": 691
+  }
+ },
+ "oil_frac_by_folder": {
+  "LookAlikes": {
+   "count": 229.0,
+   "mean": 0.0,
+   "std": 0.0,
+   "min": 0.0,
+   "25%": 0.0,
+   "50%": 0.0,
+   "75%": 0.0,
+   "max": 0.0
+  },
+  "NoOilSpill": {
+   "count": 41.0,
+   "mean": 0.0,
+   "std": 0.0,
+   "min": 0.0,
+   "25%": 0.0,
+   "50%": 0.0,
+   "75%": 0.0,
+   "max": 0.0
+  },
+  "OilSpill": {
+   "count": 998.0,
+   "mean": 0.419,
+   "std": 0.2578,
+   "min": 0.0013,
+   "25%": 0.2103,
+   "50%": 0.3771,
+   "75%": 0.5552,
+   "max": 0.9945
+  }
+ },
+ "oil_pixel_share_total": 0.32187080377905186
+}

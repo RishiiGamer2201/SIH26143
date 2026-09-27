@@ -1,0 +1,46 @@
+{
+ "best_epoch": 9,
+ "best_val_iou_at_0_5": 0.7529564145428309,
+ "epochs_run": 19,
+ "steps_per_epoch": 167,
+ "train_runtime_s": 1887.734207391739,
+ "total_runtime_s": 1931.9496655464172,
+ "peak_vram_allocated_gb": 8.509761810302734,
+ "peak_vram_reserved_gb": 12.201171875,
+ "checkpoint_mb": 94.40170383453369,
+ "sampled_crop_oil_frac": 0.0260629354373336,
+ "sampling": [
+  {
+   "kind": "lookalike",
+   "n": 9516,
+   "mean_valid_frac": 0.9861776160311929,
+   "mean_oil_frac": 0.0,
+   "crops_with_oil": 0,
+   "share": 0.24992121021115662
+  },
+  {
+   "kind": "no_oil",
+   "n": 5648,
+   "mean_valid_frac": 0.9790197850624495,
+   "mean_oil_frac": 0.0,
+   "crops_with_oil": 0,
+   "share": 0.1483349091291102
+  },
+  {
+   "kind": "oil_bg",
+   "n": 3803,
+   "mean_valid_frac": 0.9777249936332773,
+   "mean_oil_frac": 0.0,
+   "crops_with_oil": 0,
+   "share": 0.09987918899044017
+  },
+  {
+   "kind": "oil_pos",
+   "n": 19109,
+   "mean_valid_frac": 0.9925683173412643,
+   "mean_oil_frac": 0.051932195808881365,
+   "crops_with_oil": 19109,
+   "share": 0.501864691669293
+  }
+ ]
+}

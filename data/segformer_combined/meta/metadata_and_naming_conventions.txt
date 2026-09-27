@@ -1,0 +1,57 @@
+=================================================
+OIL SPILL DETECTION DATASETS METADATA & CONVENTIONS
+=================================================
+
+This directory contains four primary datasets separated by their annotation format: Bounding Box (Object Detection) and Semantic Segmentation (Pixel-wise Masks).
+
+-------------------------------------------------
+1. BOUNDING BOX DATASET(S)
+-------------------------------------------------
+
+Folder: \Bounding Box\DARTIS
+*   Origin: Dataset of Artificial and Real Threats of Oil Spills (DARTIS) / Trujillo-Acatitla et al. (2019/2024).
+*   Format: Pascal VOC (.xml bounding boxes + .jpg images).
+*   Classes: Contains only the 'oil' object class.
+
+Naming Convention in DARTIS (e.g., nc-0001-00-000001.jpg):
+The prefix represents what is in the image and its geographical context:
+- First Letter (Presence of Oil): 
+    'o' = Oil (contains an oil spill)
+    'n' = No-Oil (contains clear water or a look-alike)
+- Second Letter (Geography): 
+    'w' = Water (open sea)
+    'c' = Coast (coastal area)
+- Therefore:
+    ow = Oil in open Water
+    oc = Oil near the Coast
+    nw = No-oil in open Water
+    nc = No-oil near the Coast
+
+-------------------------------------------------
+2. SEMANTIC SEGMENTATION DATASET(S)
+-------------------------------------------------
+
+Folder: \Semantic Segmentation\MADOS
+*   Origin: Marine Artificial Dataset of Oil Spills (MADOS).
+*   Sensor Modality: Multispectral / EO (Sentinel-2).
+*   Format: Pixel-wise class masks (.tif or .png).
+*   Classes: Originally 15 classes (mapped locally to OilSpill, LookAlikes, NoOilSpill based on semantic analysis). 
+*   Metadata files: Includes 'rgb' (true color), 'cl' (class label masks), 'conf' (confidence map), 'rep' (representativeness).
+
+Folder: \Semantic Segmentation\Sentinel-1_SAR_Oil_spill_image_dataset
+*   Origin: Trujillo-Acatitla et al. (Parts I, II, III).
+*   Sensor Modality: SAR (Sentinel-1).
+*   Format: Binary pixel-wise masks for OilSpill, LookAlikes, and NoOilSpill.
+*   Data Split: Combines Training and Validation/Test imagery into a strictly standardized folder structure.
+
+Folder: \Semantic Segmentation\dataset (M4D Group Dataset)
+*   Origin: Multimodal Data Fusion and Analytics (M4D) Group.
+*   Sensor Modality: SAR (Sentinel-1).
+*   Format: RGB Semantic Masks.
+*   Class Mapping (RGB values):
+    - [255,   0, 124] : Oil Spill
+    - [255, 204,  51] : Others / LookAlikes
+    - [ 51, 221, 255] : Water / NoOilSpill
+    - [  0,   0,   0] : Background
+
+=================================================

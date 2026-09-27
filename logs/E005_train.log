@@ -1,0 +1,67 @@
+{"encoder": "mit_b2", "encoder_weights": "imagenet", "in_channels": 2, "seed": 26143, "epochs": 40, "patience": 10, "crop": 512, "samples_per_epoch": 2000, "eval_batch": 4, "lr": 6e-05, "weight_decay": 0.01, "warmup_epochs": 1, "poly_power": 1.0, "amp": "bf16", "gain_db": 1.5, "p_flip": 0.5, "mix": {"oil_pos": 0.5, "lookalike": 0.25, "no_oil": 0.15, "oil_bg": 0.1}, "bg_block": 32, "pos_weight_cap": 5.0, "bce_w": 0.5, "dice_w": 0.5, "dice_smooth": 1.0, "train_threshold": 0.5, "sweep": [0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9], "probe_batches": [2, 4, 6, 8, 12, 16], "probe_max_reserved_gb": 12.0, "overfit_n": 12, "overfit_steps": 600, "overfit_lr": 0.0003, "overfit_target_dice": 0.95, "batch": 12, "norm_mu": 0.4433064878306307, "norm_sd": 0.12064228658860848, "train_valid_px": 1984391046, "train_oil_px": 20755937, "train_bg_px": 1963635109, "train_oil_frac": 0.010459600209262383, "raw_pos_weight": 94.6059486015977, "n_train": 1941, "n_val": 477, "train_tiles": {"oil": 844, "no_oil": 550, "lookalike": 547}, "val_tiles": {"oil": 211, "lookalike": 135, "no_oil": 131}, "pos_weight": 5.0, "oil_bg_candidate_windows": 41848, "oil_bg_candidate_tiles": 642}
+epoch=1 train_loss=0.642 train_bce=0.4566 train_dice_loss=0.8274 val_bce=0.2002 val_iou=0.3188 val_dice=0.4835 val_precision=0.3278 val_recall=0.9205 lr=6e-05 train_s=80.27 epoch_s=103.7 *
+epoch=2 train_loss=0.3435 train_bce=0.1608 train_dice_loss=0.5262 val_bce=0.07679 val_iou=0.6319 val_dice=0.7745 val_precision=0.688 val_recall=0.8858 lr=5.846e-05 train_s=76.06 epoch_s=98.86 *
+epoch=3 train_loss=0.2473 train_bce=0.1198 train_dice_loss=0.3749 val_bce=0.07045 val_iou=0.5425 val_dice=0.7034 val_precision=0.5672 val_recall=0.9259 lr=5.692e-05 train_s=76.03 epoch_s=98.77 
+epoch=4 train_loss=0.1972 train_bce=0.09582 train_dice_loss=0.2986 val_bce=0.05983 val_iou=0.604 val_dice=0.7532 val_precision=0.6427 val_recall=0.9095 lr=5.538e-05 train_s=76.22 epoch_s=99.08 
+epoch=5 train_loss=0.1938 train_bce=0.1106 train_dice_loss=0.277 val_bce=0.06087 val_iou=0.559 val_dice=0.7171 val_precision=0.5955 val_recall=0.9012 lr=5.385e-05 train_s=76.21 epoch_s=99.04 
+epoch=6 train_loss=0.1535 train_bce=0.07576 train_dice_loss=0.2312 val_bce=0.05352 val_iou=0.6915 val_dice=0.8177 val_precision=0.797 val_recall=0.8394 lr=5.231e-05 train_s=76.06 epoch_s=98.76 *
+epoch=7 train_loss=0.1507 train_bce=0.07974 train_dice_loss=0.2217 val_bce=0.03819 val_iou=0.7298 val_dice=0.8438 val_precision=0.8273 val_recall=0.8609 lr=5.077e-05 train_s=76.12 epoch_s=98.85 *
+epoch=8 train_loss=0.1439 train_bce=0.08063 train_dice_loss=0.2071 val_bce=0.04602 val_iou=0.7096 val_dice=0.8301 val_precision=0.8093 val_recall=0.852 lr=4.923e-05 train_s=76.01 epoch_s=98.77 
+epoch=9 train_loss=0.1328 train_bce=0.06408 train_dice_loss=0.2015 val_bce=0.03967 val_iou=0.753 val_dice=0.8591 val_precision=0.8496 val_recall=0.8688 lr=4.769e-05 train_s=76 epoch_s=98.67 *
+epoch=10 train_loss=0.1484 train_bce=0.08515 train_dice_loss=0.2117 val_bce=0.04183 val_iou=0.7116 val_dice=0.8315 val_precision=0.7835 val_recall=0.8857 lr=4.615e-05 train_s=75.99 epoch_s=98.73 
+epoch=11 train_loss=0.1225 train_bce=0.06418 train_dice_loss=0.1809 val_bce=0.05627 val_iou=0.7179 val_dice=0.8358 val_precision=0.8661 val_recall=0.8076 lr=4.462e-05 train_s=76.1 epoch_s=98.96 
+epoch=12 train_loss=0.1475 train_bce=0.07536 train_dice_loss=0.2197 val_bce=0.05145 val_iou=0.6834 val_dice=0.8119 val_precision=0.8042 val_recall=0.8198 lr=4.308e-05 train_s=76.13 epoch_s=98.85 
+epoch=13 train_loss=0.118 train_bce=0.05585 train_dice_loss=0.1802 val_bce=0.0397 val_iou=0.727 val_dice=0.8419 val_precision=0.8154 val_recall=0.8703 lr=4.154e-05 train_s=76.21 epoch_s=98.88 
+epoch=14 train_loss=0.1199 train_bce=0.06175 train_dice_loss=0.1781 val_bce=0.06375 val_iou=0.7148 val_dice=0.8337 val_precision=0.8964 val_recall=0.7791 lr=4e-05 train_s=76.16 epoch_s=98.98 
+epoch=15 train_loss=0.127 train_bce=0.06786 train_dice_loss=0.1861 val_bce=0.03639 val_iou=0.6606 val_dice=0.7956 val_precision=0.6971 val_recall=0.9267 lr=3.846e-05 train_s=79.56 epoch_s=102.3 
+epoch=16 train_loss=0.1187 train_bce=0.06345 train_dice_loss=0.174 val_bce=0.0455 val_iou=0.6583 val_dice=0.794 val_precision=0.7258 val_recall=0.8762 lr=3.692e-05 train_s=76.15 epoch_s=98.86 
+epoch=17 train_loss=0.1259 train_bce=0.07006 train_dice_loss=0.1817 val_bce=0.0446 val_iou=0.7378 val_dice=0.8491 val_precision=0.8466 val_recall=0.8517 lr=3.538e-05 train_s=76.19 epoch_s=98.97 
+epoch=18 train_loss=0.1119 train_bce=0.06265 train_dice_loss=0.1612 val_bce=0.04122 val_iou=0.7339 val_dice=0.8466 val_precision=0.8213 val_recall=0.8734 lr=3.385e-05 train_s=76.31 epoch_s=99.11 
+epoch=19 train_loss=0.1146 train_bce=0.06232 train_dice_loss=0.1669 val_bce=0.05141 val_iou=0.5389 val_dice=0.7004 val_precision=0.5691 val_recall=0.9103 lr=3.231e-05 train_s=76.24 epoch_s=98.9 
+early stop: no val IoU gain for 10 epochs
+{
+ "best_epoch": 9,
+ "best_val_iou_at_0_5": 0.7529564145428309,
+ "epochs_run": 19,
+ "steps_per_epoch": 167,
+ "train_runtime_s": 1887.734207391739,
+ "total_runtime_s": 1931.9496655464172,
+ "peak_vram_allocated_gb": 8.509761810302734,
+ "peak_vram_reserved_gb": 12.201171875,
+ "checkpoint_mb": 94.40170383453369,
+ "sampled_crop_oil_frac": 0.0260629354373336,
+ "sampling": [
+  {
+   "kind": "lookalike",
+   "n": 9516,
+   "mean_valid_frac": 0.9861776160311929,
+   "mean_oil_frac": 0.0,
+   "crops_with_oil": 0,
+   "share": 0.24992121021115662
+  },
+  {
+   "kind": "no_oil",
+   "n": 5648,
+   "mean_valid_frac": 0.9790197850624495,
+   "mean_oil_frac": 0.0,
+   "crops_with_oil": 0,
+   "share": 0.1483349091291102
+  },
+  {
+   "kind": "oil_bg",
+   "n": 3803,
+   "mean_valid_frac": 0.9777249936332773,
+   "mean_oil_frac": 0.0,
+   "crops_with_oil": 0,
+   "share": 0.09987918899044017
+  },
+  {
+   "kind": "oil_pos",
+   "n": 19109,
+   "mean_valid_frac": 0.9925683173412643,
+   "mean_oil_frac": 0.051932195808881365,
+   "crops_with_oil": 19109,
+   "share": 0.501864691669293
+  }
+ ]
+}

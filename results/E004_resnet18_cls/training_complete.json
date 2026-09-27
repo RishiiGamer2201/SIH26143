@@ -1,0 +1,52 @@
+{
+ "best_epoch": 8,
+ "best_val_macro_f1": 0.9070964659228443,
+ "epochs_run": 16,
+ "runtime_s": 76.50452280044556,
+ "peak_vram_allocated_gb": 3.979074001312256,
+ "peak_vram_reserved_gb": 13.810546875,
+ "checkpoint_mb": 42.69959545135498,
+ "val": {
+  "n": 477,
+  "accuracy": 0.9161,
+  "balanced_accuracy": 0.908,
+  "macro_f1": 0.9071,
+  "per_class": {
+   "no_oil": {
+    "precision": 0.9055,
+    "recall": 0.8779,
+    "f1": 0.8915,
+    "support": 131
+   },
+   "lookalike": {
+    "precision": 0.8392,
+    "recall": 0.8889,
+    "f1": 0.8633,
+    "support": 135
+   },
+   "oil": {
+    "precision": 0.9758,
+    "recall": 0.9573,
+    "f1": 0.9665,
+    "support": 211
+   }
+  },
+  "confusion_rows_true_cols_pred": [
+   [
+    115,
+    15,
+    1
+   ],
+   [
+    11,
+    120,
+    4
+   ],
+   [
+    1,
+    8,
+    202
+   ]
+  ]
+ }
+}

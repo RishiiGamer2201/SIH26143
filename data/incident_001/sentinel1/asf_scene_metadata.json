@@ -1,0 +1,127 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -90.768005,
+              27.953224
+            ],
+            [
+              -90.438545,
+              26.445272
+            ],
+            [
+              -87.880463,
+              26.866686
+            ],
+            [
+              -88.174416,
+              28.371782
+            ],
+            [
+              -90.768005,
+              27.953224
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "centerLat": 27.4151,
+        "centerLon": -89.3179,
+        "stopTime": "2023-01-03T00:02:07Z",
+        "fileID": "S1A_IW_GRDH_1SDV_20230103T000142_20230103T000207_046612_059620_257F-METADATA_GRD_HD",
+        "flightDirection": "ASCENDING",
+        "pathNumber": 165,
+        "processingLevel": "METADATA_GRD_HD",
+        "url": "https://datapool.asf.alaska.edu/METADATA_GRD_HD/SA/S1A_IW_GRDH_1SDV_20230103T000142_20230103T000207_046612_059620_257F.iso.xml",
+        "startTime": "2023-01-03T00:01:42Z",
+        "sceneName": "S1A_IW_GRDH_1SDV_20230103T000142_20230103T000207_046612_059620_257F",
+        "browse": [
+          "https://datapool.asf.alaska.edu/BROWSE/SA/S1A_IW_GRDH_1SDV_20230103T000142_20230103T000207_046612_059620_257F.jpg"
+        ],
+        "platform": "Sentinel-1A",
+        "bytes": 59049,
+        "md5sum": "0a8017d343cc7b747f8a6e92ee70b916",
+        "frameNumber": 85,
+        "granuleType": "SENTINEL_1A_FRAME",
+        "orbit": 46612,
+        "polarization": "VV+VH",
+        "processingDate": "2023-01-03T00:01:42Z",
+        "sensor": "C-SAR",
+        "groupID": "S1A_IWDV_0084_0090_046612_165",
+        "pgeVersion": "003.52",
+        "fileName": "S1A_IW_GRDH_1SDV_20230103T000142_20230103T000207_046612_059620_257F.iso.xml",
+        "beamModeType": "IW",
+        "s3Urls": [
+          "s3://asf-ngap2w-p-s1-xml-8cf7476b/S1A_IW_GRDH_1SDV_20230103T000142_20230103T000207_046612_059620_257F.iso.xml"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              -90.768005,
+              27.953224
+            ],
+            [
+              -90.438545,
+              26.445272
+            ],
+            [
+              -87.880463,
+              26.866686
+            ],
+            [
+              -88.174416,
+              28.371782
+            ],
+            [
+              -90.768005,
+              27.953224
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "properties": {
+        "centerLat": 27.4151,
+        "centerLon": -89.3179,
+        "stopTime": "2023-01-03T00:02:07Z",
+        "fileID": "S1A_IW_GRDH_1SDV_20230103T000142_20230103T000207_046612_059620_257F-GRD_HD",
+        "flightDirection": "ASCENDING",
+        "pathNumber": 165,
+        "processingLevel": "GRD_HD",
+        "url": "https://datapool.asf.alaska.edu/GRD_HD/SA/S1A_IW_GRDH_1SDV_20230103T000142_20230103T000207_046612_059620_257F.zip",
+        "startTime": "2023-01-03T00:01:42Z",
+        "sceneName": "S1A_IW_GRDH_1SDV_20230103T000142_20230103T000207_046612_059620_257F",
+        "browse": [
+          "https://datapool.asf.alaska.edu/BROWSE/SA/S1A_IW_GRDH_1SDV_20230103T000142_20230103T000207_046612_059620_257F.jpg"
+        ],
+        "platform": "Sentinel-1A",
+        "bytes": 762777440,
+        "md5sum": "8adf00dc26063855957d4aacaa725086",
+        "frameNumber": 85,
+        "granuleType": "SENTINEL_1A_FRAME",
+        "orbit": 46612,
+        "polarization": "VV+VH",
+        "processingDate": "2023-01-03T00:01:42Z",
+        "sensor": "C-SAR",
+        "groupID": "S1A_IWDV_0084_0090_046612_165",
+        "pgeVersion": "003.52",
+        "fileName": "S1A_IW_GRDH_1SDV_20230103T000142_20230103T000207_046612_059620_257F.zip",
+        "beamModeType": "IW",
+        "s3Urls": [
+          "s3://asf-ngap2w-p-s1-grd-7d1b4348/S1A_IW_GRDH_1SDV_20230103T000142_20230103T000207_046612_059620_257F.zip"
+        ]
+      }
+    }
+  ]
+}

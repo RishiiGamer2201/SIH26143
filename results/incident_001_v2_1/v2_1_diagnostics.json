@@ -1,0 +1,38 @@
+{
+  "config": {
+    "_doc": "V2.1 = V2 density score with AIS positions linearly interpolated to physics model times. Thresholds chosen 2026-09-26 from the Incident 001 AIS gap distribution BEFORE computing any V2.1 score (see EXPERIMENT_LOG E101). Not tuned against Cerulean.",
+    "incident_t0_utc": "2023-01-03T00:01:42Z",
+    "hindcast_nc": "results/incident_001/hindcast_48h.nc",
+    "ais_parquet": "data/incident_001/ais/ais_roi.parquet",
+    "v2_summary_csv": "results/incident_001/ais_density_scores_v2.csv",
+    "v2_release_age_csv": "results/incident_001/release_age_scores.csv",
+    "sigma_km": 5.0,
+    "max_bracket_gap_min": 30,
+    "edge_nearest_tol_min": 5,
+    "max_implied_speed_kn": 50,
+    "age_bins_h": [
+      -0.001,
+      6,
+      12,
+      24,
+      36,
+      48.01
+    ],
+    "age_labels": [
+      "0-6h",
+      "6-12h",
+      "12-24h",
+      "24-36h",
+      "36-48h"
+    ]
+  },
+  "vessel_time_positions": {
+    "unavailable": 5555,
+    "interp": 1939,
+    "edge_nearest": 131,
+    "exact": 19
+  },
+  "vessels_scored_v2": 155,
+  "vessels_scored_v2_1": 152,
+  "model_times": 49
+}

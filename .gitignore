@@ -1,0 +1,10 @@
+# Bulk data kept local only (143 GB; GitHub file limit 100 MiB). See PROJECT_CONTEXT.md for provenance.
+data/sar/extracted/
+data/sar/cache/v1/*.npy
+data/ais/
+data/segformer_combined/m4d_raw/
+data/segformer_combined/kernel_out/m4d.zip
+data/incident_001/sentinel1/**/measurement/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

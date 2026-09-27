@@ -1,0 +1,17 @@
+{
+ "tile": 2048,
+ "clip_db": [
+  -40.0,
+  5.0
+ ],
+ "scale": "(dB+40)/45",
+ "min_valid_block": 0.5,
+ "factors": {
+  "20": 2,
+  "40": 4
+ },
+ "valid_def": "finite(VH)&finite(VV)&VH!=0&VV!=0",
+ "band_order": "1=VH,2=VV",
+ "split_file": "results/sar_audit/splits_v1_acq.parquet",
+ "n": 3020
+}

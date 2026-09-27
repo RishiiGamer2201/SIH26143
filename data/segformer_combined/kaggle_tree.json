@@ -1,0 +1,2066 @@
+{
+ "Dataset": {
+  "directories": [
+   {
+    "name": "Bounding Box",
+    "relativeUrl": "Dataset/Bounding Box",
+    "totalDirectories": 1,
+    "totalChildren": 1
+   },
+   {
+    "name": "Semantic Segmentation",
+    "relativeUrl": "Dataset/Semantic Segmentation",
+    "totalDirectories": 3,
+    "totalChildren": 3
+   }
+  ],
+  "files": [
+   {
+    "name": "metadata_and_naming_conventions.txt",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 2549,
+    "relativeUrl": "Dataset/metadata_and_naming_conventions.txt"
+   }
+  ],
+  "totalChildren": 3,
+  "totalDirectories": 2,
+  "totalFiles": 1
+ },
+ "Dataset/Bounding Box": {
+  "directories": [
+   {
+    "name": "DARTIS",
+    "relativeUrl": "Dataset/Bounding Box/DARTIS",
+    "totalDirectories": 2,
+    "totalChildren": 2
+   }
+  ],
+  "totalChildren": 1,
+  "totalDirectories": 1
+ },
+ "Dataset/Semantic Segmentation": {
+  "directories": [
+   {
+    "name": "MADOS",
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS",
+    "totalDirectories": 4,
+    "totalFiles": 1,
+    "totalChildren": 4
+   },
+   {
+    "name": "Sentinel-1_SAR_Oil_spill_image_dataset",
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset",
+    "totalDirectories": 4,
+    "totalChildren": 4
+   },
+   {
+    "name": "dataset",
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset",
+    "totalDirectories": 3,
+    "totalChildren": 3
+   }
+  ],
+  "totalChildren": 3,
+  "totalDirectories": 3
+ },
+ "Dataset/Bounding Box/DARTIS": {
+  "directories": [
+   {
+    "name": "NoOIL SPILL",
+    "relativeUrl": "Dataset/Bounding Box/DARTIS/NoOIL SPILL",
+    "totalDirectories": 1,
+    "totalChildren": 1
+   },
+   {
+    "name": "OIL SPILL",
+    "relativeUrl": "Dataset/Bounding Box/DARTIS/OIL SPILL",
+    "totalDirectories": 2,
+    "totalChildren": 2
+   }
+  ],
+  "totalChildren": 2,
+  "totalDirectories": 2
+ },
+ "Dataset/Semantic Segmentation/MADOS": {
+  "directories": [
+   {
+    "name": "LookAlikes",
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/LookAlikes",
+    "totalDirectories": 3,
+    "totalChildren": 3
+   },
+   {
+    "name": "MADOS",
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS",
+    "totalDirectories": 175,
+    "totalChildren": 175
+   },
+   {
+    "name": "NoOilSpill",
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/NoOilSpill",
+    "totalDirectories": 3,
+    "totalChildren": 3
+   },
+   {
+    "name": "OilSpill",
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/OilSpill",
+    "totalDirectories": 3,
+    "totalChildren": 3
+   }
+  ],
+  "files": [
+   {
+    "name": "sort_mados.py",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 3533,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/sort_mados.py"
+   }
+  ],
+  "totalChildren": 5,
+  "totalDirectories": 4,
+  "totalFiles": 1
+ },
+ "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset": {
+  "directories": [
+   {
+    "name": "LookAlikes",
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/LookAlikes",
+    "totalDirectories": 2,
+    "totalChildren": 2
+   },
+   {
+    "name": "NoOilSpill",
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/NoOilSpill",
+    "totalDirectories": 2,
+    "totalChildren": 2
+   },
+   {
+    "name": "OilSpill",
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/OilSpill",
+    "totalDirectories": 2,
+    "totalChildren": 2
+   },
+   {
+    "name": "Test",
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test",
+    "totalDirectories": 3,
+    "totalChildren": 3
+   }
+  ],
+  "totalChildren": 4,
+  "totalDirectories": 4
+ },
+ "Dataset/Semantic Segmentation/dataset": {
+  "directories": [
+   {
+    "name": "LookAlikes",
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/LookAlikes",
+    "totalDirectories": 2,
+    "totalChildren": 2
+   },
+   {
+    "name": "NoOilSpill",
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/NoOilSpill",
+    "totalDirectories": 2,
+    "totalChildren": 2
+   },
+   {
+    "name": "OilSpill",
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/OilSpill",
+    "totalDirectories": 2,
+    "totalChildren": 2
+   }
+  ],
+  "totalChildren": 3,
+  "totalDirectories": 3
+ },
+ "Dataset/Bounding Box/DARTIS/NoOIL SPILL": {
+  "directories": [
+   {
+    "name": "JPG Files",
+    "relativeUrl": "Dataset/Bounding Box/DARTIS/NoOIL SPILL/JPG Files",
+    "totalFiles": 2290
+   }
+  ],
+  "totalChildren": 1,
+  "totalDirectories": 1
+ },
+ "Dataset/Bounding Box/DARTIS/OIL SPILL": {
+  "directories": [
+   {
+    "name": "JPG Files",
+    "relativeUrl": "Dataset/Bounding Box/DARTIS/OIL SPILL/JPG Files",
+    "totalFiles": 1365
+   },
+   {
+    "name": "XML FILES",
+    "relativeUrl": "Dataset/Bounding Box/DARTIS/OIL SPILL/XML FILES",
+    "totalFiles": 1365
+   }
+  ],
+  "totalChildren": 2,
+  "totalDirectories": 2
+ },
+ "Dataset/Semantic Segmentation/MADOS/LookAlikes": {
+  "directories": [
+   {
+    "name": "Masks",
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/LookAlikes/Masks",
+    "totalFiles": 1438
+   },
+   {
+    "name": "Metadata",
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/LookAlikes/Metadata",
+    "totalFiles": 3592
+   },
+   {
+    "name": "Tiff files",
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/LookAlikes/Tiff files",
+    "totalFiles": 8628
+   }
+  ],
+  "totalChildren": 3,
+  "totalDirectories": 3
+ },
+ "Dataset/Semantic Segmentation/MADOS/MADOS": {
+  "directories": [
+   {
+    "name": "Scene_0",
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_0",
+    "totalDirectories": 1,
+    "totalChildren": 1
+   },
+   {
+    "name": "Scene_1",
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_1",
+    "totalDirectories": 1,
+    "totalChildren": 1
+   },
+   {
+    "name": "Scene_10",
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_10",
+    "totalDirectories": 1,
+    "totalChildren": 1
+   },
+   {
+    "name": "Scene_100",
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_100",
+    "totalDirectories": 1,
+    "totalChildren": 1
+   },
+   {
+    "name": "Scene_101",
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_101",
+    "totalDirectories": 1,
+    "totalChildren": 1
+   },
+   {
+    "name": "Scene_102",
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_102",
+    "totalDirectories": 1,
+    "totalChildren": 1
+   }
+  ],
+  "totalChildren": 6,
+  "totalDirectories": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U569ORj_jFjQnMzIH4Z_89bsbi1wAtEE3ZngQm6L32jflcy1dDDrH_j3I9fJA00R4E"
+ },
+ "Dataset/Semantic Segmentation/MADOS/NoOilSpill": {
+  "directories": [
+   {
+    "name": "Masks",
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/NoOilSpill/Masks",
+    "totalFiles": 4023
+   },
+   {
+    "name": "Metadata",
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/NoOilSpill/Metadata",
+    "totalFiles": 10056
+   },
+   {
+    "name": "Tiff files",
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/NoOilSpill/Tiff files",
+    "totalFiles": 24138
+   }
+  ],
+  "totalChildren": 3,
+  "totalDirectories": 3
+ },
+ "Dataset/Semantic Segmentation/MADOS/OilSpill": {
+  "directories": [
+   {
+    "name": "Masks",
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/OilSpill/Masks",
+    "totalFiles": 145
+   },
+   {
+    "name": "Metadata",
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/OilSpill/Metadata",
+    "totalFiles": 367
+   },
+   {
+    "name": "Tiff files",
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/OilSpill/Tiff files",
+    "totalFiles": 870
+   }
+  ],
+  "totalChildren": 3,
+  "totalDirectories": 3
+ },
+ "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/LookAlikes": {
+  "directories": [
+   {
+    "name": "Masks",
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/LookAlikes/Masks",
+    "totalFiles": 685
+   },
+   {
+    "name": "Tiff files",
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/LookAlikes/Tiff files",
+    "totalFiles": 685
+   }
+  ],
+  "totalChildren": 2,
+  "totalDirectories": 2
+ },
+ "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/NoOilSpill": {
+  "directories": [
+   {
+    "name": "Masks",
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/NoOilSpill/Masks",
+    "totalFiles": 685
+   },
+   {
+    "name": "Tiff files",
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/NoOilSpill/Tiff files",
+    "totalFiles": 685
+   }
+  ],
+  "totalChildren": 2,
+  "totalDirectories": 2
+ },
+ "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/OilSpill": {
+  "directories": [
+   {
+    "name": "Masks",
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/OilSpill/Masks",
+    "totalFiles": 1200
+   },
+   {
+    "name": "Tiff files",
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/OilSpill/Tiff files",
+    "totalFiles": 1200
+   }
+  ],
+  "totalChildren": 2,
+  "totalDirectories": 2
+ },
+ "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test": {
+  "directories": [
+   {
+    "name": "LookAlikes",
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/LookAlikes",
+    "totalDirectories": 2,
+    "totalChildren": 2
+   },
+   {
+    "name": "NoOilSpill",
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/NoOilSpill",
+    "totalDirectories": 2,
+    "totalChildren": 2
+   },
+   {
+    "name": "OilSpill",
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/OilSpill",
+    "totalDirectories": 2,
+    "totalChildren": 2
+   }
+  ],
+  "totalChildren": 3,
+  "totalDirectories": 3
+ },
+ "Dataset/Semantic Segmentation/dataset/LookAlikes": {
+  "directories": [
+   {
+    "name": "Masks",
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/LookAlikes/Masks",
+    "totalFiles": 229
+   },
+   {
+    "name": "Tiff files",
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/LookAlikes/Tiff files",
+    "totalFiles": 229
+   }
+  ],
+  "totalChildren": 2,
+  "totalDirectories": 2
+ },
+ "Dataset/Semantic Segmentation/dataset/NoOilSpill": {
+  "directories": [
+   {
+    "name": "Masks",
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/NoOilSpill/Masks",
+    "totalFiles": 41
+   },
+   {
+    "name": "Tiff files",
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/NoOilSpill/Tiff files",
+    "totalFiles": 41
+   }
+  ],
+  "totalChildren": 2,
+  "totalDirectories": 2
+ },
+ "Dataset/Semantic Segmentation/dataset/OilSpill": {
+  "directories": [
+   {
+    "name": "Masks",
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/OilSpill/Masks",
+    "totalFiles": 998
+   },
+   {
+    "name": "Tiff files",
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/OilSpill/Tiff files",
+    "totalFiles": 998
+   }
+  ],
+  "totalChildren": 2,
+  "totalDirectories": 2
+ },
+ "Dataset/Bounding Box/DARTIS/NoOIL SPILL/JPG Files": {
+  "files": [
+   {
+    "name": "nc-0001-00-000001.jpg",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 87170,
+    "relativeUrl": "Dataset/Bounding Box/DARTIS/NoOIL SPILL/JPG Files/nc-0001-00-000001.jpg"
+   },
+   {
+    "name": "nc-0002-00-000002.jpg",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 80807,
+    "relativeUrl": "Dataset/Bounding Box/DARTIS/NoOIL SPILL/JPG Files/nc-0002-00-000002.jpg"
+   },
+   {
+    "name": "nc-0003-00-000003.jpg",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 136043,
+    "relativeUrl": "Dataset/Bounding Box/DARTIS/NoOIL SPILL/JPG Files/nc-0003-00-000003.jpg"
+   },
+   {
+    "name": "nc-0004-00-000004.jpg",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 84952,
+    "relativeUrl": "Dataset/Bounding Box/DARTIS/NoOIL SPILL/JPG Files/nc-0004-00-000004.jpg"
+   },
+   {
+    "name": "nc-0005-00-000005.jpg",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 93760,
+    "relativeUrl": "Dataset/Bounding Box/DARTIS/NoOIL SPILL/JPG Files/nc-0005-00-000005.jpg"
+   },
+   {
+    "name": "nc-0006-00-000006.jpg",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 84514,
+    "relativeUrl": "Dataset/Bounding Box/DARTIS/NoOIL SPILL/JPG Files/nc-0006-00-000006.jpg"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U7UzwCXuTN2dlJtnprICaLT6ltI_k4gSc2Cu7lfLsufzVwGHT0gdoECqv-NxCtj9jQ"
+ },
+ "Dataset/Bounding Box/DARTIS/OIL SPILL/JPG Files": {
+  "files": [
+   {
+    "name": "oc-0001.jpg",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 74058,
+    "relativeUrl": "Dataset/Bounding Box/DARTIS/OIL SPILL/JPG Files/oc-0001.jpg"
+   },
+   {
+    "name": "oc-0002.jpg",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 87667,
+    "relativeUrl": "Dataset/Bounding Box/DARTIS/OIL SPILL/JPG Files/oc-0002.jpg"
+   },
+   {
+    "name": "oc-0003.jpg",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 94974,
+    "relativeUrl": "Dataset/Bounding Box/DARTIS/OIL SPILL/JPG Files/oc-0003.jpg"
+   },
+   {
+    "name": "oc-0004.jpg",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 82919,
+    "relativeUrl": "Dataset/Bounding Box/DARTIS/OIL SPILL/JPG Files/oc-0004.jpg"
+   },
+   {
+    "name": "oc-0005.jpg",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 83292,
+    "relativeUrl": "Dataset/Bounding Box/DARTIS/OIL SPILL/JPG Files/oc-0005.jpg"
+   },
+   {
+    "name": "oc-0006.jpg",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 76111,
+    "relativeUrl": "Dataset/Bounding Box/DARTIS/OIL SPILL/JPG Files/oc-0006.jpg"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U7dHZ99Y2fGsZ-lYbhnVRwMNdIcZtbD_0sUVhoT6hzrhr56xMJvMj39FVfOKs3Y-04"
+ },
+ "Dataset/Bounding Box/DARTIS/OIL SPILL/XML FILES": {
+  "files": [
+   {
+    "name": "oc-0001.xml",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 1441,
+    "relativeUrl": "Dataset/Bounding Box/DARTIS/OIL SPILL/XML FILES/oc-0001.xml"
+   },
+   {
+    "name": "oc-0002.xml",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 772,
+    "relativeUrl": "Dataset/Bounding Box/DARTIS/OIL SPILL/XML FILES/oc-0002.xml"
+   },
+   {
+    "name": "oc-0003.xml",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 548,
+    "relativeUrl": "Dataset/Bounding Box/DARTIS/OIL SPILL/XML FILES/oc-0003.xml"
+   },
+   {
+    "name": "oc-0004.xml",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 772,
+    "relativeUrl": "Dataset/Bounding Box/DARTIS/OIL SPILL/XML FILES/oc-0004.xml"
+   },
+   {
+    "name": "oc-0005.xml",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 548,
+    "relativeUrl": "Dataset/Bounding Box/DARTIS/OIL SPILL/XML FILES/oc-0005.xml"
+   },
+   {
+    "name": "oc-0006.xml",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 772,
+    "relativeUrl": "Dataset/Bounding Box/DARTIS/OIL SPILL/XML FILES/oc-0006.xml"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U7zLx_hFHOvhxopy7YiROZBTbPnAmwxQmgh1C6IiUbFjJEXFvFvD4J3W9hh5qSlvk8"
+ },
+ "Dataset/Semantic Segmentation/MADOS/LookAlikes/Masks": {
+  "files": [
+   {
+    "name": "10_Scene_101_L2R_cl_3.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 65599,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/LookAlikes/Masks/10_Scene_101_L2R_cl_3.tif"
+   },
+   {
+    "name": "10_Scene_101_L2R_cl_4.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 65599,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/LookAlikes/Masks/10_Scene_101_L2R_cl_4.tif"
+   },
+   {
+    "name": "10_Scene_102_L2R_cl_1.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 65599,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/LookAlikes/Masks/10_Scene_102_L2R_cl_1.tif"
+   },
+   {
+    "name": "10_Scene_102_L2R_cl_2.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 65599,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/LookAlikes/Masks/10_Scene_102_L2R_cl_2.tif"
+   },
+   {
+    "name": "10_Scene_107_L2R_cl_1.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 65599,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/LookAlikes/Masks/10_Scene_107_L2R_cl_1.tif"
+   },
+   {
+    "name": "10_Scene_107_L2R_cl_2.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 65599,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/LookAlikes/Masks/10_Scene_107_L2R_cl_2.tif"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U7vLfJOVySoqyO3QsxivGO0lym8W_KUVwznSvOJcrlngYififbklQ_UfwM_rJ3DWRY"
+ },
+ "Dataset/Semantic Segmentation/MADOS/LookAlikes/Metadata": {
+  "files": [
+   {
+    "name": "10_Scene_101_L2R_conf_3.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 65599,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/LookAlikes/Metadata/10_Scene_101_L2R_conf_3.tif"
+   },
+   {
+    "name": "10_Scene_101_L2R_conf_4.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 65599,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/LookAlikes/Metadata/10_Scene_101_L2R_conf_4.tif"
+   },
+   {
+    "name": "10_Scene_101_L2R_rep_3.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 65599,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/LookAlikes/Metadata/10_Scene_101_L2R_rep_3.tif"
+   },
+   {
+    "name": "10_Scene_101_L2R_rep_4.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 65599,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/LookAlikes/Metadata/10_Scene_101_L2R_rep_4.tif"
+   },
+   {
+    "name": "10_Scene_101_L2R_rgb_3.png",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 106662,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/LookAlikes/Metadata/10_Scene_101_L2R_rgb_3.png"
+   },
+   {
+    "name": "10_Scene_101_L2R_rgb_4.png",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 99491,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/LookAlikes/Metadata/10_Scene_101_L2R_rgb_4.png"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U5SnllPs-WucmpYReEuk68Ykf4HUXlutltqxW-GfvR2-GkeyxrTh9byYeTT9zZ1Hy0"
+ },
+ "Dataset/Semantic Segmentation/MADOS/LookAlikes/Tiff files": {
+  "files": [
+   {
+    "name": "10_Scene_101_L2R_rhorc_492_3.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 230851,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/LookAlikes/Tiff files/10_Scene_101_L2R_rhorc_492_3.tif"
+   },
+   {
+    "name": "10_Scene_101_L2R_rhorc_492_4.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 230851,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/LookAlikes/Tiff files/10_Scene_101_L2R_rhorc_492_4.tif"
+   },
+   {
+    "name": "10_Scene_101_L2R_rhorc_559_3.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 230851,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/LookAlikes/Tiff files/10_Scene_101_L2R_rhorc_559_3.tif"
+   },
+   {
+    "name": "10_Scene_101_L2R_rhorc_559_4.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 230851,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/LookAlikes/Tiff files/10_Scene_101_L2R_rhorc_559_4.tif"
+   },
+   {
+    "name": "10_Scene_101_L2R_rhorc_665_3.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 230851,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/LookAlikes/Tiff files/10_Scene_101_L2R_rhorc_665_3.tif"
+   },
+   {
+    "name": "10_Scene_101_L2R_rhorc_665_4.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 230851,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/LookAlikes/Tiff files/10_Scene_101_L2R_rhorc_665_4.tif"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U5G3BIZ4_x9FLrQreJJfq8xumVGqoj48_haA1x9uCYK3IKD1OBuVpMAfXn3lWKlPpE"
+ },
+ "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_0": {
+  "directories": [
+   {
+    "name": "60",
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_0/60",
+    "totalFiles": 9
+   }
+  ],
+  "totalChildren": 1,
+  "totalDirectories": 1
+ },
+ "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_1": {
+  "directories": [
+   {
+    "name": "60",
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_1/60",
+    "totalFiles": 57
+   }
+  ],
+  "totalChildren": 1,
+  "totalDirectories": 1
+ },
+ "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_10": {
+  "directories": [
+   {
+    "name": "60",
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_10/60",
+    "totalFiles": 10
+   }
+  ],
+  "totalChildren": 1,
+  "totalDirectories": 1
+ },
+ "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_100": {
+  "directories": [
+   {
+    "name": "60",
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_100/60",
+    "totalFiles": 13
+   }
+  ],
+  "totalChildren": 1,
+  "totalDirectories": 1
+ },
+ "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_101": {
+  "directories": [
+   {
+    "name": "60",
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_101/60",
+    "totalFiles": 6
+   }
+  ],
+  "totalChildren": 1,
+  "totalDirectories": 1
+ },
+ "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_102": {
+  "directories": [
+   {
+    "name": "60",
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_102/60",
+    "totalFiles": 2
+   }
+  ],
+  "totalChildren": 1,
+  "totalDirectories": 1
+ },
+ "Dataset/Semantic Segmentation/MADOS/NoOilSpill/Masks": {
+  "files": [
+   {
+    "name": "10_Scene_0_L2R_cl_1.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 65599,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/NoOilSpill/Masks/10_Scene_0_L2R_cl_1.tif"
+   },
+   {
+    "name": "10_Scene_0_L2R_cl_2.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 57919,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/NoOilSpill/Masks/10_Scene_0_L2R_cl_2.tif"
+   },
+   {
+    "name": "10_Scene_0_L2R_cl_3.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 65599,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/NoOilSpill/Masks/10_Scene_0_L2R_cl_3.tif"
+   },
+   {
+    "name": "10_Scene_0_L2R_cl_4.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 57919,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/NoOilSpill/Masks/10_Scene_0_L2R_cl_4.tif"
+   },
+   {
+    "name": "10_Scene_0_L2R_cl_5.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 65599,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/NoOilSpill/Masks/10_Scene_0_L2R_cl_5.tif"
+   },
+   {
+    "name": "10_Scene_0_L2R_cl_6.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 65599,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/NoOilSpill/Masks/10_Scene_0_L2R_cl_6.tif"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U4_zQjm3yzHD334ugAXZJF-yupylreQLKDmgaI6oVhZjvzKhyDMqfvDm9J9AdXxIaM"
+ },
+ "Dataset/Semantic Segmentation/MADOS/NoOilSpill/Metadata": {
+  "files": [
+   {
+    "name": "10_Scene_0_L2R_conf_1.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 65599,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/NoOilSpill/Metadata/10_Scene_0_L2R_conf_1.tif"
+   },
+   {
+    "name": "10_Scene_0_L2R_conf_2.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 57919,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/NoOilSpill/Metadata/10_Scene_0_L2R_conf_2.tif"
+   },
+   {
+    "name": "10_Scene_0_L2R_conf_3.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 65599,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/NoOilSpill/Metadata/10_Scene_0_L2R_conf_3.tif"
+   },
+   {
+    "name": "10_Scene_0_L2R_conf_4.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 57919,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/NoOilSpill/Metadata/10_Scene_0_L2R_conf_4.tif"
+   },
+   {
+    "name": "10_Scene_0_L2R_conf_5.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 65599,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/NoOilSpill/Metadata/10_Scene_0_L2R_conf_5.tif"
+   },
+   {
+    "name": "10_Scene_0_L2R_conf_6.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 65599,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/NoOilSpill/Metadata/10_Scene_0_L2R_conf_6.tif"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U6Yzx99lRx_gXne9dC80F_pCvxA_K0QILvGj0csvXby5geanKDk2zoY_hpD_BhV-Yk"
+ },
+ "Dataset/Semantic Segmentation/MADOS/NoOilSpill/Tiff files": {
+  "files": [
+   {
+    "name": "10_Scene_0_L2R_rhorc_492_1.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 230851,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/NoOilSpill/Tiff files/10_Scene_0_L2R_rhorc_492_1.tif"
+   },
+   {
+    "name": "10_Scene_0_L2R_rhorc_492_2.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 230851,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/NoOilSpill/Tiff files/10_Scene_0_L2R_rhorc_492_2.tif"
+   },
+   {
+    "name": "10_Scene_0_L2R_rhorc_492_3.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 230851,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/NoOilSpill/Tiff files/10_Scene_0_L2R_rhorc_492_3.tif"
+   },
+   {
+    "name": "10_Scene_0_L2R_rhorc_492_4.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 230851,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/NoOilSpill/Tiff files/10_Scene_0_L2R_rhorc_492_4.tif"
+   },
+   {
+    "name": "10_Scene_0_L2R_rhorc_492_5.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 230851,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/NoOilSpill/Tiff files/10_Scene_0_L2R_rhorc_492_5.tif"
+   },
+   {
+    "name": "10_Scene_0_L2R_rhorc_492_6.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 230851,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/NoOilSpill/Tiff files/10_Scene_0_L2R_rhorc_492_6.tif"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U6UHEJDL6XKyGnBdcMgsXEGd70ZVa81bslepRRVqskZ1MD4BXqUP7hxCuvuShcbJwM"
+ },
+ "Dataset/Semantic Segmentation/MADOS/OilSpill/Masks": {
+  "files": [
+   {
+    "name": "10_Scene_108_L2R_cl_26.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 65599,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/OilSpill/Masks/10_Scene_108_L2R_cl_26.tif"
+   },
+   {
+    "name": "10_Scene_108_L2R_cl_37.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 57919,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/OilSpill/Masks/10_Scene_108_L2R_cl_37.tif"
+   },
+   {
+    "name": "10_Scene_108_L2R_cl_38.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 65599,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/OilSpill/Masks/10_Scene_108_L2R_cl_38.tif"
+   },
+   {
+    "name": "10_Scene_108_L2R_cl_41.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 65599,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/OilSpill/Masks/10_Scene_108_L2R_cl_41.tif"
+   },
+   {
+    "name": "10_Scene_114_L2R_cl_17.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 57919,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/OilSpill/Masks/10_Scene_114_L2R_cl_17.tif"
+   },
+   {
+    "name": "10_Scene_114_L2R_cl_18.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 65599,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/OilSpill/Masks/10_Scene_114_L2R_cl_18.tif"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U5_Dpi4XMdtdWjsJ_fz1Ns9garMv8euAtTzNjq02pI5qbxVI0iev3Cox2fgMFzJPz8"
+ },
+ "Dataset/Semantic Segmentation/MADOS/OilSpill/Metadata": {
+  "files": [
+   {
+    "name": "10_Scene_108_L2R_conf_26.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 65599,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/OilSpill/Metadata/10_Scene_108_L2R_conf_26.tif"
+   },
+   {
+    "name": "10_Scene_108_L2R_conf_37.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 57919,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/OilSpill/Metadata/10_Scene_108_L2R_conf_37.tif"
+   },
+   {
+    "name": "10_Scene_108_L2R_conf_38.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 65599,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/OilSpill/Metadata/10_Scene_108_L2R_conf_38.tif"
+   },
+   {
+    "name": "10_Scene_108_L2R_conf_41.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 65599,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/OilSpill/Metadata/10_Scene_108_L2R_conf_41.tif"
+   },
+   {
+    "name": "10_Scene_108_L2R_rep_26.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 65599,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/OilSpill/Metadata/10_Scene_108_L2R_rep_26.tif"
+   },
+   {
+    "name": "10_Scene_108_L2R_rep_37.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 57919,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/OilSpill/Metadata/10_Scene_108_L2R_rep_37.tif"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U7OIyJoODXW5Cqs6cu_ARxmQBW-R83sY0onzy5D87Khi7ydsyHKD4qLWJqaOXXhxFU"
+ },
+ "Dataset/Semantic Segmentation/MADOS/OilSpill/Tiff files": {
+  "files": [
+   {
+    "name": "10_Scene_108_L2R_rhorc_492_26.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 230851,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/OilSpill/Tiff files/10_Scene_108_L2R_rhorc_492_26.tif"
+   },
+   {
+    "name": "10_Scene_108_L2R_rhorc_492_37.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 230851,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/OilSpill/Tiff files/10_Scene_108_L2R_rhorc_492_37.tif"
+   },
+   {
+    "name": "10_Scene_108_L2R_rhorc_492_38.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 230851,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/OilSpill/Tiff files/10_Scene_108_L2R_rhorc_492_38.tif"
+   },
+   {
+    "name": "10_Scene_108_L2R_rhorc_492_41.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 230851,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/OilSpill/Tiff files/10_Scene_108_L2R_rhorc_492_41.tif"
+   },
+   {
+    "name": "10_Scene_108_L2R_rhorc_559_26.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 230851,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/OilSpill/Tiff files/10_Scene_108_L2R_rhorc_559_26.tif"
+   },
+   {
+    "name": "10_Scene_108_L2R_rhorc_559_37.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 230851,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/OilSpill/Tiff files/10_Scene_108_L2R_rhorc_559_37.tif"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U7M9UfvxK6WJK7SYeiBawWw1_FTF2bQ5hsQvE4KfaRomgNuHoFWdve0H6rZe29BWuk"
+ },
+ "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/LookAlikes/Masks": {
+  "files": [
+   {
+    "name": "archive_00000.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/LookAlikes/Masks/archive_00000.tif"
+   },
+   {
+    "name": "archive_00001.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/LookAlikes/Masks/archive_00001.tif"
+   },
+   {
+    "name": "archive_00002.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/LookAlikes/Masks/archive_00002.tif"
+   },
+   {
+    "name": "archive_00003.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/LookAlikes/Masks/archive_00003.tif"
+   },
+   {
+    "name": "archive_00004.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/LookAlikes/Masks/archive_00004.tif"
+   },
+   {
+    "name": "archive_00005.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/LookAlikes/Masks/archive_00005.tif"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U7LmTXXEZm7evL7UNZU3ON0iIlfKjqPZrMHAvXlqpljjvVMUrQiLP8qVIahHtv0xzY"
+ },
+ "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/LookAlikes/Tiff files": {
+  "files": [
+   {
+    "name": "archive_00000.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 41175406,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/LookAlikes/Tiff files/archive_00000.tif"
+   },
+   {
+    "name": "archive_00001.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 41750093,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/LookAlikes/Tiff files/archive_00001.tif"
+   },
+   {
+    "name": "archive_00002.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 41756910,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/LookAlikes/Tiff files/archive_00002.tif"
+   },
+   {
+    "name": "archive_00003.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 41723681,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/LookAlikes/Tiff files/archive_00003.tif"
+   },
+   {
+    "name": "archive_00004.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 41529705,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/LookAlikes/Tiff files/archive_00004.tif"
+   },
+   {
+    "name": "archive_00005.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 41604303,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/LookAlikes/Tiff files/archive_00005.tif"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U5KcmFDUU274MNzyJP0KK6EOujNie6PEyQCTjTYZoqpOqxcjo12x3hRuaJA1zoThVo"
+ },
+ "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/NoOilSpill/Masks": {
+  "files": [
+   {
+    "name": "archive_00000.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/NoOilSpill/Masks/archive_00000.tif"
+   },
+   {
+    "name": "archive_00001.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/NoOilSpill/Masks/archive_00001.tif"
+   },
+   {
+    "name": "archive_00002.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/NoOilSpill/Masks/archive_00002.tif"
+   },
+   {
+    "name": "archive_00003.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/NoOilSpill/Masks/archive_00003.tif"
+   },
+   {
+    "name": "archive_00004.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/NoOilSpill/Masks/archive_00004.tif"
+   },
+   {
+    "name": "archive_00005.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/NoOilSpill/Masks/archive_00005.tif"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U736pyWsOvGuEJyunWKN5xmynHB2QjFuItq47R1i7VcUeLZcX9ysCkrhbj80JoAfKI"
+ },
+ "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/NoOilSpill/Tiff files": {
+  "files": [
+   {
+    "name": "archive_00000.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 41452819,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/NoOilSpill/Tiff files/archive_00000.tif"
+   },
+   {
+    "name": "archive_00001.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 41498521,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/NoOilSpill/Tiff files/archive_00001.tif"
+   },
+   {
+    "name": "archive_00002.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 41420745,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/NoOilSpill/Tiff files/archive_00002.tif"
+   },
+   {
+    "name": "archive_00003.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 41210659,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/NoOilSpill/Tiff files/archive_00003.tif"
+   },
+   {
+    "name": "archive_00004.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 41287610,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/NoOilSpill/Tiff files/archive_00004.tif"
+   },
+   {
+    "name": "archive_00005.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 41279983,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/NoOilSpill/Tiff files/archive_00005.tif"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U57Dq0AhQoCozQJ4tHxgagE-KYnj3yaKhOlmNooCNDQ-OjqPckI86SSvugM-EFyF8s"
+ },
+ "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/OilSpill/Masks": {
+  "files": [
+   {
+    "name": "archive2_00000.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/OilSpill/Masks/archive2_00000.tif"
+   },
+   {
+    "name": "archive2_00001.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/OilSpill/Masks/archive2_00001.tif"
+   },
+   {
+    "name": "archive2_00002.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/OilSpill/Masks/archive2_00002.tif"
+   },
+   {
+    "name": "archive2_00003.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/OilSpill/Masks/archive2_00003.tif"
+   },
+   {
+    "name": "archive2_00004.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/OilSpill/Masks/archive2_00004.tif"
+   },
+   {
+    "name": "archive2_00005.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/OilSpill/Masks/archive2_00005.tif"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U6sg1xe2rN0Ulg8TdtpIDnsAC528rcqVrvIYag_nu3X8xtuJUf3D43yAlVLN7rdKiM"
+ },
+ "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/OilSpill/Tiff files": {
+  "files": [
+   {
+    "name": "archive2_00000.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 41552591,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/OilSpill/Tiff files/archive2_00000.tif"
+   },
+   {
+    "name": "archive2_00001.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 41436546,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/OilSpill/Tiff files/archive2_00001.tif"
+   },
+   {
+    "name": "archive2_00002.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 41233828,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/OilSpill/Tiff files/archive2_00002.tif"
+   },
+   {
+    "name": "archive2_00003.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 41274551,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/OilSpill/Tiff files/archive2_00003.tif"
+   },
+   {
+    "name": "archive2_00004.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 41316236,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/OilSpill/Tiff files/archive2_00004.tif"
+   },
+   {
+    "name": "archive2_00005.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 41413369,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/OilSpill/Tiff files/archive2_00005.tif"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U74Q8AlKDhhlY6OQcY9FXKLBecpRdaJn53_vCGH4oU7vJQugQrKXOrXEUB-fMNDmSY"
+ },
+ "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/LookAlikes": {
+  "directories": [
+   {
+    "name": "Masks",
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/LookAlikes/Masks",
+    "totalFiles": 150
+   },
+   {
+    "name": "Tiff files",
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/LookAlikes/Tiff files",
+    "totalFiles": 150
+   }
+  ],
+  "totalChildren": 2,
+  "totalDirectories": 2
+ },
+ "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/NoOilSpill": {
+  "directories": [
+   {
+    "name": "Masks",
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/NoOilSpill/Masks",
+    "totalFiles": 150
+   },
+   {
+    "name": "Tiff files",
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/NoOilSpill/Tiff files",
+    "totalFiles": 150
+   }
+  ],
+  "totalChildren": 2,
+  "totalDirectories": 2
+ },
+ "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/OilSpill": {
+  "directories": [
+   {
+    "name": "Masks",
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/OilSpill/Masks",
+    "totalFiles": 150
+   },
+   {
+    "name": "Tiff files",
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/OilSpill/Tiff files",
+    "totalFiles": 150
+   }
+  ],
+  "totalChildren": 2,
+  "totalDirectories": 2
+ },
+ "Dataset/Semantic Segmentation/dataset/LookAlikes/Masks": {
+  "files": [
+   {
+    "name": "test_Oil (1085).png",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 15108,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/LookAlikes/Masks/test_Oil (1085).png"
+   },
+   {
+    "name": "test_Oil (109).png",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 13921,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/LookAlikes/Masks/test_Oil (109).png"
+   },
+   {
+    "name": "test_Oil (110).png",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 14620,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/LookAlikes/Masks/test_Oil (110).png"
+   },
+   {
+    "name": "test_Oil (112).png",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 15787,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/LookAlikes/Masks/test_Oil (112).png"
+   },
+   {
+    "name": "test_Oil (115).png",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 16805,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/LookAlikes/Masks/test_Oil (115).png"
+   },
+   {
+    "name": "test_Oil (1241).png",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 10918,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/LookAlikes/Masks/test_Oil (1241).png"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U7YlPsjzbsRhvRJlv5W1P1UDPFVQprQPBfMBZkwihVM3N9PHW4bttZhLofy6B7IuTo"
+ },
+ "Dataset/Semantic Segmentation/dataset/LookAlikes/Tiff files": {
+  "files": [
+   {
+    "name": "test_Oil (1085).jpg",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 621413,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/LookAlikes/Tiff files/test_Oil (1085).jpg"
+   },
+   {
+    "name": "test_Oil (109).jpg",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 807772,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/LookAlikes/Tiff files/test_Oil (109).jpg"
+   },
+   {
+    "name": "test_Oil (110).jpg",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 806194,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/LookAlikes/Tiff files/test_Oil (110).jpg"
+   },
+   {
+    "name": "test_Oil (112).jpg",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 798522,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/LookAlikes/Tiff files/test_Oil (112).jpg"
+   },
+   {
+    "name": "test_Oil (115).jpg",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 887543,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/LookAlikes/Tiff files/test_Oil (115).jpg"
+   },
+   {
+    "name": "test_Oil (1241).jpg",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 212158,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/LookAlikes/Tiff files/test_Oil (1241).jpg"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U4zOd37pnJ87Orc-Cdp6BTkikKEVBu9i4iR-p4AAyGW2L6pveARu6JH6Mk1hYJWBVY"
+ },
+ "Dataset/Semantic Segmentation/dataset/NoOilSpill/Masks": {
+  "files": [
+   {
+    "name": "test_Oil (187).png",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 14167,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/NoOilSpill/Masks/test_Oil (187).png"
+   },
+   {
+    "name": "test_Oil (198).png",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 12135,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/NoOilSpill/Masks/test_Oil (198).png"
+   },
+   {
+    "name": "test_Oil (203).png",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 13530,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/NoOilSpill/Masks/test_Oil (203).png"
+   },
+   {
+    "name": "test_Oil (27).png",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 12750,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/NoOilSpill/Masks/test_Oil (27).png"
+   },
+   {
+    "name": "test_Oil (30).png",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 13351,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/NoOilSpill/Masks/test_Oil (30).png"
+   },
+   {
+    "name": "test_Oil (59).png",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 12927,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/NoOilSpill/Masks/test_Oil (59).png"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U6qxt9nWGBO2kxp3L1Mc7ZVshmNjhxpXaOOVkA6dRb3gW7eJ1A4QuJ58Wb-4fMLW5A"
+ },
+ "Dataset/Semantic Segmentation/dataset/NoOilSpill/Tiff files": {
+  "files": [
+   {
+    "name": "test_Oil (187).jpg",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 532308,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/NoOilSpill/Tiff files/test_Oil (187).jpg"
+   },
+   {
+    "name": "test_Oil (198).jpg",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 461098,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/NoOilSpill/Tiff files/test_Oil (198).jpg"
+   },
+   {
+    "name": "test_Oil (203).jpg",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 582506,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/NoOilSpill/Tiff files/test_Oil (203).jpg"
+   },
+   {
+    "name": "test_Oil (27).jpg",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 895754,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/NoOilSpill/Tiff files/test_Oil (27).jpg"
+   },
+   {
+    "name": "test_Oil (30).jpg",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 894156,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/NoOilSpill/Tiff files/test_Oil (30).jpg"
+   },
+   {
+    "name": "test_Oil (59).jpg",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 609262,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/NoOilSpill/Tiff files/test_Oil (59).jpg"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U6UPvj-WJ9LqRUytrZTwklCW4_UiiKEIxb9Ev7lOOQoGjV8lo0vfNJaQCx8ZKTlnVE"
+ },
+ "Dataset/Semantic Segmentation/dataset/OilSpill/Masks": {
+  "files": [
+   {
+    "name": "test_Oil (1007).png",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 29750,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/OilSpill/Masks/test_Oil (1007).png"
+   },
+   {
+    "name": "test_Oil (1019).png",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 27929,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/OilSpill/Masks/test_Oil (1019).png"
+   },
+   {
+    "name": "test_Oil (1024).png",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 27354,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/OilSpill/Masks/test_Oil (1024).png"
+   },
+   {
+    "name": "test_Oil (1026).png",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 28161,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/OilSpill/Masks/test_Oil (1026).png"
+   },
+   {
+    "name": "test_Oil (1037).png",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 33018,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/OilSpill/Masks/test_Oil (1037).png"
+   },
+   {
+    "name": "test_Oil (1038).png",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 32760,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/OilSpill/Masks/test_Oil (1038).png"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U45Cuj3DAY3mjmXwN6_G44xAEMT6AwHIprQy_SHLrje3jlcn4AT1tWOoewJj162YZ4"
+ },
+ "Dataset/Semantic Segmentation/dataset/OilSpill/Tiff files": {
+  "files": [
+   {
+    "name": "test_Oil (1007).jpg",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 546884,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/OilSpill/Tiff files/test_Oil (1007).jpg"
+   },
+   {
+    "name": "test_Oil (1019).jpg",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 560206,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/OilSpill/Tiff files/test_Oil (1019).jpg"
+   },
+   {
+    "name": "test_Oil (1024).jpg",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 567628,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/OilSpill/Tiff files/test_Oil (1024).jpg"
+   },
+   {
+    "name": "test_Oil (1026).jpg",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 570545,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/OilSpill/Tiff files/test_Oil (1026).jpg"
+   },
+   {
+    "name": "test_Oil (1037).jpg",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 623075,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/OilSpill/Tiff files/test_Oil (1037).jpg"
+   },
+   {
+    "name": "test_Oil (1038).jpg",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 619189,
+    "relativeUrl": "Dataset/Semantic Segmentation/dataset/OilSpill/Tiff files/test_Oil (1038).jpg"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U4yr_JYlbExxhJHpUdP9l3uzBrX0LME-KIsv0bVEuREdgves-izFK9ZLE4NXM0NJSg"
+ },
+ "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_0/60": {
+  "files": [
+   {
+    "name": "Scene_0_L2R_rhorc_442_1.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_0/60/Scene_0_L2R_rhorc_442_1.tif"
+   },
+   {
+    "name": "Scene_0_L2R_rhorc_442_2.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_0/60/Scene_0_L2R_rhorc_442_2.tif"
+   },
+   {
+    "name": "Scene_0_L2R_rhorc_442_3.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_0/60/Scene_0_L2R_rhorc_442_3.tif"
+   },
+   {
+    "name": "Scene_0_L2R_rhorc_442_4.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_0/60/Scene_0_L2R_rhorc_442_4.tif"
+   },
+   {
+    "name": "Scene_0_L2R_rhorc_442_5.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_0/60/Scene_0_L2R_rhorc_442_5.tif"
+   },
+   {
+    "name": "Scene_0_L2R_rhorc_442_6.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_0/60/Scene_0_L2R_rhorc_442_6.tif"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U6b8VSXuxS4pm-wA-oHNvqrzvslcTBkB5IZ9TDpueXEBaI47wKe1y4BAKq-rrFEhm0"
+ },
+ "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_1/60": {
+  "files": [
+   {
+    "name": "Scene_1_L2R_rhorc_443_1.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_1/60/Scene_1_L2R_rhorc_443_1.tif"
+   },
+   {
+    "name": "Scene_1_L2R_rhorc_443_10.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_1/60/Scene_1_L2R_rhorc_443_10.tif"
+   },
+   {
+    "name": "Scene_1_L2R_rhorc_443_11.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_1/60/Scene_1_L2R_rhorc_443_11.tif"
+   },
+   {
+    "name": "Scene_1_L2R_rhorc_443_12.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_1/60/Scene_1_L2R_rhorc_443_12.tif"
+   },
+   {
+    "name": "Scene_1_L2R_rhorc_443_13.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_1/60/Scene_1_L2R_rhorc_443_13.tif"
+   },
+   {
+    "name": "Scene_1_L2R_rhorc_443_14.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_1/60/Scene_1_L2R_rhorc_443_14.tif"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U7sgAX1dS0_aFd_-0ZraP7QLMEp0d8C_LIvARlXffJLtB5mpIZTYFcVnkEsN-xfDCA"
+ },
+ "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_10/60": {
+  "files": [
+   {
+    "name": "Scene_10_L2R_rhorc_443_1.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_10/60/Scene_10_L2R_rhorc_443_1.tif"
+   },
+   {
+    "name": "Scene_10_L2R_rhorc_443_10.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_10/60/Scene_10_L2R_rhorc_443_10.tif"
+   },
+   {
+    "name": "Scene_10_L2R_rhorc_443_2.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_10/60/Scene_10_L2R_rhorc_443_2.tif"
+   },
+   {
+    "name": "Scene_10_L2R_rhorc_443_3.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_10/60/Scene_10_L2R_rhorc_443_3.tif"
+   },
+   {
+    "name": "Scene_10_L2R_rhorc_443_4.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_10/60/Scene_10_L2R_rhorc_443_4.tif"
+   },
+   {
+    "name": "Scene_10_L2R_rhorc_443_5.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_10/60/Scene_10_L2R_rhorc_443_5.tif"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U5iX4J5rngIc2-bK1Hx_1SGvddjW02_VtQzAT3uZm0s1whx1RPDHSnJYC0RqjkF83I"
+ },
+ "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_100/60": {
+  "files": [
+   {
+    "name": "Scene_100_L2R_rhorc_443_1.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_100/60/Scene_100_L2R_rhorc_443_1.tif"
+   },
+   {
+    "name": "Scene_100_L2R_rhorc_443_10.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_100/60/Scene_100_L2R_rhorc_443_10.tif"
+   },
+   {
+    "name": "Scene_100_L2R_rhorc_443_11.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_100/60/Scene_100_L2R_rhorc_443_11.tif"
+   },
+   {
+    "name": "Scene_100_L2R_rhorc_443_12.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_100/60/Scene_100_L2R_rhorc_443_12.tif"
+   },
+   {
+    "name": "Scene_100_L2R_rhorc_443_13.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_100/60/Scene_100_L2R_rhorc_443_13.tif"
+   },
+   {
+    "name": "Scene_100_L2R_rhorc_443_2.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_100/60/Scene_100_L2R_rhorc_443_2.tif"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U47gh49BxoK2h0xmZQ4bLg-2IAwp_LZ8aQQDrUI9YEzX0prka1oIfEreRDhBtQ1uxc"
+ },
+ "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_101/60": {
+  "files": [
+   {
+    "name": "Scene_101_L2R_rhorc_442_1.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_101/60/Scene_101_L2R_rhorc_442_1.tif"
+   },
+   {
+    "name": "Scene_101_L2R_rhorc_442_2.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_101/60/Scene_101_L2R_rhorc_442_2.tif"
+   },
+   {
+    "name": "Scene_101_L2R_rhorc_442_3.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_101/60/Scene_101_L2R_rhorc_442_3.tif"
+   },
+   {
+    "name": "Scene_101_L2R_rhorc_442_4.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_101/60/Scene_101_L2R_rhorc_442_4.tif"
+   },
+   {
+    "name": "Scene_101_L2R_rhorc_442_5.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_101/60/Scene_101_L2R_rhorc_442_5.tif"
+   },
+   {
+    "name": "Scene_101_L2R_rhorc_442_6.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_101/60/Scene_101_L2R_rhorc_442_6.tif"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6
+ },
+ "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_102/60": {
+  "files": [
+   {
+    "name": "Scene_102_L2R_rhorc_442_1.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_102/60/Scene_102_L2R_rhorc_442_1.tif"
+   },
+   {
+    "name": "Scene_102_L2R_rhorc_442_2.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 6671,
+    "relativeUrl": "Dataset/Semantic Segmentation/MADOS/MADOS/Scene_102/60/Scene_102_L2R_rhorc_442_2.tif"
+   }
+  ],
+  "totalChildren": 2,
+  "totalFiles": 2
+ },
+ "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/LookAlikes/Masks": {
+  "files": [
+   {
+    "name": "00000_segmentation.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/LookAlikes/Masks/00000_segmentation.tif"
+   },
+   {
+    "name": "00001_segmentation.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/LookAlikes/Masks/00001_segmentation.tif"
+   },
+   {
+    "name": "00002_segmentation.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/LookAlikes/Masks/00002_segmentation.tif"
+   },
+   {
+    "name": "00003_segmentation.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/LookAlikes/Masks/00003_segmentation.tif"
+   },
+   {
+    "name": "00004_segmentation.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/LookAlikes/Masks/00004_segmentation.tif"
+   },
+   {
+    "name": "00005_segmentation.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/LookAlikes/Masks/00005_segmentation.tif"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U6WoWC01tws_rkXjFwSmCHbccFsqAhSoSzkWhuMrBiZ6dc7nH4fTtoehD9RXLw2QJI"
+ },
+ "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/LookAlikes/Tiff files": {
+  "files": [
+   {
+    "name": "00000.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 33567098,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/LookAlikes/Tiff files/00000.tif"
+   },
+   {
+    "name": "00001.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 33567098,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/LookAlikes/Tiff files/00001.tif"
+   },
+   {
+    "name": "00002.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 33567098,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/LookAlikes/Tiff files/00002.tif"
+   },
+   {
+    "name": "00003.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 33567098,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/LookAlikes/Tiff files/00003.tif"
+   },
+   {
+    "name": "00004.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 33567098,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/LookAlikes/Tiff files/00004.tif"
+   },
+   {
+    "name": "00005.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 33567098,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/LookAlikes/Tiff files/00005.tif"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U703IVT-mvru98q2nMuixYk6c8vKPCeEKGP5hvYFb-U78IjNUnpoF4AqZ9FMkuAiu0"
+ },
+ "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/NoOilSpill/Masks": {
+  "files": [
+   {
+    "name": "00000_segmentation.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/NoOilSpill/Masks/00000_segmentation.tif"
+   },
+   {
+    "name": "00001_segmentation.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/NoOilSpill/Masks/00001_segmentation.tif"
+   },
+   {
+    "name": "00002_segmentation.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/NoOilSpill/Masks/00002_segmentation.tif"
+   },
+   {
+    "name": "00003_segmentation.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/NoOilSpill/Masks/00003_segmentation.tif"
+   },
+   {
+    "name": "00004_segmentation.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/NoOilSpill/Masks/00004_segmentation.tif"
+   },
+   {
+    "name": "00005_segmentation.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/NoOilSpill/Masks/00005_segmentation.tif"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U7mmWwUlKNAc023mRVXL0PKx1DRWonlNEaKdMkXWp8u4AjzJlx0TM-dCQHIx-1aExk"
+ },
+ "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/NoOilSpill/Tiff files": {
+  "files": [
+   {
+    "name": "00000.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 33567098,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/NoOilSpill/Tiff files/00000.tif"
+   },
+   {
+    "name": "00001.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 33567098,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/NoOilSpill/Tiff files/00001.tif"
+   },
+   {
+    "name": "00002.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 33567098,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/NoOilSpill/Tiff files/00002.tif"
+   },
+   {
+    "name": "00003.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 33567098,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/NoOilSpill/Tiff files/00003.tif"
+   },
+   {
+    "name": "00004.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 33567098,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/NoOilSpill/Tiff files/00004.tif"
+   },
+   {
+    "name": "00005.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 33567098,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/NoOilSpill/Tiff files/00005.tif"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U6vEwNU5iLbkXyIzN7_8yn3BHGlri1Ar1czj5UjWyFi6u_r21b9zkG_K8tUlx1_J3I"
+ },
+ "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/OilSpill/Masks": {
+  "files": [
+   {
+    "name": "00000_segmentation.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/OilSpill/Masks/00000_segmentation.tif"
+   },
+   {
+    "name": "00001_segmentation.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/OilSpill/Masks/00001_segmentation.tif"
+   },
+   {
+    "name": "00002_segmentation.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/OilSpill/Masks/00002_segmentation.tif"
+   },
+   {
+    "name": "00003_segmentation.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/OilSpill/Masks/00003_segmentation.tif"
+   },
+   {
+    "name": "00004_segmentation.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/OilSpill/Masks/00004_segmentation.tif"
+   },
+   {
+    "name": "00005_segmentation.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 4211084,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/OilSpill/Masks/00005_segmentation.tif"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U6QDZtZAZHYk7ggMGJfeQB_QTt3qsEgjETsmDAtztOGT20qLqvRcICXhShRMIebr84"
+ },
+ "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/OilSpill/Tiff files": {
+  "files": [
+   {
+    "name": "00000.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 33567098,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/OilSpill/Tiff files/00000.tif"
+   },
+   {
+    "name": "00001.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 33567098,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/OilSpill/Tiff files/00001.tif"
+   },
+   {
+    "name": "00002.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 33567098,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/OilSpill/Tiff files/00002.tif"
+   },
+   {
+    "name": "00003.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 33567098,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/OilSpill/Tiff files/00003.tif"
+   },
+   {
+    "name": "00004.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 33567098,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/OilSpill/Tiff files/00004.tif"
+   },
+   {
+    "name": "00005.tif",
+    "creationDate": "2026-07-07T05:48:19.516Z",
+    "totalBytes": 33567098,
+    "relativeUrl": "Dataset/Semantic Segmentation/Sentinel-1_SAR_Oil_spill_image_dataset/Test/OilSpill/Tiff files/00005.tif"
+   }
+  ],
+  "totalChildren": 6,
+  "totalFiles": 6,
+  "nextPageToken": "CfDJ8LXGgraiXMNClPzcySXY5U68W2WXVK0RakHdT2kJrVEqRzyhqHSUciRZL5n56Tohiu_hI9hS7QxWqe156-b5pGY"
+ }
+}

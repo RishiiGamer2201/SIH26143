@@ -1,0 +1,41 @@
+train {'oil': 844, 'no_oil': 550, 'lookalike': 547}
+eval sizes {"val_all": {"oil": 211, "lookalike": 135, "no_oil": 131}, "val_place_clean": {"oil": 211, "lookalike": 135, "no_oil": 131}, "test_full_minus_nodata": {"oil": 150, "lookalike": 150, "no_oil": 147}, "test_acq_clean": {"lookalike": 150, "no_oil": 147, "oil": 88}, "test_place_clean": {"lookalike": 110, "no_oil": 65, "oil": 37}}
+                       model                   eval   n    acc  bal_acc  macro_f1  R_no_oil  R_lookalike  R_oil
+            image_stats_test                val_all 477 0.8407   0.8330    0.8332    0.8397       0.7778 0.8815
+            image_stats_test        val_place_clean 477 0.8407   0.8330    0.8332    0.8397       0.7778 0.8815
+            image_stats_test test_full_minus_nodata 447 0.7494   0.7510    0.7437    0.9864       0.6467 0.6200
+            image_stats_test         test_acq_clean 385 0.7481   0.7186    0.7241    0.9864       0.6467 0.5227
+            image_stats_test       test_place_clean 212 0.7642   0.7447    0.7360    0.9846       0.7091 0.5405
+          metadata_only_test                val_all 477 0.4717   0.4954    0.4666    0.3893       0.7556 0.3412
+          metadata_only_test        val_place_clean 477 0.4717   0.4954    0.4666    0.3893       0.7556 0.3412
+          metadata_only_test test_full_minus_nodata 447 0.3736   0.3731    0.3555    0.2925       0.2067 0.6200
+          metadata_only_test         test_acq_clean 385 0.3662   0.4202    0.3577    0.2925       0.2067 0.7614
+          metadata_only_test       test_place_clean 212 0.3255   0.4160    0.3216    0.2462       0.2182 0.7838
+          image_stats+latlon                val_all 477 0.8407   0.8358    0.8345    0.8550       0.7852 0.8673
+          image_stats+latlon        val_place_clean 477 0.8407   0.8358    0.8345    0.8550       0.7852 0.8673
+             valid_frac_only                val_all 477 0.4319   0.3560    0.3164    0.1221       0.1259 0.8199
+             valid_frac_only        val_place_clean 477 0.4319   0.3560    0.3164    0.1221       0.1259 0.8199
+                 vv_p50_only                val_all 477 0.4948   0.4842    0.4858    0.3817       0.5259 0.5450
+                 vv_p50_only        val_place_clean 477 0.4948   0.4842    0.4858    0.3817       0.5259 0.5450
+         dark_clip_frac_only                val_all 477 0.3732   0.4457    0.3141    0.9847       0.3333 0.0190
+         dark_clip_frac_only        val_place_clean 477 0.3732   0.4457    0.3141    0.9847       0.3333 0.0190
+bright_frac_only(land/ships)                val_all 477 0.4151   0.3971    0.3801    0.5191       0.1556 0.5166
+bright_frac_only(land/ships)        val_place_clean 477 0.4151   0.3971    0.3801    0.5191       0.1556 0.5166
+                    lat_only                val_all 477 0.3082   0.3334    0.3123    0.4275       0.3926 0.1801
+                    lat_only        val_place_clean 477 0.3082   0.3334    0.3123    0.4275       0.3926 0.1801
+
+image_stats confusion val_all (rows true ['no_oil', 'lookalike', 'oil']): [[110, 17, 4], [9, 105, 21], [10, 15, 186]]
+
+image_stats confusion test_full_minus_nodata (rows true ['no_oil', 'lookalike', 'oil']): [[145, 1, 1], [45, 97, 8], [20, 37, 93]]
+
+feature medians by split x class:
+                     vv_p50  frac_le_m40  frac_gt_m5  valid_frac  lat_mid  px_x_m  grad_mean
+split    cls                                                                                
+test     lookalike -22.6938          0.0         0.0         1.0  43.0409  7.3087     0.9394
+         no_oil    -16.2476          0.0         0.0         1.0  35.6616  8.1248     0.9061
+         oil       -21.2683          0.0         0.0         1.0  25.7674  9.0057     0.8861
+trainval lookalike -22.7625          0.0         0.0         1.0  29.0847  8.7391     1.1565
+         no_oil    -18.3459          0.0         0.0         1.0  27.7777  8.8477     0.8925
+         oil       -19.9500          0.0         0.0         1.0  28.8501  8.7589     0.9043
+wall 41.54 s, maxrss 2645520 KB
+exit=0

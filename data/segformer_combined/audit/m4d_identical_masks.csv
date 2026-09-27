@@ -1,0 +1,11 @@
+mask_sha,a,b,split_a,split_b,img_ncc128,img_pixel_equal
+2a0bf6b359dd,train_Oil (72),train_Oil (82),train,train,0.05604812502861023,False
+6353287fe9e7,test_Oil (64),test_Oil (74),test,test,0.13052532076835632,False
+6353287fe9e7,test_Oil (64),train_Oil (78),test,train,0.38981983065605164,False
+a4d0ab5e7934,train_Oil (296),val_Oil (287),train,val,0.5450122356414795,False
+b3496b02d755,train_Oil (410),train_Oil (437),train,train,0.37115490436553955,False
+cdedcf64f934,test_Oil (425),train_Oil (424),test,train,0.41410720348358154,False
+e84fcfae2cbd,test_Oil (71),train_Oil (63),test,train,0.16697144508361816,False
+e9d3c07d026c,test_Oil (435),train_Oil (428),test,train,0.5834029912948608,False
+e9d3c07d026c,test_Oil (435),train_Oil (431),test,train,0.5783872604370117,False
+e9d3c07d026c,test_Oil (435),train_Oil (439),test,train,0.59038245677948,False

@@ -1,0 +1,65 @@
+{
+  "incident": "incident_001",
+  "T0": "2023-01-03 00:01:42+00:00",
+  "time_start": "2023-01-01 00:00:00+00:00",
+  "time_end": "2023-01-03 06:01:42+00:00",
+  "roi": {
+    "west": -91.477933,
+    "south": 26.106677,
+    "east": -89.379742,
+    "north": 28.139636
+  },
+  "time_window_observations": 17873038,
+  "roi_observations": 59077,
+  "roi_unique_mmsi": 162,
+  "cerulean_candidates": [
+    {
+      "MMSI": 367507790,
+      "VesselName": "HARVEY SUPPORTER",
+      "TotalObservations": 1470,
+      "ROIObservations": 1249,
+      "FirstObservation": "2023-01-01 00:00:07+00:00",
+      "LastObservation": "2023-01-03 06:01:05+00:00"
+    },
+    {
+      "MMSI": 367655260,
+      "VesselName": "SHELIA BORDELON",
+      "TotalObservations": 580,
+      "ROIObservations": 580,
+      "FirstObservation": "2023-01-01 00:00:23+00:00",
+      "LastObservation": "2023-01-03 05:07:34+00:00"
+    },
+    {
+      "MMSI": 368166560,
+      "VesselName": "ARGOS PLATFORM",
+      "TotalObservations": 1322,
+      "ROIObservations": 1322,
+      "FirstObservation": "2023-01-01 00:00:35+00:00",
+      "LastObservation": "2023-01-03 06:00:35+00:00"
+    },
+    {
+      "MMSI": 368196410,
+      "VesselName": "C-CONSTRUCTOR",
+      "TotalObservations": 1138,
+      "ROIObservations": 1138,
+      "FirstObservation": "2023-01-01 00:00:20+00:00",
+      "LastObservation": "2023-01-03 06:01:42+00:00"
+    },
+    {
+      "MMSI": 538005314,
+      "VesselName": "OCEAN BLACKHORNET",
+      "TotalObservations": 710,
+      "ROIObservations": 710,
+      "FirstObservation": "2023-01-01 00:00:37+00:00",
+      "LastObservation": "2023-01-03 05:58:57+00:00"
+    },
+    {
+      "MMSI": 538005361,
+      "VesselName": "OCEAN BLACKLION",
+      "TotalObservations": 776,
+      "ROIObservations": 776,
+      "FirstObservation": "2023-01-01 00:00:02+00:00",
+      "LastObservation": "2023-01-03 06:00:41+00:00"
+    }
+  ]
+}

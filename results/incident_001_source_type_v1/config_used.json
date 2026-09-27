@@ -1,0 +1,29 @@
+{
+ "_doc": "Post-score motion_state from AIS track behaviour (source_type is NOT derived from it; stays unknown until vessel metadata + infrastructure DB are joined). Does NOT change any physics score. Thresholds justified in EXPERIMENT_LOG E102 from the stats of all 155 scored tracks. No vessel names are used.",
+ "incident_t0_utc": "2023-01-03T00:01:42Z",
+ "ais_parquet": "data/incident_001/ais/ais_roi.parquet",
+ "window_h_before_t0": 48,
+ "min_reports": 10,
+ "min_span_h": 6,
+ "stationary_radius_km": 0.5,
+ "slow_sog_kn": 0.5,
+ "stationary": {
+  "max_p90_spread_km": 0.25,
+  "max_excursion_km": 1.0,
+  "min_frac_slow": 0.9
+ },
+ "loitering": {
+  "max_p90_spread_km": 2.0,
+  "max_excursion_km": 5.0,
+  "min_frac_slow": 0.8
+ },
+ "mixed_min_stationarity_score": 0.5,
+ "metadata_hint_status_codes": {
+  "1": "at_anchor",
+  "5": "moored"
+ },
+ "metadata_hint_vessel_types": {
+  "98": "other_type_reserved",
+  "99": "other_type_no_info"
+ }
+}

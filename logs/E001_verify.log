@@ -1,0 +1,9 @@
+python 3.12.14
+torch 2.11.0+cu128 cuda build 12.8 cudnn 91900
+numpy 2.5.3 pandas 3.0.6 sklearn 1.9.1 gdal 3.13.3 pyarrow 25.0.0
+timm 1.0.30 smp 0.5.0
+cuda available True arch list ['sm_75', 'sm_80', 'sm_86', 'sm_90', 'sm_100', 'sm_120']
+gpu NVIDIA GeForce RTX 5070 Ti cc 12.0 vram GB 15.92
+fp16 matmul TFLOPS 51.7
+unet fwd/bwd ok (4, 1, 512, 512) peak alloc GB 1.27
+free/total GB 13.3 15.92

@@ -1,0 +1,97 @@
+{
+ "checkpoint_epoch": 9,
+ "threshold_selected": 0.6,
+ "pixel_area_note": "20 m cache pixels (~0.0004 km2 each)",
+ "at_0_5": {
+  "global_pixel": {
+   "iou": 0.7529564145428309,
+   "dice": 0.8590703206265412,
+   "precision": 0.8495969303438239,
+   "recall": 0.8687573583531621
+  },
+  "oil_tiles": {
+   "n": 211,
+   "pixel": {
+    "iou": 0.7690665675708781,
+    "dice": 0.8694602924149888,
+    "precision": 0.8701643649222435,
+    "recall": 0.8687573583531621
+   },
+   "tile_dice_mean": 0.8409046530677653,
+   "tile_dice_median": 0.8774997418510997,
+   "tile_recall_mean": 0.8854398888041362,
+   "tiles_detected_any_tp": 210,
+   "tiles_missed_entirely": 1,
+   "false_components_total": 427,
+   "largest_false_component_px": 18553,
+   "gt_components": 4790,
+   "missed_gt_components": 2558
+  },
+  "lookalike_tiles": {
+   "n": 135,
+   "frac_tiles_any_pred": 0.2222222222222222,
+   "mean_fp_frac": 0.0014139086978379343,
+   "p95_fp_frac": 0.0059486125911449965,
+   "max_fp_frac": 0.050826262367807934,
+   "false_components_total": 413,
+   "false_components_per_tile": 3.0592592592592593,
+   "largest_false_component_px": 26738
+  },
+  "no_oil_tiles": {
+   "n": 131,
+   "frac_tiles_any_pred": 0.05343511450381679,
+   "mean_fp_frac": 1.3335647778989047e-05,
+   "p95_fp_frac": 1.0967254638671875e-05,
+   "max_fp_frac": 0.0008821487426757812,
+   "false_components_total": 30,
+   "false_components_per_tile": 0.22900763358778625,
+   "largest_false_component_px": 554
+  }
+ },
+ "at_selected": {
+  "global_pixel": {
+   "iou": 0.7539305890035947,
+   "dice": 0.8597040199086801,
+   "precision": 0.8635062660881413,
+   "recall": 0.8559351115226447
+  },
+  "oil_tiles": {
+   "n": 211,
+   "pixel": {
+    "iou": 0.7679818966851507,
+    "dice": 0.8687666973571008,
+    "precision": 0.8819888629721186,
+    "recall": 0.8559351115226447
+   },
+   "tile_dice_mean": 0.8407631068865516,
+   "tile_dice_median": 0.8730501220331789,
+   "tile_recall_mean": 0.8731200582802758,
+   "tiles_detected_any_tp": 210,
+   "tiles_missed_entirely": 1,
+   "false_components_total": 363,
+   "largest_false_component_px": 15870,
+   "gt_components": 4790,
+   "missed_gt_components": 2641
+  },
+  "lookalike_tiles": {
+   "n": 135,
+   "frac_tiles_any_pred": 0.2222222222222222,
+   "mean_fp_frac": 0.0012250211718521176,
+   "p95_fp_frac": 0.005136797552521162,
+   "max_fp_frac": 0.047858529034955105,
+   "false_components_total": 346,
+   "false_components_per_tile": 2.562962962962963,
+   "largest_false_component_px": 25426
+  },
+  "no_oil_tiles": {
+   "n": 131,
+   "frac_tiles_any_pred": 0.05343511450381679,
+   "mean_fp_frac": 1.129045308632179e-05,
+   "p95_fp_frac": 9.5367431640625e-07,
+   "max_fp_frac": 0.0008115768432617188,
+   "false_components_total": 26,
+   "false_components_per_tile": 0.1984732824427481,
+   "largest_false_component_px": 508
+  }
+ }
+}

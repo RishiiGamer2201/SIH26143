@@ -1,0 +1,148 @@
+{
+ "A_smoke": {
+  "out_512": [
+   2,
+   1,
+   512,
+   512
+  ],
+  "out_dtype": "torch.bfloat16",
+  "out_1024": [
+   1,
+   1,
+   1024,
+   1024
+  ],
+  "finite": true,
+  "params_m": 24.719233,
+  "encoder_params_m": 24.193152,
+  "first_conv": "encoder.patch_embed1.proj.weight",
+  "first_conv_shape": [
+   64,
+   2,
+   7,
+   7
+  ],
+  "weight_adaptation": "2-ch weight == pretrained RGB weight[:, :2] * 3/2 (smp patch_first_conv: channel i copies RGB channel i % 3, rescaled by 3/2)",
+  "weight_adaptation_verified": true
+ },
+ "B_loss_mask": {
+  "loss_equal": true,
+  "max_abs_diff": 0.0,
+  "max_abs_grad_invalid": 0.0,
+  "grad_valid_nonzero": true
+ },
+ "C_augment": {
+  "identical_geometry": true,
+  "n_transformed_not_identity": 53,
+  "invalid_stays_zero": true,
+  "gain_db_range": [
+   -1.4578731060028076,
+   1.4845906496047974
+  ]
+ },
+ "E_baseline_alloc_gb": 0.0487518310546875,
+ "E_vram_probe": {
+  "results": [
+   {
+    "batch": 2,
+    "ok": true,
+    "img_per_s": 19.512043533731315,
+    "peak_alloc_gb": 1.8458929061889648,
+    "peak_reserved_gb": 1.888671875
+   },
+   {
+    "batch": 4,
+    "ok": true,
+    "img_per_s": 23.639224177893404,
+    "peak_alloc_gb": 3.183985710144043,
+    "peak_reserved_gb": 3.439453125
+   },
+   {
+    "batch": 6,
+    "ok": true,
+    "img_per_s": 25.069134853782447,
+    "peak_alloc_gb": 4.516768455505371,
+    "peak_reserved_gb": 4.953125
+   },
+   {
+    "batch": 8,
+    "ok": true,
+    "img_per_s": 26.36731808521389,
+    "peak_alloc_gb": 5.842623710632324,
+    "peak_reserved_gb": 6.39453125
+   },
+   {
+    "batch": 12,
+    "ok": true,
+    "img_per_s": 26.846394897378442,
+    "peak_alloc_gb": 8.510111808776855,
+    "peak_reserved_gb": 9.390625
+   },
+   {
+    "batch": 16,
+    "ok": true,
+    "img_per_s": 27.125159000745743,
+    "peak_alloc_gb": 11.181139945983887,
+    "peak_reserved_gb": 12.3359375
+   }
+  ],
+  "rule": "largest batch with peak reserved <= 12.0 GB",
+  "chosen_batch": 12
+ },
+ "D_overfit": {
+  "n_crops": 12,
+  "oil_frac": 0.04575955495238304,
+  "lr": 0.0003,
+  "target_dice": 0.95,
+  "reached_at_step": 50,
+  "final": {
+   "step": 50,
+   "loss": 0.07980114221572876,
+   "iou": 0.9129078775277507,
+   "dice": 0.9544713451727704,
+   "precision": 0.9534116460377834,
+   "recall": 0.9555334026003202
+  },
+  "curve": [
+   {
+    "step": 25,
+    "loss": 0.17980556190013885,
+    "iou": 0.687689538218183,
+    "dice": 0.8149479186133097,
+    "precision": 0.6900870107168767,
+    "recall": 0.9949734632557355
+   },
+   {
+    "step": 50,
+    "loss": 0.07980114221572876,
+    "iou": 0.9129078775277507,
+    "dice": 0.9544713451727704,
+    "precision": 0.9534116460377834,
+    "recall": 0.9555334026003202
+   }
+  ],
+  "alignment_dice_by_shift": {
+   "x-8": 0.8008900025619159,
+   "x-4": 0.8908886862593813,
+   "x-2": 0.9323870868206888,
+   "x-1": 0.9476585181133504,
+   "x+0": 0.9544713451727704,
+   "x+1": 0.9461879162151642,
+   "x+2": 0.9292455973596434,
+   "x+4": 0.8861826270621505,
+   "x+8": 0.795602728808025,
+   "y-8": 0.7752458757735664,
+   "y-4": 0.8759734226258306,
+   "y-2": 0.9247453586017076,
+   "y-1": 0.9445767079819779,
+   "y+0": 0.9544713451727704,
+   "y+1": 0.9477814203818307,
+   "y+2": 0.9298364334426115,
+   "y+4": 0.8819550849389036,
+   "y+8": 0.780960729312763
+  },
+  "best_shift": "x+0"
+ },
+ "all_passed": true
+}

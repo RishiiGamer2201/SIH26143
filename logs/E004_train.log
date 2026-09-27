@@ -1,0 +1,30 @@
+{"model": "resnet18.tv_in1k", "in_chans": 2, "seed": 26143, "epochs": 30, "patience": 8, "batch": 32, "eval_batch": 64, "lr": 0.0003, "weight_decay": 0.01, "warmup_epochs": 1, "amp": "bf16", "gain_db": 1.5, "p_flip": 0.5, "xscale": true, "xscale_p": 0.5, "xscale_min": 0.5, "test_min_valid_frac": 0.05, "norm_mu": 0.44496873021125793, "norm_sd": 0.11909570544958115, "class_weights": [1.1763635873794556, 1.1828153133392334, 0.7665876746177673], "n_train": 1941, "n_val": 477, "train_counts": {"no_oil": 550, "lookalike": 547, "oil": 844}}
+epoch=1 train_loss=0.6108 val_loss=0.669 val_loss_unweighted=0.6349 val_macro_f1=0.8044 val_acc=0.8155 lr=0.0003 epoch_s=5.186 *
+epoch=2 train_loss=0.3947 val_loss=0.4997 val_loss_unweighted=0.4821 val_macro_f1=0.8279 val_acc=0.8365 lr=0.0002991 epoch_s=4.668 *
+epoch=3 train_loss=0.3098 val_loss=0.4397 val_loss_unweighted=0.3793 val_macro_f1=0.8512 val_acc=0.87 lr=0.0002965 epoch_s=4.772 *
+epoch=4 train_loss=0.2829 val_loss=0.2482 val_loss_unweighted=0.2379 val_macro_f1=0.8944 val_acc=0.9036 lr=0.0002921 epoch_s=4.723 *
+epoch=5 train_loss=0.2439 val_loss=0.2737 val_loss_unweighted=0.2353 val_macro_f1=0.8997 val_acc=0.914 lr=0.0002861 epoch_s=4.725 *
+epoch=6 train_loss=0.2697 val_loss=0.3823 val_loss_unweighted=0.3296 val_macro_f1=0.8761 val_acc=0.891 lr=0.0002785 epoch_s=4.7 
+epoch=7 train_loss=0.2903 val_loss=0.3678 val_loss_unweighted=0.3175 val_macro_f1=0.8735 val_acc=0.8889 lr=0.0002694 epoch_s=4.704 
+epoch=8 train_loss=0.2344 val_loss=0.2534 val_loss_unweighted=0.2317 val_macro_f1=0.9071 val_acc=0.9161 lr=0.0002589 epoch_s=4.705 *
+epoch=9 train_loss=0.1969 val_loss=0.2317 val_loss_unweighted=0.2103 val_macro_f1=0.9041 val_acc=0.9161 lr=0.0002471 epoch_s=4.689 
+epoch=10 train_loss=0.2086 val_loss=0.3043 val_loss_unweighted=0.2901 val_macro_f1=0.8745 val_acc=0.8868 lr=0.0002342 epoch_s=4.728 
+epoch=11 train_loss=0.1872 val_loss=0.4457 val_loss_unweighted=0.4943 val_macro_f1=0.8139 val_acc=0.8092 lr=0.0002203 epoch_s=4.781 
+epoch=12 train_loss=0.1882 val_loss=0.2915 val_loss_unweighted=0.262 val_macro_f1=0.8986 val_acc=0.9119 lr=0.0002055 epoch_s=4.691 
+epoch=13 train_loss=0.1763 val_loss=0.308 val_loss_unweighted=0.285 val_macro_f1=0.9054 val_acc=0.914 lr=0.0001901 epoch_s=4.703 
+epoch=14 train_loss=0.1861 val_loss=0.3158 val_loss_unweighted=0.2859 val_macro_f1=0.8907 val_acc=0.9015 lr=0.0001743 epoch_s=4.81 
+epoch=15 train_loss=0.162 val_loss=0.3188 val_loss_unweighted=0.2951 val_macro_f1=0.8843 val_acc=0.8952 lr=0.0001581 epoch_s=4.86 
+epoch=16 train_loss=0.1579 val_loss=0.2867 val_loss_unweighted=0.2496 val_macro_f1=0.9014 val_acc=0.914 lr=0.0001419 epoch_s=4.807 
+early stop: no val macro-F1 gain for 8 epochs
+{
+ "best_epoch": 8,
+ "best_val_macro_f1": 0.9070964659228443,
+ "epochs_run": 16,
+ "runtime_s": 76.50452280044556,
+ "peak_vram_allocated_gb": 3.979074001312256,
+ "peak_vram_reserved_gb": 13.810546875,
+ "checkpoint_mb": 42.69959545135498
+}
+val @best: {"n": 477, "accuracy": 0.9161, "balanced_accuracy": 0.908, "macro_f1": 0.9071, "per_class": {"no_oil": {"precision": 0.9055, "recall": 0.8779, "f1": 0.8915, "support": 131}, "lookalike": {"precision": 0.8392, "recall": 0.8889, "f1": 0.8633, "support": 135}, "oil": {"precision": 0.9758, "recall": 0.9573, "f1": 0.9665, "support": 211}}, "confusion_rows_true_cols_pred": [[115, 15, 1], [11, 120, 4], [1, 8, 202]]}
+wall 82.03 s maxrss 2938008 KB
+exit=0

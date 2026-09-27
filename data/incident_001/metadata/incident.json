@@ -1,0 +1,23 @@
+{
+  "incident_id": "incident_001",
+  "cerulean_slick_id": 3775938,
+  "slick_timestamp": "2023-01-03T00:01:42",
+  "sentinel1_scene_id": "S1A_IW_GRDH_1SDV_20230103T000142_20230103T000207_046612_059620_257F",
+  "area_m2": 1243162.7260067165,
+  "length_m": 9536.60181781,
+  "machine_confidence": 0.6386871933937073,
+  "source_score": 0.7341757485187846,
+  "candidate_vessels": [
+    "368196410",
+    "538005361",
+    "538005314",
+    "368166560",
+    "367655260",
+    "367507790"
+  ],
+  "infrastructure_sources": [
+    "1042009"
+  ],
+  "dark_vessels": null,
+  "cerulean_url": "https://cerulean.skytruth.org/slicks/3775938?ref=api&slick_id=3775938"
+}

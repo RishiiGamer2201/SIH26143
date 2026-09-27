@@ -1,0 +1,86 @@
+position methods (vessel x model-time): {'unavailable': 5555, 'interp': 1939, 'edge_nearest': 131, 'exact': 19}
+vessels scored  V2: 155  V2.1: 152
+
+TOP 15 point-release V2.1 vs V2
+     MMSI        VesselName  point_rank_v2  point_rank_v2_1  point_release_score_v2  point_release_score_v2_1  matched_hours_v2  matched_hours_v2_1  n_interp  n_edge
+368059520       DEER ISLAND              1              1.0                  0.5291                    0.5193                19                16.0      15.0     1.0
+368589000  OVERSEAS CASCADE              3              2.0                  0.4140                    0.4015                20                18.0      16.0     2.0
+367550980          BIG FOOT              4              3.0                  0.2811                    0.2811                33                28.0      25.0     3.0
+368166560    ARGOS PLATFORM              5              4.0                  0.2594                    0.2594                43                36.0      34.0     2.0
+538005314 OCEAN BLACKHORNET              6              5.0                  0.2193                    0.1900                27                24.0      23.0     1.0
+408919000   SEAPEAK BAHRAIN              7              6.0                  0.1269                    0.1294                 4                 4.0       4.0     0.0
+367507790  HARVEY SUPPORTER              9              7.0                  0.1128                    0.1129                44                41.0      40.0     1.0
+367501540     OSG ENDURANCE              8              8.0                  0.1207                    0.1127                 4                 4.0       3.0     1.0
+538005361   OCEAN BLACKLION             10              9.0                  0.1066                    0.1066                36                30.0      27.0     3.0
+367643110       DEEP RUNNER             11             10.0                  0.0979                    0.1058                 9                 9.0       9.0     0.0
+368196410     C-CONSTRUCTOR             12             11.0                  0.0723                    0.0723                40                36.0      35.0     1.0
+367775000       MAERSK OHIO             13             12.0                  0.0479                    0.0466                 8                 7.0       7.0     0.0
+367588580  ROLAND A FALGOUT             14             13.0                  0.0300                    0.0354                12                11.0      11.0     0.0
+548704000     KERRY EXPRESS             15             14.0                  0.0096                    0.0121                11                 9.0       8.0     0.0
+338189000            BREEZE             16             15.0                  0.0058                    0.0055                10                 9.0       9.0     0.0
+
+PER RELEASE-AGE BIN
+   bin  n_v2  n_v2_1  spearman_score  top10_overlap  top6_identical_order  max_abs_rank_change_top10_v2
+  0-6h    65      61           0.999              9                 False                           3.0
+ 6-12h    78      76           0.999             10                 False                           1.0
+12-24h    82      81           0.998             10                  True                           0.0
+24-36h    74      64           0.958              8                  True                          15.0
+36-48h   112     111           0.995             10                  True                           0.0
+
+0-6h: top 8 V2.1 (rank V2 -> V2.1)
+         VesselName      MMSI  rank_in_age_bin_v2  rank_in_age_bin_v2_1  peak_density_score_v2  peak_density_score_v2_1  peak_age_hours_v2_1 peak_method
+     ARGOS PLATFORM 368166560                   2                   1.0                 0.2594                   0.2594                  0.0      interp
+  OCEAN BLACKHORNET 538005314                   3                   2.0                 0.2193                   0.1900                  1.0      interp
+   HARVEY SUPPORTER 367507790                   4                   3.0                 0.1128                   0.1129                  0.0      interp
+    OCEAN BLACKLION 538005361                   5                   4.0                 0.1066                   0.1066                  1.0      interp
+      C-CONSTRUCTOR 368196410                   6                   5.0                 0.0723                   0.0723                  0.0      interp
+BP MAD DOG PLATFORM 369494392                   7                   6.0                 0.0046                   0.0046                  1.0      interp
+     POLARCUS ALIMA 311012300                  10                   7.0                 0.0014                   0.0014                  3.0      interp
+           BIG FOOT 367550980                   8                   8.0                 0.0024                   0.0011                  5.0      interp
+
+6-12h: top 8 V2.1 (rank V2 -> V2.1)
+       VesselName      MMSI  rank_in_age_bin_v2  rank_in_age_bin_v2_1  peak_density_score_v2  peak_density_score_v2_1  peak_age_hours_v2_1  peak_method
+    OSG ENDURANCE 367501540                   1                   1.0                 0.1207                   0.1127                 10.0       interp
+         BIG FOOT 367550980                   2                   2.0                 0.0786                   0.0785                 12.0       interp
+OCEAN BLACKHORNET 538005314                   3                   3.0                 0.0344                   0.0344                  7.0       interp
+   ARGOS PLATFORM 368166560                   4                   4.0                 0.0272                   0.0272                  7.0       interp
+ HARVEY SUPPORTER 367507790                   6                   5.0                 0.0194                   0.0194                  7.0       interp
+  OCEAN BLACKLION 538005361                   5                   6.0                 0.0217                   0.0138                  8.0 edge_nearest
+    C-CONSTRUCTOR 368196410                   7                   7.0                 0.0107                   0.0107                  7.0       interp
+  SHELIA BORDELON 367655260                   8                   8.0                 0.0021                   0.0021                  8.0       interp
+
+12-24h: top 8 V2.1 (rank V2 -> V2.1)
+      VesselName      MMSI  rank_in_age_bin_v2  rank_in_age_bin_v2_1  peak_density_score_v2  peak_density_score_v2_1  peak_age_hours_v2_1 peak_method
+        BIG FOOT 367550980                   1                   1.0                 0.0903                   0.0903                 13.0      interp
+     MAERSK OHIO 367775000                   2                   2.0                 0.0479                   0.0466                 19.0      interp
+OVERSEAS CASCADE 368589000                   3                   3.0                 0.0019                   0.0021                 14.0      interp
+ SHELIA BORDELON 367655260                   4                   4.0                 0.0012                   0.0008                 13.0      interp
+ OCEAN BLACKLION 538005361                   5                   5.0                 0.0005                   0.0005                 13.0      interp
+HARVEY SUPPORTER 367507790                   6                   6.0                 0.0003                   0.0003                 13.0      interp
+  ARGOS PLATFORM 368166560                   7                   7.0                 0.0001                   0.0001                 13.0      interp
+    SEVEN OCEANS 235053116                   8                   8.0                 0.0001                   0.0001                 13.0      interp
+
+24-36h: top 8 V2.1 (rank V2 -> V2.1)
+        VesselName      MMSI  rank_in_age_bin_v2  rank_in_age_bin_v2_1  peak_density_score_v2  peak_density_score_v2_1  peak_age_hours_v2_1  peak_method
+          BIG FOOT 367550980                   1                   1.0                 0.2811                   0.2811                 32.0 edge_nearest
+   SEAPEAK BAHRAIN 408919000                   2                   2.0                 0.1269                   0.1294                 33.0       interp
+     KERRY EXPRESS 548704000                   3                   3.0                 0.0020                   0.0027                 36.0       interp
+MARAN GAS ACHILLES 241365000                   4                   4.0                 0.0001                   0.0008                 33.0       interp
+     C-CONSTRUCTOR 368196410                   5                   5.0                 0.0001                   0.0001                 25.0       interp
+   OCEAN BLACKLION 538005361                   6                   6.0                 0.0000                   0.0000                 25.0       interp
+  HARVEY SUPPORTER 367507790                   7                   7.0                 0.0000                   0.0000                 25.0       interp
+    ARGOS PLATFORM 368166560                   8                   8.0                 0.0000                   0.0000                 25.0       interp
+
+36-48h: top 8 V2.1 (rank V2 -> V2.1)
+      VesselName      MMSI  rank_in_age_bin_v2  rank_in_age_bin_v2_1  peak_density_score_v2  peak_density_score_v2_1  peak_age_hours_v2_1 peak_method
+     DEER ISLAND 368059520                   1                   1.0                 0.5291                   0.5193                 47.0      interp
+OVERSEAS CASCADE 368589000                   2                   2.0                 0.4140                   0.4015                 40.0      interp
+        BIG FOOT 367550980                   3                   3.0                 0.2314                   0.2042                 38.0      interp
+     DEEP RUNNER 367643110                   4                   4.0                 0.0979                   0.1058                 44.0      interp
+ROLAND A FALGOUT 367588580                   5                   5.0                 0.0300                   0.0354                 42.0      interp
+   KERRY EXPRESS 548704000                   6                   6.0                 0.0096                   0.0121                 37.0      interp
+          BREEZE 338189000                   7                   7.0                 0.0058                   0.0055                 48.0      interp
+  MAGNOLIA STATE 338302000                   8                   8.0                 0.0024                   0.0023                 42.0      interp
+
+saved -> /home/admin_wsl/SIH26143/results/incident_001_v2_1
+exit=0

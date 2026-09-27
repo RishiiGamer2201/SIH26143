@@ -1,0 +1,12 @@
+num,a,b,split_a,split_b,cls_a,cls_b,size_a,size_b,img_sha_equal,img_pixel_equal,img_ncc128,mask_sha_equal,mask_agree128,verdict
+1,train_Oil_2 (1),train_Oil (1),train,train,LookAlikes,OilSpill,3840x2160,1920x1080,False,False,-0.25599923729896545,False,0.4166666666666667,different images sharing an ID
+2,train_Oil_2 (2),val_Oil (2),train,val,LookAlikes,OilSpill,3840x2160,1920x1080,False,False,0.4498598873615265,False,0.8462456597222222,different images sharing an ID
+3,test_Oil_2 (3),train_Oil (3),test,train,LookAlikes,LookAlikes,3840x2160,1920x1080,False,False,0.09952801465988159,False,0.6260850694444444,different images sharing an ID
+4,val_Oil_2 (4),test_Oil (4),val,test,LookAlikes,OilSpill,3840x2160,1920x1080,False,False,-0.21022924780845642,False,0.6534288194444444,different images sharing an ID
+5,train_Oil (5),train_Oil_2 (5),train,train,OilSpill,OilSpill,1920x1080,3840x2160,False,False,0.07891006767749786,False,0.2375217013888889,different images sharing an ID
+6,train_Oil (6),train_Oil_2 (6),train,train,OilSpill,OilSpill,1920x1080,3840x2160,False,False,0.03709294646978378,False,0.146484375,different images sharing an ID
+7,train_Oil (7),train_Oil_2 (7),train,train,OilSpill,OilSpill,1920x1080,3840x2160,False,False,0.025213303044438362,False,0.16438802083333334,different images sharing an ID
+8,train_Oil (8),train_Oil_2 (8),train,train,OilSpill,OilSpill,1920x1080,3840x2160,False,False,-0.1762310266494751,False,0.17393663194444445,different images sharing an ID
+9,train_Oil (9),test_Oil_2 (9),train,test,LookAlikes,OilSpill,1920x1080,3840x2160,False,False,-0.1848835051059723,False,0.4571397569444444,different images sharing an ID
+10,train_Oil (10),test_Oil_2 (10),train,test,LookAlikes,OilSpill,1920x1080,3840x2160,False,False,-0.02417970448732376,False,0.6283637152777778,different images sharing an ID
+11,train_Oil_2 (11),train_Oil (11),train,train,LookAlikes,NoOilSpill,3840x2160,1920x1080,False,False,0.538159966468811,False,0.1411675347222222,different images sharing an ID

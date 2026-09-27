@@ -1,0 +1,42 @@
+{
+  "vv_denoised": {
+    "sea_med": -14.88,
+    "sea_mad": 2.4,
+    "p01": -22.32,
+    "p99": -10.08,
+    "oil_contrast_db": 2.67,
+    "oil_cnr": 1.11,
+    "nan_frac": 0.0335,
+    "n_target_px": 761
+  },
+  "vv_raw": {
+    "sea_med": -14.46,
+    "sea_mad": 2.18,
+    "p01": -20.4,
+    "p99": -9.93,
+    "oil_contrast_db": 2.31,
+    "oil_cnr": 1.06,
+    "nan_frac": 0.0334,
+    "n_target_px": 741
+  },
+  "vh_denoised": {
+    "sea_med": -28.73,
+    "sea_mad": 4.39,
+    "p01": -46.07,
+    "p99": -21.59,
+    "oil_contrast_db": -0.2,
+    "oil_cnr": -0.05,
+    "nan_frac": 0.5075,
+    "n_target_px": 1604
+  },
+  "vh_raw": {
+    "sea_med": -24.24,
+    "sea_mad": 2.08,
+    "p01": -30.15,
+    "p99": -20.01,
+    "oil_contrast_db": -0.0,
+    "oil_cnr": -0.0,
+    "nan_frac": 0.0334,
+    "n_target_px": 1103
+  }
+}

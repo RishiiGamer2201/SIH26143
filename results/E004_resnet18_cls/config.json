@@ -1,0 +1,33 @@
+{
+ "model": "resnet18.tv_in1k",
+ "in_chans": 2,
+ "seed": 26143,
+ "epochs": 30,
+ "patience": 8,
+ "batch": 32,
+ "eval_batch": 64,
+ "lr": 0.0003,
+ "weight_decay": 0.01,
+ "warmup_epochs": 1,
+ "amp": "bf16",
+ "gain_db": 1.5,
+ "p_flip": 0.5,
+ "xscale": true,
+ "xscale_p": 0.5,
+ "xscale_min": 0.5,
+ "test_min_valid_frac": 0.05,
+ "norm_mu": 0.44496873021125793,
+ "norm_sd": 0.11909570544958115,
+ "class_weights": [
+  1.1763635873794556,
+  1.1828153133392334,
+  0.7665876746177673
+ ],
+ "n_train": 1941,
+ "n_val": 477,
+ "train_counts": {
+  "no_oil": 550,
+  "lookalike": 547,
+  "oil": 844
+ }
+}

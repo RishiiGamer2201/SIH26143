@@ -1,0 +1,180 @@
+          VesselName      MMSI  n_reports  track_span_h  p50_spread_km  position_spread_km  max_excursion_km  stationarity_score  median_sog  frac_sog_lt_slow motion_state       metadata_hint  point_rank
+        WEST NEPTUNE 371765000       1908        47.983          0.000               0.000             0.000               1.000        0.10             1.000   stationary                             134
+      FEDERAL KIBUNE 538010349          1         0.000          0.000               0.000             0.000               1.000        8.40             0.000 undetermined                              98
+     HEIDELBERG SPAR 338147342        322        37.500          0.001               0.003             0.008               1.000        0.00             1.000   stationary           at_anchor          37
+    DEEPWATER ASGARD 538004609       1176        47.964          0.001               0.004             0.064               1.000        0.00             1.000   stationary                             125
+  JACK & ST MALO FPU 367544280         46        37.004          0.002               0.004             0.006               1.000        0.00             1.000   stationary              moored         124
+   CONSTITUTION SPAR 338125915       1069        47.942          0.002               0.004             0.007               1.000        0.10             1.000   stationary                              63
+      ISLAND VENTURE 577358000       1211        47.961          0.001               0.006             0.007               1.000        0.10             1.000   stationary                              48
+          BRUTUS TLP 367785160        532        47.951          0.003               0.006             0.025               1.000        0.10             1.000   stationary              moored          90
+            MS NANCY 367710550        101         4.678          0.003               0.006             0.630               0.980        0.30             0.861 undetermined                             130
+  DEEPWATER POSEIDON 538005126        496        37.661          0.002               0.006             0.096               1.000        0.00             1.000   stationary  other_type_no_info         109
+          TLP SHENZI 366050100        757        47.819          0.003               0.006             0.011               1.000        0.00             1.000   stationary                              39
+BP ATLANTIS PLATFORM 369494390         85        47.903          0.004               0.006             0.008               1.000        0.00             1.000   stationary              moored          47
+      ARGOS PLATFORM 368166560       1132        47.894          0.003               0.006             0.010               1.000        0.00             1.000   stationary other_type_reserved           5
+    HELIX PRODUCER I 311062000       1344        47.983          0.003               0.007             0.030               1.000        0.00             1.000   stationary                             103
+      MARCO POLO TLP 366908680        515        47.656          0.004               0.007             0.015               1.000         NaN               NaN   stationary                              42
+        STAMPEDE TLP 366054900       1060        47.984          0.004               0.008             0.020               1.000        0.00             1.000   stationary                              53
+         NEPTUNE TLP   3660489        575        47.851          0.004               0.009             0.025               1.000        0.00             1.000   stationary              moored          65
+        GENESIS SPAR 367539380          4         3.252          0.007               0.010             0.010               1.000        0.10             1.000 undetermined              moored         118
+            BIG FOOT 367550980        719        47.164          0.005               0.010             0.018               1.000        0.00             1.000   stationary                               4
+ BP MAD DOG PLATFORM 369494392        156        47.402          0.005               0.010             0.017               1.000        0.00             1.000   stationary              moored          17
+          FAST GIANT 367471840          7         0.808          0.003               0.010             0.013               1.000        0.50             0.429 undetermined                              35
+         TAHITI SPAR 367127480        988        47.903          0.004               0.011             0.065               1.000        0.00             0.999   stationary                              41
+        CONSTITUTION        11        143        45.304          0.005               0.011             0.027               1.000        0.10             1.000   stationary              moored          64
+   OCEAN BLACKHORNET 538005314        702        47.709          0.001               0.020             0.022               1.000        0.00             1.000   stationary                               6
+            HOLSTEIN 366048300        141        47.504          0.008               0.020             0.034               1.000        0.00             1.000   stationary              moored          29
+          TURRITELLA 311000143          6         1.549          0.020               0.030             0.031               1.000        0.00             1.000 undetermined              moored          72
+               Q4000 369550000        665        45.755          0.019               0.038             0.058               1.000        0.10             1.000   stationary                              44
+         WEST AURIGA 538009623        636        46.933          0.000               0.075             0.128               1.000        0.10             0.997   stationary                              43
+  DEEPWATER THALASSA 538005123        376        47.928          0.035               0.097             0.416               1.000        0.00             1.000   stationary                              62
+   DEEPWATER PROTEUS 538005124       1474        47.925          0.081               0.121             0.176               1.000        0.00             0.993   stationary                              91
+   CHRISTIAN CHOUEST 367067370        856        47.978          0.081               0.128             0.141               1.000        0.00             0.999   stationary                             135
+ DEEPWATER CONQUEROR 538005579        893        47.855          0.004               0.144             0.149               1.000        0.00             1.000   stationary                              87
+  DEEPWATER INVICTUS 538004610        687        47.628          0.013               0.155             0.159               1.000        0.00             0.990   stationary                              46
+       ODYSSEA BARON 338628000        460        26.439          0.102               0.168             0.220               1.000        0.70             0.248        mixed                             149
+     OCEAN BLACKLION 538005361        650        47.942          0.071               0.172             0.175               1.000        0.00             1.000   stationary                              10
+      PACIFIC SHARAV 636016002       1254        47.852          0.008               0.176             0.181               1.000        0.00             0.998   stationary                              59
+           C-CARRIER 368087000        374        47.972          0.007               0.212            46.241               0.901        0.10             0.930        mixed                              81
+      PEYTON CANDIES 369240000       1348        47.683          0.003               0.213            42.063               0.929        0.10             0.912        mixed                             127
+          BW PIONEER 563086300        100        46.506          0.102               0.248             0.263               1.000        0.00             1.000   stationary              moored          21
+      PELICAN ISLAND 367684260        395        40.439          0.127               0.250            21.908               0.922        0.30             0.734        mixed                              23
+    ROWAN RELENTLESS 538005035        244        47.352          0.001               0.286             0.287               1.000        0.10             1.000    loitering                              96
+       HOS BRIMSTONE 369139000        202        43.511          0.107               0.305            32.871               0.901        0.10             0.876        mixed                             131
+   GASLOG WELLINGTON 310817000          3         0.038          0.482               0.521             0.531               0.667       14.10             0.000 undetermined                             122
+     HARVEY PROVIDER 369224000        443        45.311          0.112               0.547             2.788               0.896        0.40             0.641        mixed                              45
+              MILLIE 368179260       1191        47.983          0.162               0.784             0.797               0.549        0.00             0.977    loitering                              27
+                 NaN 941202899          6         2.850          0.133               0.822             1.342               0.833        1.55             0.000 undetermined                              74
+           GINNY LAB 303260000         41        15.092          0.105               0.878             0.910               0.512        0.20             0.805    loitering                              67
+                 NaN 941202904          7         1.250          0.265               1.111             1.195               0.571        1.80             0.000 undetermined                             102
+         HARVEY COLT 367556730        788        47.978          0.806               1.273            20.169               0.447        0.40             0.529       moving                              84
+        PECAN ISLAND 367657110       1205        44.061          0.131               1.279            39.208               0.714        0.10             0.842        mixed                              92
+        FAST LEOPARD 367653160        288        16.658          0.129               1.312           102.010               0.833        0.50             0.476        mixed                              56
+       C-CONSTRUCTOR 368196410       1000        47.744          0.781               1.624             2.519               0.399        0.00             0.960    loitering                              12
+        VIYADA NAREE 564538000          9         0.164          1.148               1.807             2.065               0.222       12.60             0.000 undetermined                             153
+                 NaN 941202717          3         3.600          0.464               2.125             2.541               0.667        1.20             0.000 undetermined                              82
+            TENNER C 367687040         19         0.397          1.743               2.890             3.442               0.105        8.50             0.000 undetermined                             155
+      ODYSSEA SPIRIT 368042000        530        46.743          0.002               3.910             6.488               0.794        0.10             0.766        mixed                              66
+     JEAN PIERRE LAB 366484000         16         0.498          2.202               4.266             5.317               0.188        9.70             0.000       moving                             150
+        LUZON SPIRIT 311000467          5         0.330          1.211               4.770             6.092               0.200       14.40             0.000       moving                             137
+              TAURUS 563058600         24         0.980          2.790               5.768            16.809               0.083       11.90             0.000       moving                             154
+     SHELIA BORDELON 367655260        551        46.683          4.236               7.814             8.601               0.047        0.80             0.089       moving                               2
+             KIMOLOS 240975000         44         0.803          4.804               8.614             9.614               0.045       12.60             0.000       moving                             104
+        MORNING STAR 367525280         35         1.934          4.592               9.257            10.239               0.057        5.60             0.000       moving                             151
+      GRAND WINNER 3 352978139          8         0.972          5.393               9.826            12.803               0.000       11.75             0.000       moving                             115
+         BLUE SEA II 367763610         14         3.798          4.332              12.598            14.220               0.000        7.15             0.071       moving                              55
+       HARVEY JAGUAR 367391920         22         1.459          6.756              13.288            15.791               0.091       10.35             0.000       moving                             121
+      HARVEY STEELER 367537970         70         1.974          7.488              14.683            17.447               0.029        9.20             0.000       moving                             126
+           CAPT RUDY 366987890         15         1.700          6.326              15.072            18.623               0.067       10.70             0.000       moving                             152
+        SEVEN OCEANS 235053116        545        47.856          0.484              17.217            17.995               0.510        0.20             0.787        mixed                              22
+             SUN GAS 312407000         61         2.401          9.048              19.003            23.507               0.033        9.40             0.000       moving                              77
+            QIAN KUN 413349820         82         1.570         10.636              19.087            21.821               0.024       14.60             0.000       moving                             144
+     OLYMPIC ARTEMIS 257040610        914        46.464          8.340              19.230            24.811               0.009        0.90             0.199       moving                             143
+           WEST VELA 538009901        185         4.128         10.909              19.853            23.107               0.022        5.70             0.000       moving                             128
+       NICKI CANDIES 368615000        375         9.244          0.350              22.582            37.685               0.517        1.00             0.192        mixed                             107
+        CADE CANDIES 369108000        382        40.028          0.123              22.760            39.994               0.733        0.00             0.822        mixed                              85
+           VICTORY-G 354791000        157        33.148          9.154              23.339            26.135               0.000        3.70             0.000       moving                             119
+            MS WENDY 367325730         12        11.481         20.170              23.896            25.010               0.000       17.15             0.000       moving                             133
+          RIO GRANDE 538004028         77         3.085         14.324              25.650            51.105               0.013       13.80             0.000       moving                              94
+       GO ADVENTURER 368237180        430        12.017          0.035              25.679            56.640               0.798        0.10             0.772        mixed                              93
+      FAST DELIVERER 367580190         25         3.014          8.690              26.702            73.000               0.040       18.10             0.000       moving                             108
+       OSG ENDURANCE 367501540         63         3.539          8.567              29.213            41.802               0.032       12.20             0.000       moving                               8
+         SHIP ISLAND 338197000        148         3.522         15.907              29.638            35.884               0.027        9.60             0.000       moving                              89
+        FAST GOLIATH 367486440         31         1.849         12.409              29.824            48.239               0.032       18.50             0.000       moving              moored          80
+               MAYAN 538009307         15         3.664         15.901              29.883            34.647               0.067        8.50             0.000       moving                             117
+ LAURIE ANN REINAUER 367428330        101         3.464         17.249              30.081            34.506               0.020        9.60             0.000       moving                              70
+           BW BOBCAT 564970000        148         2.631         17.126              31.346            34.900               0.014       14.10             0.000       moving                              83
+        MS CHARLOTTE 338174000        448         9.517          5.010              32.763            40.869               0.308        6.60             0.114       moving                              75
+          STAR FIRST 311000876          7         1.872          8.519              32.899            40.286               0.143       19.60             0.000       moving                              51
+        DISNEY MAGIC 308516000          4         1.652          3.941              34.272            47.165               0.000       13.90             0.000       moving                              95
+                RHEA 366873670        241         7.842         13.819              34.377            39.630               0.021        4.50             0.000       moving                              76
+      CLAIRE CANDIES 367357000        505        23.509          0.436              35.087            91.989               0.556        0.80             0.220        mixed                              52
+      CARNIVAL DREAM 370490000         74         2.275         15.633              35.211            52.103               0.000       19.40             0.000       moving                              61
+         HARVEY RAIN 367416060        170        26.699         13.160              35.267            88.832               0.024        8.80             0.018       moving                              30
+              BREEZE 338189000        209        22.200         22.772              35.549           101.457               0.014       10.10             0.100       moving                              16
+        PATI R MORAN 367445000        101         4.733         15.639              36.246            54.108               0.020       10.20             0.000       moving                             142
+       CREOLE SPIRIT 311000246         83         2.332         19.251              36.486            52.306               0.012       21.00             0.000       moving                             106
+     HARVEY EXPLORER 369286000        491        45.008          0.026              38.010            92.611               0.815        0.00             0.707        mixed                              36
+         DONAUGRACHT 244848000         28         4.161          5.930              39.774           101.820               0.071       14.50             0.000       moving                             139
+      CLARENCE MOORE 369232000        193         5.683         22.188              40.086            44.834               0.016       10.60             0.010       moving              moored          71
+    COASTAL RELIANCE 369702000         80         5.675          8.311              40.187            53.864               0.025        9.60             0.000       moving                              26
+        SEACOR CHIEF 338297000        209         6.550         21.766              41.449            86.406               0.014       10.50             0.000       moving                              99
+          DENSA HAWK 229202000         99         3.647         15.350              41.793            52.933               0.030       11.10             0.000       moving                             112
+       VENTURE OCEAN 538009588        152        10.419         22.145              43.926           133.202               0.013       11.50             0.000       moving                             129
+      DAUPHIN ISLAND 367693810        238         5.634         26.326              44.910            51.636               0.013        9.60             0.000       moving                              49
+       ESTEEM ENERGY 353984000        189         6.133         19.454              46.089            69.130               0.074       11.90             0.000       moving                             105
+        UNI SUNSHINE 477166800         44         3.590         13.386              46.139            48.496               0.045       13.70             0.000       moving                              79
+               BIG P 367730190        182        30.223         25.824              46.915            64.074               0.016       22.30             0.000       moving              moored         110
+           GENIE LAB 368508000        170        14.113          9.761              48.672            58.621               0.000        9.30             0.218       moving                              60
+      POLARCUS ALIMA 311012300        664        46.800         35.102              49.485            53.153               0.003        4.80             0.000       moving                              20
+         GOL DIAMOND 303071000         86         9.702         14.264              49.573            50.102               0.035       10.00             0.058       moving                              78
+           LIGHTNING 369533000        357        45.555         33.970              49.910            68.586               0.000       10.50             0.221       moving                              38
+           C-RAMBLER 338615000        368        14.222          0.036              50.381           110.349               0.677        0.40             0.514        mixed                              34
+   PARAMOUNT HALIFAX 235076282        228         5.842         28.374              50.836            89.102               0.009       13.30             0.000       moving                             138
+      EMERALD SPIRIT 311000222        237         5.452         27.538              51.468            71.322               0.008       12.40             0.000       moving                             136
+                LUCY 367773540        369         8.644         27.016              53.348            64.667               0.000        8.40             0.268       moving                              31
+     SEAPEAK BAHRAIN 408919000         50         3.567         32.324              53.413            65.263               0.000       16.85             0.000       moving                               7
+      ODYSSEA KNIGHT 366014000        324         8.358         24.465              53.813            73.136               0.012        8.30             0.000       moving                             116
+  MARAN GAS ACHILLES 241365000         23         3.330         38.696              53.946            55.044               0.043       18.00             0.000       moving                              24
+      MAERSK MEMPHIS 563073700        200         6.022         25.018              54.762            73.088               0.010       12.40             0.000       moving                             140
+    ROLAND A FALGOUT 367588580        327        40.692         31.559              58.136            69.955               0.006        9.40             0.000       moving                              14
+         DEER ISLAND 368059520        387        47.219          0.912              58.531            74.043               0.413        0.80             0.465       moving                               1
+       OCEAN PROJECT 367474360        258        29.520         23.828              58.953            70.221               0.000        9.20             0.000       moving                              97
+        FAST CHEETAH 367640510        297         7.451         15.992              59.173            75.400               0.010       18.50             0.195       moving                              58
+            CAJUN IV 367666910        460        47.925          0.569              59.381            92.443               0.326        0.20             0.704       moving                              50
+  SULPHUR ENTERPRISE 303520000        218         5.838         30.238              60.287           101.288               0.000       14.90             0.000       moving                             113
+          TEAM BRAVO 538008511        125         6.925         25.288              60.753            87.869               0.008       12.90             0.000       moving                             100
+         DUBAI ANGEL 538003882        119         5.675         20.191              61.332            78.770               0.017       12.00             0.000       moving                             101
+      SARAH BORDELON 367780870        353        39.356         21.715              61.361            74.132               0.000        5.20             0.000       moving                              19
+            ASTURCON 538005262        265         5.958         38.490              63.148            82.477               0.004       13.70             0.000       moving                             147
+         HARVEY HAWK 367561140        324        47.050         29.876              63.613           134.408               0.012        8.80             0.022       moving                              54
+            DIONI.GR 538090538        277         6.434         36.652              64.885            72.305               0.007       12.30             0.000       moving                             145
+       STAR DALMATIA 538007655        182         6.517         29.627              65.163            87.465               0.011       12.20             0.000       moving                             132
+        FAST MAMMOTH 368051000         63         3.937         27.440              67.109            79.674               0.016       18.40             0.000       moving                             111
+            CAJUN II 367634690        456        37.759         39.888              67.968            89.559               0.000       19.00             0.248       moving                              69
+          JOHN JACOB 367602540        332        39.684         34.412              68.804            85.951               0.000       20.10             0.000       moving                              32
+             ROSTRUM 636020125        287         8.005         32.471              69.364           109.712               0.010       11.80             0.000       moving                              86
+       KERRY EXPRESS 548704000        290        10.558         34.131              69.633           140.183               0.000       12.60             0.000       moving                              15
+    HARVEY SUPPORTER 367507790       1099        43.489          0.127              70.582           109.767               0.601        0.20             0.728        mixed                               9
+     CHEMICAL HUNTER 374026000        248         6.365         39.182              71.112            85.266               0.000       12.30             0.000       moving                             148
+      TUCKER CANDIES 338002000        141        23.328          0.292              71.177           108.744               0.603        0.50             0.390        mixed              moored          33
+    OVERSEAS CASCADE 368589000        566        39.920         22.478              72.507           119.209               0.000       11.60             0.000       moving                               3
+     CMA CGM BERLIOZ 636019868        143         5.454         28.911              77.266            95.545               0.007       13.80             0.000       moving                             123
+    OVERSEAS CHINOOK 366495000        185        16.772          9.992              77.332           171.203               0.011        7.40             0.027       moving                              40
+               MEIYU 374113000        178         6.751         30.859              79.590            91.803               0.011       11.60             0.000       moving                             141
+         VECTIS ISLE 235095836        249         7.712         38.377              80.445            94.053               0.004       10.70             0.000       moving                             146
+         DEEP RUNNER 367643110        317         8.184         53.055              83.946           103.422               0.003       16.90             0.177       moving                              11
+  OVERSEAS SUN COAST 538008599        449         9.086         47.724              84.654            96.966               0.007       11.30             0.000       moving                             120
+        HARVEY STONE 369045000        522        45.037         47.516              86.384           100.040               0.000       10.20             0.031       moving                              28
+              JUAN C 366667000        456        37.947          0.229              86.393            86.813               0.649        0.40             0.586        mixed                              88
+         OSLO BULK 4 257432000         32         5.781         28.415              86.848            89.244               0.000       11.60             0.000       moving                              73
+       PELICAN STATE 367353110        375         7.870         51.113              99.438           119.707               0.003       15.60             0.000       moving                              25
+         MAERSK OHIO 367775000        181         7.487         35.594             103.899           156.837               0.006       15.80             0.000       moving                              13
+      MAGNOLIA STATE 338302000        454        10.614         50.242             104.843           130.260               0.004       11.60             0.000       moving                              18
+             PRELUDE 374788000        131         9.517         45.948             105.908           113.156               0.000       11.60             0.000       moving                             114
+     NAVE LUMINOSITY 538005813        179        10.005         27.843             121.878           167.163               0.000       12.00             0.000       moving                              68
+      JOSHUA CANDIES 303517000        467        38.514          0.024             160.991           185.932               0.666        0.30             0.655        mixed                              57
+
+motion_state counts: {'moving': 89, 'stationary': 31, 'mixed': 20, 'undetermined': 11, 'loitering': 4}
+source_type counts: {'unknown': 155}
+
+V2 point-release top 15 with motion_state / source_type:
+ point_rank        VesselName  point_release_score motion_state source_type
+          1       DEER ISLAND             0.529096       moving     unknown
+          2   SHELIA BORDELON             0.512039       moving     unknown
+          3  OVERSEAS CASCADE             0.414006       moving     unknown
+          4          BIG FOOT             0.281091   stationary     unknown
+          5    ARGOS PLATFORM             0.259448   stationary     unknown
+          6 OCEAN BLACKHORNET             0.219260   stationary     unknown
+          7   SEAPEAK BAHRAIN             0.126860       moving     unknown
+          8     OSG ENDURANCE             0.120740       moving     unknown
+          9  HARVEY SUPPORTER             0.112830        mixed     unknown
+         10   OCEAN BLACKLION             0.106639   stationary     unknown
+         11       DEEP RUNNER             0.097927       moving     unknown
+         12     C-CONSTRUCTOR             0.072261    loitering     unknown
+         13       MAERSK OHIO             0.047872       moving     unknown
+         14  ROLAND A FALGOUT             0.029954       moving     unknown
+         15     KERRY EXPRESS             0.009640       moving     unknown
+
+saved -> /home/admin_wsl/SIH26143/results/incident_001_source_type_v1
+exit=0
