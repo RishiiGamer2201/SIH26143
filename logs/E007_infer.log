@@ -1,0 +1,105 @@
+{
+ "e005": {
+  "checkpoint": "results/E005_segformer_b2/best.pt",
+  "sha256_verified_against": "results/E005_segformer_b2/FROZEN.json",
+  "sha256": "1240a10a184d90a156ddcacd4f72469cca94d33710b4989d1eed1818679b300b",
+  "epoch": 9,
+  "threshold": 0.6,
+  "norm_mu": 0.4433064878306307,
+  "norm_sd": 0.12064228658860848,
+  "amp": "bf16 autocast"
+ },
+ "e004": {
+  "checkpoint": "results/E004_resnet18_cls/best.pt",
+  "sha256": "a05fb37eccfbbf61580be14f12413d65cb57be6ef494cc0ef9b81be3cc68e6e4",
+  "matches_git_head": true,
+  "epoch": 8,
+  "classes": [
+   "no_oil",
+   "lookalike",
+   "oil"
+  ],
+  "use": "reported per window only; NOT used to gate / suppress segmentation",
+  "input": "x4 grid 512x512 windows = the same footprint as each E005 window"
+ },
+ "tiling": {
+  "grid": "x2 (E005 input grid)",
+  "window_px": 1024,
+  "stride_px": 512,
+  "overlap": 0.5,
+  "n_windows_y": 20,
+  "n_windows_x": 31,
+  "n_windows_run": 543,
+  "skipped": "windows with no valid pixel",
+  "padding": "scene padded bottom/right to 10752x16384 with invalid pixels (VV 0, validity 0), as training nodata",
+  "blending": "probability = sum(w * p) / sum(w) over covering windows, w = separable tent (1/512 .. 1 per axis); threshold applied once to the blended probability"
+ },
+ "probability_valid_px": {
+  "n": 120831551,
+  "min": 2.2293852453003637e-05,
+  "p01": 0.00035381491761654615,
+  "p10": 0.0009285710984840989,
+  "median": 0.0010322310263291001,
+  "p90": 0.0011955663794651628,
+  "p99": 0.001467683119699359,
+  "max": 1.0,
+  "frac_ge_0_5": 0.0006394770187134319,
+  "frac_ge_0_60": 0.0006082600065275998
+ },
+ "mask": {
+  "oil_px": 73497,
+  "valid_px": 120831551
+ },
+ "runtime_s": {
+  "inference": 40.191834688186646,
+  "total": 62.81891083717346
+ },
+ "peak_vram_gb": {
+  "allocated": 3.081664562225342,
+  "reserved": 4.615234375
+ }
+}
+ iy  ix  row0  col0  overlaps_roi  valid_frac  vv_median_db  prob_p50  prob_p90  prob_p99  prob_max  frac_prob_ge_0_5  window_pred_frac_t060  e004_p_no_oil  e004_p_lookalike  e004_p_oil e004_pred  vv_median_pctile_in_train_oil  vv_median_pctile_in_train_lookalike  vv_median_pctile_in_train_no_oil  blended_pred_frac_t060
+ 11   1  5632   512          True    0.615950    -14.318197  0.001207  0.001410  0.003483  1.000000          0.005856               0.005764       0.810462          0.092363    0.097175    no_oil                       0.989336                             0.956124                          0.754545                0.005760
+ 11   2  5632  1024          True    1.000000    -14.490873  0.001032  0.001134  0.002551  1.000000          0.003353               0.003296       0.933860          0.017510    0.048630    no_oil                       0.986967                             0.950640                          0.741818                0.003548
+ 11   3  5632  1536          True    1.000000    -14.864601  0.001001  0.001065  0.001927  0.005555          0.000000               0.000000       0.969333          0.010938    0.019729    no_oil                       0.984597                             0.948812                          0.729091                0.000000
+ 11   4  5632  2048          True    1.000000    -15.505800  0.001001  0.001099  0.001927  0.008062          0.000000               0.000000       0.962925          0.010287    0.026788    no_oil                       0.969194                             0.928702                          0.685455                0.000000
+ 11   5  5632  2560          True    1.000000    -16.112513  0.001001  0.001134  0.001927  0.006290          0.000000               0.000000       0.956142          0.011396    0.032463    no_oil                       0.934834                             0.914077                          0.647273                0.000000
+ 12   1  6144   512          True    0.506746    -14.292336  0.001245  0.001455  0.001598  0.005911          0.000000               0.000000       0.916216          0.051689    0.032095    no_oil                       0.989336                             0.956124                          0.754545                0.000000
+ 12   2  6144  1024          True    0.975980    -14.503402  0.001001  0.001134  0.487193  1.000000          0.009913               0.009183       0.374265          0.415895    0.209841 lookalike                       0.986967                             0.950640                          0.741818                0.007431
+ 12   3  6144  1536          True    1.000000    -14.910316  0.000940  0.001170  0.178097  1.000000          0.006758               0.005960       0.258572          0.405008    0.336420 lookalike                       0.983412                             0.948812                          0.725455                0.007253
+ 12   4  6144  2048          True    1.000000    -15.495583  0.001001  0.001099  0.002323  0.013637          0.000000               0.000000       0.957847          0.010074    0.032079    no_oil                       0.970379                             0.928702                          0.685455                0.000000
+ 12   5  6144  2560          True    1.000000    -16.098616  0.001001  0.001099  0.002051  0.006488          0.000000               0.000000       0.958175          0.013561    0.028264    no_oil                       0.936019                             0.915905                          0.647273                0.000000
+ 13   1  6656   512          True    0.397630    -14.191756  0.001065  0.001549  0.001701  0.006098          0.000000               0.000000       0.882460          0.075617    0.041923    no_oil                       0.990521                             0.956124                          0.760000                0.000000
+ 13   2  6656  1024          True    0.897526    -14.378657  0.001065  0.001207  0.668015  1.000000          0.011416               0.010591       0.383474          0.498194    0.118332 lookalike                       0.988152                             0.956124                          0.752727                0.008081
+ 13   3  6656  1536          True    1.000000    -14.750151  0.000940  0.001170  0.210766  1.000000          0.007247               0.006427       0.312551          0.387459    0.299990 lookalike                       0.985782                             0.950640                          0.736364                0.007253
+ 13   4  6656  2048          True    1.000000    -15.446880  0.001001  0.001170  0.010987  0.999643          0.003613               0.003283       0.764683          0.053689    0.181628    no_oil                       0.972749                             0.930530                          0.689091                0.003318
+ 13   5  6656  2560          True    1.000000    -16.091293  0.000970  0.001099  0.006488  0.999925          0.003340               0.003064       0.097720          0.207885    0.694395       oil                       0.938389                             0.915905                          0.647273                0.003318
+ 14   1  7168   512          True    0.288574    -14.196665  0.000732  0.001701  0.001868  0.005555          0.000000               0.000000       0.804185          0.136643    0.059172    no_oil                       0.990521                             0.956124                          0.760000                0.000000
+ 14   2  7168  1024          True    0.788574    -14.249279  0.001099  0.001207  0.001501  0.005060          0.000000               0.000000       0.957597          0.027165    0.015238    no_oil                       0.989336                             0.956124                          0.758182                0.000000
+ 14   3  7168  1536          True    1.000000    -14.529255  0.000970  0.001065  0.001988  0.006488          0.000000               0.000000       0.969973          0.010363    0.019665    no_oil                       0.985782                             0.950640                          0.741818                0.000000
+ 14   4  7168  2048          True    1.000000    -15.164955  0.001001  0.001134  0.015906  0.999755          0.004236               0.003914       0.052597          0.043775    0.903627       oil                       0.977488                             0.941499                          0.705455                0.003318
+ 14   5  7168  2560          True    1.000000    -15.869822  0.000970  0.001134  0.009708  0.999722          0.003493               0.003192       0.004867          0.052996    0.942137       oil                       0.952607                             0.925046                          0.658182                0.003318
+	Command being timed: "python scripts/e007_incident001_ml.py infer"
+	User time (seconds): 77.52
+	System time (seconds): 30.05
+	Percent of CPU this job got: 139%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:17.34
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 7368724
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 5271
+	Minor (reclaiming a frame) page faults: 1231306
+	Voluntary context switches: 25690
+	Involuntary context switches: 1119
+	Swaps: 0
+	File system inputs: 16917144
+	File system outputs: 630424
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

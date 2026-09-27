@@ -4,6 +4,88 @@ Newest first. Every entry: date, what ran, exact command, outputs, result, decis
 
 ---
 
+## 2026-09-28 · E007 — Incident 001 real Sentinel-1: calibrated/geocoded VV → frozen E004 + E005 → mask → polygons (no physics)
+
+**Run.** `conda activate sih-ml; python scripts/e007_incident001_ml.py {preprocess|infer|vector}`. Logs `logs/E007_{preprocess,infer,vector}.log`, outputs `results/E007_incident001_ml/`. Rasters are in `rasters/` (git-ignored).
+- Input: `S1A_IW_GRDH_1SDV_20230103T000142_…_257F.SAFE`, VV only, IPF 003.52. The SAFE is read-only.
+
+**Preprocessing** (training chain, SAR_DATA_AUDIT §9.7):
+- Calibration: σ0 = (DN² − noiseRangeLut·noiseAzimuthLut) / sigmaNought². LUTs are interpolated bilinearly (along range per vector, then linearly between vector lines).
+  - Matches the reference `s1_grd_calibrate.sigma0()` on a 512² scene-centre window to 6e-8 relative.
+- Nodata: DN = 0 is invalid (2.8% of the radar frame). σ0 ≤ 0 after noise subtraction (0.16% of valid) stays valid, floored at 1e-13 (−130 dB). This matches the training data's valid ~−128 dB pixels; the −40 dB clip makes the floor moot.
+- Geocoding: GDAL warp, thin-plate spline on the 210 annotation GCPs (ellipsoid heights ~0 m, ocean, no DEM), bilinear in linear power, NaN excluded. Absolute geolocation error of the GCP/TPS product has not been measured. Target is EPSG:4326 at the training pixel 8.983152841195208e-5°, with origin and size on multiples of 4 px so the ×2/×4 grids nest.
+  - Native: 21,452 × 32,148 px.
+  - ×2 (E005): 10,726 × 16,074 px, 1.797e-4°, **17.8 m E-W × 19.9 m N-S at 27.1°N**.
+  - ×4 (E004): 5,363 × 8,037 px, 35.6 × 39.8 m.
+  - Bounds: W −90.768, E −87.880, S 26.445, N 28.372.
+- Downsampling: linear-power block mean (block valid if ≥ 50% valid), dB, clip [−40, 5], (dB + 40)/45, float16, then E005/E004 train norm. No speckle filter (as in training).
+
+**Sanity check before ML.** Reporting ROI = Cerulean bbox ± 0.1° (1,298 × 1,661 px).
+
+| VV dB (valid) | min | p01 | p10 | median | p90 | p99 | max | valid | clip <−40 / >+5 |
+|---|---|---|---|---|---|---|---|---|---|
+| ROI | −30.5 | −19.5 | −17.2 | **−14.8** | −12.5 | −10.8 | 17.4 | 97.1% | 0 / 5e-5 |
+| scene (every 2nd px) | −130 | −25.2 | −22.4 | −19.1 | −15.1 | −12.3 | 30.6 | 70.1% | 5e-6 / 9e-6 |
+| train tiles (all, clipped) | −40 | −35.1 | −26.2 | −20.1 | −13.8 | −6.1 | 5 | | |
+| train oil tiles (clipped) | −40 | −28.6 | −23.8 | −19.8 | −16.2 | −13.1 | 5 | | |
+
+The scene matches training. The **ROI is bright**: its window medians (−14.2 to −16.1 dB) sit at the 93rd–99th percentile of train oil-tile medians. That is a domain-shift sign (bright sea around the slick). Nothing was changed because of it. Figure: `preprocess_vv.png`.
+
+**Inference** (frozen, hash-verified):
+- E005: `best.pt` sha256 `1240a10a…9300b` = FROZEN.json, epoch 9, threshold 0.60, bf16.
+- E004: sha256 `a05fb37e…68e6e4`, matches git HEAD, epoch 8.
+- Windows: 1024² on the ×2 grid, stride 512 (50% overlap), 20 × 31 grid, 543 windows run (windows with no valid pixel skipped). Scene padded bottom/right with invalid pixels.
+- **Probabilities blended** as Σ w·p / Σ w with a separable tent weight (1/512 … 1 per axis); 0.60 is applied once to the blended map.
+- E004 (512² ×4 windows, same footprints) is reported only, **not used for gating**.
+- Runtime: 40 s inference, 63 s stage total. Peak VRAM 3.08 GB allocated / 4.62 GB reserved.
+- Blended probability over the valid scene: median 0.0010, p99 0.0015. Only 0.061% of valid scene pixels (73,497 px) exceed the frozen threshold, but the scene-level false-positive burden remains substantial because those pixels form 49 components totalling ~25.9 km², including several large unverified detections.
+
+**Failure-regime check (the 20 windows overlapping the ROI).**
+- Predicted oil fraction per window is 0–1.06%; blended fraction ≤ 0.81%. Window VV medians are −14.2 to −16.1 dB.
+- This is the **thin-linear regime** where E005 worked, not the broad-dark regime of E006.
+- E004 on the four windows that contain the reference slick ((iy,ix) = (12,2), (12,3), (13,2), (13,3)): p(oil) 0.12–0.34, argmax **lookalike** (p 0.39–0.50). Three ROI windows south/east of the slick ((13,5), (14,4), (14,5); no reference slick inside, 0.3% predicted each) give p(oil) 0.69–0.94. The rest are no_oil.
+- **Negative result (keep):** classifier gating would have suppressed the core of this slick. Therefore **E004 MUST NOT gate E005 segmentation in E008.** E004 is not modified or retrained here.
+
+**Vectorisation.** Raw 0.60 mask, 4-connected components (as E005/E006), `gdal.Polygonize`, no filtering.
+- Area and perimeter are geodesic on WGS84 (OGR GeodesicArea / GeodesicLength). Axes and orientation come from the minimum rotated rectangle in a scene-centred LAEA, corrected to true north.
+- **Validation of the area method:** our geodesic area of the Cerulean polygon is 1,243,162.73 m², identical to Cerulean's reported `area_m2`. Perimeter (28,192.68 m) and Polsby-Popper (0.01965) also match. This validates our AREA calculation, not our raster geolocation accuracy.
+- Scene: **49 components**, 25.9 km² total. By area: 9 < 0.01 km², 20 at 0.01–0.1, 14 at 0.1–1, 6 ≥ 1 km².
+  - The largest (9.7, 4.9, 2.1, 1.65 km²) lie at 28.15–28.22°N, −89.19 to −88.87°, in the northern part of the scene, > 100 km from the incident area. Next is 1.26 km² at −90.565 / 27.354, north of the ROI. Unverified detections (no reference).
+- ROI: **13 components**, 2.70 km² union. The two main strands:
+  - #37: 1.128 km², centroid −90.4231 / 27.1261, major axis 2.95 km, width proxy 382 m, orientation 87.7°, elongation 3.4.
+  - #40: 0.840 km², centroid −90.4566 / 27.1091, major 3.90 km, width 215 m, 82.2°, elongation 9.2.
+  - Plus 11 smaller pieces (0.0004–0.28 km²). All are in `predicted_components.csv` / `incident001_predicted_components.geojson`.
+- Orientation of small, blocky components is quantised to the pixel grid (0°/90°/180°); treat orientation as meaningful only for elongated components.
+
+**Post-hoc Cerulean comparison** (reference only; it did not crop, select or alter anything):
+
+| | value |
+|---|---|
+| predicted area (ROI union) / reference area | 2.70 / 1.24 km² |
+| intersection / union | 1.00 / 2.94 km² |
+| **IoU** | **0.340** |
+| reference covered by prediction | 80.5% |
+| prediction inside reference | 37.1% |
+| centroid distance (union vs reference) | 938 m (component #37: 827 m) |
+| major axis pred / ref (min rotated rect) | 7.76 / 9.43 km (Cerulean `length` 9.54 km) |
+| orientation pred / ref | 81.8° / 76.8° (Δ 5.0°) |
+
+- The prediction follows both reference strands (`incident001_ml_result.png`) but is wider. Reference width proxy is 132 m; the main predicted strands are 215–382 m. This explains the IoU despite 80% reference coverage.
+- Several small predicted pieces sit between or beside the strands.
+
+**Domain-shift / failure signs.**
+1. The ROI sea is brighter than nearly all training oil tiles (93–99th percentile), yet the slick is detected.
+2. Predicted strands are 2–3× wider than Cerulean's polygon. This could be label-style differences (Trujillo masks) or the 20 m grid plus probability smoothing; not separable here.
+3. E004 calls the slick-core windows lookalike.
+4. 36 components outside the ROI are unverified; the largest cluster is in the northern part of the scene.
+5. Geocoding is GCP thin-plate spline without DEM. Absolute geolocation error of the GCP/TPS product has not been measured.
+
+**Interpretation.** Successful real-scene pipeline integration with partial/over-segmented Incident 001 recovery (post-hoc IoU 0.340, 80.5% of the reference covered, 37.1% of the prediction inside it, predicted ROI union 2.70 km² vs reference 1.243 km², centroid offset 938 m, strands ~2–3× wider). Not evidence of robust scene-wide autonomous segmentation.
+
+Decision (reviewed 2026-09-28): E007 approved as an INTEGRATION milestone and FROZEN (`results/E007_incident001_ml/FROZEN.json`; `python scripts/e007_incident001_ml.py verify`). `preprocess_report.json` geocoding text corrected (no unmeasured error figure); original in `superseded/`. Nothing was tuned to Cerulean. E008 needs a reference-independent rule for which predicted geometry seeds physics: see `E008_SELECTION_POLICY.md`. No OpenDrift / AIS run.
+
+---
+
 ## 2026-09-28 · E006 — One-shot official test of the FROZEN E005 SegFormer (evaluation only)
 
 **Freeze.** `python scripts/e006_segformer_test.py freeze` wrote `results/E005_segformer_b2/FROZEN.json`. It holds SHA-256 of 10 E005 artefacts, the split, the cache meta, `vv20`/`lab20` and `e005_segformer.py`, plus epoch 9, threshold 0.60, the architecture, split identity, val metrics and git state (HEAD `5c16912`).

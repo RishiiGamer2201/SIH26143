@@ -9,3 +9,5 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 results/E006_segformer_test/test_prob_u8.npy
+results/E007_incident001_ml/rasters/
+results/E007_incident001_ml/work/

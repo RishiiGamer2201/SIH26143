@@ -1,0 +1,269 @@
+{
+ "note": "POST-HOC diagnostics. The Cerulean polygon did not crop, select, threshold or alter the prediction.",
+ "cerulean": {
+  "slick_id": 3775938,
+  "our_metrics": {
+   "area_m2": 1243162.726006031,
+   "perimeter_m": 28192.68142882234,
+   "centroid_lon": -90.4308630718295,
+   "centroid_lat": 27.123441705424945,
+   "bbox_west": -90.477933,
+   "bbox_south": 27.106677,
+   "bbox_east": -90.379742,
+   "bbox_north": 27.139636,
+   "major_axis_m": 9426.06098776711,
+   "minor_axis_m": 3061.3857216727956,
+   "width_proxy_m": 131.8857078921274,
+   "orientation_deg_from_north": 76.82219469061289,
+   "elongation": 3.079017753638879,
+   "compactness_polsby_popper": 0.019654639216875526,
+   "area_m2_laea": 1243162.7263137111
+  },
+  "cerulean_reported": {
+   "area_m2": 1243162.7260067165,
+   "length_m": 9536.60181781,
+   "perimeter": 28192.681428815642,
+   "polsby_popper": 0.0196546392168957,
+   "machine_confidence": 0.6386871933937073
+  }
+ },
+ "roi": {
+  "bounds": [
+   -90.57793299999999,
+   27.006677,
+   -90.279742,
+   27.239636
+  ],
+  "n_components": 13
+ },
+ "all_roi_predictions_union": {
+  "predicted_area_m2": 2696887.3598488495,
+  "reference_area_m2": 1243162.726006031,
+  "intersection_m2": 1000604.8691572909,
+  "union_m2": 2939445.2231341884,
+  "iou": 0.3404060267162911,
+  "frac_reference_covered": 0.8048864786385085,
+  "frac_prediction_inside_reference": 0.3710221204564533,
+  "centroid_distance_m": 938.0487192828565,
+  "major_axis_pred_m": 7756.033204723474,
+  "major_axis_ref_m": 9426.06098776711,
+  "orientation_pred_deg": 81.8457843680689,
+  "orientation_ref_deg": 76.82219469061289,
+  "orientation_diff_deg": 5.023589677456016
+ },
+ "per_component": [
+  {
+   "component_id": 30,
+   "area_m2": 81550.02786509693,
+   "n_px_image_space": 230,
+   "prob_mean": 0.8859318665836169,
+   "intersection_with_reference_m2": 10361.101739622383,
+   "centroid_distance_m": 1786.2475322573457,
+   "major_axis_m": 356.1953094761883,
+   "width_proxy_m": 228.94750631338272,
+   "orientation_deg": 90.00057046566583,
+   "orientation_diff_deg": 13.178375775052942,
+   "elongation": 1.1182274079403782
+  },
+  {
+   "component_id": 31,
+   "area_m2": 24111.100211925805,
+   "n_px_image_space": 68,
+   "prob_mean": 0.7478837695191888,
+   "intersection_with_reference_m2": 0.0,
+   "centroid_distance_m": 1565.8432560219162,
+   "major_axis_m": 218.99350760711025,
+   "width_proxy_m": 110.09961197198054,
+   "orientation_deg": 0.00024076883897172774,
+   "orientation_diff_deg": 76.82195392177391,
+   "elongation": 1.5369808054765906
+  },
+  {
+   "component_id": 32,
+   "area_m2": 354.5821470245719,
+   "n_px_image_space": 1,
+   "prob_mean": 0.6052488088607788,
+   "intersection_with_reference_m2": 0.0,
+   "centroid_distance_m": 1169.2599468472126,
+   "major_axis_m": 19.9086113388305,
+   "width_proxy_m": 17.810491198498692,
+   "orientation_deg": 179.9999773084725,
+   "orientation_diff_deg": 76.8222173821404,
+   "elongation": 1.117791763406853
+  },
+  {
+   "component_id": 33,
+   "area_m2": 129779.3156150505,
+   "n_px_image_space": 366,
+   "prob_mean": 0.8659715295815077,
+   "intersection_with_reference_m2": 56521.58929901204,
+   "centroid_distance_m": 2245.3598829958555,
+   "major_axis_m": 641.1966589841081,
+   "width_proxy_m": 202.40173400258942,
+   "orientation_deg": 90.00013966219586,
+   "orientation_diff_deg": 13.177944971582974,
+   "elongation": 2.012955457408837
+  },
+  {
+   "component_id": 34,
+   "area_m2": 14892.629484340549,
+   "n_px_image_space": 42,
+   "prob_mean": 0.6377808863208407,
+   "intersection_with_reference_m2": 3220.5520702046265,
+   "centroid_distance_m": 1090.4450651936625,
+   "major_axis_m": 178.10937613604887,
+   "width_proxy_m": 83.61507859622624,
+   "orientation_deg": 90.0004990171423,
+   "orientation_diff_deg": 13.178304326529414,
+   "elongation": 1.4910706711232278
+  },
+  {
+   "component_id": 35,
+   "area_m2": 23757.545677751303,
+   "n_px_image_space": 67,
+   "prob_mean": 0.7874163718365911,
+   "intersection_with_reference_m2": 2265.102002072861,
+   "centroid_distance_m": 4648.9125631700335,
+   "major_axis_m": 178.11115052040444,
+   "width_proxy_m": 133.3860659949509,
+   "orientation_deg": 90.00053074930041,
+   "orientation_diff_deg": 13.17833605868752,
+   "elongation": 1.118310541254857
+  },
+  {
+   "component_id": 36,
+   "area_m2": 280131.57536319643,
+   "n_px_image_space": 790,
+   "prob_mean": 0.8841651422313497,
+   "intersection_with_reference_m2": 129298.68514177937,
+   "centroid_distance_m": 3710.9394956699243,
+   "major_axis_m": 1317.6764271610805,
+   "width_proxy_m": 212.5951178824204,
+   "orientation_deg": 92.46148450274558,
+   "orientation_diff_deg": 15.639289812132688,
+   "elongation": 4.130451055609836
+  },
+  {
+   "component_id": 37,
+   "area_m2": 1127644.7426313236,
+   "n_px_image_space": 3180,
+   "prob_mean": 0.8958090670078805,
+   "intersection_with_reference_m2": 496998.03095593525,
+   "centroid_distance_m": 827.4398922440945,
+   "major_axis_m": 2953.347542051967,
+   "width_proxy_m": 381.8191819875839,
+   "orientation_deg": 87.7324902969792,
+   "orientation_diff_deg": 10.910295606366304,
+   "elongation": 3.354687347596089
+  },
+  {
+   "component_id": 38,
+   "area_m2": 88298.01103640348,
+   "n_px_image_space": 249,
+   "prob_mean": 0.7949442305718081,
+   "intersection_with_reference_m2": 52582.33884797093,
+   "centroid_distance_m": 2832.6125787453784,
+   "major_axis_m": 409.6812815818916,
+   "width_proxy_m": 215.5285462285723,
+   "orientation_deg": 90.00135043207442,
+   "orientation_diff_deg": 13.179155741461528,
+   "elongation": 1.3718914599680958
+  },
+  {
+   "component_id": 39,
+   "area_m2": 6737.880403369665,
+   "n_px_image_space": 19,
+   "prob_mean": 0.6767317935040122,
+   "intersection_with_reference_m2": 0.0,
+   "centroid_distance_m": 2392.0310380374913,
+   "major_axis_m": 119.4505491373192,
+   "width_proxy_m": 56.40727859378748,
+   "orientation_deg": 0.00012667511269637277,
+   "orientation_diff_deg": 76.8220680155002,
+   "elongation": 1.3411706117683517
+  },
+  {
+   "component_id": 40,
+   "area_m2": 839833.4700908884,
+   "n_px_image_space": 2368,
+   "prob_mean": 0.8786429722818572,
+   "intersection_with_reference_m2": 249357.46910069344,
+   "centroid_distance_m": 3008.40016440398,
+   "major_axis_m": 3902.897052144659,
+   "width_proxy_m": 215.18207087460743,
+   "orientation_deg": 82.18802971619657,
+   "orientation_diff_deg": 5.365835025583678,
+   "elongation": 9.244497981588548
+  },
+  {
+   "component_id": 41,
+   "area_m2": 75186.02466409653,
+   "n_px_image_space": 212,
+   "prob_mean": 0.6994866503859466,
+   "intersection_with_reference_m2": 0.0,
+   "centroid_distance_m": 1333.837225966506,
+   "major_axis_m": 789.9279638653832,
+   "width_proxy_m": 95.1808621841744,
+   "orientation_deg": 95.98151684189101,
+   "orientation_diff_deg": 19.15932215127812,
+   "elongation": 5.16858776657427
+  },
+  {
+   "component_id": 42,
+   "area_m2": 4610.454658381641,
+   "n_px_image_space": 13,
+   "prob_mean": 0.6362241002229544,
+   "intersection_with_reference_m2": 0.0,
+   "centroid_distance_m": 1362.6541320673405,
+   "major_axis_m": 142.51272145026002,
+   "width_proxy_m": 32.35117968041041,
+   "orientation_deg": 90.00071680530036,
+   "orientation_diff_deg": 13.178522114687468,
+   "elongation": 3.579200215529718
+  }
+ ],
+ "scene_summary": {
+  "n_components_scene": 49,
+  "n_components_roi": 13,
+  "scene_predicted_area_m2": 25877401.305964537,
+  "component_area_m2_quantiles": {
+   "min": 354.5821470245719,
+   "p01": 1027.6601986321807,
+   "p10": 3463.5237608492375,
+   "median": 75186.02466409653,
+   "p90": 1153592.8121543769,
+   "p99": 7429889.376189483,
+   "max": 9740467.593608692
+  },
+  "components_by_area_m2": {
+   "<0.01 km2": 9,
+   "0.01-0.1 km2": 20,
+   "0.1-1 km2": 14,
+   ">=1 km2": 6
+  },
+  "runtime_s": 30.370569705963135
+ }
+}
+	Command being timed: "python scripts/e007_incident001_ml.py vector"
+	User time (seconds): 34.25
+	System time (seconds): 5.41
+	Percent of CPU this job got: 103%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:38.42
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 5965736
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 111
+	Minor (reclaiming a frame) page faults: 689784
+	Voluntary context switches: 465
+	Involuntary context switches: 248
+	Swaps: 0
+	File system inputs: 46888
+	File system outputs: 1800
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

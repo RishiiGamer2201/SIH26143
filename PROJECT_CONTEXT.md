@@ -50,6 +50,7 @@ SIH26143/
 │   ├── kaggle/e005a_audit/        private Kaggle kernel used by E005-A (hashes the dataset next to its mount)
 │   ├── e005_segformer.py          E005 SegFormer MiT-B2 segmentation (20 m), tests/train/validate -> results/E005_segformer_b2
 │   ├── e006_segformer_test.py     E006 freeze E005 (FROZEN.json) + one-shot official test -> results/E006_segformer_test
+│   ├── e007_incident001_ml.py     E007 Incident 001 SAFE -> σ0 VV geocoded -> frozen E004/E005 -> mask -> polygons -> results/E007_incident001_ml
 │   ├── score_ais_density_v2_1.py  E101 V2.1 = V2 with interpolated AIS positions -> results/incident_001_v2_1
 │   └── source_type_v1.py          E102 post-score source-type layer -> results/incident_001_source_type_v1
 ├── configs/                       ais_v2_1.json, source_type_v1.json (all thresholds for E101/E102)
@@ -74,7 +75,8 @@ SIH26143/
     ├── E003_feature_baseline/     E003 features, metrics
     ├── E004_resnet18_cls/         E004 checkpoint, curves, val + one-shot test metrics
     ├── E005_segformer_b2/         FROZEN E005 checkpoint (FROZEN.json hashes), tests, curves, val sweep/metrics/figures
-    └── E006_segformer_test/       E006 one-shot test: metrics (3 views), per-tile, component recall, figures, u8 probs (git-ignored)
+    ├── E006_segformer_test/       E006 one-shot test: metrics (3 views), per-tile, component recall, figures, u8 probs (git-ignored)
+    └── E007_incident001_ml/       E007 Incident 001 ML: reports, windows, predicted components (GeoJSON/CSV), post-hoc Cerulean comparison; rasters/ git-ignored
 ```
 `data/segformer_combined/` holds the E005-A audit outputs: the manifest, the Drone-RGB "M4D" subset and the kernel outputs. The Trujillo copy there was not stored; it is identical to `data/sar/extracted/`.
 
@@ -91,6 +93,14 @@ Done and verified (2026-09-26):
 - E005-A approved and frozen. E005 SegFormer (Trujillo only) FROZEN (`results/E005_segformer_b2/FROZEN.json`, epoch 9, thr 0.60). E006 one-shot test accepted as the frozen baseline test result: dominant failure on broad oil masks, strongly associated with a label-coverage distribution shift (region, annotation style, intensity shift not disentangled).
 - Reproducibility checkpoint (E005 freeze + E006 test): git commit `971c9490c5a36ecbaafa570f3a766a82c8410903`
   on `main` of the private repo github.com/RishiiGamer2201/SIH26143.
+- E007 (2026-09-28) FROZEN (`results/E007_incident001_ml/FROZEN.json`; `python scripts/e007_incident001_ml.py verify`). Approved as an INTEGRATION
+  milestone: successful real-scene pipeline integration with partial/over-segmented Incident 001 recovery, NOT evidence of robust scene-wide
+  autonomous segmentation. Frozen E005 on our calibrated + GCP/TPS-geocoded VV (EPSG:4326, 17.8 × 19.9 m at the ROI). Post hoc vs Cerulean:
+  IoU 0.340, reference covered 80.5%, prediction inside reference 37.1%, ROI union 2.70 vs 1.243 km², centroid offset 938 m, strands ~2–3× wider.
+  Only 0.061% of valid scene pixels exceed 0.60, but they form 49 components totalling ~25.9 km² incl. large unverified detections (9.7, 4.9, 2.1 km²).
+  Absolute geolocation error of the GCP/TPS product has not been measured (the Cerulean area match validates the AREA method only).
+  **E004 must not gate E005** (the reference-slick windows are argmax lookalike, p(oil) 0.12–0.34).
+- E008 blocked on a reference-independent source-geometry rule (`E008_SELECTION_POLICY.md`). Cerulean geometry / ROI never selects the physics seed.
 
 ## How to state the attribution result
 

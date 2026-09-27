@@ -1,0 +1,200 @@
+{
+ "frozen_at": "2026-09-27T19:45:51+00:00",
+ "status": "E007 approved as an INTEGRATION milestone (successful real-scene pipeline integration with partial/over-segmented Incident 001 recovery), not as evidence of robust scene-wide autonomous segmentation. Never overwrite these files.",
+ "e005": {
+  "checkpoint": "results/E005_segformer_b2/best.pt",
+  "epoch": 9,
+  "threshold": 0.6,
+  "norm_mu": 0.4433064878306307,
+  "norm_sd": 0.12064228658860848
+ },
+ "e004": {
+  "checkpoint": "results/E004_resnet18_cls/best.pt",
+  "epoch": 8,
+  "use": "reported only. NEGATIVE RESULT: the 4 windows holding the reference slick give p(oil) 0.12-0.34, argmax lookalike, so E004 MUST NOT gate E005 segmentation (E008)."
+ },
+ "preprocessing": {
+  "calibration": "sigma0_lin = (DN^2 - noiseRangeLut * noiseAzimuthLut) / sigmaNought^2",
+  "invalid_rule": "DN == 0 (outside swath / IPF border-noise removal) -> NaN / invalid",
+  "noise_floor_rule": "sigma0 <= 0 after noise subtraction -> 1e-13 (-130 dB), kept valid (training keeps ~-128 dB valid px)",
+  "block_average": "linear-power mean of valid sub-pixels, block valid if >= 50% valid (as E002 cache)",
+  "model_scaling": "clip dB to [-40.0, 5.0], (dB + 40) / 45, float16, then (x - norm_mu) / norm_sd on valid px, invalid -> 0",
+  "clip_db": [
+   -40.0,
+   5.0
+  ],
+  "min_valid_block_frac": 0.5
+ },
+ "geocoding": {
+  "method": "GDAL warp, thin-plate spline on annotation GCP grid (ellipsoid heights ~0 m; ocean, no DEM); absolute geolocation error of the GCP/TPS product has not been measured",
+  "resampling": "bilinear in linear power; NaN nodata excluded",
+  "crs": "EPSG:4326 (WGS84 lon/lat, north-up)",
+  "native_pixel_deg": 8.983152841195208e-05,
+  "native_geotransform": [
+   -90.76829159023191,
+   8.983152841195195e-05,
+   0.0,
+   28.372030607517296,
+   0.0,
+   -8.983152841195199e-05
+  ],
+  "native_size": [
+   21452,
+   32148
+  ],
+  "origin_snap": "origin and size on multiples of 4 native px (x2 / x4 grids nest)",
+  "grids": {
+   "x2 (E005 input, rasters incident001_vv_db / valid / probability / mask)": {
+    "geotransform": [
+     -90.76829159023191,
+     0.0001796630568239039,
+     0.0,
+     28.372030607517296,
+     0.0,
+     -0.00017966305682390397
+    ],
+    "size": [
+     10726,
+     16074
+    ],
+    "pixel_deg": 0.0001796630568239039,
+    "ground_spacing_m_at_roi_lat": {
+     "east_west": 17.812969383169268,
+     "north_south": 19.907647809102297
+    }
+   },
+   "x4 (E004 input)": {
+    "geotransform": [
+     -90.76829159023191,
+     0.0003593261136478078,
+     0.0,
+     28.372030607517296,
+     0.0,
+     -0.00035932611364780794
+    ],
+    "size": [
+     5363,
+     8037
+    ],
+    "pixel_deg": 0.0003593261136478078,
+    "ground_spacing_m_at_roi_lat": {
+     "east_west": 35.625938766338535,
+     "north_south": 39.815295618204594
+    }
+   }
+  },
+  "bounds_lonlat": {
+   "west": -90.76829159023191,
+   "north": 28.372030607517296,
+   "east": -87.88038761484448,
+   "south": 26.4449646600241
+  }
+ },
+ "tiling": {
+  "window_px": 1024,
+  "stride_px": 512,
+  "e004_window_px": 512,
+  "e004_stride_px": 256,
+  "grid": "x2 (E005 input grid)",
+  "padding": "scene padded bottom/right to 10752x16384 with invalid pixels (VV 0, validity 0), as training nodata",
+  "blending": "probability = sum(w * p) / sum(w) over covering windows, w = separable tent (1/512 .. 1 per axis); threshold applied once to the blended probability"
+ },
+ "components": {
+  "connectivity": 4,
+  "filtering": "none",
+  "area": "geodesic WGS84 (OGR); never pixel_count * 400 m2",
+  "shape": "minimum rotated rectangle in scene-centred LAEA, orientation from true north"
+ },
+ "nodata": "vv_db: NaN; valid: 0/1; probability: NaN on invalid; mask: 255 invalid, 1 oil, 0 not oil",
+ "measured_post_hoc_diagnostics": {
+  "note": "Cerulean used only post hoc; values must not change",
+  "iou": 0.3404060267162911,
+  "frac_reference_covered": 0.8048864786385085,
+  "frac_prediction_inside_reference": 0.3710221204564533,
+  "predicted_area_m2": 2696887.3598488495,
+  "reference_area_m2": 1243162.726006031,
+  "centroid_distance_m": 938.0487192828565
+ },
+ "sha256": {
+  "scripts/e007_incident001_ml.py": {
+   "sha256": "aae39a8cbd01cee7d062c703d1a597aa3279a21d979fd5d7959198c4c41c68ef",
+   "bytes": 40885
+  },
+  "results/E004_resnet18_cls/best.pt": {
+   "sha256": "a05fb37eccfbbf61580be14f12413d65cb57be6ef494cc0ef9b81be3cc68e6e4",
+   "bytes": 44773771
+  },
+  "results/E005_segformer_b2/best.pt": {
+   "sha256": "1240a10a184d90a156ddcacd4f72469cca94d33710b4989d1eed1818679b300b",
+   "bytes": 98987361
+  },
+  "results/E005_segformer_b2/FROZEN.json": {
+   "sha256": "52386c765458d21970ddd6835c408fae060bc38f5a62a255d46028607b69f8cd",
+   "bytes": 6645
+  },
+  "results/E007_incident001_ml/preprocess_report.json": {
+   "sha256": "9fed7b4ba0e990173bd1f0fffc62071c585038e19f86a88ff64b716d6dcd0ced",
+   "bytes": 5578
+  },
+  "results/E007_incident001_ml/inference_report.json": {
+   "sha256": "19bbcfea5243b82ab711c4bc83b6c8f8ca0fea1c0410bf3aa298085cf2e99cd1",
+   "bytes": 19251
+  },
+  "results/E007_incident001_ml/windows.parquet": {
+   "sha256": "f1160bf25b53c07737733f54af5ba0d5ab546188d2eace5851b551d4386e2400",
+   "bytes": 45221
+  },
+  "results/E007_incident001_ml/predicted_components.csv": {
+   "sha256": "020bc4581d0b26ad2d57bd45aaad2a967bb2493e8b35de0bf396ad5ec378ea5c",
+   "bytes": 16322
+  },
+  "results/E007_incident001_ml/incident001_predicted_components.geojson": {
+   "sha256": "5c3d45cc4038d9407e86fa729d9d2ff4c315328c273576169603a6e530f5e23b",
+   "bytes": 293686
+  },
+  "results/E007_incident001_ml/cerulean_comparison.json": {
+   "sha256": "55a4960df61f2620c53055fb3a59929564857fc28e0ee52ed5569fd65733013d",
+   "bytes": 7745
+  },
+  "results/E007_incident001_ml/preprocess_vv.png": {
+   "sha256": "2428c1749befd29b877747b23cbcdff0dbf87c231dbdbfd2062d7852366c1246",
+   "bytes": 466356
+  },
+  "results/E007_incident001_ml/incident001_ml_result.png": {
+   "sha256": "0b3aafa2ef5bea8ce6bf264612c1db9efed79f77aa52d234044e00a36c3b60bd",
+   "bytes": 590703
+  },
+  "results/E007_incident001_ml/rasters/incident001_segformer_mask_t060.tif": {
+   "sha256": "ab0b3533e1b1802f62357012465be02e953e39651cf4726a9dd3a290ef073a84",
+   "bytes": 441646
+  },
+  "results/E007_incident001_ml/rasters/incident001_segformer_probability.tif": {
+   "sha256": "d718bff16c25182120d684f8d75e4da038f5ba8e3d87478277a53066fb8b9486",
+   "bytes": 322248745
+  },
+  "results/E007_incident001_ml/rasters/incident001_sigma0_vv_linear_native.tif": {
+   "sha256": "f7a91ffcf29c8af6baac5da3eccf2c1303351dd9c24e3e86c1bbcb6a2d3afdfb",
+   "bytes": 1569312505
+  },
+  "results/E007_incident001_ml/rasters/incident001_valid.tif": {
+   "sha256": "6ff401126e89dcf6024c637a14847785c34ad1e853316b3eddb726485a5cf221",
+   "bytes": 635302
+  },
+  "results/E007_incident001_ml/rasters/incident001_valid_40m.tif": {
+   "sha256": "a8cfae4e2b944e4ba2d795b8edc78b1fd5fe7c779cafadd273cf2e6098e89f99",
+   "bytes": 167542
+  },
+  "results/E007_incident001_ml/rasters/incident001_vv_db.tif": {
+   "sha256": "ebb88a5735fd2338e1ce8790a6449e69030e563a528a4a4f11e5bb0544a708a6",
+   "bytes": 358812103
+  },
+  "results/E007_incident001_ml/rasters/incident001_vv_db_40m.tif": {
+   "sha256": "51633b93fb1f5c9a0242da85b58315326fb44ce0c98caa2cf214173d774100d2",
+   "bytes": 89362671
+  }
+ },
+ "git": {
+  "head": "bce0a44294c0c5a3ee205fec5cd3a9f69c4ab3f8",
+  "note": "E007 files were committed after this freeze; see PROJECT_CONTEXT.md for the commit"
+ }
+}

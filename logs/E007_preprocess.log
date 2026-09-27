@@ -1,0 +1,231 @@
+{
+ "safe": "S1A_IW_GRDH_1SDV_20230103T000142_20230103T000207_046612_059620_257F.SAFE",
+ "polarisation": "VV",
+ "ipf": "003.52",
+ "calibration": {
+  "equation": "sigma0_lin = (DN^2 - noiseRangeLut * noiseAzimuthLut) / sigmaNought^2",
+  "lut_interpolation": "bilinear: along range per LUT vector, then linear between vector lines (clamped)",
+  "invalid_rule": "DN == 0 (outside swath / IPF border-noise removal) -> NaN / invalid",
+  "noise_floor_rule": "sigma0 <= 0 after noise subtraction -> 1e-13 (-130 dB), kept valid (training keeps ~-128 dB valid px)",
+  "speckle_filter": "none (x2 / x4 linear-power block averaging only, as in training)",
+  "radar_size": [
+   16733,
+   25892
+  ],
+  "dn0_frac": 0.028026567962583227,
+  "noise_floored_frac_of_valid": 0.001551738583391785,
+  "n_gcps": 210,
+  "check_vs_reference": {
+   "window_rows": [
+    8110,
+    8622
+   ],
+   "window_cols": [
+    12690,
+    13202
+   ],
+   "max_rel_diff": 5.95171213703685e-08,
+   "ref_nan_px": 279,
+   "reference": "scripts/s1_grd_calibrate.py sigma0()"
+  }
+ },
+ "geocoding": {
+  "method": "GDAL warp, thin-plate spline on annotation GCP grid (ellipsoid heights ~0 m; ocean, no DEM); expected absolute error tens of metres",
+  "resampling": "bilinear in linear power; NaN nodata excluded",
+  "crs": "EPSG:4326 (WGS84 lon/lat, north-up)",
+  "native_pixel_deg": 8.983152841195208e-05,
+  "native_geotransform": [
+   -90.76829159023191,
+   8.983152841195195e-05,
+   0.0,
+   28.372030607517296,
+   0.0,
+   -8.983152841195199e-05
+  ],
+  "native_size": [
+   21452,
+   32148
+  ]
+ },
+ "grids": {
+  "x2 (E005 input, rasters incident001_vv_db / valid / probability / mask)": {
+   "geotransform": [
+    -90.76829159023191,
+    0.0001796630568239039,
+    0.0,
+    28.372030607517296,
+    0.0,
+    -0.00017966305682390397
+   ],
+   "size": [
+    10726,
+    16074
+   ],
+   "pixel_deg": 0.0001796630568239039,
+   "ground_spacing_m_at_roi_lat": {
+    "east_west": 17.812969383169268,
+    "north_south": 19.907647809102297
+   }
+  },
+  "x4 (E004 input)": {
+   "geotransform": [
+    -90.76829159023191,
+    0.0003593261136478078,
+    0.0,
+    28.372030607517296,
+    0.0,
+    -0.00035932611364780794
+   ],
+   "size": [
+    5363,
+    8037
+   ],
+   "pixel_deg": 0.0003593261136478078,
+   "ground_spacing_m_at_roi_lat": {
+    "east_west": 35.625938766338535,
+    "north_south": 39.815295618204594
+   }
+  }
+ },
+ "block_average": "linear-power mean of valid sub-pixels, block valid if >= 50% valid (as E002 cache)",
+ "model_scaling": "clip dB to [-40.0, 5.0], (dB + 40) / 45, float16, then (x - norm_mu) / norm_sd on valid px, invalid -> 0",
+ "nodata": "vv_db: NaN; valid: 0/1; probability: NaN on invalid; mask: 255 invalid, 1 oil, 0 not oil",
+ "bounds_lonlat": {
+  "west": -90.76829159023191,
+  "north": 28.372030607517296,
+  "east": -87.88038761484448,
+  "south": 26.4449646600241
+ },
+ "roi": {
+  "definition": "Cerulean slick bbox +/- 0.1 deg (reporting only)",
+  "bounds": [
+   -90.57793299999999,
+   27.006677,
+   -90.279742,
+   27.239636
+  ],
+  "pixels": [
+   1298,
+   1661
+  ],
+  "valid_frac": 0.9713828248711258,
+  "n_valid": 2094280,
+  "vv_db_unclipped": {
+   "min": -30.486072540283203,
+   "p01": -19.451220531463623,
+   "p10": -17.224217033386232,
+   "median": -14.756758689880371,
+   "p90": -12.496779346466065,
+   "p99": -10.760474767684936,
+   "max": 17.379892349243164
+  },
+  "clip_lo_frac": 0.0,
+  "clip_hi_frac": 4.918158030444831e-05
+ },
+ "scene_x2_every_2nd_px": {
+  "valid_frac": 0.7008395361737253,
+  "vv_db_unclipped": {
+   "min": -130.0,
+   "p01": -25.17152629852295,
+   "p10": -22.37363624572754,
+   "median": -19.075529098510742,
+   "p90": -15.095833969116207,
+   "p99": -12.332929525375366,
+   "max": 30.61557960510254
+  },
+  "clip_lo_frac": 5.064901582672501e-06,
+  "clip_hi_frac": 8.971165548393778e-06
+ },
+ "training_comparison": {
+  "note": "diagnostic only; clipped dB [-40, 5] because the cache stores clipped values",
+  "train_all_20m": {
+   "min": -40.0,
+   "p01": -35.08087158203125,
+   "p10": -26.234130859375,
+   "median": -20.07080078125,
+   "p90": -13.7646484375,
+   "p99": -6.14013671875,
+   "max": 5.0
+  },
+  "train_oil_tiles_20m": {
+   "min": -40.0,
+   "p01": -28.629150390625,
+   "p10": -23.7841796875,
+   "median": -19.840087890625,
+   "p90": -16.20361328125,
+   "p99": -13.0615234375,
+   "max": 5.0
+  },
+  "roi_clipped": {
+   "min": -30.486072540283203,
+   "p01": -19.451220531463623,
+   "p10": -17.224217033386232,
+   "median": -14.756758689880371,
+   "p90": -12.496779346466065,
+   "p99": -10.760474767684936,
+   "max": 5.0
+  },
+  "scene_clipped": {
+   "min": -40.0,
+   "p01": -25.17152629852295,
+   "p10": -22.37363624572754,
+   "median": -19.075529098510742,
+   "p90": -15.095833969116207,
+   "p99": -12.332929525375366,
+   "max": 5.0
+  },
+  "train_tile_median_db_by_class": {
+   "oil": {
+    "min": -28.12948666964497,
+    "p01": -25.337867467780804,
+    "p10": -23.22175870963989,
+    "median": -19.742346765695018,
+    "p90": -16.672759684143177,
+    "p99": -14.260853469318517,
+    "max": -12.348130352059634
+   },
+   "lookalike": {
+    "min": -36.81202263147808,
+    "p01": -34.45111471778851,
+    "p10": -29.439927826352456,
+    "median": -22.840216094520756,
+    "p90": -16.645759055668496,
+    "p99": -8.78838087664809,
+    "max": -7.257240425151897
+   },
+   "no_oil": {
+    "min": -32.92848588235632,
+    "p01": -27.800285266896058,
+    "p10": -23.17480950659853,
+    "median": -18.223238817326788,
+    "p90": -9.3196954161277,
+    "p99": -7.166456129502238,
+    "max": -5.916690308779451
+   }
+  }
+ },
+ "runtime_s": 53.455414056777954
+}
+	Command being timed: "python scripts/e007_incident001_ml.py preprocess"
+	User time (seconds): 107.74
+	System time (seconds): 25.47
+	Percent of CPU this job got: 181%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:13.42
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 10552208
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 47671
+	Minor (reclaiming a frame) page faults: 1487344
+	Voluntary context switches: 54567
+	Involuntary context switches: 2209
+	Swaps: 0
+	File system inputs: 12163840
+	File system outputs: 7390320
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
