@@ -100,6 +100,7 @@ Done and verified (2026-09-26):
   Only 0.061% of valid scene pixels exceed 0.60, but they form 49 components totalling ~25.9 km² incl. large unverified detections (9.7, 4.9, 2.1 km²).
   Absolute geolocation error of the GCP/TPS product has not been measured (the Cerulean area match validates the AREA method only).
   **E004 must not gate E005** (the reference-slick windows are argmax lookalike, p(oil) 0.12–0.34).
+- Reproducibility checkpoint (E007 freeze): git commit `4b9e1783aa5612c91c9db5d625030af512a63969` on `main` (rasters git-ignored; their sha256 are in FROZEN.json).
 - E008 blocked on a reference-independent source-geometry rule (`E008_SELECTION_POLICY.md`). Cerulean geometry / ROI never selects the physics seed.
 
 ## How to state the attribution result
