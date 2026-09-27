@@ -116,6 +116,7 @@ Done and verified (2026-09-26):
   No grouping (explicit mode, not G = 0); drop components < 5,000 m²; each remaining E007 component = one candidate `E007-C{id}`.
   Applied once: 42 candidates, 7 excluded (19,068 m²). Post hoc only: 8 candidates intersect Cerulean (C30, C33–C38, C40); no winner.
   Cerulean geometry / ROI never selects, merges or ranks candidates. Physics (hindcast / ensemble / scoring) per candidate NOT started.
+- Reproducibility checkpoint (E008 policy v1 freeze + application): git commit `e3aa9a63d2cebd043262a4fa1ea54db133a0aba1` on `main`.
 
 ## How to state the attribution result
 
