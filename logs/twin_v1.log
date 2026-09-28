@@ -1,0 +1,31 @@
+run: C:\Users\Omen\Desktop\Oil Tracking PS\SIH26143\runs\incident_001\twin_v1b
+[twin] start -> runs/incident_001/twin_v1b/twin
+  twin: 45 usable cases of 48 sampled (712 draws)
+  backward sim 1/9 (K=1.0, cu=0.0): 54000 elements
+  backward sim 2/9 (K=1.0, cu=0.05): 54000 elements
+  backward sim 3/9 (K=1.0, cu=0.1): 54000 elements
+  backward sim 4/9 (K=3.0, cu=0.0): 54000 elements
+  backward sim 5/9 (K=3.0, cu=0.05): 54000 elements
+  backward sim 6/9 (K=3.0, cu=0.1): 54000 elements
+  backward sim 7/9 (K=10.0, cu=0.0): 54000 elements
+  backward sim 8/9 (K=10.0, cu=0.05): 54000 elements
+  backward sim 9/9 (K=10.0, cu=0.1): 54000 elements
+  forward sim 1/9: 102150 virtual-oil elements
+  forward sim 2/9: 102150 virtual-oil elements
+  forward sim 3/9: 102150 virtual-oil elements
+  forward sim 4/9: 102150 virtual-oil elements
+  forward sim 5/9: 102150 virtual-oil elements
+  forward sim 6/9: 102150 virtual-oil elements
+  forward sim 7/9: 102150 virtual-oil elements
+  forward sim 8/9: 102150 virtual-oil elements
+  forward sim 9/9: 102150 virtual-oil elements
+    subset  n  funnel_recall  top1_fused  top3_fused  top5_fused  top1_backward_only  top3_backward_only  top5_backward_only  top1_forward_only  top3_forward_only  top5_forward_only  truth_tier_consistent_or_better  median_window_mid_error_h
+       all 45           0.98        0.67        0.89        0.98                0.62                0.89                0.96               0.78               0.87               0.96                             0.98                       0.50
+      0-3h 12           0.92        0.67        0.92        0.92                0.67                0.92                0.92               0.83               0.92               0.92                             0.92                       0.25
+     3-12h 12           1.00        0.83        1.00        1.00                0.83                1.00                1.00               0.92               1.00               1.00                             1.00                       0.50
+    12-24h 12           1.00        0.83        0.92        1.00                0.67                0.92                1.00               0.83               1.00               1.00                             1.00                       0.50
+    24-40h  9           1.00        0.22        0.67        1.00                0.22                0.67                0.89               0.44               0.44               0.89                             1.00                       1.38
+    moving 10           0.90        0.50        0.80        0.90                0.40                0.80                0.80               0.70               0.80               0.80                             0.90                       0.25
+stationary 35           1.00        0.71        0.91        1.00                0.69                0.91                1.00               0.80               0.89               1.00                             1.00                       0.50
+{'n': 45, 'innocent_top_consistent_or_better': 0.9777777777777777, 'innocent_top_strong': 0.13333333333333333, 'present_top_consistent_or_better': 1.0, 'present_top_is_truth': 0.6666666666666666}
+[twin] ok in 1360.79 s

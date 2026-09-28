@@ -1,0 +1,46 @@
+case_id,n_suspects,truth_passes_funnel,rank_fused,tier_truth,rank_backward_only,rank_forward_only,top_tier,top_vessel
+1000,35,False,,not in funnel,,,consistent,368189190
+1001,34,False,,not in funnel,,,consistent,368189190
+1002,42,False,,not in funnel,,,consistent,367067370
+1003,18,False,,not in funnel,,,consistent,374113000
+1004,25,False,,not in funnel,,,consistent,353984000
+1005,45,False,,not in funnel,,,consistent,538005124
+1006,45,False,,not in funnel,,,consistent,369286000
+1007,43,False,,not in funnel,,,consistent,538005124
+1008,41,False,,not in funnel,,,strongly consistent,367657110
+1009,33,False,,not in funnel,,,consistent,367052000
+1010,12,False,,not in funnel,,,consistent,303260000
+1012,35,False,,not in funnel,,,consistent,236111902
+1013,9,False,,not in funnel,,,weak,366495000
+1014,45,False,,not in funnel,,,consistent,538005124
+1015,18,False,,not in funnel,,,consistent,367763610
+1016,62,False,,not in funnel,,,consistent,236111902
+1017,15,False,,not in funnel,,,consistent,303260000
+1018,45,False,,not in funnel,,,consistent,538005124
+1019,44,False,,not in funnel,,,consistent,538005124
+1020,30,False,,not in funnel,,,consistent,367507790
+1021,35,False,,not in funnel,,,consistent,367507790
+1022,22,False,,not in funnel,,,consistent,577358000
+1024,30,False,,not in funnel,,,strongly consistent,538005361
+1025,49,False,,not in funnel,,,consistent,368179260
+1026,11,False,,not in funnel,,,consistent,354791000
+1027,15,False,,not in funnel,,,consistent,369533000
+1028,24,False,,not in funnel,,,strongly consistent,371765000
+1029,14,False,,not in funnel,,,consistent,303260000
+1030,32,False,,not in funnel,,,consistent,367067370
+1032,39,False,,not in funnel,,,strongly consistent,367574050
+1033,26,False,,not in funnel,,,strongly consistent,366101000
+1034,32,False,,not in funnel,,,consistent,367507790
+1035,50,False,,not in funnel,,,consistent,636015112
+1036,39,False,,not in funnel,,,strongly consistent,636015112
+1037,40,False,,not in funnel,,,consistent,367580190
+1038,33,False,,not in funnel,,,consistent,367574050
+1039,40,False,,not in funnel,,,consistent,338125915
+1040,71,False,,not in funnel,,,consistent,367127480
+1041,18,False,,not in funnel,,,consistent,577358000
+1042,33,False,,not in funnel,,,consistent,371765000
+1043,50,False,,not in funnel,,,consistent,636015112
+1044,31,False,,not in funnel,,,consistent,354791000
+1045,18,False,,not in funnel,,,consistent,367561140
+1046,50,False,,not in funnel,,,consistent,636015112
+1047,34,False,,not in funnel,,,consistent,367666910

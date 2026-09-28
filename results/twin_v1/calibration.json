@@ -1,0 +1,107 @@
+{
+ "rule": {
+  "fwd_F_min": 0.7,
+  "bwd_point_min": 0.7,
+  "member_support_min": 0.5,
+  "margin_vs_runner_up": 1.0
+ },
+ "test_looks": 2,
+ "note": "calibration v2 (margin feature, wider grid) added after one look at the test half",
+ "selection": "ok",
+ "max_false_accusation_target": 0.1,
+ "calibration": {
+  "n": 23,
+  "correct_attribution": 0.17391304347826086,
+  "truth_supported": 0.17391304347826086,
+  "false_accusation": 0.08695652173913043,
+  "no_accusation_when_present": 0.8260869565217391
+ },
+ "test": {
+  "n": 22,
+  "correct_attribution": 0.13636363636363635,
+  "truth_supported": 0.13636363636363635,
+  "false_accusation": 0.045454545454545456,
+  "no_accusation_when_present": 0.8636363636363636
+ },
+ "test_by_stratum": {
+  "0-3h": {
+   "n": 6,
+   "correct_attribution": 0.16666666666666666,
+   "truth_supported": 0.16666666666666666,
+   "false_accusation": 0.0,
+   "no_accusation_when_present": 0.8333333333333334
+  },
+  "12-24h": {
+   "n": 6,
+   "correct_attribution": 0.0,
+   "truth_supported": 0.0,
+   "false_accusation": 0.0,
+   "no_accusation_when_present": 1.0
+  },
+  "24-40h": {
+   "n": 4,
+   "correct_attribution": 0.0,
+   "truth_supported": 0.0,
+   "false_accusation": 0.0,
+   "no_accusation_when_present": 1.0
+  },
+  "3-12h": {
+   "n": 6,
+   "correct_attribution": 0.3333333333333333,
+   "truth_supported": 0.3333333333333333,
+   "false_accusation": 0.16666666666666666,
+   "no_accusation_when_present": 0.6666666666666666
+  }
+ },
+ "v3_preregistered_tiers_on_test": {
+  "correct_attribution": 0.7272727272727273,
+  "false_accusation": 1.0
+ },
+ "split": {
+  "1032": "calibration",
+  "1000": "test",
+  "1036": "calibration",
+  "1004": "test",
+  "1024": "calibration",
+  "1028": "test",
+  "1044": "calibration",
+  "1016": "test",
+  "1020": "calibration",
+  "1008": "test",
+  "1040": "calibration",
+  "1012": "test",
+  "1038": "calibration",
+  "1014": "test",
+  "1046": "calibration",
+  "1030": "test",
+  "1042": "calibration",
+  "1034": "test",
+  "1006": "calibration",
+  "1022": "test",
+  "1002": "calibration",
+  "1010": "test",
+  "1018": "calibration",
+  "1026": "test",
+  "1047": "calibration",
+  "1015": "test",
+  "1019": "calibration",
+  "1043": "test",
+  "1039": "calibration",
+  "1003": "test",
+  "1027": "calibration",
+  "1007": "test",
+  "1035": "calibration",
+  "1013": "calibration",
+  "1037": "test",
+  "1001": "calibration",
+  "1017": "test",
+  "1005": "calibration",
+  "1025": "test",
+  "1033": "calibration",
+  "1041": "test",
+  "1021": "calibration",
+  "1045": "test",
+  "1009": "calibration",
+  "1029": "test"
+ }
+}
