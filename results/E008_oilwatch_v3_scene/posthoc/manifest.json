@@ -1,0 +1,31 @@
+{
+ "stage": "posthoc",
+ "incident": "incident_001",
+ "run_id": "e008_v3_scene",
+ "status": "ok",
+ "error": null,
+ "finished_utc": "2026-09-28T09:13:51.351419+00:00",
+ "seconds": 0.13,
+ "params": {
+  "note": "reference read here only, after all outputs were written"
+ },
+ "notes": {},
+ "inputs": {
+  "data/incident_001/metadata/slick_3775938.geojson": "fb66db194029293bc47d0e3df0c25fa63e5be44a3c48e97c6fbdea9139b402aa"
+ },
+ "outputs": {
+  "runs/incident_001/e008_v3_scene/posthoc/posthoc.json": "ed004a8cfe2c915d3335d391dd3bb3fbe655e32c9f45b3ead3bd60923904715b"
+ },
+ "git": {
+  "head": "e33e72084ab07f57c6640834abb9331335b9c298",
+  "branch": "pipeline-v1",
+  "dirty": true
+ },
+ "env": {
+  "python": "3.11.9",
+  "numpy": "2.4.2",
+  "pandas": "2.3.3",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "opendrift": "1.14.11"
+ }
+}

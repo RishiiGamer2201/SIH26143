@@ -1,0 +1,46 @@
+{
+ "stage": "evidence",
+ "incident": "incident_001",
+ "run_id": "e008_v3_scene",
+ "status": "ok",
+ "error": null,
+ "finished_utc": "2026-09-28T09:07:13.130024+00:00",
+ "seconds": 203.22,
+ "params": {
+  "geometry": {
+   "_doc": "Fresh-discharge evidence (Cerulean source scoring, SkyTruth cerulean-cloud scoring.py): head proximity P = exp(-(d/d_ref)^5), d_ref = max(3 km/h * dt, 0.5 km); heading alignment A = exp(-ln2*(dtheta/45deg)^2) (45 deg -> 0.5). Only meaningful for slicks younger than ~3 h (MAX_SLICK_DRIFT_TIME = 3).",
+   "spread_rate_km_h": 3.0,
+   "min_ref_km": 0.5,
+   "fresh_age_h": 3.0,
+   "moving_sog_kn": 2.0
+  }
+ },
+ "notes": {
+  "platforms_loaded": 1600,
+  "source_type_counts": {
+   "vessel": 62,
+   "unknown": 15,
+   "fixed_infrastructure": 11
+  }
+ },
+ "inputs": {
+  "data/incident_001/ais/ais_scene.parquet": "9d7dbf068870934399868f260bfa4fb56a03bf36a06824d8a083adc5ee658b59"
+ },
+ "outputs": {
+  "runs/incident_001/e008_v3_scene/evidence/geometry.csv": "05573629611940cb2a34f3707c3d03dcf3c7f0b127862ff69dd5fffee765f576",
+  "runs/incident_001/e008_v3_scene/evidence/behaviour.csv": "3172225d1235a8dd061e019a7463ee22ab5166b90af04a9e707321a49ddafc68",
+  "runs/incident_001/e008_v3_scene/evidence/motion.csv": "4c0ae1db951251a37671f674cf6de70a59160d1325d9ea509ed8497f745367b8"
+ },
+ "git": {
+  "head": "e33e72084ab07f57c6640834abb9331335b9c298",
+  "branch": "pipeline-v1",
+  "dirty": true
+ },
+ "env": {
+  "python": "3.11.9",
+  "numpy": "2.4.2",
+  "pandas": "2.3.3",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "opendrift": "1.14.11"
+ }
+}

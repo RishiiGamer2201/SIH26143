@@ -1,0 +1,30 @@
+{
+ "stage": "report",
+ "incident": "incident_001",
+ "run_id": "e008_v3_scene",
+ "status": "ok",
+ "error": null,
+ "finished_utc": "2026-09-28T10:13:45.699734+00:00",
+ "seconds": 3.98,
+ "params": {},
+ "notes": {},
+ "inputs": {},
+ "outputs": {
+  "runs/incident_001/e008_v3_scene/report/summary.json": "69009d61e19b763ddf4637d1306066873a04ae3291c18092dab756bab244cf2c",
+  "runs/incident_001/e008_v3_scene/report/report.md": "d0b44f6d43624855b6a446966396a919e45fbebea1dbcfc46aa42811ff5655b2",
+  "runs/incident_001/e008_v3_scene/report/map.png": "ed3d05decaf64a3e87a0020e275fc543cff6fb4f8e9aabc51025c8ad6adf38ee",
+  "runs/incident_001/e008_v3_scene/report/forecast.png": "0859774a2382ca2fbeedfb65ccc546ef5f38d8d31afaed89ab29ba4dc5e19072"
+ },
+ "git": {
+  "head": "e33e72084ab07f57c6640834abb9331335b9c298",
+  "branch": "pipeline-v1",
+  "dirty": true
+ },
+ "env": {
+  "python": "3.11.9",
+  "numpy": "2.4.2",
+  "pandas": "2.3.3",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "opendrift": "1.14.11"
+ }
+}

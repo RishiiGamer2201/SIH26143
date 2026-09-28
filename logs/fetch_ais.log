@@ -1,0 +1,22 @@
+  AIS_2023_01_01.zip: 25/319 MB (0.3 MB/s)
+  AIS_2023_01_01.zip: 92/319 MB (0.5 MB/s)
+  AIS_2023_01_01.zip: 176/319 MB (0.5 MB/s)
+  AIS_2023_01_01.zip: 243/319 MB (0.5 MB/s)
+  AIS_2023_01_01.zip: 311/319 MB (0.5 MB/s)
+  done AIS_2023_01_01.zip (319 MB, 608 s)
+  AIS_2023_01_01_bbox.parquet: 980,176 rows
+  AIS_2023_01_02.zip: 8/308 MB (0.2 MB/s)
+  AIS_2023_01_02.zip: 109/308 MB (0.4 MB/s)
+  AIS_2023_01_02.zip: 176/308 MB (0.5 MB/s)
+  AIS_2023_01_02.zip: 260/308 MB (0.5 MB/s)
+  AIS_2023_01_02.zip: 308/308 MB (0.5 MB/s)
+  done AIS_2023_01_02.zip (308 MB, 589 s)
+  AIS_2023_01_02_bbox.parquet: 981,412 rows
+  AIS_2023_01_03.zip: 101/304 MB (0.4 MB/s)
+  AIS_2023_01_03.zip: 101/304 MB (0.4 MB/s)
+  AIS_2023_01_03.zip: 143/304 MB (0.4 MB/s)
+  AIS_2023_01_03.zip: 252/304 MB (0.5 MB/s)
+  AIS_2023_01_03.zip: 304/304 MB (0.5 MB/s)
+  done AIS_2023_01_03.zip (304 MB, 671 s)
+  AIS_2023_01_03_bbox.parquet: 957,450 rows
+  have PlatStrucRawData.zip (2 MB)

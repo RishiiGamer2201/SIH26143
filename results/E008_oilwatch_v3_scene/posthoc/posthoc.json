@@ -1,0 +1,309 @@
+{
+ "note": "POST-HOC only; the reference did not select, seed, tune or filter anything.",
+ "events_overlapping_reference": [
+  {
+   "cluster_id": 17,
+   "selected": true,
+   "overlap_m2": 563162.2063675784,
+   "iou": 0.2782985046816082
+  },
+  {
+   "cluster_id": 19,
+   "selected": true,
+   "overlap_m2": 249357.13318724,
+   "iou": 0.1303190932793441
+  },
+  {
+   "cluster_id": 18,
+   "selected": true,
+   "overlap_m2": 188085.327766072,
+   "iou": 0.12633810285357383
+  }
+ ],
+ "reference_vessels_in_our_ranking": [
+  {
+   "cluster_id": 17,
+   "MMSI": "368196410",
+   "VesselName": "C-CONSTRUCTOR",
+   "suspect_rank": 7,
+   "tier": "weak",
+   "bwd_point": 0.1292555651625984,
+   "bwd_peak_age_median": 48.0,
+   "fwd_F": 0.0091321065641307,
+   "fss_1km": 0.0116334566280872
+  },
+  {
+   "cluster_id": 17,
+   "MMSI": "367507790",
+   "VesselName": "HARVEY SUPPORTER",
+   "suspect_rank": 18,
+   "tier": "not supported",
+   "bwd_point": 0.008520195672986,
+   "bwd_peak_age_median": 29.0,
+   "fwd_F": 0.0,
+   "fss_1km": 0.0
+  },
+  {
+   "cluster_id": 17,
+   "MMSI": "367655260",
+   "VesselName": "SHELIA BORDELON",
+   "suspect_rank": 22,
+   "tier": "not supported",
+   "bwd_point": 0.35017817380139,
+   "bwd_peak_age_median": 48.0,
+   "fwd_F": 0.0,
+   "fss_1km": 0.0
+  },
+  {
+   "cluster_id": 17,
+   "MMSI": "368166560",
+   "VesselName": "ARGOS PLATFORM",
+   "suspect_rank": 25,
+   "tier": "not supported",
+   "bwd_point": 0.0655901028275932,
+   "bwd_peak_age_median": 48.0,
+   "fwd_F": 0.0,
+   "fss_1km": -2.220446049250313e-16
+  },
+  {
+   "cluster_id": 17,
+   "MMSI": "538005314",
+   "VesselName": "OCEAN BLACKHORNET",
+   "suspect_rank": 31,
+   "tier": "not supported",
+   "bwd_point": 0.019366069050947,
+   "bwd_peak_age_median": 48.0,
+   "fwd_F": 0.0,
+   "fss_1km": -2.220446049250313e-16
+  },
+  {
+   "cluster_id": 17,
+   "MMSI": "538005361",
+   "VesselName": "OCEAN BLACKLION",
+   "suspect_rank": 32,
+   "tier": "not supported",
+   "bwd_point": 0.1243212373444959,
+   "bwd_peak_age_median": 48.0,
+   "fwd_F": 0.0,
+   "fss_1km": 0.0
+  },
+  {
+   "cluster_id": 18,
+   "MMSI": "367655260",
+   "VesselName": "SHELIA BORDELON",
+   "suspect_rank": 1,
+   "tier": "consistent",
+   "bwd_point": 0.5162104267012662,
+   "bwd_peak_age_median": 48.0,
+   "fwd_F": 0.1916558018252933,
+   "fss_1km": 0.0101724472001547
+  },
+  {
+   "cluster_id": 18,
+   "MMSI": "368196410",
+   "VesselName": "C-CONSTRUCTOR",
+   "suspect_rank": 8,
+   "tier": "weak",
+   "bwd_point": 0.1372953246620523,
+   "bwd_peak_age_median": 48.0,
+   "fwd_F": 0.0091251448435689,
+   "fss_1km": 0.0055961906631974
+  },
+  {
+   "cluster_id": 18,
+   "MMSI": "367507790",
+   "VesselName": "HARVEY SUPPORTER",
+   "suspect_rank": 18,
+   "tier": "not supported",
+   "bwd_point": 0.0059304558818188,
+   "bwd_peak_age_median": 29.0,
+   "fwd_F": 0.0,
+   "fss_1km": 0.0
+  },
+  {
+   "cluster_id": 18,
+   "MMSI": "368166560",
+   "VesselName": "ARGOS PLATFORM",
+   "suspect_rank": 25,
+   "tier": "not supported",
+   "bwd_point": 0.0848846734329697,
+   "bwd_peak_age_median": 48.0,
+   "fwd_F": 0.0,
+   "fss_1km": 0.0
+  },
+  {
+   "cluster_id": 18,
+   "MMSI": "538005314",
+   "VesselName": "OCEAN BLACKHORNET",
+   "suspect_rank": 31,
+   "tier": "not supported",
+   "bwd_point": 0.0396470867181945,
+   "bwd_peak_age_median": 48.0,
+   "fwd_F": 0.0,
+   "fss_1km": 0.0
+  },
+  {
+   "cluster_id": 18,
+   "MMSI": "538005361",
+   "VesselName": "OCEAN BLACKLION",
+   "suspect_rank": 32,
+   "tier": "not supported",
+   "bwd_point": 0.1309591109600693,
+   "bwd_peak_age_median": 48.0,
+   "fwd_F": 0.0,
+   "fss_1km": 0.0
+  },
+  {
+   "cluster_id": 19,
+   "MMSI": "367655260",
+   "VesselName": "SHELIA BORDELON",
+   "suspect_rank": 4,
+   "tier": "consistent",
+   "bwd_point": 0.4496104445773315,
+   "bwd_peak_age_median": 48.0,
+   "fwd_F": 0.0,
+   "fss_1km": 0.0
+  },
+  {
+   "cluster_id": 19,
+   "MMSI": "367507790",
+   "VesselName": "HARVEY SUPPORTER",
+   "suspect_rank": 16,
+   "tier": "not supported",
+   "bwd_point": 0.0010001585321285,
+   "bwd_peak_age_median": 37.0,
+   "fwd_F": 0.0,
+   "fss_1km": 0.0
+  },
+  {
+   "cluster_id": 19,
+   "MMSI": "368166560",
+   "VesselName": "ARGOS PLATFORM",
+   "suspect_rank": 22,
+   "tier": "not supported",
+   "bwd_point": 0.0331484815239692,
+   "bwd_peak_age_median": 48.0,
+   "fwd_F": 0.0,
+   "fss_1km": 0.0
+  },
+  {
+   "cluster_id": 19,
+   "MMSI": "368196410",
+   "VesselName": "C-CONSTRUCTOR",
+   "suspect_rank": 23,
+   "tier": "not supported",
+   "bwd_point": 0.0521670426983362,
+   "bwd_peak_age_median": 48.0,
+   "fwd_F": 0.0,
+   "fss_1km": 0.0
+  },
+  {
+   "cluster_id": 19,
+   "MMSI": "538005314",
+   "VesselName": "OCEAN BLACKHORNET",
+   "suspect_rank": 28,
+   "tier": "not supported",
+   "bwd_point": 0.0255515999087611,
+   "bwd_peak_age_median": 48.0,
+   "fwd_F": 0.0,
+   "fss_1km": 0.0
+  },
+  {
+   "cluster_id": 19,
+   "MMSI": "538005361",
+   "VesselName": "OCEAN BLACKLION",
+   "suspect_rank": 29,
+   "tier": "not supported",
+   "bwd_point": 0.0490816520429218,
+   "bwd_peak_age_median": 48.0,
+   "fwd_F": 0.0,
+   "fss_1km": 0.0
+  }
+ ],
+ "reference_vessels_passing_funnel": 6,
+ "frozen_v2_0_6h_top6": [
+  {
+   "MMSI": "367655260",
+   "VesselName": "SHELIA BORDELON",
+   "rank_median": 1.0
+  },
+  {
+   "MMSI": "368166560",
+   "VesselName": "ARGOS PLATFORM",
+   "rank_median": 2.0
+  },
+  {
+   "MMSI": "538005314",
+   "VesselName": "OCEAN BLACKHORNET",
+   "rank_median": 3.0
+  },
+  {
+   "MMSI": "367507790",
+   "VesselName": "HARVEY SUPPORTER",
+   "rank_median": 4.0
+  },
+  {
+   "MMSI": "538005361",
+   "VesselName": "OCEAN BLACKLION",
+   "rank_median": 5.0
+  },
+  {
+   "MMSI": "368196410",
+   "VesselName": "C-CONSTRUCTOR",
+   "rank_median": 6.0
+  }
+ ],
+ "top3_per_overlapping_event": {
+  "17": [
+   {
+    "VesselName": "OVERSEAS CASCADE",
+    "tier": "consistent",
+    "combined": 0.8669335942265957
+   },
+   {
+    "VesselName": "BIG FOOT",
+    "tier": "consistent",
+    "combined": 0.0
+   },
+   {
+    "VesselName": "DEER ISLAND",
+    "tier": "weak",
+    "combined": 0.45853628827115
+   }
+  ],
+  "19": [
+   {
+    "VesselName": "BIG FOOT",
+    "tier": "consistent",
+    "combined": 0.5360966527704074
+   },
+   {
+    "VesselName": "OVERSEAS CASCADE",
+    "tier": "consistent",
+    "combined": 0.3260335866029921
+   },
+   {
+    "VesselName": "DEEP RUNNER",
+    "tier": "consistent",
+    "combined": 0.1405544756928538
+   }
+  ],
+  "18": [
+   {
+    "VesselName": "SHELIA BORDELON",
+    "tier": "consistent",
+    "combined": 0.537675098449031
+   },
+   {
+    "VesselName": "OVERSEAS CASCADE",
+    "tier": "consistent",
+    "combined": 0.4093866131342487
+   },
+   {
+    "VesselName": "BIG FOOT",
+    "tier": "consistent",
+    "combined": 0.0
+   }
+  ]
+ }
+}

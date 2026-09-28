@@ -1,0 +1,169 @@
+{
+ "stage": "parity_scoring",
+ "incident": "incident_001",
+ "run_id": "e008_v3_scene",
+ "status": "ok",
+ "error": null,
+ "finished_utc": "2026-09-28T07:01:57.120650+00:00",
+ "seconds": 39.16,
+ "params": {
+  "frozen": {
+   "deterministic": {
+    "n_particles": 2000,
+    "rng_seed": 26143,
+    "windage": 0.03,
+    "duration_h": 48,
+    "dt_s": 900,
+    "output_s": 3600
+   },
+   "ensemble": {
+    "particles_per_scenario": 400,
+    "base_seed": 26143,
+    "duration_h": 48,
+    "dt_s": 900,
+    "output_s": 3600,
+    "windage": [
+     0.02,
+     0.03,
+     0.04
+    ],
+    "current_uncertainty": [
+     0.0,
+     0.05,
+     0.1
+    ],
+    "wind_uncertainty": [
+     0.0,
+     0.5,
+     1.0
+    ]
+   },
+   "v2": {
+    "ais_tolerance_min": 20,
+    "sigma_km": 5.0
+   },
+   "age_bins_h": [
+    -0.001,
+    6,
+    12,
+    24,
+    36,
+    48.01
+   ],
+   "age_labels": [
+    "0-6h",
+    "6-12h",
+    "12-24h",
+    "24-36h",
+    "36-48h"
+   ],
+   "v2_1_config": "configs/ais_v2_1.json",
+   "source_type_config": "configs/source_type_v1.json"
+  }
+ },
+ "notes": {
+  "results": [
+   {
+    "table": "v2_time_scores",
+    "rows_ours": 2397,
+    "rows_frozen": 2397,
+    "same_columns": true,
+    "exact": false,
+    "ulp_equal": true,
+    "max_rel_diff": 3.390716675677311e-14
+   },
+   {
+    "table": "v2_summary",
+    "rows_ours": 155,
+    "rows_frozen": 155,
+    "same_columns": true,
+    "exact": false,
+    "ulp_equal": true,
+    "max_rel_diff": 2.6614042996059855e-14
+   },
+   {
+    "table": "v2_release_age",
+    "rows_ours": 411,
+    "rows_frozen": 411,
+    "same_columns": true,
+    "exact": false,
+    "ulp_equal": true,
+    "max_rel_diff": 2.6614042996059855e-14
+   },
+   {
+    "table": "ensemble_scenario_scores",
+    "rows_ours": 11097,
+    "rows_frozen": 11097,
+    "same_columns": true,
+    "exact": false,
+    "ulp_equal": true,
+    "max_rel_diff": 2.1832231387871537e-13
+   },
+   {
+    "table": "ensemble_robust_scores",
+    "rows_ours": 411,
+    "rows_frozen": 411,
+    "same_columns": true,
+    "exact": false,
+    "ulp_equal": true,
+    "max_rel_diff": 4.3610179132134494e-14
+   },
+   {
+    "table": "v2_1_time_scores",
+    "rows_ours": 2089,
+    "rows_frozen": 2089,
+    "same_columns": true,
+    "exact": false,
+    "ulp_equal": true,
+    "max_rel_diff": 3.0224651090384626e-14
+   },
+   {
+    "table": "v2_1_release_age",
+    "rows_ours": 393,
+    "rows_frozen": 393,
+    "same_columns": true,
+    "exact": false,
+    "ulp_equal": true,
+    "max_rel_diff": 7.44581059956448e-15
+   },
+   {
+    "table": "track_motion",
+    "rows_ours": 155,
+    "rows_frozen": 155,
+    "same_columns": true,
+    "exact": false,
+    "ulp_equal": true,
+    "max_rel_diff": 2.3961076208551194e-16
+   }
+  ],
+  "all_exact": false,
+  "all_ulp_equal": true
+ },
+ "inputs": {
+  "results/incident_001/hindcast_48h.nc": "5b3b5e26d52f4a6b206c94d1fbedf71663240645521cbdd11396a43d0f4012d0",
+  "results/incident_001/hindcast_ensemble_particles.parquet": "ce62916634bee39d554a5002b65e280747d64e06a16e849e2c920867ca320793",
+  "data/incident_001/ais/ais_roi.parquet": "587389252fe7bd1dcb5dbbe44d74b3c3f34ff63acdeaa1dea5c1e2298e338a1e"
+ },
+ "outputs": {
+  "runs/incident_001/e008_v3_scene/parity_scoring/ais_density_time_scores_v2.parquet": "e4fcfda33f6e2a2077bf27b124daaa76868d70e10fecab2de1de326d8d9ad661",
+  "runs/incident_001/e008_v3_scene/parity_scoring/ais_density_scores_v2.csv": "f74a9c1d1cfe2ee35adbcb122d84ffa2dbd90148c0883a93df2ef65f9e330c24",
+  "runs/incident_001/e008_v3_scene/parity_scoring/release_age_scores.csv": "1791e70e6e39c54092e7141325c85a968de96f7a100998bc25d0cb7e6b6c929e",
+  "runs/incident_001/e008_v3_scene/parity_scoring/ais_ensemble_scenario_scores.parquet": "995d413966c9762e299d5eb7bb3906865c55e645e4a66c429422592a06ea8dbd",
+  "runs/incident_001/e008_v3_scene/parity_scoring/ais_ensemble_robust_scores.csv": "0ea505702b494ff2072f639307b954213af6ebfadb0a802fe9c9f10a2e163026",
+  "runs/incident_001/e008_v3_scene/parity_scoring/ais_density_time_scores_v2_1.parquet": "dea6cea1bf643413bc0c860274ab691842a2366987e72ac46c8fa5e019813bef",
+  "runs/incident_001/e008_v3_scene/parity_scoring/release_age_scores_v2_1.csv": "7e347fc23240d5f4df9b57948379bc8f802d7f2495b873b193521aecf668645b",
+  "runs/incident_001/e008_v3_scene/parity_scoring/track_motion.csv": "4b7fa669f3584ec5cabd98d33827d659a456bd7100c8a047822dc66aa8f83ecd"
+ },
+ "git": {
+  "head": "e33e72084ab07f57c6640834abb9331335b9c298",
+  "branch": "pipeline-v1",
+  "dirty": true
+ },
+ "env": {
+  "python": "3.11.9",
+  "numpy": "2.4.2",
+  "pandas": "2.3.3",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "opendrift": "1.14.11"
+ }
+}

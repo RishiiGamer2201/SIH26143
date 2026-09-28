@@ -53,7 +53,11 @@ SIH26143/
 │   ├── e007_incident001_ml.py     E007 Incident 001 SAFE -> σ0 VV geocoded -> frozen E004/E005 -> mask -> polygons -> results/E007_incident001_ml
 │   ├── score_ais_density_v2_1.py  E101 V2.1 = V2 with interpolated AIS positions -> results/incident_001_v2_1
 │   └── source_type_v1.py          E102 post-score source-type layer -> results/incident_001_source_type_v1
-├── configs/                       ais_v2_1.json, source_type_v1.json (all thresholds for E101/E102)
+├── oilwatch/                      (2026-09-29) pipeline package: parity, seed, context, backward, forward, evidence, fuse, report, posthoc
+│                                  `python -m oilwatch run incident_001`; writes only runs/<incident>/<run_id>/ (see oilwatch/README.md)
+├── tests/                         pytest: parity gate + unit tests for the v3 maths
+├── configs/                       ais_v2_1.json, source_type_v1.json (all thresholds for E101/E102),
+│                                  pipeline_v1.json (frozen + v3 parameters with sources), incidents/<id>.json (incident specs)
 ├── logs/                          E001_*.log, E002_*.log, E003_*.log, E101_*.log, E102_*.log
 ├── data/
 │   ├── sar/extracted/             Zenodo dataset, see SAR_DATA_AUDIT.md §1 (never modified)
@@ -101,7 +105,13 @@ Done and verified (2026-09-26):
   Absolute geolocation error of the GCP/TPS product has not been measured (the Cerulean area match validates the AREA method only).
   **E004 must not gate E005** (the reference-slick windows are argmax lookalike, p(oil) 0.12–0.34).
 - Reproducibility checkpoint (E007 freeze): git commit `4b9e1783aa5612c91c9db5d625030af512a63969` on `main` (rasters git-ignored; their sha256 are in FROZEN.json).
-- E008 blocked on a reference-independent source-geometry rule (`E008_SELECTION_POLICY.md`). Cerulean geometry / ROI never selects the physics seed.
+- E008 (2026-09-29) DONE via the `oilwatch/` pipeline (branch `pipeline-v1`). Artefacts are in `results/E008_oilwatch_v3_scene/`; the seed policy is in `E008_SELECTION_POLICY.md`.
+  - **Parity gate:** physics bit-exact; scoring ULP-equal.
+  - **New open data:** S1 measurement (verified identical), scene-wide NOAA AIS (1,715 MMSI), BOEM platforms.
+  - **SAR:** geolocation error measured (39 m median); ship detections and AIS-silent vessels.
+  - **Event 18 (reference area):** #1 SHELIA BORDELON. The forward/backward drift gives a 1–2 h release, there is an AIS gap inside that window, and SAR sees it at the slick while AIS-silent. No pair reaches FSS skill.
+  - Earlier same-day E008 numbers were WITHDRAWN (OpenDrift reverses element order in backward runs; now guarded and tested).
+- Windows setup: `git config core.longpaths true` (SAFE paths), then `python -m venv --system-site-packages .venv` + `pip install opendrift netCDF4`.
 
 ## How to state the attribution result
 

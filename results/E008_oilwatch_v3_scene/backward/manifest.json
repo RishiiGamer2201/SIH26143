@@ -1,0 +1,152 @@
+{
+ "stage": "backward",
+ "incident": "incident_001",
+ "run_id": "e008_v3_scene",
+ "status": "ok",
+ "error": null,
+ "finished_utc": "2026-09-28T07:27:58.939267+00:00",
+ "seconds": 1052.88,
+ "params": {
+  "physics": {
+   "_doc": "E008/E009-informed v3 ensemble. Forcing = SMOC uo+utide with SEPARATE Stokes (vsdx/vsdy), so windage must exclude wave drift: 0.02 + Stokes ~ 3.5% total (Roehrs et al. 2018 Ocean Sci 14:1581; OpenDrift default 0.02). Frozen 0.03/0.04 + Stokes likely double counts (E000 item 4).",
+   "model": "OceanDrift transport-only (weathering irreversible; Breivik et al. 2012 BAKTRAK)",
+   "windage": [
+    0.01,
+    0.02,
+    0.03
+   ],
+   "stokes_drift": true,
+   "horizontal_diffusivity_m2s": [
+    1.0,
+    3.0,
+    10.0
+   ],
+   "_diffusivity_why": "Okubo 1971 apparent diffusivity 0.2-3 m2/s at 6-48 h; MEDSLIK-II default 2, calibrated 2-13 m2/s (Accarino et al. 2025); OpenDrift example 10",
+   "current_uncertainty": [
+    0.0,
+    0.05,
+    0.1
+   ],
+   "wind_uncertainty": 0.5,
+   "duration_h": 48,
+   "dt_s": 900,
+   "output_s": 3600,
+   "backward_particles_per_windage": 400,
+   "seed": 26143
+  },
+  "backward": {
+   "_doc": "Density score with an age-dependent kernel: sigma(tau)^2 = sigma0^2 + (u_err*tau)^2. sigma0 covers slick geolocation + AIS + release offset; u_err = persistent current-model error (order of the frozen current-uncertainty range; centroid errors 2-3 km/day, de Aguiar et al. 2023). Ensemble spread is already in the particle cloud, so it is not added again.",
+   "sigma0_km": 1.0,
+   "u_err_m_s": 0.05,
+   "persistence_tau0_h": 12,
+   "_persistence_why": "ship-discharge slicks typically persist ~2-12 h (Liu B. et al. 2021; Cerulean temporal reference ~2.8 h): prior weight exp(-tau/12 h) on release age",
+   "funnel_gate_sigma": 3.0,
+   "funnel_min_positions": 2
+  }
+ },
+ "notes": {
+  "n_elements": 14400,
+  "n_members": 27,
+  "n_vessels_positioned": 1682,
+  "funnel": [
+   {
+    "cluster_id": 1,
+    "ais_vessels_in_window": 1682,
+    "positioned_ge_min_hours": 1591,
+    "within_gate_of_backward_cloud": 36
+   },
+   {
+    "cluster_id": 2,
+    "ais_vessels_in_window": 1682,
+    "positioned_ge_min_hours": 1591,
+    "within_gate_of_backward_cloud": 34
+   },
+   {
+    "cluster_id": 3,
+    "ais_vessels_in_window": 1682,
+    "positioned_ge_min_hours": 1591,
+    "within_gate_of_backward_cloud": 38
+   },
+   {
+    "cluster_id": 7,
+    "ais_vessels_in_window": 1682,
+    "positioned_ge_min_hours": 1591,
+    "within_gate_of_backward_cloud": 28
+   },
+   {
+    "cluster_id": 12,
+    "ais_vessels_in_window": 1682,
+    "positioned_ge_min_hours": 1591,
+    "within_gate_of_backward_cloud": 24
+   },
+   {
+    "cluster_id": 15,
+    "ais_vessels_in_window": 1682,
+    "positioned_ge_min_hours": 1591,
+    "within_gate_of_backward_cloud": 40
+   },
+   {
+    "cluster_id": 16,
+    "ais_vessels_in_window": 1682,
+    "positioned_ge_min_hours": 1591,
+    "within_gate_of_backward_cloud": 5
+   },
+   {
+    "cluster_id": 17,
+    "ais_vessels_in_window": 1682,
+    "positioned_ge_min_hours": 1591,
+    "within_gate_of_backward_cloud": 35
+   },
+   {
+    "cluster_id": 18,
+    "ais_vessels_in_window": 1682,
+    "positioned_ge_min_hours": 1591,
+    "within_gate_of_backward_cloud": 34
+   },
+   {
+    "cluster_id": 19,
+    "ais_vessels_in_window": 1682,
+    "positioned_ge_min_hours": 1591,
+    "within_gate_of_backward_cloud": 30
+   },
+   {
+    "cluster_id": 21,
+    "ais_vessels_in_window": 1682,
+    "positioned_ge_min_hours": 1591,
+    "within_gate_of_backward_cloud": 24
+   },
+   {
+    "cluster_id": 22,
+    "ais_vessels_in_window": 1682,
+    "positioned_ge_min_hours": 1591,
+    "within_gate_of_backward_cloud": 23
+   }
+  ]
+ },
+ "inputs": {
+  "data/incident_001/currents/ocean_opendrift.nc": "3c8f047ac526dee253895f72ff73a3ce214530f07322ed04c28257824edc8ca8",
+  "data/incident_001/wind/era5_wind_10m_151h.nc": "4fe4edcfbee1820608c364f51c1540c7fba9d6ab08888a7d62659d0de57df7a1",
+  "data/incident_001/ais/ais_scene.parquet": "9d7dbf068870934399868f260bfa4fb56a03bf36a06824d8a083adc5ee658b59"
+ },
+ "outputs": {
+  "runs/incident_001/e008_v3_scene/backward/particles.parquet": "e205253ad8957af188e80a1b95fb1772a6f84cd301785c7a5dd43c3d2bbac6d4",
+  "runs/incident_001/e008_v3_scene/backward/cloud_summary.parquet": "2dabcb09083deca08f14c2a4cf10f1580c853fc9f7f7af997307dadb6ec0a484",
+  "runs/incident_001/e008_v3_scene/backward/time_scores.parquet": "26133b0d4291b711ebdb1c1d00bbefd4c641efe76d9598f2e53ce56ef7efb4aa",
+  "runs/incident_001/e008_v3_scene/backward/member_scores.parquet": "ea1b786ab6e986f809c6f5eef17d4fad7f1c116c320d0c8253b84777f30775b4",
+  "runs/incident_001/e008_v3_scene/backward/backward_robust.csv": "71365dc234367087846674a2592aff5569ba9d32562c058caf4e045b62a0cd6f",
+  "runs/incident_001/e008_v3_scene/backward/backward_age_bins.csv": "fd0df4ad43d29254ad380ae111c7f687a3bb0a7ad3277ea788d1abf871f54c38",
+  "runs/incident_001/e008_v3_scene/backward/funnel.csv": "40381b510c6a068c713495eda035668dcc988c66ee3e12fba8643c0aebcb7166"
+ },
+ "git": {
+  "head": "e33e72084ab07f57c6640834abb9331335b9c298",
+  "branch": "pipeline-v1",
+  "dirty": true
+ },
+ "env": {
+  "python": "3.11.9",
+  "numpy": "2.4.2",
+  "pandas": "2.3.3",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "opendrift": "1.14.11"
+ }
+}

@@ -1,0 +1,88 @@
+{
+ "stage": "forward",
+ "incident": "incident_001",
+ "run_id": "e008_v3_scene",
+ "status": "ok",
+ "error": null,
+ "finished_utc": "2026-09-28T09:03:48.901192+00:00",
+ "seconds": 342.0,
+ "params": {
+  "physics": {
+   "_doc": "E008/E009-informed v3 ensemble. Forcing = SMOC uo+utide with SEPARATE Stokes (vsdx/vsdy), so windage must exclude wave drift: 0.02 + Stokes ~ 3.5% total (Roehrs et al. 2018 Ocean Sci 14:1581; OpenDrift default 0.02). Frozen 0.03/0.04 + Stokes likely double counts (E000 item 4).",
+   "model": "OceanDrift transport-only (weathering irreversible; Breivik et al. 2012 BAKTRAK)",
+   "windage": [
+    0.01,
+    0.02,
+    0.03
+   ],
+   "stokes_drift": true,
+   "horizontal_diffusivity_m2s": [
+    1.0,
+    3.0,
+    10.0
+   ],
+   "_diffusivity_why": "Okubo 1971 apparent diffusivity 0.2-3 m2/s at 6-48 h; MEDSLIK-II default 2, calibrated 2-13 m2/s (Accarino et al. 2025); OpenDrift example 10",
+   "current_uncertainty": [
+    0.0,
+    0.05,
+    0.1
+   ],
+   "wind_uncertainty": 0.5,
+   "duration_h": 48,
+   "dt_s": 900,
+   "output_s": 3600,
+   "backward_particles_per_windage": 400,
+   "seed": 26143
+  },
+  "forward": {
+   "_doc": "Forward hypothesis test (Longepe et al. 2015 MPB 101:826): each funnel vessel is assumed to discharge along its AIS track; the virtual slick is drifted to T0 and compared with the observed slick by the Fractions Skill Score (Simecek-Beatty & Lehr 2021 MPB).",
+   "release_step_min": 15,
+   "particles_per_release_per_windage": 2,
+   "release_radius_m": 50,
+   "window_durations_h": [
+    1,
+    2,
+    3,
+    6,
+    12
+   ],
+   "window_end_step_h": 1,
+   "grid_m": 200,
+   "fss_scales_km": [
+    0.5,
+    1.0,
+    2.0,
+    5.0
+   ],
+   "fss_primary_km": 1.0,
+   "max_vessels_per_cluster": 25
+  }
+ },
+ "notes": {
+  "n_vessels": 88,
+  "n_elements": 49739
+ },
+ "inputs": {
+  "data/incident_001/currents/ocean_opendrift.nc": "3c8f047ac526dee253895f72ff73a3ce214530f07322ed04c28257824edc8ca8",
+  "data/incident_001/wind/era5_wind_10m_151h.nc": "4fe4edcfbee1820608c364f51c1540c7fba9d6ab08888a7d62659d0de57df7a1",
+  "data/incident_001/ais/ais_scene.parquet": "9d7dbf068870934399868f260bfa4fb56a03bf36a06824d8a083adc5ee658b59"
+ },
+ "outputs": {
+  "runs/incident_001/e008_v3_scene/forward/shortlist.csv": "1f0aa218ac9d433a7cde2f22b22edc0eedfeb7288ee8794aeaf0643f6ea8d733",
+  "runs/incident_001/e008_v3_scene/forward/virtual_oil_at_t0.parquet": "2ff32dca8b019094d077f12c4aae3a4f4ccddfafd0044f11fa2c6494d38a3d0d",
+  "runs/incident_001/e008_v3_scene/forward/forward_best.csv": "a2709b6075c5c8b474b4d7c9830cb1759b26bf618a5cbc0113ad848d3b274d96",
+  "runs/incident_001/e008_v3_scene/forward/forward_windows.parquet": "a9e4b0e4d914c9774906a045024475bc95ea9ca23171d289ce1ee7c8fd70e512"
+ },
+ "git": {
+  "head": "e33e72084ab07f57c6640834abb9331335b9c298",
+  "branch": "pipeline-v1",
+  "dirty": true
+ },
+ "env": {
+  "python": "3.11.9",
+  "numpy": "2.4.2",
+  "pandas": "2.3.3",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "opendrift": "1.14.11"
+ }
+}
