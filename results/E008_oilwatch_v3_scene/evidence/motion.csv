@@ -1,0 +1,89 @@
+MMSI,motion_state,motion_reason,source_type,source_type_basis,nearest_boem_structure,nearest_boem_km
+210328000,moving,"p90 spread 49.31 km, stationarity 0.01",vessel,"motion_state moving, no BOEM structure within 0.5 km",MC 807 A (Mars) (Shell Offshore Inc.),2.1533606016327957
+235053116,mixed,0.51 of reports within 0.5 km of median position but max excursion 18.0 km,vessel,"motion_state mixed, no BOEM structure within 0.5 km",GC 782 A (Mad Dog) (BP Exploration & Production Inc.),7.69364549617856
+236111902,moving,"p90 spread 43.33 km, stationarity 0.00",vessel,"motion_state moving, no BOEM structure within 0.5 km",MC 939 A (Vito) (Shell Offshore Inc.),2.3530123389035
+249390000,moving,"p90 spread 56.17 km, stationarity 0.15",vessel,AIS VesselType 70 (ship code),"SP 75 A (White Fleet Operating, LLC)",6.186247217451824
+255803670,moving,"p90 spread 106.90 km, stationarity 0.00",vessel,AIS VesselType 72 (ship code),"MC 547 A (Who Dat) (LLOG Exploration Offshore, L.L.C.)",6.801977394824014
+257084660,moving,"p90 spread 105.07 km, stationarity 0.00",vessel,AIS VesselType 80 (ship code),"SP 55 A-VALVE (Kinetica Partners, LLC)",5.861739249787387
+311001096,stationary,"p90 0.01<= 0.25 km, max 0.02<= 1.0 km, slow frac 0.99>= 0.9",unknown,"motion_state stationary, VesselType 90.0, nearest structure 4.79 km",MC 773 A(Devils Tower) (Eni US Operating Co. Inc.),4.789824730660922
+311012300,moving,"p90 spread 49.48 km, stationarity 0.00",vessel,"motion_state moving, no BOEM structure within 0.5 km",WR 29 A (Big Foot) (Chevron U.S.A. Inc.),13.145790474866539
+319627000,moving,"p90 spread 191.82 km, stationarity 0.00",vessel,AIS VesselType 80 (ship code),GI 19 3 (Exxon Mobil Corporation),49.66056927791209
+338002000,moving,"p90 spread 202.19 km, stationarity 0.00",vessel,"motion_state moving, no BOEM structure within 0.5 km","ST 26 G (White Fleet Operating, LLC)",2.1435182227104432
+338189000,moving,"p90 spread 268.52 km, stationarity 0.15",vessel,"motion_state moving, no BOEM structure within 0.5 km",ST 21 80 (J. M. Huber Corporation),4.7499260845373446
+338281000,moving,"p90 spread 72.63 km, stationarity 0.01",vessel,"motion_state moving, no BOEM structure within 0.5 km",MC 809 A (Ursa) (Shell Offshore Inc.),8.276837191268914
+338302000,moving,"p90 spread 188.75 km, stationarity 0.00",vessel,AIS VesselType 80 (ship code),GC 680 A(Constitution) (Anadarko Petroleum Corporation),38.18290821066216
+338536000,moving,"p90 spread 158.94 km, stationarity 0.35",vessel,"motion_state moving, no BOEM structure within 0.5 km","ST 41 A (W & T Offshore, Inc.)",2.427799020961098
+338615000,moving,"p90 spread 205.61 km, stationarity 0.10",vessel,"motion_state moving, no BOEM structure within 0.5 km",PL 9 5 (Apache Corporation),28.66703368710535
+338798000,moving,"p90 spread 166.09 km, stationarity 0.22",vessel,"motion_state moving, no BOEM structure within 0.5 km","ST 41 A (W & T Offshore, Inc.)",4.447723130260241
+351684000,mixed,0.52 of reports within 0.5 km of median position but max excursion 304.0 km,vessel,AIS VesselType 70 (ship code),SP 57 B (Chevron U.S.A. Inc.),5.899704950994606
+357659000,moving,"p90 spread 137.70 km, stationarity 0.00",vessel,AIS VesselType 60 (ship code),"WD 21 BB (Array Petroleum, LLC)",35.78223316013379
+366047800,stationary,"p90 0.01<= 0.25 km, max 0.01<= 1.0 km, slow frac 1.00>= 0.9",fixed_infrastructure,stationary AIS within 49 m of BOEM structure MC 778 A(Thunder Horse (BP Exploration & Production Inc.),MC 778 A(Thunder Horse (BP Exploration & Production Inc.),0.04885984355115161
+366048300,stationary,"p90 0.02<= 0.25 km, max 0.03<= 1.0 km, slow frac 1.00>= 0.9",fixed_infrastructure,stationary AIS within 29 m of BOEM structure GC 645 A (Holstein) (Anadarko Petroleum Corporation),GC 645 A (Holstein) (Anadarko Petroleum Corporation),0.029155156162361744
+3660489,stationary,"p90 0.01<= 0.25 km, max 0.02<= 1.0 km, slow frac 1.00>= 0.9",fixed_infrastructure,"stationary AIS within 28 m of BOEM structure GC 613 A (Neptune) (Talos Energy Ventures, LLC)","GC 613 A (Neptune) (Talos Energy Ventures, LLC)",0.028027094302627308
+366050100,stationary,"p90 0.01<= 0.25 km, max 0.01<= 1.0 km, slow frac 1.00>= 0.9",fixed_infrastructure,stationary AIS within 33 m of BOEM structure GC 653 A (Shenzi) (Woodside Energy (GOM) Inc.),GC 653 A (Shenzi) (Woodside Energy (GOM) Inc.),0.03339835048912684
+366101000,stationary,"p90 0.01<= 0.25 km, max 0.02<= 1.0 km, slow frac 1.00>= 0.9",fixed_infrastructure,stationary AIS within 25 m of BOEM structure MC 939 A (Vito) (Shell Offshore Inc.),MC 939 A (Vito) (Shell Offshore Inc.),0.02476566894628346
+366495000,moving,"p90 spread 336.39 km, stationarity 0.00",vessel,AIS VesselType 80 (ship code),MC 474 A(Na Kika) (BP Exploration & Production Inc.),9.776282549428718
+366840000,moving,"p90 spread 184.00 km, stationarity 0.00",vessel,"motion_state moving, no BOEM structure within 0.5 km","BM 3 13 (Cantium, LLC)",9.229992071008613
+366908680,mixed,1.00 of reports within 0.5 km of median position but max excursion 0.0 km,unknown,"motion_state mixed, VesselType 90.0, nearest structure 0.04 km",GC 608 A (Marco Polo) (Anadarko Petroleum Corporation),0.03922299803872064
+367063220,stationary,"p90 0.01<= 0.25 km, max 0.01<= 1.0 km, slow frac 1.00>= 0.9",fixed_infrastructure,stationary AIS within 33 m of BOEM structure MC 809 A (Ursa) (Shell Offshore Inc.),MC 809 A (Ursa) (Shell Offshore Inc.),0.032873907045569695
+367094770,moving,"p90 spread 4.33 km, stationarity 0.36",vessel,AIS VesselType 30 (ship code),MC 941 A(Mirage/Titan) (Equinor USA E&P Inc.),20.8802350741706
+367101870,stationary,"p90 0.01<= 0.25 km, max 0.02<= 1.0 km, slow frac 1.00>= 0.9",fixed_infrastructure,stationary AIS within 1 m of BOEM structure MC 807 A (Mars) (Shell Offshore Inc.),MC 807 A (Mars) (Shell Offshore Inc.),0.001461719146512946
+367353110,moving,"p90 spread 197.39 km, stationarity 0.00",vessel,AIS VesselType 80 (ship code),GC 680 A(Constitution) (Anadarko Petroleum Corporation),14.057432095739124
+367357000,moving,"p90 spread 183.99 km, stationarity 0.00",vessel,"motion_state moving, no BOEM structure within 0.5 km","ST 41 A (W & T Offshore, Inc.)",3.956107208084105
+367501540,moving,"p90 spread 201.53 km, stationarity 0.00",vessel,AIS VesselType 31 (ship code),"GB 72 A (Manta Ray Gathering Company, L.L.C.)",7.952381372456965
+367507790,mixed,0.56 of reports within 0.5 km of median position but max excursion 193.6 km,vessel,"motion_state mixed, no BOEM structure within 0.5 km",GC 782 A (Mad Dog) (BP Exploration & Production Inc.),6.6159973690350515
+367550980,stationary,"p90 0.01<= 0.25 km, max 0.02<= 1.0 km, slow frac 1.00>= 0.9",fixed_infrastructure,stationary AIS within 103 m of BOEM structure WR 29 A (Big Foot) (Chevron U.S.A. Inc.),WR 29 A (Big Foot) (Chevron U.S.A. Inc.),0.1030663018681184
+367561730,mixed,0.58 of reports within 0.5 km of median position but max excursion 177.3 km,vessel,AIS VesselType 60 (ship code),"BM 3 13 (Cantium, LLC)",11.504804856383918
+367588580,moving,"p90 spread 133.12 km, stationarity 0.00",vessel,AIS VesselType 31 (ship code),"ST 151 AA (Arena Offshore, LP)",2.533699549028463
+367609520,moving,"p90 spread 1.45 km, stationarity 0.28",vessel,"motion_state moving, no BOEM structure within 0.5 km",MC 939 A (Vito) (Shell Offshore Inc.),0.662977116384704
+367612310,loitering,"p90 0.36<= 2.0 km, max 0.48<= 5.0 km, slow frac 0.90>= 0.8",unknown,"motion_state loitering, VesselType 90.0, nearest structure 0.43 km",MC 773 A(Devils Tower) (Eni US Operating Co. Inc.),0.43407802088838415
+367643110,moving,"p90 spread 124.95 km, stationarity 0.00",vessel,AIS VesselType 60 (ship code),GC 205 A (Genesis) (Chevron U.S.A. Inc.),13.765748268445465
+367648150,moving,"p90 spread 63.51 km, stationarity 0.00",vessel,AIS VesselType 31 (ship code),"GI 76 A (White Fleet Operating, LLC)",7.9841776993588045
+367653160,moving,"p90 spread 214.76 km, stationarity 0.49",vessel,AIS VesselType 60 (ship code),GC 787 A (Atlantis) (BP Exploration & Production Inc.),3.4665935261213288
+367655260,moving,"p90 spread 7.81 km, stationarity 0.05",vessel,"motion_state moving, no BOEM structure within 0.5 km",GC 782 A (Mad Dog) (BP Exploration & Production Inc.),19.874366554053214
+367677960,moving,"p90 spread 104.98 km, stationarity 0.00",vessel,AIS VesselType 60 (ship code),GI 41 I (GOM Shelf LLC),2.2245512980894193
+367684260,mixed,0.92 of reports within 0.5 km of median position but max excursion 21.9 km,unknown,"motion_state mixed, VesselType 90.0, nearest structure 0.11 km",GC 782 A (Mad Dog) (BP Exploration & Production Inc.),0.10834619694719608
+367687040,moving,"p90 spread 233.88 km, stationarity 0.00",vessel,AIS VesselType 31 (ship code),EI 39 2 (Promethean Operating II LLC),54.75198340988085
+367693810,moving,"p90 spread 128.59 km, stationarity 0.24",vessel,"motion_state moving, no BOEM structure within 0.5 km","BM 3 13 (Cantium, LLC)",9.451719619470753
+367763610,moving,"short track (n=14, span 3.8 h) but moved 14.2 km > 5.0 km",vessel,AIS VesselType 30 (ship code),GC 787 A (Atlantis) (BP Exploration & Production Inc.),28.397889661205348
+367775000,moving,"p90 spread 141.08 km, stationarity 0.00",vessel,AIS VesselType 70 (ship code),GB 260 A (Baldpate) (Hess Corporation),18.644686426822517
+367789310,mixed,0.91 of reports within 0.5 km of median position but max excursion 64.8 km,unknown,"motion_state mixed, VesselType 90.0, nearest structure 0.06 km",MC 778 A(Thunder Horse (BP Exploration & Production Inc.),0.06334817699745733
+368001000,mixed,0.59 of reports within 0.5 km of median position but max excursion 16.3 km,vessel,"motion_state mixed, no BOEM structure within 0.5 km",MC 724 A (Gulfstar 1) (Hess Corporation),7.63931607114142
+368042000,mixed,0.79 of reports within 0.5 km of median position but max excursion 6.5 km,unknown,"motion_state mixed, VesselType 90.0, nearest structure 0.12 km","GC 613 A (Neptune) (Talos Energy Ventures, LLC)",0.1175705116724052
+368059520,moving,"p90 spread 58.53 km, stationarity 0.41",vessel,AIS VesselType 20 (ship code),WR 551 A (Turritella) (Shell Offshore Inc.),7.192819738926703
+368166560,stationary,"p90 0.01<= 0.25 km, max 0.01<= 1.0 km, slow frac 1.00>= 0.9",unknown,"motion_state stationary, VesselType 98.0, nearest structure 9.77 km",GC 782 A (Mad Dog) (BP Exploration & Production Inc.),9.765142165244274
+368179260,loitering,"p90 0.78<= 2.0 km, max 0.80<= 5.0 km, slow frac 0.98>= 0.8",vessel,AIS VesselType 79 (ship code),GC 645 A (Holstein) (Anadarko Petroleum Corporation),0.2317358073379741
+368196410,loitering,"p90 1.62<= 2.0 km, max 2.52<= 5.0 km, slow frac 0.96>= 0.8",vessel,AIS VesselType 20 (ship code),GC 782 A (Mad Dog) (BP Exploration & Production Inc.),5.610292616206875
+368589000,moving,"p90 spread 222.63 km, stationarity 0.00",vessel,AIS VesselType 80 (ship code),"GC 613 A (Neptune) (Talos Energy Ventures, LLC)",20.76693430725911
+369045000,moving,"p90 spread 142.46 km, stationarity 0.00",vessel,"motion_state moving, no BOEM structure within 0.5 km",GC 205 A (Genesis) (Chevron U.S.A. Inc.),7.099085128985438
+369232000,moving,"p90 spread 123.60 km, stationarity 0.00",vessel,"motion_state moving, no BOEM structure within 0.5 km","ST 41 A (W & T Offshore, Inc.)",2.280976813584318
+369286000,mixed,0.68 of reports within 0.5 km of median position but max excursion 145.5 km,vessel,"motion_state mixed, no BOEM structure within 0.5 km",GC 468 A (Stampede) (Hess Corporation),10.703828213395527
+369494390,stationary,"p90 0.01<= 0.25 km, max 0.01<= 1.0 km, slow frac 1.00>= 0.9",fixed_infrastructure,stationary AIS within 74 m of BOEM structure GC 787 A (Atlantis) (BP Exploration & Production Inc.),GC 787 A (Atlantis) (BP Exploration & Production Inc.),0.07357078573291072
+369494392,stationary,"p90 0.01<= 0.25 km, max 0.02<= 1.0 km, slow frac 1.00>= 0.9",fixed_infrastructure,stationary AIS within 9 m of BOEM structure GC 782 A (Mad Dog) (BP Exploration & Production Inc.),GC 782 A (Mad Dog) (BP Exploration & Production Inc.),0.008658022730240522
+369533000,moving,"p90 spread 80.58 km, stationarity 0.00",vessel,"motion_state moving, no BOEM structure within 0.5 km","EW 1003 A (Prince) (Talos Energy Ventures, LLC)",19.007717794711372
+370069000,moving,"p90 spread 114.91 km, stationarity 0.08",vessel,AIS VesselType 80 (ship code),SP 77 C (Chevron U.S.A. Inc.),6.292044817590902
+370573000,moving,"p90 spread 185.57 km, stationarity 0.00",vessel,AIS VesselType 80 (ship code),WD 27 AH (Chevron U.S.A. Inc.),20.295509273541626
+371085000,moving,"p90 spread 147.69 km, stationarity 0.26",vessel,AIS VesselType 80 (ship code),WD 27 AH (Chevron U.S.A. Inc.),23.04922482043479
+374788000,moving,"p90 spread 305.17 km, stationarity 0.00",vessel,AIS VesselType 80 (ship code),WD 99 B (Exxon Mobil Corporation),6.600319011938378
+408919000,moving,"p90 spread 161.89 km, stationarity 0.01",vessel,AIS VesselType 89 (ship code),"GB 72 A (Manta Ray Gathering Company, L.L.C.)",20.467150952214116
+413527660,moving,"p90 spread 210.09 km, stationarity 0.00",vessel,AIS VesselType 80 (ship code),"GI 17 State GI 17S (Cox Operating, L.L.C.)",54.68705092008511
+477855700,moving,"p90 spread 100.22 km, stationarity 0.00",vessel,AIS VesselType 70 (ship code),WD 27 AH (Chevron U.S.A. Inc.),11.176759208878297
+538003526,moving,"p90 spread 144.96 km, stationarity 0.00",vessel,AIS VesselType 80 (ship code),"SP 75 A (White Fleet Operating, LLC)",0.6970847046695341
+538004610,stationary,"p90 0.15<= 0.25 km, max 0.16<= 1.0 km, slow frac 0.99>= 0.9",unknown,"motion_state stationary, VesselType 90.0, nearest structure 3.72 km",GC 608 A (Marco Polo) (Anadarko Petroleum Corporation),3.7215464772946603
+538005314,stationary,"p90 0.02<= 0.25 km, max 0.02<= 1.0 km, slow frac 1.00>= 0.9",unknown,"motion_state stationary, VesselType 90.0, nearest structure 17.13 km",GC 645 A (Holstein) (Anadarko Petroleum Corporation),17.12596458073374
+538005361,stationary,"p90 0.17<= 0.25 km, max 0.17<= 1.0 km, slow frac 1.00>= 0.9",unknown,"motion_state stationary, VesselType 90.0, nearest structure 6.80 km",GC 782 A (Mad Dog) (BP Exploration & Production Inc.),6.801813656220088
+538005604,moving,"p90 spread 114.08 km, stationarity 0.00",vessel,AIS VesselType 70 (ship code),"SP 27 5 (Nugulf Operating, L.L.C.)",9.972974447129275
+538005813,moving,"p90 spread 180.14 km, stationarity 0.00",vessel,AIS VesselType 80 (ship code),"WD 21 BB (Array Petroleum, LLC)",2.2777511280191636
+538006982,mixed,0.58 of reports within 0.5 km of median position but max excursion 256.5 km,vessel,AIS VesselType 70 (ship code),SP 57 B (Chevron U.S.A. Inc.),4.7232391289234945
+538009623,stationary,"p90 0.07<= 0.25 km, max 0.13<= 1.0 km, slow frac 1.00>= 0.9",unknown,"motion_state stationary, VesselType 0.0, nearest structure 3.20 km",GC 787 A (Atlantis) (BP Exploration & Production Inc.),3.195432330189868
+548704000,moving,"p90 spread 280.08 km, stationarity 0.00",vessel,AIS VesselType 70 (ship code),EW 834 A (Coelacanth) (Walter Oil & Gas Corporation),35.58974349012192
+548978000,mixed,0.52 of reports within 0.5 km of median position but max excursion 348.7 km,vessel,AIS VesselType 70 (ship code),SP 57 B (Chevron U.S.A. Inc.),7.527034026019775
+563086300,stationary,"p90 0.25<= 0.25 km, max 0.26<= 1.0 km, slow frac 1.00>= 0.9",fixed_infrastructure,stationary AIS within 120 m of BOEM structure WR 249 A (Pioneer) (Murphy Exploration & Production Company - USA),WR 249 A (Pioneer) (Murphy Exploration & Production Company - USA),0.11950728855385287
+563141900,moving,"p90 spread 140.79 km, stationarity 0.00",vessel,AIS VesselType 70 (ship code),"SP 28 316 (Whitney Oil & Gas, LLC)",4.5310725803480745
+566199000,moving,"p90 spread 152.04 km, stationarity 0.00",vessel,AIS VesselType 80 (ship code),"SP 27 35-SL 1011 (Whitney Oil & Gas, LLC)",12.32283915796924
+577358000,stationary,"p90 0.01<= 0.25 km, max 0.01<= 1.0 km, slow frac 1.00>= 0.9",unknown,"motion_state stationary, VesselType 90.0, nearest structure 3.22 km",GC 787 A (Atlantis) (BP Exploration & Production Inc.),3.2181338067761303
+636015856,stationary,"p90 0.09<= 0.25 km, max 0.09<= 1.0 km, slow frac 1.00>= 0.9",unknown,"motion_state stationary, VesselType 99.0, nearest structure 21.28 km",MC 773 A(Devils Tower) (Eni US Operating Co. Inc.),21.284186658265142
+636016002,stationary,"p90 0.18<= 0.25 km, max 0.18<= 1.0 km, slow frac 1.00>= 0.9",unknown,"motion_state stationary, VesselType 90.0, nearest structure 6.93 km",GC 433 A (Kings Quay) (Murphy Exploration & Production Company - USA),6.928201655736844
+636018377,moving,"p90 spread 168.37 km, stationarity 0.00",vessel,AIS VesselType 70 (ship code),WD 27 AH (Chevron U.S.A. Inc.),10.968015452326188
+636019499,moving,"p90 spread 214.31 km, stationarity 0.00",vessel,AIS VesselType 70 (ship code),"WD 21 BB (Array Petroleum, LLC)",44.17606080144657
+941202904,undetermined,n_reports=7 or span=1.2h below minimum,unknown,"motion_state undetermined, VesselType nan, nearest structure 50.63 km","GC 613 A (Neptune) (Talos Energy Ventures, LLC)",50.631707085315654

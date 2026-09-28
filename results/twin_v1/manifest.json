@@ -1,0 +1,103 @@
+{
+ "stage": "twin",
+ "incident": "incident_001",
+ "run_id": "twin_v1b",
+ "status": "ok",
+ "error": null,
+ "finished_utc": "2026-09-28T10:09:45.671998+00:00",
+ "seconds": 1360.79,
+ "params": {
+  "twin": {
+   "_doc": "Twin experiments (oilwatch/twin.py). Fixed before any twin result. Truth physics deliberately outside the attribution ensemble; observation degraded like the real product.",
+   "seed": 2026,
+   "durations_h": [
+    1,
+    2,
+    3,
+    6
+   ],
+   "min_coverage": 0.75,
+   "domain_margin_deg": 0.5,
+   "truth": {
+    "windage": 0.025,
+    "horizontal_diffusivity": 5.0,
+    "current_uncertainty": 0.07,
+    "wind_uncertainty": 0.7,
+    "seed": 777
+   },
+   "truth_particles_per_release": 20,
+   "grid_m": 100,
+   "min_particles_per_cell": 2,
+   "degrade_buffer_m": 60,
+   "_buffer_why": "E007 strands are 2-3x wider than the reference (E007 log)",
+   "degrade_shift_m": 40,
+   "_shift_why": "measured GCP/TPS geolocation median 39 m (E008 SAR stage)",
+   "min_area_m2": 23000,
+   "forward_max_vessels": 15,
+   "_fwd_why": "25 in the pipeline; 15 here to fit the laptop (fewer forward tests only lowers measured skill)"
+  },
+  "physics": {
+   "_doc": "E008/E009-informed v3 ensemble. Forcing = SMOC uo+utide with SEPARATE Stokes (vsdx/vsdy), so windage must exclude wave drift: 0.02 + Stokes ~ 3.5% total (Roehrs et al. 2018 Ocean Sci 14:1581; OpenDrift default 0.02). Frozen 0.03/0.04 + Stokes likely double counts (E000 item 4).",
+   "model": "OceanDrift transport-only (weathering irreversible; Breivik et al. 2012 BAKTRAK)",
+   "windage": [
+    0.01,
+    0.02,
+    0.03
+   ],
+   "stokes_drift": true,
+   "horizontal_diffusivity_m2s": [
+    1.0,
+    3.0,
+    10.0
+   ],
+   "_diffusivity_why": "Okubo 1971 apparent diffusivity 0.2-3 m2/s at 6-48 h; MEDSLIK-II default 2, calibrated 2-13 m2/s (Accarino et al. 2025); OpenDrift example 10",
+   "current_uncertainty": [
+    0.0,
+    0.05,
+    0.1
+   ],
+   "wind_uncertainty": 0.5,
+   "duration_h": 48,
+   "dt_s": 900,
+   "output_s": 3600,
+   "backward_particles_per_windage": 400,
+   "seed": 26143
+  }
+ },
+ "notes": {
+  "n_cases": 45,
+  "false_accusation": {
+   "n": 45,
+   "innocent_top_consistent_or_better": 0.9777777777777777,
+   "innocent_top_strong": 0.13333333333333333,
+   "present_top_consistent_or_better": 1.0,
+   "present_top_is_truth": 0.6666666666666666
+  }
+ },
+ "inputs": {
+  "data/incident_001/ais/ais_scene.parquet": "9d7dbf068870934399868f260bfa4fb56a03bf36a06824d8a083adc5ee658b59",
+  "data/incident_001/currents/ocean_opendrift.nc": "3c8f047ac526dee253895f72ff73a3ce214530f07322ed04c28257824edc8ca8",
+  "data/incident_001/wind/era5_wind_10m_151h.nc": "4fe4edcfbee1820608c364f51c1540c7fba9d6ab08888a7d62659d0de57df7a1"
+ },
+ "outputs": {
+  "runs/incident_001/twin_v1b/twin/cases.csv": "f72bb6564029ff3bbf2b02c360292fc880584f99cf5b7b07cbe3a1b2ab2b7ac8",
+  "runs/incident_001/twin_v1b/twin/synthetic_slicks.geojson": "3ff2cac7538978ca779169375ef20c18408332217e05c0b06959abc61ef2f0df",
+  "runs/incident_001/twin_v1b/twin/results_present.csv": "9c7566c60afa3987a0ab2a9c24755115c34456f3c4062bdcbfd4376508ca82f6",
+  "runs/incident_001/twin_v1b/twin/results_hidden.csv": "bb3de1cbfaf2e94bf8f5a393acf5227464687fa9b0904e0d306f00debea35d4e",
+  "runs/incident_001/twin_v1b/twin/suspects.csv": "e76ba2c67a3b9d11dbd97506a0d455082dbf6022c03d667a257891727c00c4e6",
+  "runs/incident_001/twin_v1b/twin/skill_table.csv": "f6be4d9957680dda258dd51153785b8bec8557b532e615fd42de46563aaa2a54",
+  "runs/incident_001/twin_v1b/twin/summary.json": "8868d4641888067cdb804466b4c063e4a2cf613aebd35f9492ec3d74c9c74888"
+ },
+ "git": {
+  "head": "e33e72084ab07f57c6640834abb9331335b9c298",
+  "branch": "pipeline-v1",
+  "dirty": true
+ },
+ "env": {
+  "python": "3.11.9",
+  "numpy": "2.4.2",
+  "pandas": "2.3.3",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "opendrift": "1.14.11"
+ }
+}

@@ -1,0 +1,119 @@
+cue,lo_h,hi_h,detail,cluster_id
+width_diffusion,1.1174569762179911,11.17456976217991,"W=1136 m, K 1.0-10.0 m2/s (biased old: E007 strands 2-3x too wide)",2
+okubo_1971,12.310368887300886,12.310368887300886,sigma=W/4=284 m,2
+persistence_prior,2.0,12.0,typical ship-discharge slick lifetime,2
+forward_best_window:OVERSEAS CHINOOK,28.0,29.0,"F=0.13, FSS1km=0.05",2
+backward_peak_age:OVERSEAS CHINOOK,29.0,29.0,median over members,2
+forward_best_window:FAIRCHEM BLADE,29.0,30.0,"F=0.02, FSS1km=0.00",2
+backward_peak_age:FAIRCHEM BLADE,30.0,30.0,median over members,2
+backward_peak_age:DUBAI GLAMOUR,21.0,21.0,median over members,2
+sar_darkness,2.0,24.0,"damping 5.6 dB, edge sharpness 0.83 -> intermediate (heuristic interval; over-wide E007 polygons bias damping LOW)",2
+optical_baoac,,,no coincident optical imagery,2
+width_diffusion,0.5872024645414877,5.872024645414878,"W=824 m, K 1.0-10.0 m2/s (biased old: E007 strands 2-3x too wide)",7
+okubo_1971,9.357839017451452,9.357839017451452,sigma=W/4=206 m,7
+persistence_prior,2.0,12.0,typical ship-discharge slick lifetime,7
+forward_best_window:NOBLE FAYE KOZACK,15.0,16.0,"F=0.43, FSS1km=0.26",7
+backward_peak_age:NOBLE FAYE KOZACK,16.0,16.0,median over members,7
+forward_best_window:GEMI,12.0,13.0,"F=0.46, FSS1km=0.24",7
+backward_peak_age:GEMI,17.0,17.0,median over members,7
+forward_best_window:BULK CONCORD,11.0,12.0,"F=0.03, FSS1km=0.02",7
+backward_peak_age:BULK CONCORD,11.0,11.0,median over members,7
+sar_darkness,2.0,24.0,"damping 4.2 dB, edge sharpness 0.87 -> intermediate (heuristic interval; over-wide E007 polygons bias damping LOW)",7
+optical_baoac,,,no coincident optical imagery,7
+width_diffusion,0.1583104183142771,1.583104183142771,"W=430 m, K 1.0-10.0 m2/s (biased old: E007 strands 2-3x too wide)",3
+okubo_1971,5.367060098993922,5.367060098993922,sigma=W/4=107 m,3
+persistence_prior,2.0,12.0,typical ship-discharge slick lifetime,3
+forward_best_window:PRELUDE,18.0,19.0,"F=0.15, FSS1km=0.08",3
+backward_peak_age:PRELUDE,19.0,19.0,median over members,3
+forward_best_window:NEFELI,37.0,38.0,"F=0.39, FSS1km=0.22",3
+backward_peak_age:NEFELI,38.0,38.0,median over members,3
+forward_best_window:OVERSEAS CHINOOK,28.0,29.0,"F=0.13, FSS1km=0.07",3
+backward_peak_age:OVERSEAS CHINOOK,29.0,29.0,median over members,3
+sar_darkness,2.0,24.0,"damping 4.4 dB, edge sharpness 0.86 -> intermediate (heuristic interval; over-wide E007 polygons bias damping LOW)",3
+optical_baoac,,,no coincident optical imagery,3
+width_diffusion,0.333708349853527,3.33708349853527,"W=622 m, K 1.0-10.0 m2/s (biased old: E007 strands 2-3x too wide)",15
+okubo_1971,7.3589064479630775,7.3589064479630775,sigma=W/4=156 m,15
+persistence_prior,2.0,12.0,typical ship-discharge slick lifetime,15
+forward_best_window:MILLIE,6.0,7.0,"F=0.72, FSS1km=0.42",15
+backward_peak_age:MILLIE,8.0,8.0,median over members,15
+forward_best_window:HOLSTEIN,6.0,7.0,"F=0.72, FSS1km=0.42",15
+backward_peak_age:HOLSTEIN,8.0,8.0,median over members,15
+forward_best_window:HARVEY EXPLORER,8.0,9.0,"F=0.65, FSS1km=0.30",15
+backward_peak_age:HARVEY EXPLORER,9.0,9.0,median over members,15
+sar_darkness,2.0,24.0,"damping 3.1 dB, edge sharpness 0.69 -> intermediate (heuristic interval; over-wide E007 polygons bias damping LOW)",15
+optical_baoac,,,no coincident optical imagery,15
+width_diffusion,0.42778708131725657,4.277870813172566,"W=704 m, K 1.0-10.0 m2/s (biased old: E007 strands 2-3x too wide)",1
+okubo_1971,8.177934873830571,8.177934873830571,sigma=W/4=176 m,1
+persistence_prior,2.0,12.0,typical ship-discharge slick lifetime,1
+forward_best_window:URSA TLP,4.0,6.0,"F=0.32, FSS1km=0.08",1
+backward_peak_age:URSA TLP,6.0,6.0,median over members,1
+forward_best_window:NOBLE FAYE KOZACK,47.0,48.0,"F=0.14, FSS1km=0.07",1
+backward_peak_age:NOBLE FAYE KOZACK,48.0,48.0,median over members,1
+forward_best_window:PEACEFUL LADY,46.0,47.0,"F=0.25, FSS1km=0.08",1
+backward_peak_age:PEACEFUL LADY,47.0,47.0,median over members,1
+sar_darkness,2.0,24.0,"damping 3.3 dB, edge sharpness 0.78 -> intermediate (heuristic interval; over-wide E007 polygons bias damping LOW)",1
+optical_baoac,,,no coincident optical imagery,1
+width_diffusion,0.04236358837481562,0.42363588374815614,"W=227 m, K 1.0-10.0 m2/s (biased old: E007 strands 2-3x too wide)",12
+okubo_1971,3.10324604952996,3.10324604952996,sigma=W/4=57 m,12
+persistence_prior,2.0,12.0,typical ship-discharge slick lifetime,12
+forward_best_window:MARCO POLO TLP,7.0,9.0,"F=0.61, FSS1km=0.16",12
+backward_peak_age:MARCO POLO TLP,9.0,9.0,median over members,12
+forward_best_window:TLP SHENZI,15.0,17.0,"F=0.41, FSS1km=0.25",12
+backward_peak_age:TLP SHENZI,16.0,16.0,median over members,12
+forward_best_window:ISLAND VENTURE,43.0,44.0,"F=0.28, FSS1km=0.24",12
+backward_peak_age:ISLAND VENTURE,43.0,43.0,median over members,12
+sar_darkness,6.0,48.0,"damping 2.5 dB, edge sharpness 0.74 -> weak/weathered-looking (heuristic interval; over-wide E007 polygons bias damping LOW)",12
+optical_baoac,,,no coincident optical imagery,12
+width_diffusion,0.054740012311269425,0.5474001231126943,"W=256 m, K 1.0-10.0 m2/s (biased old: E007 strands 2-3x too wide)",16
+okubo_1971,3.44611152690902,3.44611152690902,sigma=W/4=64 m,16
+persistence_prior,2.0,12.0,typical ship-discharge slick lifetime,16
+sar_darkness,6.0,48.0,"damping 2.5 dB, edge sharpness 0.65 -> weak/weathered-looking (heuristic interval; over-wide E007 polygons bias damping LOW)",16
+optical_baoac,,,no coincident optical imagery,16
+width_diffusion,0.03548401400626853,0.35484014006268527,"W=208 m, K 1.0-10.0 m2/s (biased old: E007 strands 2-3x too wide)",22
+okubo_1971,2.888501195726075,2.888501195726075,sigma=W/4=52 m,22
+persistence_prior,2.0,12.0,typical ship-discharge slick lifetime,22
+forward_best_window:OVERSEAS CASCADE,13.0,14.0,"F=0.21, FSS1km=0.10",22
+backward_peak_age:OVERSEAS CASCADE,47.0,47.0,median over members,22
+forward_best_window:DEER ISLAND,47.0,48.0,"F=0.05, FSS1km=0.10",22
+backward_peak_age:DEER ISLAND,47.0,47.0,median over members,22
+backward_peak_age:BIG FOOT,48.0,48.0,median over members,22
+sar_darkness,6.0,48.0,"damping 2.2 dB, edge sharpness 0.47 -> weak/weathered-looking (heuristic interval; over-wide E007 polygons bias damping LOW)",22
+optical_baoac,,,no coincident optical imagery,22
+width_diffusion,0.08267205037214062,0.8267205037214063,"W=313 m, K 1.0-10.0 m2/s (biased old: E007 strands 2-3x too wide)",21
+okubo_1971,4.087345488138182,4.087345488138182,sigma=W/4=78 m,21
+persistence_prior,2.0,12.0,typical ship-discharge slick lifetime,21
+forward_best_window:OVERSEAS CASCADE,46.0,47.0,"F=0.05, FSS1km=0.07",21
+backward_peak_age:OVERSEAS CASCADE,43.0,43.0,median over members,21
+forward_best_window:DEER ISLAND,47.0,48.0,"F=0.03, FSS1km=0.02",21
+backward_peak_age:DEER ISLAND,47.0,47.0,median over members,21
+sar_darkness,6.0,48.0,"damping 2.1 dB, edge sharpness 0.61 -> weak/weathered-looking (heuristic interval; over-wide E007 polygons bias damping LOW)",21
+optical_baoac,,,no coincident optical imagery,21
+width_diffusion,0.12146928759743496,1.2146928759743496,"W=377 m, K 1.0-10.0 m2/s (biased old: E007 strands 2-3x too wide)",17
+okubo_1971,4.801007932277433,4.801007932277433,sigma=W/4=94 m,17
+persistence_prior,2.0,12.0,typical ship-discharge slick lifetime,17
+forward_best_window:OVERSEAS CASCADE,43.0,44.0,"F=0.13, FSS1km=0.15",17
+backward_peak_age:OVERSEAS CASCADE,40.0,40.0,median over members,17
+backward_peak_age:BIG FOOT,41.0,41.0,median over members,17
+sar_darkness,6.0,48.0,"damping 2.0 dB, edge sharpness 0.53 -> weak/weathered-looking (heuristic interval; over-wide E007 polygons bias damping LOW)",17
+optical_baoac,,,no coincident optical imagery,17
+width_diffusion,0.03593871892614299,0.35938718926142993,"W=210 m, K 1.0-10.0 m2/s (biased old: E007 strands 2-3x too wide)",19
+okubo_1971,2.9033564027661143,2.9033564027661143,sigma=W/4=52 m,19
+persistence_prior,2.0,12.0,typical ship-discharge slick lifetime,19
+forward_best_window:BIG FOOT,38.0,39.0,"F=0.03, FSS1km=0.01",19
+backward_peak_age:BIG FOOT,39.0,39.0,median over members,19
+forward_best_window:OVERSEAS CASCADE,46.0,47.0,"F=0.06, FSS1km=0.13",19
+backward_peak_age:OVERSEAS CASCADE,44.0,44.0,median over members,19
+forward_best_window:DEEP RUNNER,44.0,45.0,"F=0.03, FSS1km=0.03",19
+backward_peak_age:DEEP RUNNER,44.0,44.0,median over members,19
+sar_darkness,6.0,48.0,"damping 2.0 dB, edge sharpness 0.61 -> weak/weathered-looking (heuristic interval; over-wide E007 polygons bias damping LOW)",19
+optical_baoac,,,no coincident optical imagery,19
+width_diffusion,0.020566150299066204,0.20566150299066205,"W=162 m, K 1.0-10.0 m2/s (biased old: E007 strands 2-3x too wide)",18
+okubo_1971,2.3283214408030997,2.3283214408030997,sigma=W/4=40 m,18
+persistence_prior,2.0,12.0,typical ship-discharge slick lifetime,18
+forward_best_window:SHELIA BORDELON,1.0,2.0,"F=0.19, FSS1km=0.01",18
+backward_peak_age:SHELIA BORDELON,48.0,48.0,median over members,18
+forward_best_window:OVERSEAS CASCADE,39.0,40.0,"F=0.07, FSS1km=0.07",18
+backward_peak_age:OVERSEAS CASCADE,44.0,44.0,median over members,18
+backward_peak_age:BIG FOOT,40.0,40.0,median over members,18
+sar_darkness,6.0,48.0,"damping 2.1 dB, edge sharpness 0.58 -> weak/weathered-looking (heuristic interval; over-wide E007 polygons bias damping LOW)",18
+optical_baoac,,,no coincident optical imagery,18

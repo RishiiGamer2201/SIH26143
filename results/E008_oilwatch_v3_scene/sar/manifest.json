@@ -1,0 +1,87 @@
+{
+ "stage": "sar",
+ "incident": "incident_001",
+ "run_id": "e008_v3_scene",
+ "status": "ok",
+ "error": null,
+ "finished_utc": "2026-09-28T07:08:41.650197+00:00",
+ "seconds": 374.85,
+ "params": {
+  "_doc": "Tile-wise S1 GRD processing from the measurement TIFF (Microsoft Planetary Computer COG, no login). Heuristic thresholds, fixed before any SAR result.",
+  "darkness": {
+   "strong_db": 6.0,
+   "weak_db": 3.0,
+   "_why": "no validated SAR-age formula; anchored on the Trujillo training oil damping median 6.36 dB (SAR_DATA_AUDIT s4) and 'strong/weak contrast' operator labels (Bianchi et al. 2020); descriptive only"
+  },
+  "ships": {
+   "tile_px": 1024,
+   "guard_px": 11,
+   "background_px": 41,
+   "k_sigma": 5.0,
+   "min_excess_db": 8.0,
+   "min_px": 4,
+   "max_px": 3000,
+   "_why": "two-parameter CFAR (guard 11 px ~110 m > ship length, background 41 px); k=5 and +8 dB over clutter keep false alarms low on 10 m GRD; 4 px min removes speckle"
+  },
+  "match": {
+   "ais_window_min": 30,
+   "stationary_km": 0.5,
+   "moving_km": 1.5,
+   "platform_km": 0.5,
+   "moving_sog_kn": 2.0,
+   "_why": "moving ships are displaced along azimuth by ~R*v_r/V_sat (~110 m per m/s radial speed at R~850 km, V~7.5 km/s), so allow 1.5 km; stationary targets need no Doppler allowance",
+   "silent_max_h": 3,
+   "silent_max_radius_km": 3.0,
+   "_silent_why": "vessel whose last AIS report is 30 min-3 h before T0 (none near T0); dead-reckoned from last SOG/COG; radius 1.5 km + 30% of dead-reckoned distance, capped at 3 km (cap added after the first run matched a 25 kn crew boat at 8-25 km: sanity fix, not tuned to any vessel)"
+  },
+  "dark_near_slick_km": 2.0
+ },
+ "notes": {
+  "gcp_source": "measurement tiff",
+  "n_gcps": 210,
+  "radar_size": [
+   16733,
+   25892
+  ],
+  "n_detections": 117,
+  "labels": {
+   "ais_stationary": 45,
+   "dark_vessel_candidate": 44,
+   "platform_no_ais": 14,
+   "ais_silent_at_t0": 7,
+   "ais_moving": 7
+  },
+  "geolocation": {
+   "n": 59,
+   "median_dx_m": -1.1484464349360246,
+   "median_dy_m": 5.182919650004436,
+   "median_abs_offset_m": 38.88667407936046,
+   "p90_abs_offset_m": 156.18609954737968
+  },
+  "platforms_loaded": 1600
+ },
+ "inputs": {
+  "data/incident_001/ais/ais_scene.parquet": "9d7dbf068870934399868f260bfa4fb56a03bf36a06824d8a083adc5ee658b59",
+  "data/incident_001/sentinel1/extracted/S1A_IW_GRDH_1SDV_20230103T000142_20230103T000207_046612_059620_257F.SAFE/measurement/s1a-iw-grd-vv-20230103t000142-20230103t000207-046612-059620-001.tiff": "172525775e24c57eabdcd4b63af06ba0b2ecc0d3b240ff7f1ccdb076dedebe32"
+ },
+ "outputs": {
+  "runs/incident_001/e008_v3_scene/sar/darkness.csv": "73097e2130db1ebf4fd4486725e2e3fd48d7c410272f09ba128e6f6a470914dc",
+  "runs/incident_001/e008_v3_scene/sar/ship_detections_raw.csv": "212495d26270b80aa1475b8b8c12ef53c69df6a145ce35d24d563c9da5d685ad",
+  "runs/incident_001/e008_v3_scene/sar/ship_detections.csv": "2372b77fd6c185a5b0eaba0ba06c724c1831d010c08351ff26bd88c21c3f8789",
+  "runs/incident_001/e008_v3_scene/sar/ais_at_t0.csv": "e8457b9b809547c85373e7c01b51040b6bb76bba0034167ab9c8aa8e0e11706d",
+  "runs/incident_001/e008_v3_scene/sar/dark_vessels_near_slicks.csv": "831f766580a43e2f68e3bb01d66166ad68a8f0c134ef40131e3958e676505317",
+  "runs/incident_001/e008_v3_scene/sar/geolocation.json": "95293c1a45c0b0a6c15f04bac805cedc2010baa6f982bb01cde3033cf02238bc"
+ },
+ "git": {
+  "head": "e33e72084ab07f57c6640834abb9331335b9c298",
+  "branch": "pipeline-v1",
+  "dirty": true
+ },
+ "env": {
+  "python": "3.11.9",
+  "numpy": "2.4.2",
+  "pandas": "2.3.3",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "opendrift": "1.14.11"
+ }
+}

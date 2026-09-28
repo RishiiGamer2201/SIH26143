@@ -11,3 +11,8 @@ __pycache__/
 results/E006_segformer_test/test_prob_u8.npy
 results/E007_incident001_ml/rasters/
 results/E007_incident001_ml/work/
+
+# local tooling / pipeline runs (large, reproducible from manifests)
+.venv/
+runs/
+portal/*.log

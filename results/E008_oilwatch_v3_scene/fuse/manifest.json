@@ -1,0 +1,53 @@
+{
+ "stage": "fuse",
+ "incident": "incident_001",
+ "run_id": "e008_v3_scene",
+ "status": "ok",
+ "error": null,
+ "finished_utc": "2026-09-28T09:07:14.737551+00:00",
+ "seconds": 0.9,
+ "params": {
+  "fusion": {
+   "_doc": "Forward-backward averaging (Luo et al. 2024 MPB 207:116808): combined = sqrt(backward_rel * forward_rel), each normalised by the cluster maximum. Geometric mean penalises inconsistency in either direction. Tiers use absolute criteria so a weak field of candidates does not produce a 'strong' suspect.",
+   "strong": {
+    "fss_skilful": true,
+    "bwd_top3_fraction": 0.5
+   },
+   "consistent": {
+    "bwd_top5_fraction": 0.5
+   },
+   "bwd_min_point_density": 0.135,
+   "_bwd_floor_why": "exp(-2): at its best release age the vessel must lie within ~2 sigma(tau) of the drifted oil for backward support to count at all; relative rank alone can crown a vessel in a field with no real support. Fixed after the dev1 backward stage showed weak absolute densities, BEFORE any forward result existed."
+  },
+  "age": {
+   "_doc": "Slick age evidence (no validated SAR-only age estimator exists; report an interval). Width diffusion t=((W/4)^2 - s0^2)/(2K) for K in the diffusivity range; Okubo 1971 sigma_rc^2[cm2]=0.0108 t[s]^2.34; forward best release window of consistent vessels; persistence prior.",
+   "initial_width_m": 50,
+   "grid_h": 48
+  }
+ },
+ "notes": {
+  "tiers": {
+   "not supported": 251,
+   "weak": 58,
+   "consistent": 42
+  }
+ },
+ "inputs": {},
+ "outputs": {
+  "runs/incident_001/e008_v3_scene/fuse/suspects.csv": "78823e5b054dd0cadbe549321f3370ed7e2ff76ff9cb118e02ca904fbe99356b",
+  "runs/incident_001/e008_v3_scene/fuse/age_cues.csv": "c6f4f12aa2a078c9fc8cc614ffdd7bc0f15833469808c0bcdde12b1aa4cbcb84",
+  "runs/incident_001/e008_v3_scene/fuse/age_summary.csv": "7c061249a434d290e89c4d71ce0c2bdd5cf9b698840553b44facb2007c3516db"
+ },
+ "git": {
+  "head": "e33e72084ab07f57c6640834abb9331335b9c298",
+  "branch": "pipeline-v1",
+  "dirty": true
+ },
+ "env": {
+  "python": "3.11.9",
+  "numpy": "2.4.2",
+  "pandas": "2.3.3",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "opendrift": "1.14.11"
+ }
+}

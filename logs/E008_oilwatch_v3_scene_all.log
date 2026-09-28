@@ -1,0 +1,132 @@
+run: C:\Users\Omen\Desktop\Oil Tracking PS\SIH26143\runs\incident_001\e008_v3_scene
+[parity_scoring] start -> runs/incident_001/e008_v3_scene/parity_scoring
+  ULP   v2_time_scores: 2397 rows, max rel diff 3.4e-14
+  ULP   v2_summary: 155 rows, max rel diff 2.7e-14
+  ULP   v2_release_age: 411 rows, max rel diff 2.7e-14
+  ULP   ensemble_scenario_scores: 11097 rows, max rel diff 2.2e-13
+  ULP   ensemble_robust_scores: 411 rows, max rel diff 4.4e-14
+  ULP   v2_1_time_scores: 2089 rows, max rel diff 3.0e-14
+  ULP   v2_1_release_age: 393 rows, max rel diff 7.4e-15
+  return np.nanmean(a, axis, out=out, keepdims=keepdims)
+  ULP   track_motion: 155 rows, max rel diff 2.4e-16
+[parity_scoring] ok in 39.16 s
+[seed] start -> runs/incident_001/e008_v3_scene/seed
+[seed] ok in 7.05 s
+[context] start -> runs/incident_001/e008_v3_scene/context
+[context] ok in 21.39 s
+[sar] start -> runs/incident_001/e008_v3_scene/sar
+  ship scan tile 1/442: 0 detections so far
+  ship scan tile 51/442: 0 detections so far
+  ship scan tile 101/442: 6 detections so far
+  ship scan tile 151/442: 14 detections so far
+  ship scan tile 201/442: 33 detections so far
+  ship scan tile 251/442: 50 detections so far
+  ship scan tile 301/442: 60 detections so far
+  ship scan tile 351/442: 67 detections so far
+  ship scan tile 401/442: 88 detections so far
+[sar] ok in 374.85 s
+[backward] start -> runs/incident_001/e008_v3_scene/backward
+[backward] failed in 30.95 s
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Omen\Desktop\Oil Tracking PS\SIH26143\oilwatch\__main__.py", line 40, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "C:\Users\Omen\Desktop\Oil Tracking PS\SIH26143\oilwatch\__main__.py", line 35, in main
+    run_all(run, inc, P, skip_parity=a.skip_parity, stages=a.stages.split(",") if a.stages else None)
+  File "C:\Users\Omen\Desktop\Oil Tracking PS\SIH26143\oilwatch\pipeline.py", line 271, in run_all
+    fn[name](run, inc, P)
+  File "C:\Users\Omen\Desktop\Oil Tracking PS\SIH26143\oilwatch\pipeline.py", line 120, in st_backward
+    parts, els = backward.run_ensemble(cands, inc.t0, rdr, PP)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omen\Desktop\Oil Tracking PS\SIH26143\oilwatch\backward.py", line 45, in run_ensemble
+    lon, lat, t = drift.simulate(els, P["duration_h"], True, rdr, sim, P, seed=P["seed"] + 1000 * sim["sim_id"])
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omen\Desktop\Oil Tracking PS\SIH26143\oilwatch\drift.py", line 143, in simulate
+    perm = _element_order(elements, lon, lat, t_out)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omen\Desktop\Oil Tracking PS\SIH26143\oilwatch\drift.py", line 165, in _element_order
+    raise RuntimeError(f"cannot match OpenDrift rows to elements at {t} (max d {d.max():.2e})")
+RuntimeError: cannot match OpenDrift rows to elements at 2023-01-03 00:01:42+00:00 (max d 3.92e-06)
+run: C:\Users\Omen\Desktop\Oil Tracking PS\SIH26143\runs\incident_001\e008_v3_scene
+[backward] start -> runs/incident_001/e008_v3_scene/backward
+  backward sim 1/9 (K=1.0, cu=0.0): 14400 elements
+  backward sim 2/9 (K=1.0, cu=0.05): 14400 elements
+  backward sim 3/9 (K=1.0, cu=0.1): 14400 elements
+  backward sim 4/9 (K=3.0, cu=0.0): 14400 elements
+  backward sim 5/9 (K=3.0, cu=0.05): 14400 elements
+  backward sim 6/9 (K=3.0, cu=0.1): 14400 elements
+  backward sim 7/9 (K=10.0, cu=0.0): 14400 elements
+  backward sim 8/9 (K=10.0, cu=0.05): 14400 elements
+  backward sim 9/9 (K=10.0, cu=0.1): 14400 elements
+[backward] ok in 1052.88 s
+[forward] start -> runs/incident_001/e008_v3_scene/forward
+[forward] failed in 45.82 s
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Omen\Desktop\Oil Tracking PS\SIH26143\oilwatch\__main__.py", line 40, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "C:\Users\Omen\Desktop\Oil Tracking PS\SIH26143\oilwatch\__main__.py", line 35, in main
+    run_all(run, inc, P, skip_parity=a.skip_parity, stages=a.stages.split(",") if a.stages else None)
+  File "C:\Users\Omen\Desktop\Oil Tracking PS\SIH26143\oilwatch\pipeline.py", line 271, in run_all
+    fn[name](run, inc, P)
+  File "C:\Users\Omen\Desktop\Oil Tracking PS\SIH26143\oilwatch\pipeline.py", line 156, in st_forward
+    fpos = forward.run(els, inc.t0, rdr, PP)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omen\Desktop\Oil Tracking PS\SIH26143\oilwatch\forward.py", line 64, in run
+    lon, lat, t = drift.simulate(els, P["duration_h"], False, rdr, sim, P, seed=P["seed"] + 500 + 1000 * sim["sim_id"])
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omen\Desktop\Oil Tracking PS\SIH26143\oilwatch\drift.py", line 143, in simulate
+    perm = _element_order(elements, lon, lat, t_out)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Omen\Desktop\Oil Tracking PS\SIH26143\oilwatch\drift.py", line 172, in _element_order
+    raise RuntimeError(f"cannot match OpenDrift rows to elements at {t} (max d {d.max():.2e})")
+RuntimeError: cannot match OpenDrift rows to elements at 2023-01-01 00:01:42+00:00 (max d 1.48e-01)
+run: C:\Users\Omen\Desktop\Oil Tracking PS\SIH26143\runs\incident_001\e008_v3_scene
+[forward] start -> runs/incident_001/e008_v3_scene/forward
+  forward sim 1/9: 49739 virtual-oil elements
+  forward sim 2/9: 49739 virtual-oil elements
+  forward sim 3/9: 49739 virtual-oil elements
+  forward sim 4/9: 49739 virtual-oil elements
+  forward sim 5/9: 49739 virtual-oil elements
+  forward sim 6/9: 49739 virtual-oil elements
+  forward sim 7/9: 49739 virtual-oil elements
+  forward sim 8/9: 49739 virtual-oil elements
+  forward sim 9/9: 49739 virtual-oil elements
+  forward eval cluster 2: 31 vessels
+  forward eval cluster 7: 27 vessels
+  forward eval cluster 3: 35 vessels
+  forward eval cluster 15: 35 vessels
+  forward eval cluster 1: 33 vessels
+  forward eval cluster 12: 24 vessels
+  forward eval cluster 16: 5 vessels
+  forward eval cluster 22: 23 vessels
+  forward eval cluster 21: 24 vessels
+  forward eval cluster 17: 34 vessels
+  forward eval cluster 19: 28 vessels
+  forward eval cluster 18: 32 vessels
+[forward] ok in 342.0 s
+[evidence] start -> runs/incident_001/e008_v3_scene/evidence
+[evidence] ok in 203.22 s
+[fuse] start -> runs/incident_001/e008_v3_scene/fuse
+[fuse] ok in 0.9 s
+[forecast] start -> runs/incident_001/e008_v3_scene/forecast
+  forecast run 1/11: GENERIC MEDIUM CRUDE, K=1.0, cu=0.0
+  forecast run 2/11: GENERIC MEDIUM CRUDE, K=1.0, cu=0.05
+  forecast run 3/11: GENERIC MEDIUM CRUDE, K=1.0, cu=0.1
+  forecast run 4/11: GENERIC MEDIUM CRUDE, K=3.0, cu=0.0
+  forecast run 5/11: GENERIC MEDIUM CRUDE, K=3.0, cu=0.05
+  forecast run 6/11: GENERIC MEDIUM CRUDE, K=3.0, cu=0.1
+  forecast run 7/11: GENERIC MEDIUM CRUDE, K=10.0, cu=0.0
+  forecast run 8/11: GENERIC MEDIUM CRUDE, K=10.0, cu=0.05
+  forecast run 9/11: GENERIC MEDIUM CRUDE, K=10.0, cu=0.1
+  forecast run 10/11: GENERIC LIGHT CRUDE, K=3.0, cu=0.05
+  forecast run 11/11: GENERIC HEAVY CRUDE, K=3.0, cu=0.05
+[forecast] ok in 391.15 s
+[report] start -> runs/incident_001/e008_v3_scene/report
+[report] ok in 4.74 s
+[posthoc] start -> runs/incident_001/e008_v3_scene/posthoc
+[posthoc] ok in 0.13 s

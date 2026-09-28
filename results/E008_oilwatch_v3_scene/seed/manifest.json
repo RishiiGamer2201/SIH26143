@@ -1,0 +1,67 @@
+{
+ "stage": "seed",
+ "incident": "incident_001",
+ "run_id": "e008_v3_scene",
+ "status": "ok",
+ "error": null,
+ "finished_utc": "2026-09-28T07:02:04.314584+00:00",
+ "seconds": 7.05,
+ "params": {
+  "_doc": "E008 slick-candidate policy v1 (reference-independent).",
+  "min_component_area_m2": 0,
+  "merge_distance_m": 1000,
+  "_merge_why": "fragments whose gap <= 1 km form one slick event = Cerulean 500 m closing buffer (SkyTruth cerulean-cloud constants INFRA/DARK_CLOSING_BUFFER); fragment merging needed (KSAT: ~100 polygons/event, Bianchi et al. 2020)",
+  "min_cluster_area_m2": 23000,
+  "_min_area_why": "64 px at the E005 x2 grid (17.8 x 19.9 m = 354 m2): E005 VAL misses 73% of GT components <= 64 px (EXPERIMENT_LOG E005), so smaller detections are below the detector's reliable size",
+  "wind_valid_m_s": [
+   2.5,
+   10.0
+  ],
+  "wind_marginal_m_s": [
+   1.5,
+   12.0
+  ],
+  "_wind_why": "C-band oil detectability window: ~2-3 m/s lower (look-alike regime below), ~10 m/s upper (Topouzelis 2008 Sensors 8:6642; Fingas & Brown 2018 Sensors 18:91)",
+  "wind_factor": {
+   "valid": 1.0,
+   "marginal": 0.5,
+   "invalid": 0.2
+  },
+  "size_ref_m2": 100000,
+  "max_clusters_attributed": 12
+ },
+ "notes": {
+  "n_components": 49,
+  "n_events": 22,
+  "n_eligible": 20,
+  "n_selected": 12,
+  "ais_bbox": [
+   -93.0,
+   24.5026,
+   -87.50001,
+   30.0
+  ],
+  "ais_coverage_caveat": "AIS extract region was cut around the reference slick when the dataset was built; scene-wide autonomy needs a scene-wide AIS extract"
+ },
+ "inputs": {
+  "results/E007_incident001_ml/incident001_predicted_components.geojson": "5c3d45cc4038d9407e86fa729d9d2ff4c315328c273576169603a6e530f5e23b",
+  "data/incident_001/ais/ais_scene.parquet": "9d7dbf068870934399868f260bfa4fb56a03bf36a06824d8a083adc5ee658b59"
+ },
+ "outputs": {
+  "runs/incident_001/e008_v3_scene/seed/candidates.geojson": "f3c4d458bd583633c5980ebedbeede771e0a938fe4c587c054623dfbbf7f76de",
+  "runs/incident_001/e008_v3_scene/seed/candidates.csv": "6bb48f1c2ae90af752149e8646063ee9885feb246aedbd1aa5d5b19a20520d7d",
+  "runs/incident_001/e008_v3_scene/seed/components_clustered.geojson": "2379c3f86ceb988299f98264cc377cc3acd5b3399b18db7f18440d80d71dc963"
+ },
+ "git": {
+  "head": "e33e72084ab07f57c6640834abb9331335b9c298",
+  "branch": "pipeline-v1",
+  "dirty": true
+ },
+ "env": {
+  "python": "3.11.9",
+  "numpy": "2.4.2",
+  "pandas": "2.3.3",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "opendrift": "1.14.11"
+ }
+}

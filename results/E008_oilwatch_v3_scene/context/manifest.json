@@ -1,0 +1,42 @@
+{
+ "stage": "context",
+ "incident": "incident_001",
+ "run_id": "e008_v3_scene",
+ "status": "ok",
+ "error": null,
+ "finished_utc": "2026-09-28T07:02:26.059289+00:00",
+ "seconds": 21.39,
+ "params": {},
+ "notes": {
+  "forcing_time_range": [
+   "2023-01-01 00:00:00+00:00",
+   "2023-01-07 06:00:00+00:00"
+  ],
+  "forcing_bounds": [
+   -92.25,
+   25.25,
+   -88.5,
+   29.0
+  ]
+ },
+ "inputs": {
+  "data/incident_001/currents/ocean_opendrift.nc": "3c8f047ac526dee253895f72ff73a3ce214530f07322ed04c28257824edc8ca8",
+  "data/incident_001/wind/era5_wind_10m_151h.nc": "4fe4edcfbee1820608c364f51c1540c7fba9d6ab08888a7d62659d0de57df7a1"
+ },
+ "outputs": {
+  "runs/incident_001/e008_v3_scene/context/context_t0.csv": "fccb86fae6047d63d54d3688cb797fe812b02cd029baf5b3b0433f76ca83ede9",
+  "runs/incident_001/e008_v3_scene/context/context_history.parquet": "afa78f69947ed9193187f69471b7249c52a9b3fe0a012bd7bffaf8be91f56b75"
+ },
+ "git": {
+  "head": "e33e72084ab07f57c6640834abb9331335b9c298",
+  "branch": "pipeline-v1",
+  "dirty": true
+ },
+ "env": {
+  "python": "3.11.9",
+  "numpy": "2.4.2",
+  "pandas": "2.3.3",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "opendrift": "1.14.11"
+ }
+}

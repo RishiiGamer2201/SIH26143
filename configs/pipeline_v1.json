@@ -1,0 +1,251 @@
+{
+  "_doc": "oilwatch pipeline v1 parameters. 'frozen' reproduces the frozen physics/attribution (PROJECT_CONTEXT.md, never changed). Every v3 value was fixed from literature/val BEFORE any v3 result was computed (E008 pre-registration, EXPERIMENT_LOG). Nothing here is tuned to Cerulean or to the official test set.",
+  "frozen": {
+    "deterministic": {
+      "n_particles": 2000,
+      "rng_seed": 26143,
+      "windage": 0.03,
+      "duration_h": 48,
+      "dt_s": 900,
+      "output_s": 3600
+    },
+    "ensemble": {
+      "particles_per_scenario": 400,
+      "base_seed": 26143,
+      "duration_h": 48,
+      "dt_s": 900,
+      "output_s": 3600,
+      "windage": [
+        0.02,
+        0.03,
+        0.04
+      ],
+      "current_uncertainty": [
+        0.0,
+        0.05,
+        0.1
+      ],
+      "wind_uncertainty": [
+        0.0,
+        0.5,
+        1.0
+      ]
+    },
+    "v2": {
+      "ais_tolerance_min": 20,
+      "sigma_km": 5.0
+    },
+    "age_bins_h": [
+      -0.001,
+      6,
+      12,
+      24,
+      36,
+      48.01
+    ],
+    "age_labels": [
+      "0-6h",
+      "6-12h",
+      "12-24h",
+      "24-36h",
+      "36-48h"
+    ],
+    "v2_1_config": "configs/ais_v2_1.json",
+    "source_type_config": "configs/source_type_v1.json"
+  },
+  "seed": {
+    "_doc": "E008 slick-candidate policy v1 (reference-independent).",
+    "min_component_area_m2": 0,
+    "merge_distance_m": 1000,
+    "_merge_why": "fragments whose gap <= 1 km form one slick event = Cerulean 500 m closing buffer (SkyTruth cerulean-cloud constants INFRA/DARK_CLOSING_BUFFER); fragment merging needed (KSAT: ~100 polygons/event, Bianchi et al. 2020)",
+    "min_cluster_area_m2": 23000,
+    "_min_area_why": "64 px at the E005 x2 grid (17.8 x 19.9 m = 354 m2): E005 VAL misses 73% of GT components <= 64 px (EXPERIMENT_LOG E005), so smaller detections are below the detector's reliable size",
+    "wind_valid_m_s": [
+      2.5,
+      10.0
+    ],
+    "wind_marginal_m_s": [
+      1.5,
+      12.0
+    ],
+    "_wind_why": "C-band oil detectability window: ~2-3 m/s lower (look-alike regime below), ~10 m/s upper (Topouzelis 2008 Sensors 8:6642; Fingas & Brown 2018 Sensors 18:91)",
+    "wind_factor": {
+      "valid": 1.0,
+      "marginal": 0.5,
+      "invalid": 0.2
+    },
+    "size_ref_m2": 100000,
+    "max_clusters_attributed": 12
+  },
+  "physics_v3": {
+    "_doc": "E008/E009-informed v3 ensemble. Forcing = SMOC uo+utide with SEPARATE Stokes (vsdx/vsdy), so windage must exclude wave drift: 0.02 + Stokes ~ 3.5% total (Roehrs et al. 2018 Ocean Sci 14:1581; OpenDrift default 0.02). Frozen 0.03/0.04 + Stokes likely double counts (E000 item 4).",
+    "model": "OceanDrift transport-only (weathering irreversible; Breivik et al. 2012 BAKTRAK)",
+    "windage": [
+      0.01,
+      0.02,
+      0.03
+    ],
+    "stokes_drift": true,
+    "horizontal_diffusivity_m2s": [
+      1.0,
+      3.0,
+      10.0
+    ],
+    "_diffusivity_why": "Okubo 1971 apparent diffusivity 0.2-3 m2/s at 6-48 h; MEDSLIK-II default 2, calibrated 2-13 m2/s (Accarino et al. 2025); OpenDrift example 10",
+    "current_uncertainty": [
+      0.0,
+      0.05,
+      0.1
+    ],
+    "wind_uncertainty": 0.5,
+    "duration_h": 48,
+    "dt_s": 900,
+    "output_s": 3600,
+    "backward_particles_per_windage": 400,
+    "seed": 26143
+  },
+  "backward_v3": {
+    "_doc": "Density score with an age-dependent kernel: sigma(tau)^2 = sigma0^2 + (u_err*tau)^2. sigma0 covers slick geolocation + AIS + release offset; u_err = persistent current-model error (order of the frozen current-uncertainty range; centroid errors 2-3 km/day, de Aguiar et al. 2023). Ensemble spread is already in the particle cloud, so it is not added again.",
+    "sigma0_km": 1.0,
+    "u_err_m_s": 0.05,
+    "persistence_tau0_h": 12,
+    "_persistence_why": "ship-discharge slicks typically persist ~2-12 h (Liu B. et al. 2021; Cerulean temporal reference ~2.8 h): prior weight exp(-tau/12 h) on release age",
+    "funnel_gate_sigma": 3.0,
+    "funnel_min_positions": 2
+  },
+  "forward_v3": {
+    "_doc": "Forward hypothesis test (Longepe et al. 2015 MPB 101:826): each funnel vessel is assumed to discharge along its AIS track; the virtual slick is drifted to T0 and compared with the observed slick by the Fractions Skill Score (Simecek-Beatty & Lehr 2021 MPB).",
+    "release_step_min": 15,
+    "particles_per_release_per_windage": 2,
+    "release_radius_m": 50,
+    "window_durations_h": [
+      1,
+      2,
+      3,
+      6,
+      12
+    ],
+    "window_end_step_h": 1,
+    "grid_m": 200,
+    "fss_scales_km": [
+      0.5,
+      1.0,
+      2.0,
+      5.0
+    ],
+    "fss_primary_km": 1.0,
+    "max_vessels_per_cluster": 25
+  },
+  "geometry_v3": {
+    "_doc": "Fresh-discharge evidence (Cerulean source scoring, SkyTruth cerulean-cloud scoring.py): head proximity P = exp(-(d/d_ref)^5), d_ref = max(3 km/h * dt, 0.5 km); heading alignment A = exp(-ln2*(dtheta/45deg)^2) (45 deg -> 0.5). Only meaningful for slicks younger than ~3 h (MAX_SLICK_DRIFT_TIME = 3).",
+    "spread_rate_km_h": 3.0,
+    "min_ref_km": 0.5,
+    "fresh_age_h": 3.0,
+    "moving_sog_kn": 2.0
+  },
+  "age_v3": {
+    "_doc": "Slick age evidence (no validated SAR-only age estimator exists; report an interval). Width diffusion t=((W/4)^2 - s0^2)/(2K) for K in the diffusivity range; Okubo 1971 sigma_rc^2[cm2]=0.0108 t[s]^2.34; forward best release window of consistent vessels; persistence prior.",
+    "initial_width_m": 50,
+    "grid_h": 48
+  },
+  "fusion_v3": {
+    "_doc": "Forward-backward averaging (Luo et al. 2024 MPB 207:116808): combined = sqrt(backward_rel * forward_rel), each normalised by the cluster maximum. Geometric mean penalises inconsistency in either direction. Tiers use absolute criteria so a weak field of candidates does not produce a 'strong' suspect.",
+    "strong": {
+      "fss_skilful": true,
+      "bwd_top3_fraction": 0.5
+    },
+    "consistent": {
+      "bwd_top5_fraction": 0.5
+    },
+    "bwd_min_point_density": 0.135,
+    "_bwd_floor_why": "exp(-2): at its best release age the vessel must lie within ~2 sigma(tau) of the drifted oil for backward support to count at all; relative rank alone can crown a vessel in a field with no real support. Fixed after the dev1 backward stage showed weak absolute densities, BEFORE any forward result existed."
+  },
+  "forecast_v1": {
+    "_doc": "Forward forecast T0 -> T0+72 h with weathering (OpenOil, NOAA weathering), GSHHG coastline stranding, v3 transport ensemble. Forcing covers to 2023-01-07 06:00 (T0+78 h).",
+    "hours": 72,
+    "particles_per_windage": 50,
+    "oil_central": "GENERIC MEDIUM CRUDE",
+    "oil_sensitivity": [
+      "GENERIC LIGHT CRUDE",
+      "GENERIC HEAVY CRUDE"
+    ],
+    "central_member": {
+      "horizontal_diffusivity": 3.0,
+      "current_uncertainty": 0.05
+    },
+    "sea_water_temperature_c": 22.0,
+    "_sst_why": "ASSUMPTION: offshore northern Gulf of Mexico SST in early January ~21-23 C (NOAA climatology); no SST in the incident forcing. OpenOil default (10 C) would under-evaporate.",
+    "sea_water_salinity_psu": 36.0,
+    "m3_total": 1.0,
+    "_m3_why": "volume unknown from SAR; mass fractions (fate shares) are reported, not absolute volumes",
+    "grid_cell_deg": 0.02,
+    "lead_times_h": [
+      24,
+      48,
+      72
+    ]
+  },
+  "sar_v1": {
+    "_doc": "Tile-wise S1 GRD processing from the measurement TIFF (Microsoft Planetary Computer COG, no login). Heuristic thresholds, fixed before any SAR result.",
+    "darkness": {
+      "strong_db": 6.0,
+      "weak_db": 3.0,
+      "_why": "no validated SAR-age formula; anchored on the Trujillo training oil damping median 6.36 dB (SAR_DATA_AUDIT s4) and 'strong/weak contrast' operator labels (Bianchi et al. 2020); descriptive only"
+    },
+    "ships": {
+      "tile_px": 1024,
+      "guard_px": 11,
+      "background_px": 41,
+      "k_sigma": 5.0,
+      "min_excess_db": 8.0,
+      "min_px": 4,
+      "max_px": 3000,
+      "_why": "two-parameter CFAR (guard 11 px ~110 m > ship length, background 41 px); k=5 and +8 dB over clutter keep false alarms low on 10 m GRD; 4 px min removes speckle"
+    },
+    "match": {
+      "ais_window_min": 30,
+      "stationary_km": 0.5,
+      "moving_km": 1.5,
+      "platform_km": 0.5,
+      "moving_sog_kn": 2.0,
+      "_why": "moving ships are displaced along azimuth by ~R*v_r/V_sat (~110 m per m/s radial speed at R~850 km, V~7.5 km/s), so allow 1.5 km; stationary targets need no Doppler allowance",
+      "silent_max_h": 3,
+      "silent_max_radius_km": 3.0,
+      "_silent_why": "vessel whose last AIS report is 30 min-3 h before T0 (none near T0); dead-reckoned from last SOG/COG; radius 1.5 km + 30% of dead-reckoned distance, capped at 3 km (cap added after the first run matched a 25 kn crew boat at 8-25 km: sanity fix, not tuned to any vessel)"
+    },
+    "dark_near_slick_km": 2.0
+  },
+  "twin_v1": {
+    "_doc": "Twin experiments (oilwatch/twin.py). Fixed before any twin result. Truth physics deliberately outside the attribution ensemble; observation degraded like the real product.",
+    "seed": 2026,
+    "durations_h": [
+      1,
+      2,
+      3,
+      6
+    ],
+    "min_coverage": 0.75,
+    "domain_margin_deg": 0.5,
+    "truth": {
+      "windage": 0.025,
+      "horizontal_diffusivity": 5.0,
+      "current_uncertainty": 0.07,
+      "wind_uncertainty": 0.7,
+      "seed": 777
+    },
+    "truth_particles_per_release": 20,
+    "grid_m": 100,
+    "min_particles_per_cell": 2,
+    "degrade_buffer_m": 60,
+    "_buffer_why": "E007 strands are 2-3x wider than the reference (E007 log)",
+    "degrade_shift_m": 40,
+    "_shift_why": "measured GCP/TPS geolocation median 39 m (E008 SAR stage)",
+    "min_area_m2": 23000,
+    "forward_max_vessels": 15,
+    "_fwd_why": "25 in the pipeline; 15 here to fit the laptop (fewer forward tests only lowers measured skill)"
+  },
+  "fusion_v31": {
+    "_doc": "Absolute attribution rule calibrated on the calibration half of the twin experiments (max false accusation 10%), scored once on the held-out half. Applied beside the pre-registered v3 tiers.",
+    "calibration_file": "results/twin_v1/calibration.json"
+  }
+}

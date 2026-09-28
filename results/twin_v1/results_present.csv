@@ -1,0 +1,46 @@
+case_id,n_suspects,truth_passes_funnel,rank_fused,tier_truth,rank_backward_only,rank_forward_only,top_tier,top_vessel,est_window,window_overlap_h,window_mid_error_h
+1000,36,True,1.0,strongly consistent,1.0,1.0,strongly consistent,367523620,1-2h,1.0,0.5
+1001,35,True,1.0,consistent,1.0,1.0,consistent,367323780,12-13h,0.5,0.5
+1002,43,True,1.0,consistent,1.0,3.0,consistent,338628000,23-24h,0.75,0.75
+1003,19,True,4.0,consistent,3.0,,consistent,374113000,,,
+1004,26,True,1.0,strongly consistent,1.0,1.0,strongly consistent,367710550,1-2h,1.0,0.5
+1005,46,True,1.0,consistent,1.0,1.0,consistent,367785160,14-15h,1.0,0.5
+1006,46,True,1.0,consistent,1.0,1.0,consistent,368179260,14-15h,1.0,0.5
+1007,44,True,4.0,consistent,4.0,5.0,consistent,538005124,23-24h,0.0,8.0
+1008,42,True,1.0,strongly consistent,1.0,1.0,strongly consistent,538005124,6-7h,1.0,1.75
+1009,34,True,2.0,consistent,2.0,2.0,consistent,367052000,7-8h,0.5,0.5
+1010,13,True,1.0,consistent,1.0,1.0,consistent,3660489,15-16h,0.25,1.25
+1012,36,True,1.0,strongly consistent,1.0,1.0,strongly consistent,367101870,2-3h,1.0,0.0
+1013,10,True,1.0,consistent,1.0,1.0,consistent,563086300,7-9h,1.5,0.5
+1014,46,True,1.0,consistent,2.0,1.0,consistent,367657110,15-16h,1.0,0.25
+1015,19,True,1.0,consistent,6.0,1.0,consistent,548704000,38-39h,1.0,0.0
+1016,63,True,1.0,consistent,1.0,1.0,consistent,210328000,1-4h,2.75,0.25
+1017,16,True,1.0,consistent,1.0,1.0,consistent,3660489,6-7h,1.0,0.0
+1018,46,True,2.0,consistent,2.0,1.0,consistent,538005124,15-16h,1.0,0.25
+1019,45,True,2.0,consistent,3.0,1.0,consistent,538005124,24-25h,0.0,10.75
+1020,31,True,1.0,strongly consistent,1.0,1.0,strongly consistent,368196410,2-3h,0.5,0.5
+1021,36,True,1.0,consistent,1.0,1.0,consistent,368166560,10-11h,1.0,0.5
+1022,23,True,1.0,consistent,1.0,1.0,consistent,366908680,13-14h,1.0,0.25
+1024,31,True,1.0,strongly consistent,1.0,1.0,strongly consistent,368196410,3-4h,1.0,0.0
+1025,50,True,1.0,strongly consistent,1.0,1.0,strongly consistent,367127480,7-8h,1.0,0.75
+1026,12,True,1.0,consistent,1.0,1.0,consistent,210328000,14-15h,1.0,0.25
+1027,16,True,2.0,consistent,2.0,1.0,consistent,369533000,32-33h,1.0,0.25
+1028,25,True,2.0,strongly consistent,2.0,1.0,strongly consistent,371765000,2-3h,1.0,0.25
+1029,15,True,1.0,consistent,1.0,1.0,consistent,3660489,15-16h,0.0,4.75
+1030,33,True,1.0,consistent,1.0,1.0,consistent,371765000,13-14h,1.0,0.5
+1032,40,True,1.0,strongly consistent,1.0,2.0,strongly consistent,367622660,4-7h,3.0,0.0
+1033,27,True,1.0,strongly consistent,1.0,1.0,strongly consistent,367609520,7-8h,1.0,0.25
+1034,33,True,4.0,consistent,4.0,2.0,consistent,367507790,13-14h,0.25,1.25
+1035,51,True,4.0,consistent,4.0,4.0,consistent,636015112,39-40h,1.0,0.5
+1036,40,True,2.0,strongly consistent,2.0,1.0,strongly consistent,636015112,3-5h,2.0,0.0
+1037,41,True,1.0,strongly consistent,1.0,1.0,strongly consistent,311062000,4-5h,1.0,0.25
+1038,34,True,1.0,consistent,1.0,1.0,consistent,367622660,14-15h,0.75,0.25
+1039,41,True,1.0,consistent,1.0,1.0,consistent,338147342,40-41h,0.0,2.5
+1040,72,True,2.0,consistent,3.0,1.0,consistent,367127480,2-4h,2.0,0.0
+1041,19,True,2.0,consistent,2.0,1.0,consistent,577358000,11-12h,0.5,0.5
+1042,34,True,1.0,consistent,2.0,1.0,consistent,367067370,14-15h,1.0,0.5
+1043,51,True,2.0,consistent,1.0,4.0,consistent,636015112,24-25h,0.75,1.25
+1044,31,False,,not in funnel,,,consistent,354791000,,,
+1045,19,True,1.0,strongly consistent,1.0,1.0,strongly consistent,538005579,10-11h,1.0,0.25
+1046,51,True,1.0,consistent,1.0,1.0,consistent,367101870,16-18h,2.0,1.25
+1047,35,True,3.0,consistent,2.0,5.0,consistent,367666910,37-38h,0.0,1.5

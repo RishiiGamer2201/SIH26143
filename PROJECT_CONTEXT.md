@@ -61,7 +61,13 @@ SIH26143/
 │   ├── e007_incident001_ml.py     E007 Incident 001 SAFE -> σ0 VV geocoded -> frozen E004/E005 -> mask -> polygons -> results/E007_incident001_ml
 │   ├── score_ais_density_v2_1.py  E101 V2.1 = V2 with interpolated AIS positions -> results/incident_001_v2_1
 │   └── source_type_v1.py          E102 post-score source-type layer -> results/incident_001_source_type_v1
-├── configs/                       ais_v2_1.json, source_type_v1.json (E101/E102 thresholds); e008_candidate_policy_v1.json + .sha256 (FROZEN, never edit)
+├── oilwatch/                      OW track (branch pipeline-v1, EXPLORATORY, not reviewed): parity, seed, context, backward, forward,
+│                                  evidence, fuse, report, posthoc. `python -m oilwatch run incident_001`; writes only runs/<incident>/<run_id>/
+│                                  (see oilwatch/README.md). Its seed policy is oilwatch/OW_SEED_POLICY.md, NOT the frozen E008 policy.
+├── portal/                        OW track analyst portal (React + deck.gl web, FastAPI api) over OW results
+├── tests/                         pytest: OW parity gate + unit tests for the OW v3 maths
+├── configs/                       ais_v2_1.json, source_type_v1.json (E101/E102 thresholds); e008_candidate_policy_v1.json + .sha256 (FROZEN, never edit);
+│                                  OW track: pipeline_v1.json (frozen + v3 parameters with sources), incidents/<id>.json (incident specs)
 ├── logs/                          E001_*.log, E002_*.log, E003_*.log, E101_*.log, E102_*.log
 ├── data/
 │   ├── sar/extracted/             Zenodo dataset, see SAR_DATA_AUDIT.md §1 (never modified)
@@ -85,6 +91,8 @@ SIH26143/
     ├── E004_resnet18_cls/         E004 checkpoint, curves, val + one-shot test metrics
     ├── E005_segformer_b2/         FROZEN E005 checkpoint (FROZEN.json hashes), tests, curves, val sweep/metrics/figures
     ├── E006_segformer_test/       E006 one-shot test: metrics (3 views), per-tile, component recall, figures, u8 probs (git-ignored)
+    ├── E008_oilwatch_v3_scene/    OW-E008 (exploratory, not reviewed): oilwatch v3 scene run artefacts
+    ├── twin_v1/                   OW-E011 (exploratory, not reviewed): twin experiments + v3.1 calibration
     ├── E008_candidate_policy_v1/  E008 policy v1 applied once: 42 candidate components (CSV/GeoJSON), 7 excluded, report; post-hoc Cerulean mapping (separate file)
     ├── E007c_validation_clustering/ E007c val component tables, intra/inter gaps, G + A_min sweeps, report, curves
     ├── E007b_component_structure/ E007b model-only component table, clusters at predeclared gaps, figure; post-hoc ROI map (separate file)
@@ -136,6 +144,17 @@ Done and verified (2026-09-26):
   `results/E008c_candidate_ensemble/`). Recipe audit 0 diffs; E008c functions reproduce the historical ensemble bit-exactly.
   1134/1134 scenarios valid, 0 deactivations/exits, min margin 210.5 km. Hourly positions kept for later age bins.
   AIS / release-age scoring NOT run; no candidate ranking or fusion.
+- **OW track (oilwatch, merged from branch `pipeline-v1`, 2026-09-28): EXPLORATORY, NOT REVIEWED, NOT part of the gated E-chain.**
+  Its entries are OW-E008 (pipeline run) and OW-E011 (twin experiments) in EXPERIMENT_LOG.md; the teammate's branch called them
+  "E008"/"E011". Outputs: `results/E008_oilwatch_v3_scene/`, `results/twin_v1/` (directory names kept so manifests/portal stay valid).
+  - Verified at merge: 8/8 pytest; parity reproduces `results/incident_001` physics and scoring exactly.
+  - It deviates from frozen main decisions, so none of its outputs may be cited as the project result until reviewed:
+    - seed: 1 km single-linkage merge + top-12 ranking by potential, AIS coverage as eligibility (frozen E008 policy v1 = grouping none, no ranking);
+    - it runs AIS attribution, fusion and vessel suspect lists (E009 gate not yet opened);
+    - it states a numeric geolocation error (39 m median) from its own stationary-target method (not reviewed);
+    - source_type = fixed_infrastructure when AIS is stationary and within 0.5 km of a BOEM structure (review against motion_state ≠ source_type);
+    - the OW-E011 decision rule was re-calibrated after the test half was looked at (both results reported).
+  - Windows setup for OW: `git config core.longpaths true` (SAFE paths), then `python -m venv --system-site-packages .venv` + `pip install opendrift netCDF4`.
 
 ## How to state the attribution result
 

@@ -349,6 +349,154 @@ Frozen root scripts are not edited.
 - At G ≤ 1 km they split into 3–8 clusters; the internal fragment gaps are about 1.06–1.13 km.
 
 **Answer.** A coherent, isolated, orientation-consistent model-only cluster exists for the Incident 001 region at G ≥ 2 km. However, model-only features do not single it out: larger coherent clusters exist, and `incident.json` offers no location cue independent of Cerulean. Decision: see `E008_SELECTION_POLICY.md` (Mode A analyst-assisted vs Mode B autonomous multi-candidate); awaiting review. No OpenDrift / AIS run.
+## 2026-09-29 · OW-E011 — Twin experiments: measured attribution skill + calibrated decision rule (v3.1)
+
+> **OW track (oilwatch, merged from teammate branch `pipeline-v1`): EXPLORATORY, NOT REVIEWED.** Not part of the gated E-chain and not the frozen E008 policy; see PROJECT_CONTEXT.md "OW track" for the deviations. The branch called this entry "E011".
+
+**Run.**
+- Command: `python -m oilwatch twin incident_001 --n 48 --run-id twin_v1b`, then `python -m oilwatch.calibrate runs/incident_001/twin_v1b/twin`.
+- Outputs `results/twin_v1/` (incl. `twin_skill.png`, `operating_curve.csv`, `calibration.json`); log `logs/twin_v1.log`. Runtime 23 min.
+- Code `oilwatch/twin.py`, `oilwatch/calibrate.py`; parameters `configs/pipeline_v1.json` → `twin_v1`, fixed before any twin result.
+
+**Design.**
+- A real AIS vessel (real track, real forcing) secretly discharges for 1/2/3/6 h, ending 0–40 h before T0 (4 age strata).
+- Truth drift uses physics **outside** the attribution ensemble: windage 2.5%, K 5 m²/s, current unc 0.07, wind unc 0.7, own seed.
+- The T0 particles become a slick polygon, degraded like our product: +60 m buffer (E007 over-width) and a 40 m random shift (measured geolocation).
+- Blind v3 attribution against the real scene AIS (1,715 vessels as distractors), same code and parameters.
+- "Hidden culprit": the same case with the true vessel's AIS removed.
+- 48 sampled → **45 usable** (3 discarded: stranded / out of domain).
+- Limitation: truth and model share the forcing fields, so this is an UPPER bound for forcing error.
+
+**Ranking skill (all 45).**
+
+| | funnel recall | top-1 fused | top-3 fused | top-5 fused | top-1 fwd only | top-1 bwd only | median release-window error |
+|---|---|---|---|---|---|---|---|
+| all | 0.98 | **0.67** | **0.89** | **0.98** | 0.78 | 0.62 | **0.5 h** |
+| 0–3 h (12) | 0.92 | 0.67 | 0.92 | 0.92 | 0.83 | 0.67 | 0.25 h |
+| 3–12 h (12) | 1.00 | 0.83 | 1.00 | 1.00 | 0.92 | 0.83 | 0.5 h |
+| 12–24 h (12) | 1.00 | 0.83 | 0.92 | 1.00 | 0.83 | 0.67 | 0.5 h |
+| 24–40 h (9) | 1.00 | 0.22 | 0.67 | 1.00 | 0.44 | 0.22 | 1.4 h |
+
+The forward model alone ranks better at top-1 than the fused order. The fused order is tier-first, and the tiers are relative.
+
+**Decision (judge) skill.**
+- The pre-registered v3 tiers flag an innocent vessel as "consistent" in **98–100%** of hidden-culprit cases. Relative criteria always find someone; the Gulf is crowded around platforms.
+- Absolute rule: supported = fwd_F ≥ a ∧ bwd_point ≥ b ∧ member support ≥ c, optionally with a margin over the runner-up.
+  - It was calibrated on a stratified half (23 cases) and scored on the held-out half (22 cases).
+  - The target was ≤ 10% false accusation.
+- Chosen rule: **fwd_F ≥ 0.7, bwd_point ≥ 0.7, member support ≥ 0.5, margin 1.0**.
+  - Calibration: correct 0.17, false 0.09.
+  - **Test: correct 0.14, false accusation 0.05**; it abstains when the culprit is present 86% of the time.
+- The full Pareto trade-off is in `operating_curve.csv`: every rule that is cautious on false accusations is cautious on correct ones.
+- **Test was looked at twice.** Calibration v1 (a, b, c only) gave test correct 0.36 / false 0.09. v2 (margin feature, wider grid) was added after that look and gave test correct 0.14 / false 0.05. Both are reported.
+
+**Interpretation.** v3 is a strong **lead generator** (culprit in the top 3 in 89% of blind cases, release time within ~0.5 h), but not a reliable judge on its own. Operational use:
+- ranked leads for an analyst, always shown;
+- a rare **high-confidence flag** (v3.1, ~5–9% false accusation on twins).
+
+**Applied to Incident 001 (v3.1, `fuse/suspects.csv` column `v31_decision`).**
+- One high-confidence flag: event 15, MILLIE (vessel), release 6–7 h, F 0.72, bwd 0.77. It is co-located with the **HOLSTEIN** platform (identical evidence, "supported"), and the drift cannot separate them.
+- SHELIA BORDELON (event 18) stays a lead: F 0.19 < 0.7, but it carries the AIS-gap and SAR-silent flags.
+
+**Next.**
+- More twin cases (± forcing perturbation for realism).
+- A margin/ratio on the full score vector.
+- Include SAR ship fixes to bridge AIS gaps.
+- Portal.
+
+---
+
+## 2026-09-29 · OW-E008 — oilwatch pipeline v1: parity gate, own-polygon seeding, v3 backward + forward attribution, SAR ships, forecast
+
+> **OW track (oilwatch, merged from teammate branch `pipeline-v1`): EXPLORATORY, NOT REVIEWED.** Not part of the gated E-chain and not the frozen E008 policy; see PROJECT_CONTEXT.md "OW track" for the deviations. The branch called this entry "E008".
+
+**Run.**
+- Command: `.venv/Scripts/python -m oilwatch run incident_001 --run-id e008_v3_scene`.
+- Log `logs/E008_oilwatch_v3_scene_all.log`; small artefacts in `results/E008_oilwatch_v3_scene/`.
+- Docs: `oilwatch/README.md`, `configs/pipeline_v1.json` (all parameters and sources), `E008_SELECTION_POLICY.md`.
+- Environment: Windows 11, Python 3.11.9, numpy 2.4.2, OpenDrift 1.14.11, GDAL 3.11.4, torch 2.5.1 (pip venv, RTX 4060 laptop).
+
+**Withdrawn: earlier same-day E008 numbers (runs e008_v1/e008_v2).**
+- OpenDrift 1.14 returns BACKWARD runs in reversed element order and exposes no element ID.
+- v3 runs every slick in one simulation, so slick clouds were swapped.
+- Fix: `drift._element_order` recovers identity from the seed positions (identity or reversal must match every element within 2e-5°, which is float32 storage), and raises otherwise. Regression test: `tests/test_simulate_keeps_element_identity`.
+- Check: every τ=0 cloud now sits on its own slick (max 0.0007°).
+- Frozen scripts are unaffected (no element-identity dependence).
+- A second guard: OpenDrift silently drops elements seeded on land (coastal AIS), so forward release points are masked with GSHHG before seeding.
+
+**Parity gate.**
+- Physics re-implementation bit-exact: deterministic 2000 × 49; ensemble 529,200 rows.
+- Scoring ULP-equal: ranks, names and bins identical; floats ≤ 2.2e-13 relative. Numpy build/CPU rounding; the frozen E102 code imported verbatim also differs at 2e-16.
+
+**New data (open, no login; `oilwatch/fetch.py`, hashes in `fetch_manifest.json`).**
+- S1 GRD VV+VH measurement from Microsoft Planetary Computer.
+  - Verified identical to the original: the labelled check reproduces `incident001_labelled_pol_check.json` exactly (VV sea −14.88 dB, contrast 2.67 dB, NaN 0.0335).
+- NOAA AIS 2023-01-01..03, clipped W−93 S24.5 E−87.5 N30 → `ais_scene.parquet`: 2.21 M reports, 1,715 MMSI. It contains 100% of the frozen ROI extract.
+- BOEM platform structures: 7,091, NAD27→WGS84.
+- Parity keeps using the frozen ROI AIS.
+
+**Seed (policy v1, pre-registered, reference not read).**
+- 49 components → 22 events (gap ≤ 1 km). Wind 7.8–8.7 m/s at all events (valid window).
+- With scene AIS all 20 events ≥ 23,000 m² are eligible; the top 12 by potential are selected.
+- The reference area splits into events 17 / 19 / 18.
+
+**SAR stage (tile-wise from the measurement TIFF, radar geometry).**
+- **Geolocation error measured** (E007 limitation #4): 59 stationary targets (AIS-stationary + BOEM platforms) give a median offset of **39 m**, p90 156 m.
+- **Darkness:** VV damping 2.0–3.4 dB at all 12 events: 10 weak/weathered-looking, 2 intermediate (training oil median 6.36 dB). Over-wide E007 polygons bias this low.
+- **Ships:** 117 CFAR detections →
+  - 45 AIS-stationary, 7 AIS-moving;
+  - 14 BOEM platforms without AIS;
+  - 7 AIS-silent (dead-reckoned from the last report 30 min–3 h before T0, ≤ 3 km cap);
+  - 44 unmatched dark-vessel candidates.
+- **SHELIA BORDELON:** last AIS report 79 min before T0; dead-reckoned position 0.12 km from a 42 px detection, which lies 0.82 km from event 18.
+
+**v3 method.**
+- Physics: OceanDrift transport-only; windage {1, 2, 3}% + separate Stokes; diffusivity {1, 3, 10} m²/s; current uncertainty {0, .05, .10}; 27 members.
+- Backward: σ(τ)² = 1 km² + (0.05 m/s·τ)²; V2.1 AIS; persistence prior; floor bwd_point ≥ e⁻².
+- Forward (Longépé 2015): virtual discharge every 15 min along each funnel vessel's track, pooled members, F within 1 km, FSS skill.
+- Fusion √(bwd·fwd) (Luo 2024) with pre-registered tiers.
+- Source type from BOEM (stationary AIS ≤ 0.5 km from a structure → fixed_infrastructure).
+
+**Result.**
+- Tiers: 42 consistent, 58 weak, 251 not supported.
+- Two-direction support for 79 vessel-event pairs. **No pair reaches FSS useful skill** (max 0.42 vs ≈ 0.5).
+- **Reference events (post-hoc overlap):**
+
+  | event | #1 | direction | release window | extra evidence |
+  |---|---|---|---|---|
+  | 18 | **SHELIA BORDELON** (vessel) | fwd+bwd, F 0.19 | **1–2 h** | AIS gap inside the window; **SAR sees it 0.8 km from the slick while AIS-silent** |
+  | 17 | OVERSEAS CASCADE (vessel) | fwd+bwd, F 0.13 | 43–44 h | — |
+  | 19 | BIG FOOT (**fixed_infrastructure**, BOEM WR 29 A, 103 m) | fwd+bwd, F 0.03 | 38–39 h | — |
+
+- **Other events:**
+  - 15: MILLIE / HOLSTEIN (platform) at 6–7 h. This is the strongest forward match of the run (F 0.72, FSS 0.42). The vessel and the platform are co-located, so drift cannot separate them.
+  - 12: MARCO POLO TLP, 7–9 h, F 0.61, AIS gap in window.
+  - 1: URSA TLP, 4–6 h.
+  - North events 2/3/7: vessels at 15–38 h.
+- **Age:**
+  - Platform-linked events 1/12/15 have drift ages of 4–9 h, consistent with appearance (≤ 12 h).
+  - Events matched only at 13–47 h are flagged as age conflicts (drift older than appearance): either an old slick or a non-AIS source.
+- **Post hoc:** of the six Cerulean-associated vessels, only SHELIA BORDELON is supported (event 18, #1; event 19, #4 backward). C-CONSTRUCTOR is weak (#7–8). The others are not supported under the 1 km-at-τ0 kernel.
+- **Forecast 72 h** (OpenOil with weathering, SST 22 °C assumed):
+  - no beaching for any event;
+  - medium crude after 72 h: 13% surface, 26% evaporated, 61% dispersed;
+  - light 2% / heavy 19% surface;
+  - surface oil moves NW with the wind, dispersed oil S with the current.
+
+**Interpretation.**
+- The pipeline is autonomous from our own detection, scene-wide, reproducible, and reference-independent until posthoc.
+- The most specific Incident 001 lead is SHELIA BORDELON for event 18. Three independent lines agree:
+  - forward/backward drift for a 1–2 h release;
+  - an AIS gap inside that window;
+  - a SAR detection at the slick while the AIS was silent.
+- It remains below FSS skill: evidence of consistency, never proof.
+
+**Next.**
+- Drifter calibration of windage/K (Liu–Weisberg).
+- Twin experiments for attribution accuracy.
+- A 72 h hindcast window (forcing starts 2023-01-01).
+- Use SAR ship fixes to bridge AIS gaps in V2.x (pre-register).
+- Analyst portal.
 
 ---
 
