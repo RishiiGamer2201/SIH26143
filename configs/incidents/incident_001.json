@@ -1,0 +1,44 @@
+{
+  "_doc": "Incident spec for the oilwatch pipeline. Paths are relative to the repo root. 'reference' is POST-HOC ONLY: it is never a feature, never a tuning target and never selects a physics seed (PROJECT_CONTEXT.md rules).",
+  "incident_id": "incident_001",
+  "t0_utc": "2023-01-03T00:01:42Z",
+  "sentinel1_scene_id": "S1A_IW_GRDH_1SDV_20230103T000142_20230103T000207_046612_059620_257F",
+  "inputs": {
+    "detected_components": "results/E007_incident001_ml/incident001_predicted_components.geojson",
+    "ocean_nc": "data/incident_001/currents/ocean_opendrift.nc",
+    "wind_nc": "data/incident_001/wind/era5_wind_10m_151h.nc",
+    "ais_parquet": "data/incident_001/ais/ais_roi.parquet",
+    "safe": "data/incident_001/sentinel1/extracted/S1A_IW_GRDH_1SDV_20230103T000142_20230103T000207_046612_059620_257F.SAFE",
+    "platforms_dir": "data/infrastructure/boem",
+    "ais_scene_parquet": "data/incident_001/ais/ais_scene.parquet",
+    "_ais_doc": "ais_parquet = frozen ROI extract (parity only); ais_scene_parquet = NOAA MarineCadastre 2023-01-01..03 clipped to W-93 S24.5 E-87.5 N30, T0-49 h..T0+6 h (oilwatch.fetch), used by all v3 stages"
+  },
+  "reference": {
+    "name": "cerulean",
+    "slick_geojson": "data/incident_001/metadata/slick_3775938.geojson",
+    "vessel_mmsi": [
+      "368196410",
+      "538005361",
+      "538005314",
+      "368166560",
+      "367655260",
+      "367507790"
+    ]
+  },
+  "frozen_baseline": {
+    "_doc": "Frozen outputs the parity stage must reproduce when seeded with the reference polygon.",
+    "hindcast_nc": "results/incident_001/hindcast_48h.nc",
+    "origin_cloud_csv": "results/incident_001/origin_cloud_48h.csv",
+    "ensemble_particles": "results/incident_001/hindcast_ensemble_particles.parquet",
+    "ensemble_scenarios": "results/incident_001/hindcast_ensemble_scenarios.csv",
+    "v2_time_scores": "results/incident_001/ais_density_time_scores_v2.parquet",
+    "v2_summary": "results/incident_001/ais_density_scores_v2.csv",
+    "v2_release_age": "results/incident_001/release_age_scores.csv",
+    "ensemble_scenario_scores": "results/incident_001/ais_ensemble_scenario_scores.parquet",
+    "ensemble_robust_scores": "results/incident_001/ais_ensemble_robust_scores.csv",
+    "v2_1_time_scores": "results/incident_001_v2_1/ais_density_time_scores_v2_1.parquet",
+    "v2_1_summary": "results/incident_001_v2_1/ais_density_scores_v2_1.csv",
+    "v2_1_release_age": "results/incident_001_v2_1/release_age_scores_v2_1.csv",
+    "track_motion": "results/incident_001_source_type_v1/track_motion.csv"
+  }
+}
