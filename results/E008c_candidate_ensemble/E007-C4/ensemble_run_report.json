@@ -1,0 +1,93 @@
+{
+ "candidate_id": "E007-C4",
+ "component_id": 4,
+ "seed_area_m2": 9740467.593608692,
+ "seed_geometry_valid": true,
+ "n_scenarios": 27,
+ "n_valid_scenarios": 27,
+ "n_rows": 529200,
+ "scenario_runtime_s": [
+  6.233426812999824,
+  1.9237083449988859,
+  1.8968195890047355,
+  1.911422823999601,
+  1.9123947849948308,
+  1.9369150069978787,
+  1.8927278929986642,
+  1.944516052994004,
+  1.9487801370050875,
+  1.895678097003838,
+  1.9080879899993306,
+  1.8981984779966297,
+  1.92543827600457,
+  1.9594212240044726,
+  1.9446857920047478,
+  1.9797513739977148,
+  2.0054714860016247,
+  1.9781757050004671,
+  1.9673546140038525,
+  1.938676163998025,
+  1.9334631850069854,
+  1.8983341560015106,
+  1.919613564001338,
+  1.9462410429987358,
+  1.9373869319970254,
+  1.949708208994707,
+  1.9408367850046488
+ ],
+ "total_runtime_s": 58.89812203800102,
+ "peak_rss_mb": 2586.09375,
+ "pid": 1396591,
+ "env": {
+  "OMP_NUM_THREADS": "1",
+  "OPENBLAS_NUM_THREADS": "1",
+  "MKL_NUM_THREADS": "1"
+ },
+ "forcing": {
+  "data/incident_001/forcing_v2/ocean_opendrift.nc": "9873536080833ef6c55c79df5570d333a9fcbbe0ba6333b5705ce30a5128f707",
+  "data/incident_001/forcing_v2/era5_wind_10m_151h.nc": "c3c64ddd4ed99897e899aa436a8962698c3c7084258a89a3994bf79b7d58fabb"
+ },
+ "script_sha256": "b02dcda0f006617c1d4e9d3f856785a882ecf756aa5426708e86168938ef81e0",
+ "baseline_sha256": "4d77fa65ab930bfc123b9c187ea3a22c5c1444b1995e9e71f8065f97ae7e687f",
+ "git_head": "262ddaed53fb363191c88630312dfe9c1af93bb4",
+ "opendrift_version": "1.14.11",
+ "particle_table": {
+  "file": "ensemble_particles.parquet",
+  "columns": [
+   "candidate_id",
+   "scenario_id",
+   "trajectory",
+   "time",
+   "lon",
+   "lat",
+   "windage",
+   "current_uncertainty",
+   "wind_uncertainty",
+   "particle_id",
+   "age_hours"
+  ],
+  "note": "all 49 hourly positions per particle retained (age_hours 0 .. -48) for later release-age binning; rows with non-finite lon/lat dropped as in the baseline"
+ },
+ "age_bins_h_for_later_scoring": [
+  [
+   0,
+   6
+  ],
+  [
+   6,
+   12
+  ],
+  [
+   12,
+   24
+  ],
+  [
+   24,
+   36
+  ],
+  [
+   36,
+   48
+  ]
+ ]
+}

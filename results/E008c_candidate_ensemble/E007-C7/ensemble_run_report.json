@@ -1,0 +1,93 @@
+{
+ "candidate_id": "E007-C7",
+ "component_id": 7,
+ "seed_area_m2": 44955.67300414294,
+ "seed_geometry_valid": true,
+ "n_scenarios": 27,
+ "n_valid_scenarios": 27,
+ "n_rows": 529200,
+ "scenario_runtime_s": [
+  5.431952081999043,
+  1.9685999549983535,
+  1.969691853999393,
+  1.9436595820006914,
+  2.035049361998972,
+  1.9610752819935442,
+  1.9873871259987936,
+  2.011380233998352,
+  1.9975412179992418,
+  1.9266276650014333,
+  1.9521255180006847,
+  1.9597131949994946,
+  1.950848694999877,
+  1.965071155995247,
+  1.9792513189968304,
+  1.9609979649976594,
+  1.9854467659970396,
+  1.9871942940008012,
+  1.9439653439985705,
+  1.9732011649975902,
+  1.9528689100043266,
+  1.9793997410015436,
+  1.9685909489999176,
+  1.973353399996995,
+  1.9950662690025638,
+  1.9543453290025354,
+  1.9907242780027445
+ ],
+ "total_runtime_s": 58.76811816800182,
+ "peak_rss_mb": 2585.65234375,
+ "pid": 1396701,
+ "env": {
+  "OMP_NUM_THREADS": "1",
+  "OPENBLAS_NUM_THREADS": "1",
+  "MKL_NUM_THREADS": "1"
+ },
+ "forcing": {
+  "data/incident_001/forcing_v2/ocean_opendrift.nc": "9873536080833ef6c55c79df5570d333a9fcbbe0ba6333b5705ce30a5128f707",
+  "data/incident_001/forcing_v2/era5_wind_10m_151h.nc": "c3c64ddd4ed99897e899aa436a8962698c3c7084258a89a3994bf79b7d58fabb"
+ },
+ "script_sha256": "b02dcda0f006617c1d4e9d3f856785a882ecf756aa5426708e86168938ef81e0",
+ "baseline_sha256": "4d77fa65ab930bfc123b9c187ea3a22c5c1444b1995e9e71f8065f97ae7e687f",
+ "git_head": "262ddaed53fb363191c88630312dfe9c1af93bb4",
+ "opendrift_version": "1.14.11",
+ "particle_table": {
+  "file": "ensemble_particles.parquet",
+  "columns": [
+   "candidate_id",
+   "scenario_id",
+   "trajectory",
+   "time",
+   "lon",
+   "lat",
+   "windage",
+   "current_uncertainty",
+   "wind_uncertainty",
+   "particle_id",
+   "age_hours"
+  ],
+  "note": "all 49 hourly positions per particle retained (age_hours 0 .. -48) for later release-age binning; rows with non-finite lon/lat dropped as in the baseline"
+ },
+ "age_bins_h_for_later_scoring": [
+  [
+   0,
+   6
+  ],
+  [
+   6,
+   12
+  ],
+  [
+   12,
+   24
+  ],
+  [
+   24,
+   36
+  ],
+  [
+   36,
+   48
+  ]
+ ]
+}

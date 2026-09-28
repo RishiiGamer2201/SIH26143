@@ -4,6 +4,73 @@ Newest first. Every entry: date, what ran, exact command, outputs, result, decis
 
 ---
 
+## 2026-09-28 · E008c — 27-scenario ensemble for all 42 candidates with forcing v2 (no AIS, no release-age scoring)
+
+**Prerequisite.** The E008b commit is `262ddaed53fb363191c88630312dfe9c1af93bb4` (pushed).
+
+**Scripts and outputs.**
+- `scripts/e008c_candidate_ensemble.py`, stages: `audit`, `pilot`, `run-all --workers N`, `summary`, and `candidate`
+  (one candidate per subprocess).
+- `scripts/e008c_baseline_reproduction_check.py`: a recipe check using the historical inputs only.
+- Outputs: `results/E008c_candidate_ensemble/`. Logs: `logs/E008c_*.log` and `logs/E008c_candidates/`.
+- `run_hindcast_ensemble.py` was not edited or executed.
+
+**Config audit** (`ensemble_config_audit.json`).
+- 35 static fields were compared against the parsed baseline. All are equal except the allowed differences: input
+  polygon, forcing v1 → frozen v2, output, and sampler bounds taken from the passed polygon (same values for the same
+  polygon).
+- Fields compared include:
+  - the 7 constants and the scenario grid;
+  - the full scenario table (IDs 1–27, seeds 26143 + 1000·id, values, order) and the loop;
+  - `np.random.seed`, the sampler call, RNG and while-loop AST, and the validity fix;
+  - `OpenOil(loglevel=50)`, the readers, `add_reader`, the 9 `set_config` calls, and the `seed_elements` and `run`
+    keywords;
+  - the output columns and the finite filter;
+  - reader sharing across the 27 scenarios.
+- Runtime: the effective config (102 keys) equals the baseline for all 27 scenarios, with 0 differences.
+- Stokes: identical config (`drift:stokes_drift` True, tabularised False, fallback 0); Stokes comes from the v2 ocean file.
+- Static token check: 0 hits.
+
+**Recipe check** (`baseline_reproduction_check.json`). The E008c functions were run with the historical inputs
+(reference polygon, forcing v1). They reproduce the frozen `results/incident_001/hindcast_ensemble_particles.parquet`
+**bit-exactly**: 529,200 rows, max diff 0, identical dtypes and scenarios table. Nothing is written to `incident_001`.
+
+**Pilot C1** (smallest component ID) passed 12 of 12 checks (`pilot_acceptance.json`).
+- 27 of 27 scenarios: 400 seeded, 49 times, −48 h reached, 0 deactivations, 0 exits, 0 fallback zeros; grid and seeds
+  exact; frozen files unchanged.
+- Scenario runtime: mean 2.04 s, median 1.92, min 1.89, p90 1.98, max 5.05 (the first scenario, which fills the reader
+  and land-mask caches). C1 total 57 s.
+- Estimate: 2.04 × 27 × 42 = 0.64 h serial, which is ≤ 4 h, so the run continued automatically.
+
+**All candidates.**
+- Peak RSS is about 2.59 GB per candidate process: 2 readers plus the GSHHG land mask, shared by its 27 scenarios.
+- Workers = floor(0.6 × 14,685 MB available / 2,585 MB) = 3, on 20 CPUs.
+- Wall time 927 s. Minimum MemAvailable was 6.07 GB; swap did not grow.
+- Child threads were set to OMP/OPENBLAS/MKL = 1 for every run, including the pilot.
+- Determinism: C1 was re-run inside the parallel pool, and its particle table is identical to the pilot's.
+- **1,134 of 1,134 scenarios completed and physics-valid; 42 of 42 candidates. No candidate has an invalid scenario.**
+- 0 deactivations, 0 current or wind exits.
+- Minimum realized margin is 210.5 km (C12, scenario 27, east edge). C1–C10 are at least 224.2 km.
+- 453,600 seeded particles and 22,226,400 particle-hour rows (= 1134 × 400 × 49). Scenario runtime sum 2,467 s.
+- Disk: 137 MB.
+
+**Per-candidate −48 h endpoint summaries** (`candidate_ensemble_summary.csv`; descriptive only, no ranking).
+- 10,800 endpoint particles per candidate.
+- RMS spread 4.4–11.8 km; r90 about the median 6.0–15.7 km.
+- The 1σ ellipses are strongly elongated (minor axis about 0.7–2.5 km). The scenario-centroid RMS (4.1–11.8 km) is
+  almost equal to the total spread: the spread comes mainly from between-scenario (parameter) differences, not from
+  within-scenario dispersion.
+
+**Also written:**
+- `scenario_run_summary.csv` (1,134 rows).
+- `candidate_origin_pairwise.parquet` (861 pairs; exploratory; no threshold, clustering or fusion).
+- `release_age_products_README.json`: hourly positions are kept; the age bins 0–6/6–12/12–24/24–36/36–48 h are defined
+  but not scored.
+
+**Not run:** AIS attribution, release-age scoring, vessel ranking, candidate ranking or fusion. Not committed.
+
+---
+
 ## 2026-09-28 · E008b — Forcing-domain expansion (forcing v2) and 42 deterministic re-runs (no ensemble, no AIS)
 
 **Scripts and outputs.** Neither script edits E008a or v1 files.

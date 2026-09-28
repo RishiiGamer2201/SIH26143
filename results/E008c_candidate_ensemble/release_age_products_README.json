@@ -1,0 +1,25 @@
+{
+ "age_bins_h": [
+  [
+   0,
+   6
+  ],
+  [
+   6,
+   12
+  ],
+  [
+   12,
+   24
+  ],
+  [
+   24,
+   36
+  ],
+  [
+   36,
+   48
+  ]
+ ],
+ "note": "Hourly positions (age_hours 0 .. -48) of every particle and scenario are kept in <candidate>/ensemble_particles.parquet so later release-age scoring needs no physics re-run. Nothing is scored here."
+}

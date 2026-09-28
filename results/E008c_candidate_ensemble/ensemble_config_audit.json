@@ -1,0 +1,945 @@
+{
+ "all_equal_except_allowed": true,
+ "allowed_differences": [
+  "input polygon",
+  "forcing paths v1 -> frozen v2",
+  "output location",
+  "candidate ID",
+  "diagnostics / instrumentation"
+ ],
+ "static_fields": [
+  {
+   "field": "const:T0",
+   "baseline": "2023-01-03 00:01:42",
+   "e008c": "2023-01-03 00:01:42",
+   "equal": true,
+   "allowed_difference": false,
+   "note": null
+  },
+  {
+   "field": "const:DURATION_HOURS",
+   "baseline": "48",
+   "e008c": "48",
+   "equal": true,
+   "allowed_difference": false,
+   "note": null
+  },
+  {
+   "field": "const:PARTICLES_PER_SCENARIO",
+   "baseline": "400",
+   "e008c": "400",
+   "equal": true,
+   "allowed_difference": false,
+   "note": null
+  },
+  {
+   "field": "const:BASE_SEED",
+   "baseline": "26143",
+   "e008c": "26143",
+   "equal": true,
+   "allowed_difference": false,
+   "note": null
+  },
+  {
+   "field": "const:WINDAGE",
+   "baseline": "[0.02, 0.03, 0.04]",
+   "e008c": "[0.02, 0.03, 0.04]",
+   "equal": true,
+   "allowed_difference": false,
+   "note": null
+  },
+  {
+   "field": "const:CURRENT_UNCERTAINTY",
+   "baseline": "[0.0, 0.05, 0.1]",
+   "e008c": "[0.0, 0.05, 0.1]",
+   "equal": true,
+   "allowed_difference": false,
+   "note": null
+  },
+  {
+   "field": "const:WIND_UNCERTAINTY",
+   "baseline": "[0.0, 0.5, 1.0]",
+   "e008c": "[0.0, 0.5, 1.0]",
+   "equal": true,
+   "allowed_difference": false,
+   "note": null
+  },
+  {
+   "field": "scenario_grid_expression",
+   "baseline": "list(product(WINDAGE, CURRENT_UNCERTAINTY, WIND_UNCERTAINTY))",
+   "e008c": "list(product(WINDAGE, CURRENT_UNCERTAINTY, WIND_UNCERTAINTY))",
+   "equal": true,
+   "allowed_difference": false,
+   "note": null
+  },
+  {
+   "field": "scenario_table[id, seed, windage, current_unc, wind_unc] (ordering, ids, seeds, values)",
+   "baseline": [
+    [
+     1,
+     27143,
+     0.02,
+     0.0,
+     0.0
+    ],
+    [
+     2,
+     28143,
+     0.02,
+     0.0,
+     0.5
+    ],
+    [
+     3,
+     29143,
+     0.02,
+     0.0,
+     1.0
+    ],
+    [
+     4,
+     30143,
+     0.02,
+     0.05,
+     0.0
+    ],
+    [
+     5,
+     31143,
+     0.02,
+     0.05,
+     0.5
+    ],
+    [
+     6,
+     32143,
+     0.02,
+     0.05,
+     1.0
+    ],
+    [
+     7,
+     33143,
+     0.02,
+     0.1,
+     0.0
+    ],
+    [
+     8,
+     34143,
+     0.02,
+     0.1,
+     0.5
+    ],
+    [
+     9,
+     35143,
+     0.02,
+     0.1,
+     1.0
+    ],
+    [
+     10,
+     36143,
+     0.03,
+     0.0,
+     0.0
+    ],
+    [
+     11,
+     37143,
+     0.03,
+     0.0,
+     0.5
+    ],
+    [
+     12,
+     38143,
+     0.03,
+     0.0,
+     1.0
+    ],
+    [
+     13,
+     39143,
+     0.03,
+     0.05,
+     0.0
+    ],
+    [
+     14,
+     40143,
+     0.03,
+     0.05,
+     0.5
+    ],
+    [
+     15,
+     41143,
+     0.03,
+     0.05,
+     1.0
+    ],
+    [
+     16,
+     42143,
+     0.03,
+     0.1,
+     0.0
+    ],
+    [
+     17,
+     43143,
+     0.03,
+     0.1,
+     0.5
+    ],
+    [
+     18,
+     44143,
+     0.03,
+     0.1,
+     1.0
+    ],
+    [
+     19,
+     45143,
+     0.04,
+     0.0,
+     0.0
+    ],
+    [
+     20,
+     46143,
+     0.04,
+     0.0,
+     0.5
+    ],
+    [
+     21,
+     47143,
+     0.04,
+     0.0,
+     1.0
+    ],
+    [
+     22,
+     48143,
+     0.04,
+     0.05,
+     0.0
+    ],
+    [
+     23,
+     49143,
+     0.04,
+     0.05,
+     0.5
+    ],
+    [
+     24,
+     50143,
+     0.04,
+     0.05,
+     1.0
+    ],
+    [
+     25,
+     51143,
+     0.04,
+     0.1,
+     0.0
+    ],
+    [
+     26,
+     52143,
+     0.04,
+     0.1,
+     0.5
+    ],
+    [
+     27,
+     53143,
+     0.04,
+     0.1,
+     1.0
+    ]
+   ],
+   "e008c": [
+    [
+     1,
+     27143,
+     0.02,
+     0.0,
+     0.0
+    ],
+    [
+     2,
+     28143,
+     0.02,
+     0.0,
+     0.5
+    ],
+    [
+     3,
+     29143,
+     0.02,
+     0.0,
+     1.0
+    ],
+    [
+     4,
+     30143,
+     0.02,
+     0.05,
+     0.0
+    ],
+    [
+     5,
+     31143,
+     0.02,
+     0.05,
+     0.5
+    ],
+    [
+     6,
+     32143,
+     0.02,
+     0.05,
+     1.0
+    ],
+    [
+     7,
+     33143,
+     0.02,
+     0.1,
+     0.0
+    ],
+    [
+     8,
+     34143,
+     0.02,
+     0.1,
+     0.5
+    ],
+    [
+     9,
+     35143,
+     0.02,
+     0.1,
+     1.0
+    ],
+    [
+     10,
+     36143,
+     0.03,
+     0.0,
+     0.0
+    ],
+    [
+     11,
+     37143,
+     0.03,
+     0.0,
+     0.5
+    ],
+    [
+     12,
+     38143,
+     0.03,
+     0.0,
+     1.0
+    ],
+    [
+     13,
+     39143,
+     0.03,
+     0.05,
+     0.0
+    ],
+    [
+     14,
+     40143,
+     0.03,
+     0.05,
+     0.5
+    ],
+    [
+     15,
+     41143,
+     0.03,
+     0.05,
+     1.0
+    ],
+    [
+     16,
+     42143,
+     0.03,
+     0.1,
+     0.0
+    ],
+    [
+     17,
+     43143,
+     0.03,
+     0.1,
+     0.5
+    ],
+    [
+     18,
+     44143,
+     0.03,
+     0.1,
+     1.0
+    ],
+    [
+     19,
+     45143,
+     0.04,
+     0.0,
+     0.0
+    ],
+    [
+     20,
+     46143,
+     0.04,
+     0.0,
+     0.5
+    ],
+    [
+     21,
+     47143,
+     0.04,
+     0.0,
+     1.0
+    ],
+    [
+     22,
+     48143,
+     0.04,
+     0.05,
+     0.0
+    ],
+    [
+     23,
+     49143,
+     0.04,
+     0.05,
+     0.5
+    ],
+    [
+     24,
+     50143,
+     0.04,
+     0.05,
+     1.0
+    ],
+    [
+     25,
+     51143,
+     0.04,
+     0.1,
+     0.0
+    ],
+    [
+     26,
+     52143,
+     0.04,
+     0.1,
+     0.5
+    ],
+    [
+     27,
+     53143,
+     0.04,
+     0.1,
+     1.0
+    ]
+   ],
+   "equal": true,
+   "allowed_difference": false,
+   "note": null
+  },
+  {
+   "field": "scenario_loop",
+   "baseline": {
+    "target": "(scenario_id, (windage, current_unc, wind_unc))",
+    "iter": "enumerate(SCENARIOS, start=1)"
+   },
+   "e008c": {
+    "target": "(scenario_id, (windage, current_unc, wind_unc))",
+    "iter": "enumerate(SCENARIOS, start=1)"
+   },
+   "equal": true,
+   "allowed_difference": false,
+   "note": null
+  },
+  {
+   "field": "scenario_seed_formula",
+   "baseline": "BASE_SEED + scenario_id * 1000",
+   "e008c": "BASE_SEED + scenario_id * 1000",
+   "equal": true,
+   "allowed_difference": false,
+   "note": null
+  },
+  {
+   "field": "np_random_seed_call",
+   "baseline": "np.random.seed(scenario_seed)",
+   "e008c": "np.random.seed(scenario_seed)",
+   "equal": true,
+   "allowed_difference": false,
+   "note": null
+  },
+  {
+   "field": "sampler_call",
+   "baseline": "sample_polygon(geom, PARTICLES_PER_SCENARIO, scenario_seed)",
+   "e008c": "sample_polygon(geom, PARTICLES_PER_SCENARIO, scenario_seed)",
+   "equal": true,
+   "allowed_difference": false,
+   "note": null
+  },
+  {
+   "field": "sampler_rng",
+   "baseline": "np.random.default_rng(seed)",
+   "e008c": "np.random.default_rng(seed)",
+   "equal": true,
+   "allowed_difference": false,
+   "note": null
+  },
+  {
+   "field": "sampler_while_loop_ast",
+   "baseline": "While(test=Compare(left=Call(func=Name(id='len', ctx=Load()), args=[Name(id='xs_out', ctx=Load())], keywords=[]), ops=[Lt()], comparators=[Name(id='number', ctx=Load())]), body=[Assign(targets=[Name(id='need', ctx=Store())], value=BinOp(left=Name(id='number', ctx=Load()), op=Sub(), right=Call(func=Name(id='len', ctx=Load()), args=[Name(id='xs_out', ctx=Load())], keywords=[]))), Assign(targets=[Name(id='n_try', ctx=Store())], value=Call(func=Name(id='max', ctx=Load()), args=[Constant(value=1000), BinOp(left=Name(id='need', ctx=Load()), op=Mult(), right=Constant(value=4))], keywords=[])), Assign(targets=[Name(id='xs', ctx=Store())], value=Call(func=Attribute(value=Name(id='rng', ctx=Load()), attr='uniform', ctx=Load()), args=[Name(id='minx', ctx=Load()), Name(id='maxx', ctx=Load()), Name(id='n_try', ctx=Load())], keywords=[])), Assign(targets=[Name(id='ys', ctx=Store())], value=Call(func=Attribute(value=Name(id='rng', ctx=Load()), attr='uniform', ctx=Load()), args=[Name(id='miny', ctx=Load()), Name(id='maxy', ctx=Load()), Name(id='n_try', ctx=Load())], keywords=[])), For(target=Tuple(elts=[Name(id='x', ctx=Store()), Name(id='y', ctx=Store())], ctx=Store()), iter=Call(func=Name(id='zip', ctx=Load()), args=[Name(id='xs', ctx=Load()), Name(id='ys', ctx=Load())], keywords=[]), body=[If(test=Call(func=Attribute(value=Name(id='geometry', ctx=Load()), attr='contains', ctx=Load()), args=[Call(func=Name(id='Point', ctx=Load()), args=[Name(id='x', ctx=Load()), Name(id='y', ctx=Load())], keywords=[])], keywords=[]), body=[Expr(value=Call(func=Attribute(value=Name(id='xs_out', ctx=Load()), attr='append', ctx=Load()), args=[Name(id='x', ctx=Load())], keywords=[])), Expr(value=Call(func=Attribute(value=Name(id='ys_out', ctx=Load()), attr='append', ctx=Load()), args=[Name(id='y', ctx=Load())], keywords=[])), If(test=Compare(left=Call(func=Name(id='len', ctx=Load()), args=[Name(id='xs_out', ctx=Load())], keywords=[]), ops=[Eq()], comparators=[Name(id='number', ctx=Load())]), body=[Break()], orelse=[])], orelse=[])], orelse=[])], orelse=[])",
+   "e008c": "While(test=Compare(left=Call(func=Name(id='len', ctx=Load()), args=[Name(id='xs_out', ctx=Load())], keywords=[]), ops=[Lt()], comparators=[Name(id='number', ctx=Load())]), body=[Assign(targets=[Name(id='need', ctx=Store())], value=BinOp(left=Name(id='number', ctx=Load()), op=Sub(), right=Call(func=Name(id='len', ctx=Load()), args=[Name(id='xs_out', ctx=Load())], keywords=[]))), Assign(targets=[Name(id='n_try', ctx=Store())], value=Call(func=Name(id='max', ctx=Load()), args=[Constant(value=1000), BinOp(left=Name(id='need', ctx=Load()), op=Mult(), right=Constant(value=4))], keywords=[])), Assign(targets=[Name(id='xs', ctx=Store())], value=Call(func=Attribute(value=Name(id='rng', ctx=Load()), attr='uniform', ctx=Load()), args=[Name(id='minx', ctx=Load()), Name(id='maxx', ctx=Load()), Name(id='n_try', ctx=Load())], keywords=[])), Assign(targets=[Name(id='ys', ctx=Store())], value=Call(func=Attribute(value=Name(id='rng', ctx=Load()), attr='uniform', ctx=Load()), args=[Name(id='miny', ctx=Load()), Name(id='maxy', ctx=Load()), Name(id='n_try', ctx=Load())], keywords=[])), For(target=Tuple(elts=[Name(id='x', ctx=Store()), Name(id='y', ctx=Store())], ctx=Store()), iter=Call(func=Name(id='zip', ctx=Load()), args=[Name(id='xs', ctx=Load()), Name(id='ys', ctx=Load())], keywords=[]), body=[If(test=Call(func=Attribute(value=Name(id='geometry', ctx=Load()), attr='contains', ctx=Load()), args=[Call(func=Name(id='Point', ctx=Load()), args=[Name(id='x', ctx=Load()), Name(id='y', ctx=Load())], keywords=[])], keywords=[]), body=[Expr(value=Call(func=Attribute(value=Name(id='xs_out', ctx=Load()), attr='append', ctx=Load()), args=[Name(id='x', ctx=Load())], keywords=[])), Expr(value=Call(func=Attribute(value=Name(id='ys_out', ctx=Load()), attr='append', ctx=Load()), args=[Name(id='y', ctx=Load())], keywords=[])), If(test=Compare(left=Call(func=Name(id='len', ctx=Load()), args=[Name(id='xs_out', ctx=Load())], keywords=[]), ops=[Eq()], comparators=[Name(id='number', ctx=Load())]), body=[Break()], orelse=[])], orelse=[])], orelse=[])], orelse=[])",
+   "equal": true,
+   "allowed_difference": false,
+   "note": null
+  },
+  {
+   "field": "sampler_polygon_validity_fix",
+   "baseline": "if not geom.is_valid:\n    geom = geom.buffer(0)",
+   "e008c": "if not geom.is_valid:\n    geom = geom.buffer(0)",
+   "equal": true,
+   "allowed_difference": false,
+   "note": null
+  },
+  {
+   "field": "model_constructor",
+   "baseline": "OpenOil(loglevel=50)",
+   "e008c": "OpenOil(loglevel=50)",
+   "equal": true,
+   "allowed_difference": false,
+   "note": null
+  },
+  {
+   "field": "readers",
+   "baseline": [
+    "reader_netCDF_CF_generic.Reader(str(OCEAN))",
+    "reader_netCDF_CF_generic.Reader(str(WIND))"
+   ],
+   "e008c": [
+    "reader_netCDF_CF_generic.Reader(str(OCEAN))",
+    "reader_netCDF_CF_generic.Reader(str(WIND))"
+   ],
+   "equal": true,
+   "allowed_difference": false,
+   "note": null
+  },
+  {
+   "field": "add_reader",
+   "baseline": "[ocean_reader, wind_reader]",
+   "e008c": "[ocean_reader, wind_reader]",
+   "equal": true,
+   "allowed_difference": false,
+   "note": null
+  },
+  {
+   "field": "set_config_calls_ordered",
+   "baseline": [
+    [
+     "'processes:evaporation'",
+     "False"
+    ],
+    [
+     "'processes:emulsification'",
+     "False"
+    ],
+    [
+     "'processes:dispersion'",
+     "False"
+    ],
+    [
+     "'processes:biodegradation'",
+     "False"
+    ],
+    [
+     "'drift:vertical_mixing'",
+     "False"
+    ],
+    [
+     "'drift:vertical_advection'",
+     "False"
+    ],
+    [
+     "'drift:current_uncertainty'",
+     "current_unc"
+    ],
+    [
+     "'drift:wind_uncertainty'",
+     "wind_unc"
+    ],
+    [
+     "'environment:fallback:land_binary_mask'",
+     "0"
+    ]
+   ],
+   "e008c": [
+    [
+     "'processes:evaporation'",
+     "False"
+    ],
+    [
+     "'processes:emulsification'",
+     "False"
+    ],
+    [
+     "'processes:dispersion'",
+     "False"
+    ],
+    [
+     "'processes:biodegradation'",
+     "False"
+    ],
+    [
+     "'drift:vertical_mixing'",
+     "False"
+    ],
+    [
+     "'drift:vertical_advection'",
+     "False"
+    ],
+    [
+     "'drift:current_uncertainty'",
+     "current_unc"
+    ],
+    [
+     "'drift:wind_uncertainty'",
+     "wind_unc"
+    ],
+    [
+     "'environment:fallback:land_binary_mask'",
+     "0"
+    ]
+   ],
+   "equal": true,
+   "allowed_difference": false,
+   "note": null
+  },
+  {
+   "field": "seed_elements:lat",
+   "baseline": "lats",
+   "e008c": "lats",
+   "equal": true,
+   "allowed_difference": false,
+   "note": null
+  },
+  {
+   "field": "seed_elements:lon",
+   "baseline": "lons",
+   "e008c": "lons",
+   "equal": true,
+   "allowed_difference": false,
+   "note": null
+  },
+  {
+   "field": "seed_elements:number",
+   "baseline": "PARTICLES_PER_SCENARIO",
+   "e008c": "PARTICLES_PER_SCENARIO",
+   "equal": true,
+   "allowed_difference": false,
+   "note": null
+  },
+  {
+   "field": "seed_elements:time",
+   "baseline": "T0",
+   "e008c": "T0",
+   "equal": true,
+   "allowed_difference": false,
+   "note": null
+  },
+  {
+   "field": "seed_elements:wind_drift_factor",
+   "baseline": "windage",
+   "e008c": "windage",
+   "equal": true,
+   "allowed_difference": false,
+   "note": null
+  },
+  {
+   "field": "run:duration",
+   "baseline": "timedelta(hours=DURATION_HOURS)",
+   "e008c": "timedelta(hours=DURATION_HOURS)",
+   "equal": true,
+   "allowed_difference": false,
+   "note": null
+  },
+  {
+   "field": "run:time_step",
+   "baseline": "-900",
+   "e008c": "-900",
+   "equal": true,
+   "allowed_difference": false,
+   "note": null
+  },
+  {
+   "field": "run:time_step_output",
+   "baseline": "3600",
+   "e008c": "3600",
+   "equal": true,
+   "allowed_difference": false,
+   "note": null
+  },
+  {
+   "field": "output_frame_columns",
+   "baseline": {
+    "scenario_id": "np.repeat(scenario_id, ntraj * ntime)",
+    "trajectory": "np.repeat(np.arange(ntraj), ntime)",
+    "time": "np.tile(result_times, ntraj)",
+    "lon": "lon.reshape(-1)",
+    "lat": "lat.reshape(-1)",
+    "windage": "np.repeat(windage, ntraj * ntime)",
+    "current_uncertainty": "np.repeat(current_unc, ntraj * ntime)",
+    "wind_uncertainty": "np.repeat(wind_unc, ntraj * ntime)"
+   },
+   "e008c": {
+    "scenario_id": "np.repeat(scenario_id, ntraj * ntime)",
+    "trajectory": "np.repeat(np.arange(ntraj), ntime)",
+    "time": "np.tile(result_times, ntraj)",
+    "lon": "lon.reshape(-1)",
+    "lat": "lat.reshape(-1)",
+    "windage": "np.repeat(windage, ntraj * ntime)",
+    "current_uncertainty": "np.repeat(current_unc, ntraj * ntime)",
+    "wind_uncertainty": "np.repeat(wind_unc, ntraj * ntime)"
+   },
+   "equal": true,
+   "allowed_difference": false,
+   "note": null
+  },
+  {
+   "field": "output_frame_finite_filter",
+   "baseline": "scenario_df[np.isfinite(scenario_df['lon']) & np.isfinite(scenario_df['lat'])].copy()",
+   "e008c": "scenario_df[np.isfinite(scenario_df['lon']) & np.isfinite(scenario_df['lat'])].copy()",
+   "equal": true,
+   "allowed_difference": false,
+   "note": null
+  },
+  {
+   "field": "sampler_bounds",
+   "baseline": "module globals = bounds of the (same) seed polygon",
+   "e008c": "geometry.bounds of the seed polygon passed in",
+   "equal": false,
+   "allowed_difference": true,
+   "note": "identical values for the same polygon; follows from the allowed input-polygon change"
+  },
+  {
+   "field": "input_polygon",
+   "baseline": "reference polygon file",
+   "e008c": "candidate polygon from candidate_components.geojson",
+   "equal": false,
+   "allowed_difference": true
+  },
+  {
+   "field": "forcing_paths",
+   "baseline": [
+    "currents/ocean_opendrift.nc",
+    "wind/era5_wind_10m_151h.nc"
+   ],
+   "e008c": [
+    "data/incident_001/forcing_v2/ocean_opendrift.nc",
+    "data/incident_001/forcing_v2/era5_wind_10m_151h.nc"
+   ],
+   "equal": false,
+   "allowed_difference": true,
+   "note": "forcing v2 = v1 recipe with expanded coverage (E008b, FROZEN)"
+  },
+  {
+   "field": "output",
+   "baseline": "results/incident_001/hindcast_ensemble_*",
+   "e008c": "results/E008c_candidate_ensemble/<candidate>/ensemble_*; extra columns candidate_id, particle_id, age_hours",
+   "equal": false,
+   "allowed_difference": true
+  },
+  {
+   "field": "reader_lifetime",
+   "baseline": "2 readers created once, shared by all 27 scenarios in order",
+   "e008c": "2 readers created once per candidate (own process), shared by its 27 scenarios in order",
+   "equal": true,
+   "allowed_difference": false
+  }
+ ],
+ "runtime_full_config_n_keys": 102,
+ "runtime_differences_per_scenario": {},
+ "stokes_handling": {
+  "config_per_scenario_identical": true,
+  "config": {
+   "drift:stokes_drift": true,
+   "drift:stokes_drift_profile": "Phillips",
+   "drift:tabularised_stokes_drift_fetch": "25000",
+   "drift:use_tabularised_stokes_drift": false,
+   "environment:constant:sea_surface_wave_stokes_drift_x_velocity": null,
+   "environment:constant:sea_surface_wave_stokes_drift_y_velocity": null,
+   "environment:fallback:sea_surface_wave_stokes_drift_x_velocity": 0,
+   "environment:fallback:sea_surface_wave_stokes_drift_y_velocity": 0
+  },
+  "stokes_variables_provider": {
+   "sea_surface_wave_stokes_drift_x_velocity": [
+    "/home/admin_wsl/SIH26143/data/incident_001/forcing_v2/ocean_opendrift.nc"
+   ],
+   "sea_surface_wave_stokes_drift_y_velocity": [
+    "/home/admin_wsl/SIH26143/data/incident_001/forcing_v2/ocean_opendrift.nc"
+   ]
+  }
+ },
+ "required_variables_provider": {
+  "x_sea_water_velocity": [
+   "/home/admin_wsl/SIH26143/data/incident_001/forcing_v2/ocean_opendrift.nc"
+  ],
+  "y_sea_water_velocity": [
+   "/home/admin_wsl/SIH26143/data/incident_001/forcing_v2/ocean_opendrift.nc"
+  ],
+  "x_wind": [
+   "/home/admin_wsl/SIH26143/data/incident_001/forcing_v2/era5_wind_10m_151h.nc"
+  ],
+  "y_wind": [
+   "/home/admin_wsl/SIH26143/data/incident_001/forcing_v2/era5_wind_10m_151h.nc"
+  ],
+  "sea_surface_height": [],
+  "upward_sea_water_velocity": [],
+  "sea_surface_wave_significant_height": [],
+  "sea_surface_wave_stokes_drift_x_velocity": [
+   "/home/admin_wsl/SIH26143/data/incident_001/forcing_v2/ocean_opendrift.nc"
+  ],
+  "sea_surface_wave_stokes_drift_y_velocity": [
+   "/home/admin_wsl/SIH26143/data/incident_001/forcing_v2/ocean_opendrift.nc"
+  ],
+  "sea_surface_wave_period_at_variance_spectral_density_maximum": [],
+  "sea_surface_wave_mean_period_from_variance_spectral_density_second_frequency_moment": [],
+  "sea_ice_area_fraction": [],
+  "sea_ice_x_velocity": [],
+  "sea_ice_y_velocity": [],
+  "sea_water_temperature": [],
+  "sea_water_salinity": [],
+  "sea_floor_depth_below_sea_level": [],
+  "horizontal_diffusivity": [],
+  "ocean_vertical_diffusivity": [],
+  "land_binary_mask": [],
+  "ocean_mixed_layer_thickness": []
+ },
+ "readers": {
+  "current": {
+   "name": "/home/admin_wsl/SIH26143/data/incident_001/forcing_v2/ocean_opendrift.nc",
+   "variables": [
+    "sea_surface_wave_stokes_drift_speed",
+    "sea_surface_wave_stokes_drift_x_velocity",
+    "sea_surface_wave_stokes_drift_y_velocity",
+    "sea_water_speed",
+    "x_sea_water_velocity",
+    "y_sea_water_velocity"
+   ],
+   "xmin": -92.75,
+   "xmax": -86.25,
+   "ymin": 24.5,
+   "ymax": 30.25,
+   "delta_x": 0.08333587646484375,
+   "delta_y": 0.08333396911621094,
+   "zmin": -Infinity,
+   "zmax": Infinity,
+   "z_for_coverage": 0.0,
+   "start_time": "2023-01-01 00:00:00",
+   "end_time": "2023-01-07 06:00:00",
+   "time_step": "1:00:00",
+   "proj": "+proj=latlong"
+  },
+  "wind": {
+   "name": "/home/admin_wsl/SIH26143/data/incident_001/forcing_v2/era5_wind_10m_151h.nc",
+   "variables": [
+    "eastward_wind",
+    "northward_wind",
+    "wind_speed",
+    "x_wind",
+    "y_wind"
+   ],
+   "xmin": -92.75,
+   "xmax": -86.25,
+   "ymin": 24.5,
+   "ymax": 30.25,
+   "delta_x": 0.25,
+   "delta_y": 0.25,
+   "zmin": -Infinity,
+   "zmax": Infinity,
+   "z_for_coverage": 0.0,
+   "start_time": "2023-01-01 00:00:00",
+   "end_time": "2023-01-07 06:00:00",
+   "time_step": "1:00:00",
+   "proj": "+proj=latlong"
+  }
+ },
+ "static_forbidden_token_hits": [],
+ "child_process_env": {
+  "OMP_NUM_THREADS": "1",
+  "OPENBLAS_NUM_THREADS": "1",
+  "MKL_NUM_THREADS": "1"
+ },
+ "integrity_before": {
+  "forcing_v2": {
+   "frozen_json_sha256": "b7ee1fa8c136513dd522b74a8136e747eca17f0db14d11ee32242bf1c336c147",
+   "files_verified": 11,
+   "sha256": {
+    "data/incident_001/currents/dataset_description.json": "0f30b399813e5f35ed416a441827eae242a6cc054f47aa549bef635d77034c8f",
+    "data/incident_001/forcing_v2/download_metadata.json": "72da7b289d4f921caebe3454a25324e591c290c4cecfca39e32b2372bd59ea40",
+    "data/incident_001/forcing_v2/raw/ocean_surface_velocity.nc": "524cb86e0f5c883aa39f59a6bfccb8d22ea18ad9ab1a809e5d7ba0a30b35771f",
+    "data/incident_001/forcing_v2/raw/era5_wind_10m.nc": "90df47885fa0a537efef7b8f894d12d1476a4286071b3f2fc40587a6c61076fa",
+    "data/incident_001/forcing_v2/ocean_opendrift.nc": "9873536080833ef6c55c79df5570d333a9fcbbe0ba6333b5705ce30a5128f707",
+    "data/incident_001/forcing_v2/era5_wind_10m_151h.nc": "c3c64ddd4ed99897e899aa436a8962698c3c7084258a89a3994bf79b7d58fabb",
+    "scripts/e008b_prepare_forcing_v2.py": "d59c19d06f831ecb491ca63692a6d75b085e4562e296bfdb2204031dea6c5ffb",
+    "scripts/e008b_candidate_hindcast_v2.py": "91b1062773d25576dd2481df6aa1e53accc29acaf4a6e711b7775d7715cddb8f",
+    "results/E008b_forcing_expansion/provenance_audit.json": "5b1e203e3a952863e1170ab13b69685fc9c645df34839cfa1cccae3c9b6c621f",
+    "results/E008b_forcing_expansion/forcing_expansion_config.json": "e2b569bdf296e7dce00a84e5c92b813c45ca8bdae73331624fbe72c7c14f3381",
+    "results/E008b_forcing_expansion/forcing_overlap_validation.json": "5338acc758d9eb89e2a7ce8020645c0f1cdb2c2aae8c7fd6f8114712bb443e22"
+   }
+  },
+  "policy_and_e007": {
+   "policy_sha256": "3fb833df7268647641f8b9f1696527c10b067607e3fc9ce11363a4cce0f5bb27",
+   "e007_frozen_sha256": "7f85aad2f579675f50dfa9dc31c76726b9a482aff6ef43e4343bdf41c7b7d4f2",
+   "e007_frozen_files_verified": 19,
+   "candidate_files_sha256": {
+    "candidate_components.csv": "19541d9bd80b7acf16767600c59c4337c892bc9d721b6d4ce6b189db85329847",
+    "candidate_components.geojson": "22414cc32182f6b2edccbcde61c49b3bc9837021792a6fe06a54783655e537ab",
+    "excluded_components.csv": "41e9268f007c595a8d7ed6a45266f810c412f7161fdc7afd5f9b3984189ab520"
+   }
+  },
+  "frozen": {
+   "incident_001": {
+    "ais_density_scores_v2.csv": "e6e3ccae34245555d28735bd5f05600b747e9414e292958a0239f0ee543ceb4c",
+    "ais_density_time_scores_v2.parquet": "69514183d3929106a296820d2164d38cc109bcba952b01e8ca3675aaf127b706",
+    "ais_ensemble_robust_scores.csv": "9b53b3ac349951474cad8546e3359a7c0460e6b74e8f8af8eb1ab53a9d8bae6e",
+    "ais_ensemble_scenario_scores.parquet": "152e1a3fdf93082bab6f52d9741879e8032b40c0fd552634b29104b1b5d3d294",
+    "ais_hindcast_scores.csv": "fe2b10d312682784f57cb7521bad3961b889e39abd2229766c51657a7397733c",
+    "ais_hindcast_time_scores.parquet": "705c5791a4ae3c9de06a52795967dcdcbcc82b01433f18cf4e7451cbbf3ba838",
+    "hindcast_48h.nc": "5b3b5e26d52f4a6b206c94d1fbedf71663240645521cbdd11396a43d0f4012d0",
+    "hindcast_ensemble_particles.parquet": "ce62916634bee39d554a5002b65e280747d64e06a16e849e2c920867ca320793",
+    "hindcast_ensemble_scenarios.csv": "4093e52ef62fbc5b00b31392fc018d1e8b89c0a4ab4b86bf9f36ab8094b0d024",
+    "origin_cloud_48h.csv": "8c8e6a4df789c9094f379e87a913b6db81db23f8b00a24ad5cdef5f493900afe",
+    "release_age_scores.csv": "797cae82651cdc4d5cbae0f75be6bc20f3a8208d2ad38a067024ee3ea1647a0e"
+   },
+   "root_scripts": {
+    "run_hindcast_48h.py": "ae919a8536fbefa41e76dc776176e7371380e5ea2ef93f10d70a4fb3409ee70d",
+    "run_hindcast_ensemble.py": "4d77fa65ab930bfc123b9c187ea3a22c5c1444b1995e9e71f8065f97ae7e687f"
+   },
+   "root_scripts_git_clean": true
+  }
+ },
+ "baseline_sha256": "4d77fa65ab930bfc123b9c187ea3a22c5c1444b1995e9e71f8065f97ae7e687f",
+ "script_sha256": "b02dcda0f006617c1d4e9d3f856785a882ecf756aa5426708e86168938ef81e0",
+ "git_head": "262ddaed53fb363191c88630312dfe9c1af93bb4",
+ "opendrift_version": "1.14.11"
+}

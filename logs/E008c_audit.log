@@ -1,0 +1,27 @@
+{
+ "all_equal_except_allowed": true,
+ "runtime_diffs": {},
+ "token_hits": [],
+ "n_static_fields": 35,
+ "stokes": {
+  "config_per_scenario_identical": true,
+  "config": {
+   "drift:stokes_drift": true,
+   "drift:stokes_drift_profile": "Phillips",
+   "drift:tabularised_stokes_drift_fetch": "25000",
+   "drift:use_tabularised_stokes_drift": false,
+   "environment:constant:sea_surface_wave_stokes_drift_x_velocity": null,
+   "environment:constant:sea_surface_wave_stokes_drift_y_velocity": null,
+   "environment:fallback:sea_surface_wave_stokes_drift_x_velocity": 0,
+   "environment:fallback:sea_surface_wave_stokes_drift_y_velocity": 0
+  },
+  "stokes_variables_provider": {
+   "sea_surface_wave_stokes_drift_x_velocity": [
+    "/home/admin_wsl/SIH26143/data/incident_001/forcing_v2/ocean_opendrift.nc"
+   ],
+   "sea_surface_wave_stokes_drift_y_velocity": [
+    "/home/admin_wsl/SIH26143/data/incident_001/forcing_v2/ocean_opendrift.nc"
+   ]
+  }
+ }
+}

@@ -1,0 +1,93 @@
+{
+ "candidate_id": "E007-C30",
+ "component_id": 30,
+ "seed_area_m2": 81550.02786509693,
+ "seed_geometry_valid": true,
+ "n_scenarios": 27,
+ "n_valid_scenarios": 27,
+ "n_rows": 529200,
+ "scenario_runtime_s": [
+  5.578154553004424,
+  2.0909282219945453,
+  2.1140933420028887,
+  2.0416904120065738,
+  1.9927098779953667,
+  1.986642468997161,
+  2.0025055350051844,
+  2.042970560003596,
+  2.0646674710005755,
+  1.97218463900208,
+  2.05180296600156,
+  2.0036788759971387,
+  1.9775646190028056,
+  2.011892712005647,
+  2.003713300000527,
+  1.986357821006095,
+  1.9872904799995013,
+  1.9913348160043824,
+  1.9669066839996958,
+  1.9896726559964009,
+  1.9805169259998365,
+  1.964445211997372,
+  1.9652009360070224,
+  2.0214639080004417,
+  2.10057376199984,
+  2.1014850529973046,
+  2.0520832510010223
+ ],
+ "total_runtime_s": 60.15544793599838,
+ "peak_rss_mb": 2586.96875,
+ "pid": 1397710,
+ "env": {
+  "OMP_NUM_THREADS": "1",
+  "OPENBLAS_NUM_THREADS": "1",
+  "MKL_NUM_THREADS": "1"
+ },
+ "forcing": {
+  "data/incident_001/forcing_v2/ocean_opendrift.nc": "9873536080833ef6c55c79df5570d333a9fcbbe0ba6333b5705ce30a5128f707",
+  "data/incident_001/forcing_v2/era5_wind_10m_151h.nc": "c3c64ddd4ed99897e899aa436a8962698c3c7084258a89a3994bf79b7d58fabb"
+ },
+ "script_sha256": "b02dcda0f006617c1d4e9d3f856785a882ecf756aa5426708e86168938ef81e0",
+ "baseline_sha256": "4d77fa65ab930bfc123b9c187ea3a22c5c1444b1995e9e71f8065f97ae7e687f",
+ "git_head": "262ddaed53fb363191c88630312dfe9c1af93bb4",
+ "opendrift_version": "1.14.11",
+ "particle_table": {
+  "file": "ensemble_particles.parquet",
+  "columns": [
+   "candidate_id",
+   "scenario_id",
+   "trajectory",
+   "time",
+   "lon",
+   "lat",
+   "windage",
+   "current_uncertainty",
+   "wind_uncertainty",
+   "particle_id",
+   "age_hours"
+  ],
+  "note": "all 49 hourly positions per particle retained (age_hours 0 .. -48) for later release-age binning; rows with non-finite lon/lat dropped as in the baseline"
+ },
+ "age_bins_h_for_later_scoring": [
+  [
+   0,
+   6
+  ],
+  [
+   6,
+   12
+  ],
+  [
+   12,
+   24
+  ],
+  [
+   24,
+   36
+  ],
+  [
+   36,
+   48
+  ]
+ ]
+}

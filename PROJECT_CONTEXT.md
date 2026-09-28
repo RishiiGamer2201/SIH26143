@@ -53,6 +53,8 @@ SIH26143/
 │   ├── e008a_candidate_hindcast.py  E008a deterministic hindcast per policy-v1 candidate (frozen recipe; coverage audit) -> results/E008a_candidate_hindcast
 │   ├── e008b_prepare_forcing_v2.py  E008b forcing v2: v1 provenance rebuild, domain config, download, build, v1/v2 equivalence, freeze -> data/incident_001/forcing_v2, results/E008b_forcing_expansion
 │   ├── e008b_candidate_hindcast_v2.py  E008b 42 deterministic re-runs with forcing v2 (imports E008a unchanged) + v1/v2 comparison -> results/E008b_candidate_hindcast_v2
+│   ├── e008c_candidate_ensemble.py  E008c frozen 27-scenario ensemble per candidate, forcing v2 (audit, pilot, run-all, summary) -> results/E008c_candidate_ensemble
+│   ├── e008c_baseline_reproduction_check.py  E008c recipe check: historical inputs reproduce results/incident_001 ensemble bit-exactly
 │   ├── e008_candidate_policy_v1.py  E008 candidate policy v1: freeze config, apply once to E007 (no grouping, A_min 5000), post-hoc Cerulean map -> results/E008_candidate_policy_v1
 │   ├── e007c_validate_clustering.py  E007c grouping policy from E005 val only (G / A_min / orientation sweeps; its G-based freeze/apply stages are unused) -> results/E007c_validation_clustering
 │   ├── e007b_component_structure.py  E007b model-only component/cluster structure (no Cerulean) -> results/E007b_component_structure
@@ -128,7 +130,12 @@ Done and verified (2026-09-26):
 - E008b (2026-09-28): forcing v2 = same products/recipe, domain W -92.75 E -86.25 S 24.5 N 30.25 (E008a trajectory envelope + 2°,
   0.25° snap). v1 provenance reproduced (ocean byte-identical). v1/v2 common domain 100% bit-exact. FROZEN
   (`data/incident_001/forcing_v2/FROZEN.json`). 42/42 re-runs valid incl. C12/C14; 30/40 v1-valid runs bit-exact, 10 differ by 1 float32
-  ulp (max 0.76 m). Ensemble / AIS NOT run.
+  ulp (max 0.76 m). Reproducibility checkpoint (E008b): git commit `262ddaed53fb363191c88630312dfe9c1af93bb4`.
+  Forcing v2 is the frozen forcing baseline for all later candidate physics; any change = forcing_v3.
+- E008c (2026-09-28): frozen 27-scenario ensemble for all 42 candidates with forcing v2 (`scripts/e008c_candidate_ensemble.py`,
+  `results/E008c_candidate_ensemble/`). Recipe audit 0 diffs; E008c functions reproduce the historical ensemble bit-exactly.
+  1134/1134 scenarios valid, 0 deactivations/exits, min margin 210.5 km. Hourly positions kept for later age bins.
+  AIS / release-age scoring NOT run; no candidate ranking or fusion.
 
 ## How to state the attribution result
 

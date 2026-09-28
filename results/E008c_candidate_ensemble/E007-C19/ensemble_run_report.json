@@ -1,0 +1,93 @@
+{
+ "candidate_id": "E007-C19",
+ "component_id": 19,
+ "seed_area_m2": 24053.262671768665,
+ "seed_geometry_valid": true,
+ "n_scenarios": 27,
+ "n_valid_scenarios": 27,
+ "n_rows": 529200,
+ "scenario_runtime_s": [
+  5.942685825997614,
+  2.072506357995735,
+  2.0605510960012907,
+  2.0911399480028194,
+  2.120800380995206,
+  2.0195868849987164,
+  1.9901914750007563,
+  2.0630463369961944,
+  2.09467011099332,
+  2.0293322180004907,
+  2.055973495997023,
+  2.0199894580000546,
+  2.109477970006992,
+  2.0910324860014953,
+  2.089409773994703,
+  2.065130800001498,
+  2.0860099569981685,
+  2.133472804998746,
+  2.014925506999134,
+  2.0705456780051463,
+  2.034237555002619,
+  2.038974277995294,
+  2.040904692003096,
+  2.0132174269965617,
+  2.0810995049978374,
+  2.0589978729985887,
+  2.0709045589974266
+ ],
+ "total_runtime_s": 61.84440812200046,
+ "peak_rss_mb": 2585.22265625,
+ "pid": 1396980,
+ "env": {
+  "OMP_NUM_THREADS": "1",
+  "OPENBLAS_NUM_THREADS": "1",
+  "MKL_NUM_THREADS": "1"
+ },
+ "forcing": {
+  "data/incident_001/forcing_v2/ocean_opendrift.nc": "9873536080833ef6c55c79df5570d333a9fcbbe0ba6333b5705ce30a5128f707",
+  "data/incident_001/forcing_v2/era5_wind_10m_151h.nc": "c3c64ddd4ed99897e899aa436a8962698c3c7084258a89a3994bf79b7d58fabb"
+ },
+ "script_sha256": "b02dcda0f006617c1d4e9d3f856785a882ecf756aa5426708e86168938ef81e0",
+ "baseline_sha256": "4d77fa65ab930bfc123b9c187ea3a22c5c1444b1995e9e71f8065f97ae7e687f",
+ "git_head": "262ddaed53fb363191c88630312dfe9c1af93bb4",
+ "opendrift_version": "1.14.11",
+ "particle_table": {
+  "file": "ensemble_particles.parquet",
+  "columns": [
+   "candidate_id",
+   "scenario_id",
+   "trajectory",
+   "time",
+   "lon",
+   "lat",
+   "windage",
+   "current_uncertainty",
+   "wind_uncertainty",
+   "particle_id",
+   "age_hours"
+  ],
+  "note": "all 49 hourly positions per particle retained (age_hours 0 .. -48) for later release-age binning; rows with non-finite lon/lat dropped as in the baseline"
+ },
+ "age_bins_h_for_later_scoring": [
+  [
+   0,
+   6
+  ],
+  [
+   6,
+   12
+  ],
+  [
+   12,
+   24
+  ],
+  [
+   24,
+   36
+  ],
+  [
+   36,
+   48
+  ]
+ ]
+}

@@ -1,0 +1,93 @@
+{
+ "candidate_id": "E007-C5",
+ "component_id": 5,
+ "seed_area_m2": 4926762.973985381,
+ "seed_geometry_valid": true,
+ "n_scenarios": 27,
+ "n_valid_scenarios": 27,
+ "n_rows": 529200,
+ "scenario_runtime_s": [
+  5.5007163979971665,
+  2.0032145980003406,
+  1.9971082920019398,
+  1.9953330220014323,
+  2.0646562420006376,
+  2.004431522997038,
+  2.016554731002543,
+  2.0181290959953913,
+  2.037278558993421,
+  1.9664147220028099,
+  1.999429000003147,
+  2.007854663999751,
+  1.9861555059978855,
+  2.006307780997304,
+  2.0128029949992197,
+  1.9991493330016965,
+  2.0172835109988227,
+  2.0010676560050342,
+  1.9815097410028102,
+  1.987621392996516,
+  2.0008500080002705,
+  2.0018318930015084,
+  1.9999474529977306,
+  2.0137296979955863,
+  2.0068977370028733,
+  1.9951952019982855,
+  2.054882798001927
+ ],
+ "total_runtime_s": 60.05545054500544,
+ "peak_rss_mb": 2586.1484375,
+ "pid": 1396696,
+ "env": {
+  "OMP_NUM_THREADS": "1",
+  "OPENBLAS_NUM_THREADS": "1",
+  "MKL_NUM_THREADS": "1"
+ },
+ "forcing": {
+  "data/incident_001/forcing_v2/ocean_opendrift.nc": "9873536080833ef6c55c79df5570d333a9fcbbe0ba6333b5705ce30a5128f707",
+  "data/incident_001/forcing_v2/era5_wind_10m_151h.nc": "c3c64ddd4ed99897e899aa436a8962698c3c7084258a89a3994bf79b7d58fabb"
+ },
+ "script_sha256": "b02dcda0f006617c1d4e9d3f856785a882ecf756aa5426708e86168938ef81e0",
+ "baseline_sha256": "4d77fa65ab930bfc123b9c187ea3a22c5c1444b1995e9e71f8065f97ae7e687f",
+ "git_head": "262ddaed53fb363191c88630312dfe9c1af93bb4",
+ "opendrift_version": "1.14.11",
+ "particle_table": {
+  "file": "ensemble_particles.parquet",
+  "columns": [
+   "candidate_id",
+   "scenario_id",
+   "trajectory",
+   "time",
+   "lon",
+   "lat",
+   "windage",
+   "current_uncertainty",
+   "wind_uncertainty",
+   "particle_id",
+   "age_hours"
+  ],
+  "note": "all 49 hourly positions per particle retained (age_hours 0 .. -48) for later release-age binning; rows with non-finite lon/lat dropped as in the baseline"
+ },
+ "age_bins_h_for_later_scoring": [
+  [
+   0,
+   6
+  ],
+  [
+   6,
+   12
+  ],
+  [
+   12,
+   24
+  ],
+  [
+   24,
+   36
+  ],
+  [
+   36,
+   48
+  ]
+ ]
+}

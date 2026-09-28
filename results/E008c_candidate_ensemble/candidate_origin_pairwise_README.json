@@ -1,0 +1,10 @@
+{
+ "note": "EXPLORATORY ONLY. Pairwise distances between -48 h ensemble endpoint clouds (all 27 scenarios pooled). No threshold, no clustering, no fusion; overlapping origins do not show a common release.",
+ "laea_center": [
+  -89.94069148722355,
+  27.511148363045322
+ ],
+ "energy_distance": "2E|X-Y| - E|X-X'| - E|Y-Y'| (km), deterministic 2000-point subsample",
+ "histogram_overlap": "sum over 5 km cells of min(p_a, p_b)",
+ "n_pairs": 861
+}

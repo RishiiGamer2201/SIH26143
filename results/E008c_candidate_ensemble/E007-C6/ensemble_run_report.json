@@ -1,0 +1,93 @@
+{
+ "candidate_id": "E007-C6",
+ "component_id": 6,
+ "seed_area_m2": 197727.82796944678,
+ "seed_geometry_valid": true,
+ "n_scenarios": 27,
+ "n_valid_scenarios": 27,
+ "n_rows": 529200,
+ "scenario_runtime_s": [
+  5.427917888999218,
+  1.9677954060025513,
+  1.9680394819952198,
+  1.9362271659992984,
+  2.015873106000072,
+  1.9656714410011773,
+  1.9868545130011626,
+  1.974296027001401,
+  1.977681737000239,
+  1.9245757300013793,
+  1.9295682960000704,
+  1.9670313960014028,
+  1.9471808830057853,
+  1.9499241119992803,
+  1.9683646949997637,
+  1.9401406760007376,
+  1.9623224180031684,
+  1.9662291229979019,
+  1.9122766890068306,
+  1.9700382279988844,
+  1.9383996530013974,
+  1.968470364001405,
+  1.9698815390001982,
+  1.9309849799974472,
+  1.9698451309959637,
+  1.9565312510021613,
+  1.9504726070008473
+ ],
+ "total_runtime_s": 58.76332801699755,
+ "peak_rss_mb": 2588.421875,
+ "pid": 1396698,
+ "env": {
+  "OMP_NUM_THREADS": "1",
+  "OPENBLAS_NUM_THREADS": "1",
+  "MKL_NUM_THREADS": "1"
+ },
+ "forcing": {
+  "data/incident_001/forcing_v2/ocean_opendrift.nc": "9873536080833ef6c55c79df5570d333a9fcbbe0ba6333b5705ce30a5128f707",
+  "data/incident_001/forcing_v2/era5_wind_10m_151h.nc": "c3c64ddd4ed99897e899aa436a8962698c3c7084258a89a3994bf79b7d58fabb"
+ },
+ "script_sha256": "b02dcda0f006617c1d4e9d3f856785a882ecf756aa5426708e86168938ef81e0",
+ "baseline_sha256": "4d77fa65ab930bfc123b9c187ea3a22c5c1444b1995e9e71f8065f97ae7e687f",
+ "git_head": "262ddaed53fb363191c88630312dfe9c1af93bb4",
+ "opendrift_version": "1.14.11",
+ "particle_table": {
+  "file": "ensemble_particles.parquet",
+  "columns": [
+   "candidate_id",
+   "scenario_id",
+   "trajectory",
+   "time",
+   "lon",
+   "lat",
+   "windage",
+   "current_uncertainty",
+   "wind_uncertainty",
+   "particle_id",
+   "age_hours"
+  ],
+  "note": "all 49 hourly positions per particle retained (age_hours 0 .. -48) for later release-age binning; rows with non-finite lon/lat dropped as in the baseline"
+ },
+ "age_bins_h_for_later_scoring": [
+  [
+   0,
+   6
+  ],
+  [
+   6,
+   12
+  ],
+  [
+   12,
+   24
+  ],
+  [
+   24,
+   36
+  ],
+  [
+   36,
+   48
+  ]
+ ]
+}
